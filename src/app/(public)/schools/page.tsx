@@ -5,15 +5,18 @@ import {
   BookOpen,
   Building2,
   CalendarDays,
+  Check,
   CheckCircle2,
   ClipboardCheck,
   CreditCard,
+  Diamond,
   Eye,
   FileText,
   FolderOpen,
   GraduationCap,
   Laptop,
   LockKeyhole,
+  Link2,
   Mail,
   MessageSquare,
   PenLine,
@@ -366,10 +369,10 @@ export default function SchoolsPage() {
           {assessmentCards.map(([Icon, title, copy], index) => (
             <article
               key={title}
-              className={`rounded-xl border p-5 ${index === 2 ? "border-[#efd6a2] bg-[#fffcf5]" : "border-[#cde5e6] bg-[#f9fdfd]"}`}
+              className={`rounded-xl border p-5 ${index === 2 || index === 5 ? "border-[#efd6a2] bg-[#fffcf5]" : "border-[#cde5e6] bg-[#f9fdfd]"}`}
             >
               <Icon
-                className={`mx-auto h-10 w-10 ${index === 2 ? "text-[#d89410]" : "text-[#00777d]"}`}
+                className={`mx-auto h-10 w-10 ${index === 2 || index === 5 ? "text-[#d89410]" : "text-[#00777d]"}`}
               />
               <h3 className="mt-4 text-sm font-semibold text-[#075e65]">
                 {title}
@@ -470,18 +473,18 @@ export default function SchoolsPage() {
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-linear-to-r from-[#fffaf1] via-[#fffaf1]/95 to-transparent" />
-        <div className="relative mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
+        <div className="relative mx-auto max-w-7xl px-5 py-12 text-center sm:px-8 lg:px-10">
           <p className="text-xl font-semibold text-[#d08b0a]">
             School Management
           </p>
           <h2 className="mt-3 text-3xl font-semibold leading-tight text-[#075e65]">
             The administrative side, already running in schools
           </h2>
-          <p className="mt-4 text-sm leading-6 text-slate-700">
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-6 text-slate-700">
             The operational system Attobility has been running for years, now
             part of the same platform as learning and assessment.
           </p>
-          <div className="mt-8 grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="mx-auto mt-8 grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {managementCards.map(([Icon, title, description]) => (
               <div
                 key={title}
@@ -639,6 +642,99 @@ export default function SchoolsPage() {
             <p className="mt-4 text-xs font-semibold tracking-wide text-[#d88700] uppercase">
               School count differs between internal sources — confirm the
               current figure before external use
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#07818a] text-white">
+        <div className="mx-auto max-w-7xl px-5 py-16 text-center sm:px-8 sm:py-17 lg:px-10">
+          <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
+            See how it fits your school
+          </h2>
+          <p className="mt-2 text-sm text-white/90 sm:text-base">
+            A walkthrough of what is live now, and what the adaptive phase adds.
+          </p>
+          <div className="mt-7 flex flex-col justify-center gap-2 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-flex h-12 items-center justify-center rounded-md bg-[#f4aa17] px-6 text-base font-semibold text-white transition hover:bg-[#dc9411]"
+            >
+              Book a School Demo
+            </Link>
+            <Link
+              href="/adaptive-learning"
+              prefetch={false}
+              className="inline-flex h-12 items-center justify-center rounded-md border border-white/70 px-6 text-base font-semibold text-white transition hover:bg-white/10"
+            >
+              Explore Adaptive Learning
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#f5f9fb]">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10 lg:py-17">
+          <div className="text-center">
+            <p className="text-sm font-semibold tracking-[0.08em] text-[#d88700] uppercase">
+              The small print, said plainly
+            </p>
+            <h2 className="mt-1 text-3xl font-semibold tracking-[-0.02em] text-[#075e65] sm:text-4xl">
+              Things worth knowing before you pay
+            </h2>
+          </div>
+
+          <div className="mt-11 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: Diamond,
+                title: "Prices are local",
+                copy: "Each market is priced in its own currency, not converted from US dollars.",
+              },
+              {
+                icon: Check,
+                title: "Cancel any time",
+                copy: "Monthly plans stop at the end of the period you've paid for.",
+              },
+              {
+                icon: Diamond,
+                title: "Your records stay yours",
+                copy: "Learning evidence belongs to the family, including if a school or tutor relationship ends.",
+                filled: true,
+              },
+              {
+                icon: Link2,
+                title: "One invited tutor is free",
+                copy: "A tutor a parent invites is included — the tutor is never billed for that family.",
+              },
+            ].map(({ icon: Icon, title, copy, filled }) => (
+              <article
+                key={title}
+                className="min-h-41 rounded-xl border border-slate-200 bg-white p-5"
+              >
+                <span className="grid h-10 w-10 place-items-center rounded-lg bg-[#e8f5f5]">
+                  <Icon
+                    className={`h-4 w-4 text-[#00777d] ${filled ? "fill-current" : ""}`}
+                    strokeWidth={1.8}
+                  />
+                </span>
+                <h3 className="mt-3 text-base font-semibold text-[#075e65]">
+                  {title}
+                </h3>
+                <p className="mt-1 text-sm leading-4 text-slate-600">{copy}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-6 rounded-2xl border border-dashed border-[#e4a11b] bg-[#fff8eb] px-7 py-10 sm:px-8 lg:py-12">
+            <h3 className="text-base font-semibold text-[#075e65]">On tax</h3>
+            <p className="mt-1 max-w-xl text-sm leading-4 text-slate-600">
+              Whether the figures shown include GST or VAT determines the final
+              amount you pay, and consumer price display rules differ by market.
+            </p>
+            <p className="mt-2 text-xs font-semibold tracking-wide text-[#d88700] uppercase">
+              Tax-inclusive vs tax-exclusive display to be confirmed per market
+              before these prices go live
             </p>
           </div>
         </div>

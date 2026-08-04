@@ -148,29 +148,28 @@ function EvidenceCard() {
 export default function TutorsPage() {
   return (
     <div className="tutors-page overflow-hidden bg-[#f5f9fb] text-slate-800">
-      <section className="relative flex flex-col border-b border-slate-200 bg-[#f5f9fb] xl:block xl:min-h-152.5">
-        <div className="relative order-2 aspect-2/1 w-full bg-[#075e65] xl:absolute xl:inset-0 xl:h-full xl:aspect-auto">
+      <section className="relative flex flex-col overflow-hidden border-b border-[#08757b] bg-[#075e65] xl:block xl:min-h-152.5">
+        <div className="relative order-2 mx-auto aspect-2/1 w-[92%] max-w-3xl xl:absolute xl:inset-y-8 xl:right-8 xl:mx-0 xl:h-auto xl:w-[52%] xl:max-w-none xl:aspect-auto 2xl:right-12 2xl:w-[50%]">
           <Image
-            src="/images/tutors/Tutor-Banner.jpg"
+            src="/images/tutors/tutor-img.png"
             alt="Learning evidence flowing from identified difficulty to tutor focus and scheduled review"
             fill
             priority
             sizes="100vw"
-            className="object-contain object-center xl:object-cover"
+            className="object-contain object-center"
           />
-          <div className="absolute inset-y-0 left-0 hidden w-[54%] bg-linear-to-r from-[#f5f9fb] via-[#f5f9fb]/95 to-transparent xl:block" />
         </div>
         <div className="relative order-1 mx-auto w-full max-w-345 px-5 py-10 sm:px-8 sm:py-12 md:py-14 lg:px-10 xl:flex xl:min-h-152.5 xl:items-start xl:px-14 xl:pb-16 xl:pt-16 2xl:px-16">
           <div className="max-w-xl xl:max-w-100 2xl:max-w-110">
-            <p className="text-xl font-semibold text-[#00666c] sm:text-2xl xl:text-3xl">
+            <p className="text-xl font-semibold text-[#f4aa17] sm:text-2xl xl:text-3xl">
               For Tutors
             </p>
-            <h1 className="mt-4 text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-[#005c62] sm:mt-5 sm:text-5xl md:text-[54px] xl:text-[56px] 2xl:text-[58px]">
+            <h1 className="mt-4 text-4xl font-semibold leading-[1.08] tracking-[-0.04em] text-white sm:mt-5 sm:text-5xl md:text-[54px] xl:text-[56px] 2xl:text-[58px]">
               Teach with
               <br />
               clearer evidence
             </h1>
-            <p className="mt-5 max-w-xl text-sm leading-6 text-slate-700 sm:mt-6 sm:text-base sm:leading-7 xl:mt-7 xl:max-w-100 2xl:max-w-108">
+            <p className="mt-5 max-w-xl text-sm leading-6 text-white/90 sm:mt-6 sm:text-base sm:leading-7 xl:mt-7 xl:max-w-100 2xl:max-w-108">
               Walk into the session already knowing what the learner
               understands, what they don’t, and what to do about it — instead of
               spending the first twenty minutes finding out.
@@ -184,7 +183,7 @@ export default function TutorsPage() {
               </Link>
               <a
                 href="#workspace"
-                className="inline-flex h-12 w-full items-center justify-center whitespace-nowrap rounded-md border-2 border-[#00777d] bg-white/90 px-5 text-sm text-[#00666c] transition hover:bg-teal-50 sm:w-auto 2xl:px-7"
+                className="inline-flex h-12 w-full items-center justify-center whitespace-nowrap rounded-md border-2 border-white/80 bg-transparent px-5 text-sm text-white transition hover:bg-white/10 sm:w-auto 2xl:px-7"
               >
                 Explore Tutor Workspace
               </a>
