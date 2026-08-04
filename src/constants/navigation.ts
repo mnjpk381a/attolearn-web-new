@@ -1,23 +1,83 @@
 export type NavItem =
-  | { label: string; href: string }
+  | {
+      label: string;
+      href: string;
+    }
   | {
       label: string;
       href?: string;
-      children: { label: string; href: string; disabled?: boolean }[];
+      children: {
+        label: string;
+        href: string;
+        description?: string;
+        disabled?: boolean;
+      }[];
     };
 
 export const navItems: NavItem[] = [
-  { label: "Home", href: "/" },
-  { label: "Paper Generator", href: "/papergenerator" },
-  { label: "School MS", href: "/sms" },
+  { label: "Home", href: "#" },
+  { label: "Families", href: "#" },
+  { label: "Home Education", href: "#" },
+  { label: "Tutors", href: "/tutors" },
+  { label: "Tuition Centres", href: "#" },
+  { label: "Schools", href: "/schools" },
 
-  { label: "Resellers", href: "/resellers" },
-  { label: "Pricing", href: "/pricing" },
+  {
+    label: "Products",
+    children: [
+      {
+        label: "Adaptive Learning",
+        description: "Short, evidence-informed learning sessions",
+        href: "#",
+      },
+      {
+        label: "Paper Generator",
+        description: "Printable and online assessments",
+        href: "#",
+      },
+      {
+        label: "School Management",
+        description: "Connected school operations",
+        href: "#",
+      },
+      {
+        label: "Experience AttoLearn",
+        description: "Explore interactive demonstrations",
+        href: "#",
+      },
+    ],
+  },
+
+  {
+    label: "Why AttoLearn",
+    children: [
+      {
+        label: "Our Learning Philosophy",
+        description: "How practice becomes meaningful evidence",
+        href: "#",
+      },
+      {
+        label: "Safety and Trust",
+        description: "Permissions, governance and child safety",
+        href: "#",
+      },
+      {
+        label: "Learning Architecture",
+        description: "The technical account, for specialists",
+        href: "#",
+      },
+    ],
+  },
+
+  { label: "Pricing", href: "#" },
+
   {
     label: "Company",
     children: [
-      { label: "About", href: "/about" },
-      { label: "Team", href: "/team" },
+      { label: "About", href: "#" },
+      { label: "Partners", href: "#" },
+      // { label: "Team", href: "/team" },
+      // { label: "Contact", href: "/contact" },
     ],
   },
 ];

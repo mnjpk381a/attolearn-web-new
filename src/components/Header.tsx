@@ -34,7 +34,7 @@ export default function Header() {
       className="fixed inset-x-0 top-0 z-50 border-b border-gray-200 bg-white"
     >
       <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
-        <div className="flex h-19 items-center justify-between gap-3">
+        <div className="flex h-16 items-center justify-between gap-3 sm:h-19">
           <Link
             href="/"
             prefetch={false}
@@ -45,28 +45,33 @@ export default function Header() {
             }}
           >
             <Image
-              src="/images/Stats/AttoLearn_Logo.png"
+              src="/images/EducationIcon/AttoLearn_Logo.png"
               alt="Attobility"
               width={300}
               height={70}
               priority
-              className="h-19 w-42 object-contain"
+              className="h-14 w-36 object-contain sm:h-19 sm:w-42"
             />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden items-center gap-1 xl:flex">
+          <nav className="hidden min-w-0 items-center gap-0.5 xl:flex 2xl:gap-2">
             {navItems.map((item) => {
               if ("children" in item) {
                 const key = item.label;
                 const isOpen = openDropdown === key;
 
                 return (
-                  <div key={key} className="relative">
+                  <div
+                    key={key}
+                    className="relative"
+                    onMouseEnter={() => setOpenDropdown(key)}
+                    onMouseLeave={() => setOpenDropdown(null)}
+                  >
                     <button
                       type="button"
                       onClick={() => setOpenDropdown(isOpen ? null : key)}
-                      className="rounded-md px-3 py-2 text-sm font-medium text-[#808080] transition hover:bg-gray-50 hover:text-[#003238] focus:outline-none focus-visible:outline-none focus:ring-0"
+                      className="whitespace-nowrap rounded-md px-2.5 py-2 text-[13px] font-semibold text-black transition hover:bg-gray-50 focus:outline-none focus-visible:outline-none focus:ring-0 2xl:px-3 2xl:text-sm"
                     >
                       <span className="inline-flex items-center gap-1">
                         {item.label}
@@ -96,10 +101,10 @@ export default function Header() {
                               prefetch={false}
                               aria-disabled={c.disabled}
                               tabIndex={c.disabled ? -1 : 0}
-                              className={`block px-4 py-2 text-sm transition focus:outline-none focus-visible:outline-none focus:ring-0 ${
+                              className={`block px-4 py-2 transition focus:outline-none focus-visible:outline-none focus:ring-0 ${
                                 c.disabled
                                   ? "cursor-not-allowed bg-gray-50 text-gray-400"
-                                  : "text-[#077784] hover:bg-gray-50 hover:text-[#003238]"
+                                  : "text-black hover:bg-gray-50"
                               }`}
                               onClick={(e) => {
                                 if (c.disabled) {
@@ -110,7 +115,14 @@ export default function Header() {
                                 setOpenDropdown(null);
                               }}
                             >
-                              {c.label}
+                              <span className="block text-sm font-semibold">
+                                {c.label}
+                              </span>
+                              {c.description && (
+                                <span className="mt-0.5 block text-xs font-normal text-gray-500">
+                                  {c.description}
+                                </span>
+                              )}
                             </Link>
                           ))}
                         </div>
@@ -127,10 +139,10 @@ export default function Header() {
                   key={item.label}
                   href={item.href}
                   prefetch={false}
-                  className={`rounded-md px-3 py-2 text-sm font-medium transition focus:outline-none focus-visible:outline-none focus:ring-0 ${
+                  className={`whitespace-nowrap rounded-md px-2.5 py-2 text-[13px] font-semibold transition focus:outline-none focus-visible:outline-none focus:ring-0 2xl:px-3 2xl:text-sm ${
                     active
-                      ? "bg-gray-50 font-semibold text-[#4fb4c0]"
-                      : "text-[#808080] hover:bg-gray-50 hover:text-[#003238]"
+                      ? "bg-gray-50 font-semibold text-black"
+                      : "text-black hover:bg-gray-50"
                   }`}
                   onClick={() => {
                     setMobileOpen(false);
@@ -146,13 +158,13 @@ export default function Header() {
               href="https://portal.attolearn.com/auth/login"
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-2 inline-flex items-center justify-center rounded-lg bg-[#077784] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0"
+              className="ml-2 inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-[#077784] px-3 py-2 text-[13px] font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0 2xl:ml-3 2xl:px-4 2xl:text-sm"
               onClick={() => {
                 setMobileOpen(false);
                 setOpenDropdown(null);
               }}
             >
-              Sign In / Sign Up
+              Log In
             </a>
             {/* <Link
               href="/choose-module"
@@ -172,6 +184,8 @@ export default function Header() {
             type="button"
             className="inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white p-2 text-gray-700 hover:bg-gray-50 focus:outline-none focus-visible:outline-none focus:ring-0 xl:hidden"
             aria-label="Open menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
             onClick={() => setMobileOpen((v) => !v)}
           >
             <svg
@@ -193,9 +207,12 @@ export default function Header() {
 
       {/* Mobile Nav Panel */}
       {mobileOpen && (
-        <div className="border-t border-gray-200 bg-white xl:hidden">
-          <div className="mx-auto max-w-7xl px-3 py-3 sm:px-4 lg:px-6">
-            <div className="space-y-2">
+        <div
+          id="mobile-navigation"
+          className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-gray-200 bg-white sm:max-h-[calc(100dvh-4.75rem)] xl:hidden"
+        >
+          <div className="mx-auto max-w-7xl px-3 py-3 sm:px-4 sm:py-4 lg:px-6">
+            <div className="space-y-3">
               {navItems.map((item) => {
                 if ("children" in item) {
                   const key = item.label;
@@ -208,7 +225,7 @@ export default function Header() {
                     >
                       <button
                         type="button"
-                        className="flex w-full items-center justify-between bg-gray-50 px-3 py-2 text-left text-sm font-semibold text-[#077784] focus:outline-none focus-visible:outline-none focus:ring-0"
+                        className="flex w-full items-center justify-between bg-gray-50 px-3 py-2 text-left text-sm font-semibold text-black focus:outline-none focus-visible:outline-none focus:ring-0"
                         onClick={() => setOpenDropdown(isOpen ? null : key)}
                       >
                         {item.label}
@@ -236,10 +253,10 @@ export default function Header() {
                               prefetch={false}
                               aria-disabled={c.disabled}
                               tabIndex={c.disabled ? -1 : 0}
-                              className={`block border-t border-gray-100 px-3 py-2 text-sm focus:outline-none focus-visible:outline-none focus:ring-0 ${
+                              className={`block border-t border-gray-100 px-3 py-2 focus:outline-none focus-visible:outline-none focus:ring-0 ${
                                 c.disabled
                                   ? "cursor-not-allowed bg-gray-50 text-gray-400"
-                                  : "text-[#077784] hover:bg-gray-50 hover:text-[#003238]"
+                                  : "text-black hover:bg-gray-50"
                               }`}
                               onClick={(e) => {
                                 if (c.disabled) {
@@ -250,7 +267,14 @@ export default function Header() {
                                 setOpenDropdown(null);
                               }}
                             >
-                              {c.label}
+                              <span className="block text-sm font-semibold">
+                                {c.label}
+                              </span>
+                              {c.description && (
+                                <span className="mt-0.5 block text-xs font-normal text-gray-500">
+                                  {c.description}
+                                </span>
+                              )}
                             </Link>
                           ))}
                         </div>
@@ -266,10 +290,10 @@ export default function Header() {
                     key={item.label}
                     href={item.href}
                     prefetch={false}
-                    className={`block rounded-lg px-3 py-2 text-sm font-medium transition focus:outline-none focus-visible:outline-none focus:ring-0 ${
+                    className={`block rounded-lg px-3 py-2 text-sm font-semibold transition focus:outline-none focus-visible:outline-none focus:ring-0 ${
                       active
-                        ? "bg-gray-50 font-semibold text-[#4fb4c0]"
-                        : "text-[#077784] hover:bg-gray-50 hover:text-[#003238]"
+                        ? "bg-gray-50 font-semibold text-black"
+                        : "text-black hover:bg-gray-50"
                     }`}
                     onClick={() => {
                       setMobileOpen(false);
@@ -291,7 +315,7 @@ export default function Header() {
                   setOpenDropdown(null);
                 }}
               >
-                Sign In / Sign Up
+                Log In
               </a>
 
               {/* <Link

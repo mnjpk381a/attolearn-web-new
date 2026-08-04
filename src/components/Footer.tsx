@@ -1,24 +1,39 @@
 import Image from "next/image";
 import Link from "next/link";
 import { social } from "@/constants/social";
-import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
   return (
     <footer className="mt-10 bg-[#007381]">
-      {/* Newsletter */}
-      <div className="bg-white">
+      {/* Call to action */}
+      <div className="bg-[#07818a] text-white">
         <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
-          <div className="py-10 flex justify-center">
+          <div className="flex justify-center py-12">
             <div className="w-full max-w-2xl text-center">
-              <h2 className="text-2xl sm:text-3xl font-bold text-[#007381]">
-                Join our Newsletter
+              <h2 className="text-2xl font-bold sm:text-3xl">
+                Start free, decide later
               </h2>
-              <p className="mt-2 text-sm sm:text-base text-gray-600">
-                Subscribe to our newsletter and receive the latest news about
-                our products and services!
+              <p className="mt-2 text-sm text-white/90 sm:text-base">
+                No card to try it. Move to a paid plan when it&apos;s earning
+                its place.
               </p>
-              <NewsletterForm />
+              <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+                <a
+                  href="https://portal.attolearn.com/auth/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-11 items-center justify-center rounded-md bg-[#f4aa17] px-7 text-sm font-semibold text-white transition hover:bg-[#dc9411]"
+                >
+                  Start Free
+                </a>
+                <Link
+                  href="/contact"
+                  prefetch={false}
+                  className="inline-flex h-11 items-center justify-center rounded-md border border-white px-7 text-sm font-semibold text-white transition hover:bg-white/10"
+                >
+                  Talk to Sales
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -32,30 +47,17 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <Link href="/" prefetch={false} className="inline-flex">
                 <Image
-                  src="/images/Stats/AttoLearn-Logo_footer.png"
+                  src="/images/EducationIcon/AttoLearn-Logo_footer.png"
                   alt="Attobility"
                   width={300}
                   height={72}
                   className="h-19 w-42 object-contain"
                 />
               </Link>
-            </div>
-
-            {/* Company */}
-            <div className="lg:col-span-2">
-              <h4 className="text-white font-semibold">Company</h4>
-              <ul className="mt-3 space-y-2 text-sm text-white/90">
-                <li>
-                  <Link href="/team" prefetch={false} className="hover:underline">
-                    Team
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" prefetch={false} className="hover:underline">
-                    About us
-                  </Link>
-                </li>
-              </ul>
+              <p className="mt-3 max-w-48 text-sm leading-5 text-white/90">
+                One connected platform for learning, assessment and school
+                management.
+              </p>
             </div>
 
             {/* Products */}
@@ -64,25 +66,124 @@ export default function Footer() {
               <ul className="mt-3 space-y-2 text-sm text-white/90">
                 <li>
                   <Link
+                    href="/adaptive-learning"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    Adaptive Learning
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/papergenerator"
                     prefetch={false}
                     className="hover:underline"
                   >
-                    Paper Generator
+                    Assessment &amp; Paper Generator
                   </Link>
                 </li>
                 <li>
-                  <Link href="/sms" prefetch={false} className="hover:underline">
-                    School ERP
+                  <Link
+                    href="/sms"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    School Management
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Policy */}
+            {/* Solutions */}
             <div className="lg:col-span-2">
-              <h4 className="text-white font-semibold">Policies</h4>
+              <h4 className="text-white font-semibold">Solutions</h4>
               <ul className="mt-3 space-y-2 text-sm text-white/90">
+                <li>
+                  <Link
+                    href="/families"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    Families
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/home-education"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    Home Education
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tutors"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    Tutors
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/schools"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    Schools
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div className="lg:col-span-2">
+              <h4 className="text-white font-semibold">Company</h4>
+              <ul className="mt-3 space-y-2 text-sm text-white/90">
+                <li>
+                  <Link
+                    href="/about"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/partners"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    Partners
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Support */}
+            <div className="lg:col-span-2">
+              <h4 className="text-white font-semibold">Support</h4>
+              <ul className="mt-3 space-y-2 text-sm text-white/90">
+                <li>
+                  <Link
+                    href="/contact"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    Contact
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/resources"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    Resources
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="/privacypolicy"
@@ -90,64 +191,6 @@ export default function Footer() {
                     className="hover:underline"
                   >
                     Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/termsofservice"
-                    prefetch={false}
-                    className="hover:underline"
-                  >
-                    Terms & Conditions
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/refundpolicy"
-                    prefetch={false}
-                    className="hover:underline"
-                  >
-                    Refund Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/cancellationpolicy"
-                    prefetch={false}
-                    className="hover:underline"
-                  >
-                    Return (Cancellation Policy)
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/shippingdeliverypolicy"
-                    prefetch={false}
-                    className="hover:underline"
-                  >
-                    Shipping & Delivery Policy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Help & Support */}
-            <div className="lg:col-span-2">
-              <h4 className="text-white font-semibold">Help & Support</h4>
-              <ul className="mt-3 space-y-2 text-sm text-white/90">
-                <li>
-                  <Link href="/resources" prefetch={false} className="hover:underline">
-                    Resources
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" prefetch={false} className="hover:underline">
-                    Contact Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/faq" prefetch={false} className="hover:underline">
-                    FAQS
                   </Link>
                 </li>
               </ul>

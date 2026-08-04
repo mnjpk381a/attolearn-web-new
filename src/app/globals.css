@@ -67,7 +67,8 @@ body {
 --------------------------- */
 
 .banner-drift {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 30% 20%,
       rgba(255, 255, 255, 0.12),
       transparent 45%
@@ -503,4 +504,41 @@ body {
 
 .animate-marquee:hover {
   animation-play-state: paused;
+}
+
+/* Tutors page readability scale */
+.tutors-page .text-sm {
+  font-size: 1rem;
+  line-height: 1.65rem;
+}
+
+.tutors-page .text-xs {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+.tutors-page .text-\[11px\] {
+  font-size: 0.825rem;
+  line-height: 1.25rem;
+}
+
+.tutors-page .text-\[10px\] {
+  font-size: 0.75rem;
+  line-height: 1.15rem;
+}
+
+.tutors-page h2.text-3xl {
+  font-size: clamp(2rem, 3vw, 2.35rem);
+}
+
+.tutors-page h2.text-4xl {
+  font-size: clamp(2.25rem, 3.5vw, 2.75rem);
+}
+
+.tutors-page h3.text-sm,
+.tutors-page h3.text-xs,
+.tutors-page h4.text-sm,
+.tutors-page h4.text-xs {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
