@@ -92,8 +92,8 @@ export default function Header() {
                     </button>
 
                     {isOpen && (
-                      <div className="absolute left-0 mt-2 w-64 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-lg">
-                        <div className="py-1">
+                      <div className="absolute left-0 top-full z-10 w-64 pt-2">
+                        <div className="overflow-hidden rounded-xl border border-gray-200 bg-white py-1 shadow-lg">
                           {item.children.map((c) => (
                             <Link
                               key={c.label}
