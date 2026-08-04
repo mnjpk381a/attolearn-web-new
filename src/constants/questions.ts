@@ -1,0 +1,33 @@
+export const QuestionCats = [
+  "Analytical",
+  "Applied",
+  // "Auditory",
+  // "Bloom's Taxonomy",
+  // "Conceptual",
+  // "Creative",
+  // "Critical Thinking",
+  // "Descriptive",
+  // "Evaluative",
+  "Exercise",
+  // "Factual",
+  // "Inferential",
+  // "Kinesthetic",
+  "Learning Outcomes (LOs)",
+  "Previous Board Papers",
+  // "Problem Solving",
+  // "Procedural",
+  // "Recall",
+  // "Reflective",
+  // "Rote Memory",
+  // "Strategic",
+  // "Theoretical",
+  "Topic Suggestive",
+  // "Visual",
+];
+export const Complexity = ["Easy", "Moderate", "High"];
+export const SkillTypes = [
+  "Knowledge Based",
+  "Conceptual",
+  "Analytical",
+  "Application Based",
+];
