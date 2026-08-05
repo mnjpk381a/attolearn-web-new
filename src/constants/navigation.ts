@@ -19,7 +19,7 @@ export const navItems: NavItem[] = [
   { label: "Families", href: "#" },
   { label: "Home Education", href: "#" },
   { label: "Tutors", href: "/tutors" },
-  { label: "Tuition Centres", href: "#" },
+  { label: "Tuition Centres", href: "/tuition-centres" },
   { label: "Schools", href: "/schools" },
 
   {
@@ -54,7 +54,7 @@ export const navItems: NavItem[] = [
       {
         label: "Our Learning Philosophy",
         description: "How practice becomes meaningful evidence",
-        href: "#",
+        href: "/why-attolearn",
       },
       {
         label: "Safety and Trust",

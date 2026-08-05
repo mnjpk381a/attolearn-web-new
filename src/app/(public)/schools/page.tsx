@@ -104,7 +104,7 @@ function MiniRow({
 
 export default function SchoolsPage() {
   return (
-    <div className="bg-white text-slate-800">
+    <div className="schools-page bg-white text-slate-800">
       <section className="relative min-h-150 overflow-hidden border-b border-slate-200 bg-[#fffdfa]">
         <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
           <Image
