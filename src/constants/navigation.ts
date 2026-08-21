@@ -16,7 +16,7 @@ export type NavItem =
 
 export const navItems: NavItem[] = [
   { label: "Home", href: "#" },
-  { label: "Families", href: "#" },
+  { label: "Families", href: "/families" },
   { label: "Home Education", href: "#" },
   { label: "Tutors", href: "/tutors" },
   { label: "Tuition Centres", href: "/tuition-centres" },
@@ -28,7 +28,7 @@ export const navItems: NavItem[] = [
       {
         label: "Adaptive Learning",
         description: "Short, evidence-informed learning sessions",
-        href: "#",
+        href: "/adaptive-learning",
       },
       {
         label: "Paper Generator",
