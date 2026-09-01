@@ -539,9 +539,7 @@ export default function HomeEducationPage() {
               Parent-led goals
             </p>
             <h2 className="mt-7 text-[30px] sm:text-[36px] font-bold leading-[1.18] tracking-[-.025em] text-[#12134b] md:text-[42px]">
-              You are the
-              <br />
-              primary educator
+              You are the primary educator
             </h2>
             <span className="mt-5 block h-0.75 w-12 rounded-full bg-[#146f78]" />
             <p className="mt-7 max-w-110 text-[15px] leading-7 text-[#30354f]">
@@ -1239,45 +1237,6 @@ export default function HomeEducationPage() {
           </div>
         </div>
       </section>
-      <section className="w-full bg-[radial-gradient(circle_at_50%_45%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] pb-8 pt-3">
-        <div className="site-container">
-          <div className="relative overflow-hidden bg-[#075f68] lg:rounded-2xl text-white shadow-[0_10px_28px_rgba(7,68,75,.18)]">
-            <Image
-              src="/images/home-education/cta-home-learning-generated.png"
-              alt="Laptop and books on a home learning desk"
-              fill
-              sizes="(min-width:1024px) 1160px, 100vw"
-              className="object-cover object-left"
-              quality={100}
-            />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,73,80,.62)_0%,rgba(5,87,94,.90)_38%,rgba(5,90,97,.97)_100%)]" />
-            <div className="relative flex min-h-57.5 items-center justify-center px-6 py-9 sm:px-8 lg:px-12">
-              <div className="w-full max-w-xl text-center">
-                <h2 className="text-[28px] font-extrabold leading-[1.15]">
-                  Start home learning with structure behind it
-                </h2>
-                <p className="mt-3 text-[15px] font-medium text-white/90">
-                  Free to try. You stay the primary educator.
-                </p>
-                <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
-                  <Link
-                    href="/choose-module"
-                    className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#f6a400] px-5 text-[14px] font-extrabold text-white shadow-lg"
-                  >
-                    Start Home Learning
-                  </Link>
-                  <Link
-                    href="/pricing"
-                    className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/80 bg-white/5 px-5 text-[14px] font-extrabold text-white"
-                  >
-                    Explore Family Pricing
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <section className="bg-[radial-gradient(circle_at_50%_42%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] pb-16 pt-4">
         <div className="site-container">
           <div className="text-center">
@@ -1363,6 +1322,40 @@ export default function HomeEducationPage() {
           </div>
         </div>
       </section>{" "}
-    </main>
+      <section className="relative overflow-hidden text-white">
+        <Image
+          src="/images/home-education/pre-footer/home-education-start-free-banner.png"
+          alt="Home education planning notebook, books and plant"
+          fill
+          sizes="100vw"
+          quality={100}
+          className="object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-[#075f68]/78" />
+        <div className="site-container relative flex min-h-64 flex-col items-center justify-center py-12 text-center">
+          <h2 className="text-[34px] font-black leading-tight tracking-[-.02em] sm:text-[42px]">
+            Start free, decide later
+          </h2>
+          <p className="mt-3 max-w-2xl text-[16px] font-medium text-white/90 sm:text-[17px]">
+            No card to try it. Move to a paid plan when it&apos;s earning its place.
+          </p>
+          <div className="mt-6 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
+            <a
+              href="https://portal.attolearn.com/auth/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#f6a914] px-9 text-[16px] font-extrabold text-white shadow-[0_8px_20px_rgba(0,0,0,.15)] transition hover:bg-[#df970d]"
+            >
+              Start Free
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex min-h-12 items-center justify-center rounded-lg border-2 border-white/80 bg-[#075f68]/25 px-9 text-[16px] font-extrabold text-white transition hover:bg-white/10"
+            >
+              Talk to Sales
+            </Link>
+          </div>
+        </div>
+      </section>    </main>
   );
 }

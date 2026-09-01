@@ -225,6 +225,41 @@ export default function TuitionCentresPage() {
           {[[FaGlobe,'Prices are local','Each market is priced in its own currency, not converted from US dollars.','bg-[#f3ddfb] text-[#a300d4]'],[FaClock,'Cancel any time','Monthly plans stop at the end of the period you have paid for.','bg-[#e1f5df] text-[#31a04a]'],[FaShieldHalved,'Your records stay yours','Learning evidence belongs to the family, including if a school or tutor relationship ends.','bg-[#e8e9ff] text-[#4c42ea]'],[FaUsers,'One invited tutor is free','A tutor or parent invite is included — the tutor is never billed for that family.','bg-[#ffeadc] text-[#f16917]']].map(([Icon,title,copy,tone])=>{const InfoIcon=Icon as typeof FaGlobe;return <article key={String(title)} className="flex min-h-37.5 gap-4 rounded-xl border border-[#eee5da] bg-white/70 p-5 shadow-[0_6px_18px_rgba(72,62,45,.05)]"><span className={`grid h-14 w-14 shrink-0 place-items-center rounded-full ${String(tone)}`}><InfoIcon className="h-8 w-8"/></span><div><h3 className="text-sm font-extrabold text-[#075e65]">{String(title)}</h3><p className="mt-3 text-xs leading-5 text-slate-600">{String(copy)}</p></div></article>})}
         </div>
         <div className="mt-6 grid gap-5 rounded-xl border-2 border-dashed border-[#f0a527] bg-[#fffaf0] px-6 py-5 sm:grid-cols-[76px_1fr] sm:items-center"><span className="relative grid h-16 w-16 place-items-center rounded-xl bg-[#fff3d7] text-[#e39a12]"><ReceiptText className="h-10 w-10"/><b className="absolute -bottom-1 -right-1 grid h-7 w-7 place-items-center rounded-full bg-[#ffe8b8] text-sm">%</b></span><div><h3 className="text-lg font-extrabold text-[#075e65]">On tax</h3><p className="mt-1 text-sm leading-6 text-slate-600">Whether the figures shown include GST or VAT determines the final amount you pay, and consumer price display rules differ by market.</p><p className="mt-2 text-[10px] font-extrabold uppercase text-[#ee8100]">Tax-inclusive vs tax-exclusive display to be confirmed per market before these prices go live</p></div></div>
-      </section>    </main>
+      </section>
+
+      <section className="relative overflow-hidden text-white">
+        <Image
+          src="/images/tuition-centres/pre-footer/tuition-centres-start-free-banner.png"
+          alt="Tuition centre workspace with a laptop, learning dashboard, books and study plants"
+          fill
+          sizes="100vw"
+          quality={100}
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-[#075f68]/78" />
+        <div className="site-container relative flex min-h-64 flex-col items-center justify-center px-5 py-12 text-center sm:min-h-72 sm:px-8">
+          <h2 className="text-[30px] font-extrabold leading-tight tracking-[-.025em] sm:text-[38px]">
+            Start free, decide later
+          </h2>
+          <p className="mt-3 text-base leading-6 text-white/95 sm:text-lg">
+            No card to try it. Move to a paid plan when it&apos;s earning its place.
+          </p>
+          <div className="mt-7 flex w-full max-w-sm flex-col justify-center gap-3 sm:w-auto sm:max-w-none sm:flex-row">
+            <a
+              href="https://portal.attolearn.com/signup"
+              className="inline-flex h-12 items-center justify-center rounded-md bg-[#f5aa12] px-9 text-sm font-bold text-white shadow-sm transition hover:bg-[#e99c00]"
+            >
+              Start Free
+            </a>
+            <Link
+              href="/contact"
+              className="inline-flex h-12 items-center justify-center rounded-md border-2 border-white/90 bg-[#075f68]/20 px-9 text-sm font-bold text-white transition hover:bg-white/10"
+            >
+              Talk to Sales
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
