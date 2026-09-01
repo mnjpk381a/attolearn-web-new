@@ -189,7 +189,7 @@ export default function HomeEducationPage() {
             <p className="text-sm font-bold text-[#087f84]">
               For Home Education
             </p>
-            <h1 className="mt-5 max-w-107.5 text-[42px] font-bold leading-[1.08] tracking-[-.035em] text-[#07163f] sm:text-[52px] lg:text-[48px]">
+            <h1 className="mt-5 max-w-107.5 text-[36px] font-bold leading-[1.08] tracking-[-.035em] text-[#07163f] sm:text-[52px] lg:text-[48px]">
               Flexible learning
               <br />
               with structure,
@@ -309,7 +309,7 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_48%_40%,#fffef8_0%,#fffbed_65%,#fffdf7_100%)] py-10">
-        <div className="mx-auto grid max-w-305 items-center gap-7 rounded-2xl border border-[#eadfce] bg-white/35 px-7 py-5 shadow-[0_5px_18px_rgba(99,70,32,.04)] sm:px-9 md:grid-cols-[240px_1fr_auto] lg:gap-10">
+        <div className="site-container grid items-center gap-7 rounded-2xl border border-[#eadfce] bg-white/35 py-5 shadow-[0_5px_18px_rgba(99,70,32,.04)] md:grid-cols-[minmax(0,240px)_minmax(0,1fr)_auto] lg:gap-10">
           <div className="relative mx-auto h-38.75 w-57.5">
             <Image
               src="/images/home-education/pathway-house-generated.png"
@@ -342,7 +342,7 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_42%,#fffef8_0%,#fffbed_58%,#fffdf7_100%)] py-16 lg:py-20">
-        <div className="mx-auto max-w-305 px-5 sm:px-8">
+        <div className="site-container">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-base font-bold uppercase tracking-[.12em] text-[#f28a00] md:text-lg">
               What home educators use
@@ -372,12 +372,12 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_48%_45%,#fffef8_0%,#fffbed_62%,#fffdf7_100%)] py-16 lg:py-20">
-        <div className="mx-auto grid max-w-305 gap-10 px-5 sm:px-8 lg:grid-cols-[.76fr_1.24fr] lg:items-center lg:gap-17">
+        <div className="site-container content-split">
           <div className="lg:pl-1">
             <p className="text-sm font-bold uppercase tracking-[.02em] text-[#f16f00]">
               Curriculum-aligned learning
             </p>
-            <h2 className="mt-7 text-[36px] font-bold leading-[1.18] tracking-[-.025em] text-[#12134b] md:text-[42px]">
+            <h2 className="mt-7 text-[30px] sm:text-[36px] font-bold leading-[1.18] tracking-[-.025em] text-[#12134b] md:text-[42px]">
               Choose exactly
               <br />
               what you’re teaching
@@ -407,12 +407,12 @@ export default function HomeEducationPage() {
               ))}
             </ul>
           </div>
-          <div className="relative aspect-630/500 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(79,55,31,.08)]">
+          <div className="content-split-media content-split-media-right relative aspect-630/500 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(79,55,31,.08)]">
             <Image
               src="/images/home-education/curriculum-generated.png"
               alt="Home learner choosing curriculum, year level, subject and microskill"
               fill
-              sizes="(min-width:1024px) 58vw, 100vw"
+              sizes="(min-width:1024px) 560px, 100vw"
               quality={100}
               className="object-cover object-top"
             />
@@ -476,13 +476,13 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_52%_45%,#fffef8_0%,#fffbed_62%,#fffdf7_100%)] py-16 lg:py-20">
-        <div className="mx-auto grid max-w-305 gap-10 px-5 sm:px-8 lg:grid-cols-[1.22fr_.78fr] lg:items-center lg:gap-16">
-          <div className="relative order-2 aspect-630/500 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(79,55,31,.08)] lg:order-1">
+        <div className="site-container content-split">
+          <div className="content-split-media content-split-media-left relative order-2 aspect-630/500 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(79,55,31,.08)] lg:order-1">
             <Image
               src="/images/home-education/parent-goals-generated.png"
               alt="Parent planning home education goals"
               fill
-              sizes="(min-width:1024px) 58vw, 100vw"
+              sizes="(min-width:1024px) 560px, 100vw"
               quality={100}
               unoptimized
               className="object-cover object-center"
@@ -538,7 +538,7 @@ export default function HomeEducationPage() {
             <p className="text-xs font-bold uppercase tracking-[.04em] text-[#f16f00]">
               Parent-led goals
             </p>
-            <h2 className="mt-7 text-[36px] font-bold leading-[1.18] tracking-[-.025em] text-[#12134b] md:text-[42px]">
+            <h2 className="mt-7 text-[30px] sm:text-[36px] font-bold leading-[1.18] tracking-[-.025em] text-[#12134b] md:text-[42px]">
               You are the
               <br />
               primary educator
@@ -571,7 +571,7 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_48%_42%,#fffef8_0%,#fffbed_64%,#fffdf7_100%)] py-16 lg:py-20">
-        <div className="mx-auto grid max-w-275 gap-10 px-5 sm:px-8 lg:grid-cols-[.68fr_1.32fr] lg:items-center lg:gap-13">
+        <div className="site-container content-split">
           <div>
             <p className="text-sm font-bold uppercase tracking-[.02em] text-[#f07800]">
               Adaptive daily learning
@@ -605,12 +605,12 @@ export default function HomeEducationPage() {
               ))}
             </ul>
           </div>
-          <div className="relative aspect-1520/1034 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(28,55,64,.10)]">
+          <div className="content-split-media content-split-media-right relative aspect-1520/1034 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(28,55,64,.10)]">
             <Image
               src="/images/home-education/adaptive-daily-complete-tablet.png"
               alt="Tablet showing Todays Best Step adaptive fraction lesson"
               fill
-              sizes="(min-width:1024px) 60vw, 100vw"
+              sizes="(min-width:1024px) 560px, 100vw"
               quality={100}
               priority
               className="object-cover"
@@ -619,7 +619,7 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_40%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] py-14 lg:py-16">
-        <div className="mx-auto max-w-290 px-5 sm:px-8">
+        <div className="site-container">
           <div className="rounded-2xl border border-[#eee5d8] bg-white/25 px-5 py-9 shadow-[0_10px_30px_rgba(70,61,42,.035)] sm:px-8 lg:px-10">
             <div className="mx-auto max-w-190 text-center">
               <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100] md:text-base">
@@ -802,13 +802,13 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_40%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] py-14 lg:py-16">
-        <div className="mx-auto max-w-290 px-5 sm:px-8">
+        <div className="site-container">
           <div className="rounded-2xl border border-[#eee5d8] bg-white/25 px-6 py-10 shadow-[0_10px_30px_rgba(70,61,42,.03)] lg:px-10 lg:py-12">
             <div className="text-center">
               <p className="text-base font-extrabold uppercase tracking-[.11em] text-[#ee8100] md:text-lg">
                 How the report behaves
               </p>
-              <h2 className="mt-3 text-[34px] font-extrabold leading-[1.12] tracking-[-.025em] text-[#075f68] md:text-[45px]">
+              <h2 className="mt-3 text-[28px] sm:text-[34px] font-extrabold leading-[1.12] tracking-[-.025em] text-[#075f68] md:text-[45px]">
                 Prepared by AttoLearn, owned by you
               </h2>
               <p className="mt-5 text-[16px] leading-7 text-[#4a465f] md:text-[18px]">
@@ -906,13 +906,13 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_40%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] py-14 lg:py-16">
-        <div className="mx-auto max-w-290 px-5 sm:px-8">
+        <div className="site-container">
           <div className="rounded-2xl border border-[#eee5d8] bg-white/25 px-6 py-9 shadow-[0_10px_30px_rgba(70,61,42,.03)] lg:px-10 lg:py-10">
             <div className="text-center">
               <p className="text-base font-extrabold uppercase tracking-[.11em] text-[#ee8100] md:text-lg">
                 Assessment tools
               </p>
-              <h2 className="mt-2 text-[34px] font-extrabold leading-[1.12] tracking-[-.025em] text-[#075f68] md:text-[43px]">
+              <h2 className="mt-2 text-[28px] sm:text-[34px] font-extrabold leading-[1.12] tracking-[-.025em] text-[#075f68] md:text-[43px]">
                 Check progress with a real assessment
               </h2>
               <p className="mt-4 text-[16px] leading-7 text-[#4a465f] md:text-[18px]">
@@ -1002,7 +1002,7 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_45%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] py-14 lg:py-16">
-        <div className="mx-auto max-w-290 overflow-hidden rounded-2xl border border-[#eee5d8] bg-white/25 px-6 py-8 shadow-[0_10px_30px_rgba(70,61,42,.03)] sm:px-8 lg:px-10">
+        <div className="site-container overflow-hidden rounded-2xl border border-[#eee5d8] bg-white/25 py-8 shadow-[0_10px_30px_rgba(70,61,42,.03)]">
           <div className="grid gap-9 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
@@ -1240,7 +1240,7 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="w-full bg-[radial-gradient(circle_at_50%_45%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] pb-8 pt-3">
-        <div className="w-full">
+        <div className="site-container">
           <div className="relative overflow-hidden bg-[#075f68] lg:rounded-2xl text-white shadow-[0_10px_28px_rgba(7,68,75,.18)]">
             <Image
               src="/images/home-education/cta-home-learning-generated.png"
@@ -1251,9 +1251,8 @@ export default function HomeEducationPage() {
               quality={100}
             />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,73,80,.62)_0%,rgba(5,87,94,.90)_38%,rgba(5,90,97,.97)_100%)]" />
-            <div className="relative grid min-h-57.5 items-center gap-7 px-6 py-7 lg:grid-cols-[1.05fr_.95fr_1.45fr] lg:px-12">
-              <div className="hidden lg:block" />
-              <div className="text-center">
+            <div className="relative flex min-h-57.5 items-center justify-center px-6 py-9 sm:px-8 lg:px-12">
+              <div className="w-full max-w-xl text-center">
                 <h2 className="text-[28px] font-extrabold leading-[1.15]">
                   Start home learning with structure behind it
                 </h2>
@@ -1263,58 +1262,24 @@ export default function HomeEducationPage() {
                 <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
                   <Link
                     href="/choose-module"
-                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#f6a400] px-5 text-[14px] font-extrabold text-white shadow-lg"
+                    className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#f6a400] px-5 text-[14px] font-extrabold text-white shadow-lg"
                   >
-                    <Sparkles className="h-4 w-4" />
                     Start Home Learning
                   </Link>
                   <Link
                     href="/pricing"
-                    className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-white/80 bg-white/5 px-5 text-[14px] font-extrabold text-white"
+                    className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/80 bg-white/5 px-5 text-[14px] font-extrabold text-white"
                   >
-                    <Users className="h-5 w-5" />
                     Explore Family Pricing
                   </Link>
                 </div>
-              </div>
-              <div className="grid grid-cols-3 divide-x divide-white/20">
-                {[
-                  [
-                    ShieldCheck,
-                    "Parent in control",
-                    "You decide who sees what",
-                  ],
-                  [
-                    LockKeyhole,
-                    "Private by default",
-                    "Only approved tutors see specific subjects",
-                  ],
-                  [
-                    BarChart3,
-                    "Evidence stays with you",
-                    "Full history, always in your account",
-                  ],
-                ].map(([Icon, title, copy]) => (
-                  <div key={title as string} className="px-3 text-center">
-                    <Icon
-                      className="mx-auto h-11 w-11 text-[#fff8e8]"
-                      strokeWidth={1.8}
-                    />
-                    <h3 className="mt-3 text-[14px] font-extrabold">
-                      {title as string}
-                    </h3>
-                    <p className="mx-auto mt-2 max-w-31.25 text-[11px] font-medium leading-5 text-white/85">
-                      {copy as string}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_42%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] pb-16 pt-4">
-        <div className="mx-auto max-w-225 px-5 sm:px-8">
+        <div className="site-container">
           <div className="text-center">
             <p className="text-sm font-extrabold uppercase tracking-[.08em] text-[#ee8100]">
               The small print, said plainly

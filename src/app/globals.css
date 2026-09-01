@@ -25,6 +25,50 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Shared page alignment and balanced text/media splits. */
+@layer components {
+  .site-container {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 0.75rem;
+  }
+
+  .content-split {
+    display: grid;
+    align-items: center;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+
+  .content-split-media {
+    width: 100%;
+    max-width: 35rem;
+  }
+
+  @media (min-width: 40rem) {
+    .site-container {
+      padding-inline: 1rem;
+    }
+  }
+
+  @media (min-width: 64rem) {
+    .site-container {
+      padding-inline: 1.5rem;
+    }
+
+    .content-split {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+
+    .content-split-media-right {
+      justify-self: end;
+    }
+
+    .content-split-media-left {
+      justify-self: start;
+    }
+  }
+}
 .why-page .editorial-heading {
   font-family: Arial, Helvetica, sans-serif !important;
   font-weight: 700 !important;

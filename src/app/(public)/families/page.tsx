@@ -369,7 +369,7 @@ export default function FamiliesPage() {
             <p className="text-sm font-bold uppercase tracking-wide text-[#087f84]">
               For families
             </p>
-            <h1 className="mt-8 text-[40px] leading-[1.12] tracking-[-.035em] sm:text-[46px] xl:text-[52px]">
+            <h1 className="mt-8 text-[36px] leading-[1.12] tracking-[-.035em] sm:text-[46px] xl:text-[52px]">
               Understand your
               <br />
               child&apos;s learning.
@@ -394,7 +394,7 @@ export default function FamiliesPage() {
         </div>
       </section>
       <section className="bg-linear-to-b from-[#f4faff] to-white py-20">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+        <div className="site-container">
           <Title eyebrow="What families receive">
             Everything your child needs, in one account
           </Title>
@@ -414,13 +414,13 @@ export default function FamiliesPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-6xl border-x border-slate-200 bg-[#fffef8] px-5 py-16 sm:px-8 lg:px-12">
-        <div className="grid gap-10 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
+      <section className="site-container border-x border-slate-200 bg-[#fffef8] py-16">
+        <div className="content-split">
           <div className="lg:pl-3">
             <p className="text-[11px] font-bold uppercase tracking-wide text-amber-500">
               Parent authority
             </p>
-            <h2 className="mt-3 text-[34px] font-semibold leading-tight text-[#08797d]">
+            <h2 className="mt-3 text-[28px] sm:text-[34px] font-semibold leading-tight text-[#08797d]">
               You decide what happens
             </h2>
             <p className="mt-5 max-w-md text-[15px] leading-7 text-slate-600">
@@ -442,12 +442,12 @@ export default function FamiliesPage() {
               ))}
             </ul>
           </div>
-          <div className="relative h-90 overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
+          <div className="content-split-media content-split-media-right relative h-90 overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
             <Image
               src="/images/families/parent-authority.png"
               alt="A parent reviewing the family learning dashboard"
               fill
-              sizes="55vw"
+              sizes="(min-width:1024px) 560px, 100vw"
               className="object-cover object-center"
             />
             <div className="absolute inset-y-5 right-5 w-[49%] rounded-xl border border-slate-200 bg-white/97 p-3 shadow-[0_12px_30px_rgba(18,59,73,.16)]">
@@ -519,13 +519,13 @@ export default function FamiliesPage() {
           </div>
         </div>
         <div className="my-16 border-t border-slate-200" />
-        <div className="grid gap-10 lg:grid-cols-[1.08fr_.92fr] lg:items-center">
-          <div className="relative min-h-110 overflow-hidden rounded-xl border border-slate-300 shadow-sm">
+        <div className="content-split">
+          <div className="content-split-media content-split-media-left relative min-h-110 overflow-hidden rounded-xl border border-slate-300 shadow-sm">
             <Image
               src="/images/families/child-experience.png"
               alt="A child completing a short learning activity"
               fill
-              sizes="55vw"
+              sizes="(min-width:1024px) 560px, 100vw"
               className="object-cover object-center"
             />
             <div className="absolute left-5 top-5 w-[42%] rounded-xl border border-slate-200 bg-white/96 p-2.5 shadow-[0_12px_30px_rgba(18,59,73,.18)]">
@@ -594,7 +594,7 @@ export default function FamiliesPage() {
         </div>
       </section>
       <section className="py-20">
-        <div className="mx-auto max-w-5xl px-5 sm:px-8">
+        <div className="site-container">
           <Title
             eyebrow="Family plan"
             copy="Full pricing detail lives on the Pricing page - here's the shape of it."
@@ -681,7 +681,7 @@ export default function FamiliesPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-7xl px-5 pb-14 sm:px-8">
+      <section className="site-container pb-14">
         <div className="relative min-h-82.5 overflow-hidden bg-[#c9f4ed]">
           <Image
             src="/images/families/family-cta-banner.png"
@@ -754,7 +754,7 @@ export default function FamiliesPage() {
           aria-hidden
           className="absolute bottom-0 right-0 h-64 w-64 translate-x-1/3 translate-y-1/3 rounded-full bg-amber-50 blur-2xl"
         />
-        <div className="relative mx-auto max-w-6xl px-5 sm:px-8 lg:px-10">
+        <div className="site-container relative">
           <Title eyebrow="The small print, said plainly">
             Things worth knowing before you pay
           </Title>

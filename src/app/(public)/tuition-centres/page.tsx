@@ -90,11 +90,11 @@ export default function TuitionCentresPage() {
           <div className="absolute -bottom-32 left-[18%] h-56 w-[92%] -rotate-2 rounded-[50%] bg-[#9de1df]" />
           <div className="absolute inset-0 opacity-25 bg-[radial-gradient(#07818a_1px,transparent_1px)] bg-size-[13px_13px]" />
         </div>
-        <div className="relative mx-auto grid min-h-138.75 max-w-315 gap-10 px-5 pb-24 pt-12 sm:px-8 lg:grid-cols-[470px_640px] lg:items-start lg:justify-between lg:px-6">
+        <div className="site-container relative grid min-h-138.75 gap-10 pb-24 pt-12 lg:grid-cols-[minmax(0,470px)_minmax(0,640px)] lg:items-start lg:justify-between">
           <div className="max-w-117.5 pt-7">
             <p className="text-xs font-extrabold uppercase tracking-[.06em] text-[#07818a]">For Tuition Centres</p>
             <span className="mt-4 block h-0.5 w-10 bg-[#f4a517]" />
-            <h1 className="mt-7 text-[40px] font-extrabold leading-[1.1] tracking-[-.035em] text-[#07163f] sm:text-[46px]">
+            <h1 className="mt-7 text-[36px] font-extrabold leading-[1.1] tracking-[-.035em] text-[#07163f] sm:text-[46px]">
               <span className="block">Bring adaptive learning</span>
               <span className="block">and assessment</span>
               <span className="block text-[#07818a]">into your tuition centre</span>
@@ -123,7 +123,7 @@ export default function TuitionCentresPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-280 px-5 py-10 sm:px-8">
+      <section className="site-container py-10">
         <div className="grid gap-6 rounded-2xl border border-[#eee5da] bg-white/80 px-7 py-6 shadow-[0_8px_22px_rgba(72,62,45,.06)] md:grid-cols-[76px_1fr_auto] md:items-center">
           <span className="grid h-19 w-19 place-items-center rounded-full bg-[#16838a] text-white"><Building2 className="h-10 w-10" strokeWidth={1.9} /></span>
           <div><h2 className="text-lg font-extrabold text-[#075e65]">A centre is a workspace, not a school system</h2><p className="mt-2 max-w-152.5 text-sm leading-6 text-slate-600">A tuition centre runs on the AttoLearn Tutor Workspace, scaled for several tutors and a larger roster. It is deliberately not a school management system — centres that need attendance, fees and academic records should look at School Management instead.</p></div>
@@ -131,9 +131,9 @@ export default function TuitionCentresPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-280 px-5 pb-14 pt-12 sm:px-8">
+      <section className="site-container pb-14 pt-12">
         <p className="text-center text-xs font-extrabold uppercase tracking-[.06em] text-[#ee8100]">Centre structure</p>
-        <h2 className="mt-3 text-center text-[36px] font-extrabold tracking-[-.025em] text-[#10243d]">Administrators, tutors, learners and groups</h2>
+        <h2 className="mt-3 text-center text-[30px] sm:text-[36px] font-extrabold tracking-[-.025em] text-[#10243d]">Administrators, tutors, learners and groups</h2>
         <p className="mt-3 text-center text-base text-slate-600">One workspace with real roles, so a centre isn&apos;t run out of a shared login.</p>
         <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {workspaceCards.map(([Icon, title, copy], index) => {
@@ -146,10 +146,10 @@ export default function TuitionCentresPage() {
           <div><h3 className="text-sm font-bold text-[#075e65]">What the workspace deliberately does not do</h3><p className="mt-1 text-xs leading-5 text-slate-600">Workspace invoicing is tracking only — it records what is owed and paid, and is not a payment or accounting system. Payroll is scoped to the workspace&apos;s own tutors. Assessment reuses the Paper Generator rather than a separate centre exam engine.</p><p className="mt-2 text-[10px] font-bold uppercase text-[#d88900]">Scope boundaries per the Phase 2 backlog — confirm against the current build before quoting capability</p></div>
         </div>
       </section>
-      <section className="mx-auto grid max-w-280 gap-14 px-5 py-20 sm:px-8 lg:grid-cols-[.95fr_1.05fr] lg:items-center">
+      <section className="site-container grid gap-14 py-20 lg:grid-cols-[.95fr_1.05fr] lg:items-center">
         <div>
           <p className="text-xs font-extrabold uppercase tracking-[.06em] text-[#ee8100]">Learning support</p>
-          <h2 className="mt-3 max-w-117.5 text-[38px] font-extrabold leading-[1.08] tracking-[-.03em] text-[#10243d]">Consistent practice between sessions</h2>
+          <h2 className="mt-3 max-w-117.5 text-[30px] sm:text-[38px] font-extrabold leading-[1.08] tracking-[-.03em] text-[#10243d]">Consistent practice between sessions</h2>
           <p className="mt-5 max-w-125 text-base leading-7 text-slate-700">Most of a learner&apos;s week happens when your tutors aren&apos;t there. Curriculum-aligned practice keeps that time productive, and turns it into evidence your tutors can act on.</p>
           <TickList items={["Curriculum-aligned practice, Foundation to Year 10", "Individual goals per learner, not one plan for a group", "Targeted revision for skills at risk of fading", "Tutor visibility of the learners they are responsible for", "Learner evidence that carries across tutors, not held in one person's head"]} />
         </div>
@@ -162,9 +162,9 @@ export default function TuitionCentresPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-280 px-5 pb-16 pt-8 sm:px-8">
+      <section className="site-container pb-16 pt-8">
         <p className="text-center text-xs font-extrabold uppercase tracking-[.06em] text-[#ee8100]">Assessment</p>
-        <h2 className="mt-3 text-center text-[34px] font-extrabold tracking-[-.025em] text-[#10243d]">One assessment toolset across the centre</h2>
+        <h2 className="mt-3 text-center text-[28px] sm:text-[34px] font-extrabold tracking-[-.025em] text-[#10243d]">One assessment toolset across the centre</h2>
         <p className="mt-2 text-center text-base text-slate-600">Every tutor building papers the same way, from the same curriculum-based bank.</p>
         <div className="mt-9 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {assessmentCards.map(([Icon,title,copy], index) => {
@@ -178,35 +178,35 @@ export default function TuitionCentresPage() {
           <Link href="/papergenerator" className="inline-flex h-14 items-center justify-center gap-3 rounded-lg bg-[#08747c] px-7 text-sm font-bold text-white">Learn More <ArrowRight className="h-4 w-4" /></Link>
         </div>
       </section>
-      <section className="mx-auto max-w-305 px-5 py-16 sm:px-8">
-        <div className="grid gap-14 lg:grid-cols-2 lg:items-center">
+      <section className="site-container py-16">
+        <div className="content-split">
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[.06em] text-[#ee8100]">Tutor coordination</p>
-            <h2 className="mt-3 text-[34px] font-extrabold leading-[1.12] tracking-[-.025em] text-[#075e65]">The centre keeps the evidence, not the individual tutor</h2>
+            <h2 className="mt-3 text-[28px] sm:text-[34px] font-extrabold leading-[1.12] tracking-[-.025em] text-[#075e65]">The centre keeps the evidence, not the individual tutor</h2>
             <p className="mt-5 text-base leading-7 text-slate-700">When a tutor leaves, or a learner moves between tutors, the learning history doesn&apos;t leave with them. That continuity is the main operational reason centres outgrow individual tutor accounts.</p>
             <TickList items={["Allocate and reallocate learners between tutors","Role-based access — administrators and tutors see different things","Consistent expectations across every tutor on staff","Auditable record of assignments, changes and access"]}/>
           </div>
-          <div className="relative h-97.5 overflow-hidden rounded-xl border border-[#e8ddd0] shadow-sm">
-            <Image src="/images/tuition-centres/tutor-coordination-v3.png" alt="Tutor working at a computer" fill sizes="(min-width:1024px) 610px,100vw" className="object-cover object-center"/>
+          <div className="content-split-media content-split-media-right relative h-97.5 overflow-hidden rounded-xl border border-[#e8ddd0] shadow-sm">
+            <Image src="/images/tuition-centres/tutor-coordination-v3.png" alt="Tutor working at a computer" fill sizes="(min-width:1024px) 560px, 100vw" className="object-cover object-center"/>
             <div className="absolute left-[29%] top-1/2 w-[42%] -translate-y-1/2 rounded-xl border border-[#e8ddd0] bg-white/95 p-4 shadow-lg backdrop-blur-sm"><h3 className="text-sm font-extrabold text-[#075e65]">Staff and access</h3>{[[FaUserGear,"Centre administrator","Full roster, staff and workspace settings"],[FaAddressCard,"Tutor","Only the learners assigned to them"],[FaUserPlus,"Reallocation","Learner moved to a new tutor — access follows"],[FaShieldHalved,"Staff departure","Access ends; the learner's evidence stays"]].map(([Icon,title,copy],i)=>{const RowIcon=Icon as typeof FaUserGear;const tones=['text-[#2f9b77] bg-[#ebf7e8]','text-[#8737d1] bg-[#f4eafa]','text-[#ef9b16] bg-[#fff3df]','text-[#477cc6] bg-[#edf2ff]'];return <div key={String(title)} className="mt-3 flex gap-3"><span className={`grid h-8 w-8 shrink-0 place-items-center rounded-md ${tones[i]}`}><RowIcon className="h-4 w-4"/></span><div><h4 className="text-[11px] font-bold text-[#10243d]">{String(title)}</h4><p className="text-[9px] leading-3 text-slate-600">{String(copy)}</p></div></div>})}</div>
           </div>
         </div>
         <div className="my-16 h-px bg-[#eadfd2]" />
-        <div className="grid gap-12 lg:grid-cols-[.85fr_1.15fr] lg:items-center">
-          <div className="relative h-97.5 overflow-hidden rounded-xl border border-[#e8ddd0] shadow-sm">
-            <Image src="/images/tuition-centres/family-permissions-v3.png" alt="Parent reviewing learning on a tablet" fill sizes="(min-width:1024px) 610px,100vw" className="object-cover object-center"/>
+        <div className="content-split">
+          <div className="content-split-media content-split-media-left relative h-97.5 overflow-hidden rounded-xl border border-[#e8ddd0] shadow-sm">
+            <Image src="/images/tuition-centres/family-permissions-v3.png" alt="Parent reviewing learning on a tablet" fill sizes="(min-width:1024px) 560px, 100vw" className="object-cover object-center"/>
             <div className="absolute left-6 top-1/2 w-[46%] -translate-y-1/2 rounded-xl border border-[#e8ddd0] bg-white/95 p-4 shadow-lg backdrop-blur-sm"><h3 className="text-sm font-extrabold text-[#075e65]">How a learner joins your centre</h3>{[[FaCircleCheck,"1. Parent approves","Access request reviewed by the parent"],[FaShieldHalved,"2. Tutor verified","Verification completed before anything is visible"],[FaUserPlus,"3. Allocated","Learner assigned to a tutor on your staff"],[ShieldCheck,"4. Reversible","Parent can narrow or end access at any point"]].map(([Icon,title,copy],i)=>{const RowIcon=Icon as typeof FaCircleCheck;const tones=['text-[#38a85a] bg-[#eaf8e9]','text-[#7c39c4] bg-[#f3eafa]','text-[#ec9a17] bg-[#fff4df]','text-[#4a83cf] bg-[#edf3ff]'];return <div key={String(title)} className="mt-3 flex gap-3"><span className={`grid h-8 w-8 shrink-0 place-items-center rounded-md ${tones[i]}`}><RowIcon className="h-4 w-4"/></span><div><h4 className="text-[11px] font-bold text-[#10243d]">{String(title)}</h4><p className="text-[9px] leading-3 text-slate-600">{String(copy)}</p></div></div>})}</div>
           </div>
           <div>
             <p className="text-xs font-extrabold uppercase tracking-[.06em] text-[#ee8100]">Family permissions</p>
-            <h2 className="mt-3 text-[34px] font-extrabold leading-[1.12] tracking-[-.025em] text-[#075e65]">The parent still controls the child&apos;s learning</h2>
+            <h2 className="mt-3 text-[28px] sm:text-[34px] font-extrabold leading-[1.12] tracking-[-.025em] text-[#075e65]">The parent still controls the child&apos;s learning</h2>
             <p className="mt-5 text-base leading-7 text-slate-700">This is the part centres most often need explained. A centre account does not give the centre ownership of a child&apos;s learning record. The parent holds the account and the consent, and grants the centre&apos;s tutor access to the learner.</p>
             <TickList items={["Parents approve tutor access — the centre cannot add a child unilaterally","Access is scoped to what the parent agreed to","Parents can withdraw access at any time","Tutor verification is required before child learning information is visible","Every access decision is recorded"]}/>
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-280 px-5 pb-5 pt-14 sm:px-8">
-        <div className="text-center"><p className="text-xs font-extrabold uppercase tracking-[.06em] text-[#ee8100]">Commercial model</p><h2 className="mt-3 text-[36px] font-extrabold tracking-[-.03em] text-[#075e65]">The same plans as individual tutors</h2><p className="mx-auto mt-2 max-w-2xl text-base leading-6 text-slate-600">Centres are not priced differently. You use the published Starter, Growth and Pro plans, sized by how many learners are actually active.</p></div>
+      <section className="site-container pb-5 pt-14">
+        <div className="text-center"><p className="text-xs font-extrabold uppercase tracking-[.06em] text-[#ee8100]">Commercial model</p><h2 className="mt-3 text-[30px] sm:text-[36px] font-extrabold tracking-[-.03em] text-[#075e65]">The same plans as individual tutors</h2><p className="mx-auto mt-2 max-w-2xl text-base leading-6 text-slate-600">Centres are not priced differently. You use the published Starter, Growth and Pro plans, sized by how many learners are actually active.</p></div>
         <div className="mx-auto mt-8 grid max-w-225 gap-4 md:grid-cols-3">
           {[[FaUsers,"Priced by active learners","Not by how many names sit on your roster. Dormant learners don't count."],[FaChartColumn,"Add students between tiers","Extra-student add-ons mean you never jump a tier for one learner."],[FaFileLines,"Published rates","The same rate card a solo tutor sees, in your local currency."]].map(([Icon,title,copy])=>{const PriceIcon=Icon as typeof FaUsers;return <article key={String(title)} className="flex min-h-30 gap-4 rounded-xl border border-[#eee5da] bg-white/70 p-5"><span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-[#f1f2e9] text-[#238685]"><PriceIcon className="h-7 w-7"/></span><div><h3 className="text-sm font-extrabold text-[#075e65]">{String(title)}</h3><p className="mt-2 text-xs leading-5 text-slate-600">{String(copy)}</p></div></article>})}
         </div>
@@ -214,13 +214,13 @@ export default function TuitionCentresPage() {
         <div className="mx-auto mt-4 grid max-w-225 gap-5 rounded-xl border-2 border-dashed border-[#f0a527] bg-[#fffaf0] p-5 md:grid-cols-[64px_1fr] md:items-center"><span className="grid h-14 w-14 place-items-center rounded-full bg-[#fff2ce] text-[#e8a000]"><FaShieldHalved className="h-9 w-9"/></span><div><h3 className="text-sm font-extrabold text-[#075e65]">Two things to confirm before you budget</h3><p className="mt-1 text-xs leading-5 text-slate-600">Whether a plan covers your whole workspace or each tutor account, and what applies once you pass 50 active learners. Both change the cost materially for a centre, and neither is settled yet.</p><p className="mt-2 text-[10px] font-extrabold uppercase text-[#dc8900]">Per-workspace vs per-tutor billing, and the above-50 arrangement, still to be confirmed</p></div></div>
       </section>
 
-      <section className="relative mx-auto my-8 w-[calc(100%-2rem)] max-w-none overflow-hidden rounded-2xl text-white">
+      <section className="site-container relative my-8 overflow-hidden rounded-2xl text-white">
         <Image src="/images/tuition-centres/roster-cta-v1.png" alt="Laptop workspace" fill sizes="100vw" className="object-cover object-center"/>
         <div className="absolute inset-0 bg-[#075f68]/85" />
-        <div className="relative px-5 py-14 text-center sm:px-8"><h2 className="text-[34px] font-extrabold">See it with your own roster</h2><p className="mt-2 text-base text-white/90">A demo built around how your centre actually runs.</p><div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row"><Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-md bg-[#f4aa17] px-7 text-sm font-bold text-white">Book a Tuition Centre Demo</Link><Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-md border border-white/90 px-7 text-sm font-bold text-white">Contact Sales</Link></div></div>
+        <div className="relative px-5 py-14 text-center sm:px-8"><h2 className="text-[28px] sm:text-[34px] font-extrabold">See it with your own roster</h2><p className="mt-2 text-base text-white/90">A demo built around how your centre actually runs.</p><div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row"><Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-md bg-[#f4aa17] px-7 text-sm font-bold text-white">Book a Tuition Centre Demo</Link><Link href="/contact" className="inline-flex h-12 items-center justify-center rounded-md border border-white/90 px-7 text-sm font-bold text-white">Contact Sales</Link></div></div>
       </section>
-      <section className="mx-auto max-w-280 px-5 py-16 sm:px-8">
-        <div className="text-center"><p className="text-xs font-extrabold uppercase tracking-[.08em] text-[#ee8100]">The small print, said plainly</p><h2 className="mt-3 text-[36px] font-extrabold tracking-[-.03em] text-[#075e65]">Things worth knowing before you pay</h2></div>
+      <section className="site-container py-16">
+        <div className="text-center"><p className="text-xs font-extrabold uppercase tracking-[.08em] text-[#ee8100]">The small print, said plainly</p><h2 className="mt-3 text-[30px] sm:text-[36px] font-extrabold tracking-[-.03em] text-[#075e65]">Things worth knowing before you pay</h2></div>
         <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[[FaGlobe,'Prices are local','Each market is priced in its own currency, not converted from US dollars.','bg-[#f3ddfb] text-[#a300d4]'],[FaClock,'Cancel any time','Monthly plans stop at the end of the period you have paid for.','bg-[#e1f5df] text-[#31a04a]'],[FaShieldHalved,'Your records stay yours','Learning evidence belongs to the family, including if a school or tutor relationship ends.','bg-[#e8e9ff] text-[#4c42ea]'],[FaUsers,'One invited tutor is free','A tutor or parent invite is included — the tutor is never billed for that family.','bg-[#ffeadc] text-[#f16917]']].map(([Icon,title,copy,tone])=>{const InfoIcon=Icon as typeof FaGlobe;return <article key={String(title)} className="flex min-h-37.5 gap-4 rounded-xl border border-[#eee5da] bg-white/70 p-5 shadow-[0_6px_18px_rgba(72,62,45,.05)]"><span className={`grid h-14 w-14 shrink-0 place-items-center rounded-full ${String(tone)}`}><InfoIcon className="h-8 w-8"/></span><div><h3 className="text-sm font-extrabold text-[#075e65]">{String(title)}</h3><p className="mt-3 text-xs leading-5 text-slate-600">{String(copy)}</p></div></article>})}
         </div>
