@@ -5,18 +5,14 @@ import {
   ChevronRight,
   BarChart3,
   BookOpen,
-  CalendarCheck,
   Check,
   ClipboardCheck,
   FileText,
   Globe2,
-  Earth,
   GraduationCap,
   LineChart,
-  MapPin,
   Flag,
   CalendarDays,
-  CalendarClock,
   Star,
   ShieldCheck,
   ShieldX,
@@ -34,42 +30,42 @@ import {
 
 const benefits = [
   [
-    BookOpen,
+    "/images/home-education/generated-icons/curriculum-aligned-learning.png",
     "Curriculum-aligned learning",
     "Choose the curriculum, year level, subjects, topics and individual learning goals.",
   ],
   [
-    Target,
+    "/images/home-education/generated-icons/parent-led-goals.png",
     "Parent-led goals",
     "You set the priorities and milestones, or use recommendations.",
   ],
   [
-    Sparkles,
+    "/images/home-education/generated-icons/adaptive-daily-learning.png",
     "Adaptive daily learning",
     "Today’s Best Step turns your goal into manageable daily practice.",
   ],
   [
-    BarChart3,
+    "/images/home-education/generated-icons/coverage-and-progress.png",
     "Coverage and progress",
     "Know what has been practised, what the evidence shows and what needs attention.",
   ],
   [
-    ClipboardCheck,
+    "/images/home-education/generated-icons/assessment-tools.png",
     "Assessment tools",
     "Build papers and term assessments, print or set them online.",
   ],
   [
-    Users,
+    "/images/home-education/generated-icons/tutor-collaboration.png",
     "Tutor collaboration",
     "Bring in an approved tutor for a subject, without giving up control.",
   ],
   [
-    Users,
+    "/images/home-education/generated-icons/multiple-children.png",
     "Multiple children",
     "Switch between children, each with their own learning and evidence.",
   ],
   [
-    UserRound,
+    "/images/home-education/generated-icons/one-parent-view.png",
     "One parent view",
     "Plain-English progress across every child, in one place.",
   ],
@@ -77,22 +73,22 @@ const benefits = [
 
 const smallPrint = [
   [
-    Earth,
+    "/images/home-education/generated-icons/small-print-prices-local-v2.png",
     "Prices are local",
     "Each market is priced in its own currency, not converted from US dollars.",
   ],
   [
-    CalendarCheck,
+    "/images/home-education/generated-icons/small-print-cancel-any-time-v2.png",
     "Cancel any time",
     "Monthly plans stop at the end of the period you’ve paid for.",
   ],
   [
-    Shield,
+    "/images/home-education/generated-icons/small-print-records-stay-yours-v2.png",
     "Your records stay yours",
     "Learning evidence belongs to the family, including if a school or tutor relationship ends.",
   ],
   [
-    Users,
+    "/images/home-education/generated-icons/small-print-invited-tutor-free-v2.png",
     "One invited tutor is free",
     "A tutor a parent invites is included — the tutor is never billed for that family.",
   ],
@@ -118,26 +114,16 @@ function Button({
 }
 
 function FeatureCard({
-  Icon,
+  iconSrc,
   title,
   copy,
   index,
 }: {
-  Icon: typeof BookOpen;
+  iconSrc: string;
   title: string;
   copy: string;
   index: number;
 }) {
-  const iconColors = [
-    "text-[#168f8b] bg-[#e5f5ef] border-[#9edbd1]",
-    "text-[#ff7800] bg-[#fff0dc] border-[#ffd19a]",
-    "text-[#3b9419] bg-[#eaf6d5] border-[#cce6a6]",
-    "text-[#456bd1] bg-[#edf2ff] border-[#b8c9f3]",
-    "text-[#9a12bd] bg-[#f8e9fb] border-[#e5b9ed]",
-    "text-[#188e8b] bg-[#e6f5ef] border-[#a9dbd2]",
-    "text-[#ff9c00] bg-[#fff2d7] border-[#ffd390]",
-    "text-[#f01867] bg-[#ffedf3] border-[#ffc0d3]",
-  ];
   const titleColors = [
     "text-[#087f84]",
     "text-[#f36f00]",
@@ -150,11 +136,13 @@ function FeatureCard({
   ];
   return (
     <article className="min-h-44 rounded-2xl border border-[#f4eadb] bg-white/80 p-5 shadow-[0_8px_24px_rgba(117,82,34,.06)]">
-      <span
-        className={`grid h-14 w-14 place-items-center rounded-full border ${iconColors[index]}`}
-      >
-        <Icon className="h-8 w-8" strokeWidth={2.2} />
-      </span>
+      <Image
+        src={iconSrc}
+        alt=""
+        width={72}
+        height={72}
+        className="h-16 w-16 object-contain mix-blend-multiply"
+      />
       <h3 className={`mt-4 text-[15px] font-bold ${titleColors[index]}`}>
         {title}
       </h3>
@@ -359,10 +347,10 @@ export default function HomeEducationPage() {
             </div>
           </div>
           <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {benefits.map(([Icon, title, copy], i) => (
+            {benefits.map(([iconSrc, title, copy], i) => (
               <FeatureCard
                 key={title}
-                Icon={Icon}
+                iconSrc={iconSrc}
                 title={title}
                 copy={copy}
                 index={i}
@@ -636,34 +624,34 @@ export default function HomeEducationPage() {
             <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {[
                 [
-                  BookOpen,
+                  "/images/home-education/generated-icons/coverage-topics-practised-v2.png",
                   "Topics practised",
                   "What has been covered, by subject and by child.",
                   "text-[#2da98e] bg-[#e9f8f2]",
                   "bg-[#2da98e]",
                 ],
                 [
-                  ClipboardCheck,
+                  "/images/home-education/generated-icons/coverage-evidence-collected-v2.png",
                   "Evidence collected",
                   "What the practice actually showed about understanding.",
                   "text-[#4673d5] bg-[#edf2ff]",
                   "bg-[#4673d5]",
                 ],
                 [
-                  Flag,
+                  "/images/home-education/generated-icons/coverage-areas-needing-support-v2.png",
                   "Areas needing support",
                   "Where the evidence is thin or shaky, in plain English.",
                   "text-[#ef8b00] bg-[#fff3dc]",
                   "bg-[#ef8b00]",
                 ],
                 [
-                  CalendarClock,
+                  "/images/home-education/generated-icons/coverage-revision-needs-v2.png",
                   "Revision needs",
                   "Skills due to come back for a check, and when.",
                   "text-[#8f20bc] bg-[#f7eafb]",
                   "bg-[#8f20bc]",
                 ],
-              ].map(([Icon, title, copy, color, line]) => (
+              ].map(([iconSrc, title, copy, color, line]) => (
                 <article
                   key={title as string}
                   className="min-h-48 rounded-xl border border-[#eee5da] bg-white/55 px-5 py-5 shadow-[0_5px_18px_rgba(67,58,43,.035)]"
@@ -671,14 +659,12 @@ export default function HomeEducationPage() {
                   <span
                     className={`mx-auto grid h-15.5 w-15.5 place-items-center rounded-full ${color}`}
                   >
-                    <Icon
-                      className="h-10 w-10"
-                      strokeWidth={2.15}
-                      fill={
-                        (title as string) === "Areas needing support"
-                          ? "currentColor"
-                          : "none"
-                      }
+                    <Image
+                      src={iconSrc as string}
+                      alt=""
+                      width={72}
+                      height={72}
+                      className="h-15.5 w-15.5 object-contain"
                     />
                   </span>
                   <h3 className="mt-4 text-[17px] font-extrabold leading-tight text-[#075f68]">
@@ -817,13 +803,13 @@ export default function HomeEducationPage() {
             <div className="mt-9 grid gap-5 md:grid-cols-3">
               {[
                 [
-                  FileText,
+                  "/images/home-education/generated-icons/report-you-own-document-v2.png",
                   "You own the document",
                   "AttoLearn prepares the draft. You edit, approve and submit it — the wording is never locked.",
                   "text-[#268fa0] bg-[#e8f5ee]",
                 ],
                 [
-                  ClipboardCheck,
+                  "/images/home-education/generated-icons/report-nothing-invented-v2.png",
                   "Nothing is invented",
                   "Where there is no evidence, the report shows a gap or a prompt. It never writes progress that didn’t happen.",
                   "text-[#456ed0] bg-[#edf0fa]",
@@ -834,7 +820,7 @@ export default function HomeEducationPage() {
                   "Templates are configured by country and region. Where yours isn’t covered yet, you get a general template rather than invented requirements.",
                   "text-[#1d9e67] bg-[#fff1d7]",
                 ],
-              ].map(([Icon, title, copy, color], index) => (
+              ].map(([iconAsset, title, copy, color], index) => (
                 <article
                   key={title as string}
                   className="min-h-87.5 rounded-2xl border border-[#eee5da] bg-white/50 px-6 py-6 shadow-[0_7px_22px_rgba(67,58,43,.035)]"
@@ -842,7 +828,15 @@ export default function HomeEducationPage() {
                   <span
                     className={`relative mx-auto grid h-33 w-33 place-items-center rounded-full ${color}`}
                   >
-                    {index === 2 ? (
+                    {index < 2 ? (
+                      <Image
+                        src={iconAsset as string}
+                        alt=""
+                        width={122}
+                        height={122}
+                        className="h-30.5 w-30.5 object-contain drop-shadow-[0_6px_5px_rgba(30,45,55,.16)]"
+                      />
+                    ) : (
                       <Image
                         src="/images/home-education/different-places-globe-icon.png"
                         alt="Globe with location marker"
@@ -850,16 +844,6 @@ export default function HomeEducationPage() {
                         height={122}
                         className="h-30.5 w-30.5 object-contain drop-shadow-[0_6px_5px_rgba(30,45,55,.16)]"
                       />
-                    ) : (
-                      <>
-                        <Icon
-                          className="h-19.5 w-19.5 drop-shadow-[0_5px_4px_rgba(30,45,55,.18)]"
-                          strokeWidth={1.75}
-                        />
-                        <span className="absolute bottom-4 right-4 grid h-8 w-8 place-items-center rounded-full bg-[#25a943] text-white shadow-md">
-                          <Check className="h-5 w-5" strokeWidth={3} />
-                        </span>
-                      </>
                     )}
                   </span>
                   <h3 className="mt-4 text-center text-[20px] font-extrabold leading-tight text-[#075f68]">
@@ -1248,47 +1232,18 @@ export default function HomeEducationPage() {
             </h2>
           </div>
           <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-            {smallPrint.map(([, title, copy], index) => (
+            {smallPrint.map(([iconSrc, title, copy]) => (
               <article
                 key={title}
                 className="min-h-43.75 rounded-xl border border-[#eee5da] bg-white/55 px-4 py-4 shadow-[0_6px_18px_rgba(67,58,43,.035)]"
               >
-                <span
-                  className={`relative grid h-12 w-12 place-items-center rounded-full ${index === 0 ? "bg-[#e8f4ef] text-[#188789]" : index === 1 ? "bg-[#eef7df] text-[#4b9d28]" : index === 2 ? "bg-[#edf1fa] text-[#365aa5]" : "bg-[#f6eaf8] text-[#8d20bd]"}`}
-                >
-                  {index === 0 ? (
-                    <>
-                      <Earth
-                        className="h-7.5 w-7.5 -translate-x-0.5 text-[#177f82]"
-                        strokeWidth={1.8}
-                      />
-                      <span className="absolute bottom-0 right-0 z-10 grid h-4.5 w-4.5 place-items-center rounded-full bg-[#fff5df]">
-                        <MapPin
-                          className="h-3.75 w-3.75 fill-[#fff5df] text-[#efa000]"
-                          strokeWidth={2.5}
-                        />
-                      </span>
-                    </>
-                  ) : index === 1 ? (
-                    <>
-                      <CalendarCheck className="h-7 w-7" strokeWidth={1.9} />
-                      <Check
-                        className="absolute bottom-0 right-0 h-4 w-4 rounded-full bg-[#4b9d28] p-0.5 text-white"
-                        strokeWidth={3}
-                      />
-                    </>
-                  ) : index === 2 ? (
-                    <>
-                      <Shield className="h-7 w-7" strokeWidth={1.9} />
-                      <LockKeyhole
-                        className="absolute h-3.5 w-3.5"
-                        strokeWidth={2.4}
-                      />
-                    </>
-                  ) : (
-                    <Users className="h-7 w-7" strokeWidth={1.9} />
-                  )}
-                </span>
+                <Image
+                  src={iconSrc}
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="h-14 w-14 object-contain"
+                />
                 <h3 className="mt-3 text-[15px] font-extrabold text-[#075f68]">
                   {title}
                 </h3>
