@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <>
       <Header />
-      <main className="pt-19">{children}</main>
+      <main className="public-site pt-19">{children}</main>
       <Footer />
     </>
   );

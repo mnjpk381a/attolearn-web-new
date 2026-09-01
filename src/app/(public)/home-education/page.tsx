@@ -189,7 +189,7 @@ export default function HomeEducationPage() {
             <p className="text-sm font-bold text-[#087f84]">
               For Home Education
             </p>
-            <h1 className="mt-5 max-w-107.5 text-[36px] font-bold leading-[1.08] tracking-[-.035em] text-[#07163f] sm:text-[52px] lg:text-[48px]">
+            <h1 className="mt-5 max-w-107.5 text-[36px] font-bold leading-[1.08] tracking-[-.035em] text-[#075f68] sm:text-[52px] lg:text-[48px]">
               Flexible learning
               <br />
               with structure,
@@ -347,7 +347,7 @@ export default function HomeEducationPage() {
             <p className="text-base font-bold uppercase tracking-[.12em] text-[#f28a00] md:text-lg">
               What home educators use
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-[1.12] text-[#0b123d] md:text-[38px]">
+            <h2 className="mt-3 text-3xl font-bold leading-[1.12] text-[#075f68] md:text-[38px]">
               Structure where you want it,
               <br />
               flexibility where you need it
@@ -377,7 +377,7 @@ export default function HomeEducationPage() {
             <p className="text-sm font-bold uppercase tracking-[.02em] text-[#f16f00]">
               Curriculum-aligned learning
             </p>
-            <h2 className="mt-7 text-[30px] sm:text-[36px] font-bold leading-[1.18] tracking-[-.025em] text-[#12134b] md:text-[42px]">
+            <h2 className="mt-7 text-[30px] sm:text-[36px] font-bold leading-[1.18] tracking-[-.025em] text-[#075f68] md:text-[42px]">
               Choose exactly
               <br />
               what you’re teaching
@@ -534,11 +534,11 @@ export default function HomeEducationPage() {
               </div>
             </div>
           </div>
-          <div className="order-1 lg:order-2">
+          <div className="order-1 lg:order-2 lg:pl-8 xl:pl-10">
             <p className="text-xs font-bold uppercase tracking-[.04em] text-[#f16f00]">
               Parent-led goals
             </p>
-            <h2 className="mt-7 text-[30px] sm:text-[36px] font-bold leading-[1.18] tracking-[-.025em] text-[#12134b] md:text-[42px]">
+            <h2 className="mt-7 text-[30px] sm:text-[36px] font-bold leading-[1.18] tracking-[-.025em] text-[#075f68] md:text-[42px]">
               You are the primary educator
             </h2>
             <span className="mt-5 block h-0.75 w-12 rounded-full bg-[#146f78]" />
@@ -692,7 +692,7 @@ export default function HomeEducationPage() {
               ))}
             </div>
           </div>
-          <div className="mt-3 grid gap-8 rounded-2xl border border-[#eee5d8] bg-white/25 px-6 py-7 shadow-[0_8px_24px_rgba(70,61,42,.025)] lg:grid-cols-[.83fr_1.17fr] lg:px-10 lg:py-8">
+          <div className="mt-3 grid gap-8 rounded-2xl border border-[#eee5d8] bg-white/25 px-6 py-7 shadow-[0_8px_24px_rgba(70,61,42,.025)] lg:grid-cols-[.9fr_1.1fr] lg:gap-12 lg:px-10 lg:py-8">
             <div className="py-1 lg:pl-1">
               <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
                 Home education reporting
@@ -862,7 +862,7 @@ export default function HomeEducationPage() {
                       </>
                     )}
                   </span>
-                  <h3 className="mt-4 text-center text-[20px] font-extrabold leading-tight text-[#0b3440]">
+                  <h3 className="mt-4 text-center text-[20px] font-extrabold leading-tight text-[#075f68]">
                     {title as string}
                   </h3>
                   <span className="mx-auto mt-4 block h-0.75 w-10 rounded-full bg-[#198081]" />
@@ -883,7 +883,7 @@ export default function HomeEducationPage() {
                 <span className="absolute right-3 top-4 h-2 w-5 rotate-58 rounded-full bg-[#f28a00]" />
               </div>
               <div className="flex-1 text-center sm:text-left">
-                <h3 className="text-[25px] font-extrabold leading-tight text-[#0b3440]">
+                <h3 className="text-[25px] font-extrabold leading-tight text-[#075f68]">
                   What this does not do
                 </h3>
                 <p className="mt-3 text-[15px] font-medium leading-[1.65] text-[#34364d]">
@@ -955,7 +955,7 @@ export default function HomeEducationPage() {
                       style={{ left: `-${Number(iconIndex) * 100}%` }}
                     />
                   </span>
-                  <h3 className="mt-3 text-[20px] font-extrabold text-[#0b3440]">
+                  <h3 className="mt-3 text-[20px] font-extrabold text-[#075f68]">
                     {title as string}
                   </h3>
                   <span className="mx-auto mt-3 block h-0.75 w-10 rounded-full bg-[#198081]" />
@@ -977,7 +977,7 @@ export default function HomeEducationPage() {
                 />
               </div>
               <div className="text-center md:text-left">
-                <h3 className="text-[25px] font-extrabold leading-tight text-[#0b3440]">
+                <h3 className="text-[25px] font-extrabold leading-tight text-[#075f68]">
                   Combining topics into one paper
                 </h3>
                 <p className="mt-2 text-[14px] font-medium leading-5 text-[#34364d]">
@@ -1001,7 +1001,7 @@ export default function HomeEducationPage() {
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_45%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] py-14 lg:py-16">
         <div className="site-container overflow-hidden rounded-2xl border border-[#eee5d8] bg-white/25 py-8 shadow-[0_10px_30px_rgba(70,61,42,.03)]">
-          <div className="grid gap-9 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
+          <div className="grid gap-9 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-14">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
                 Tutor collaboration
@@ -1126,7 +1126,7 @@ export default function HomeEducationPage() {
             </div>
           </div>
           <div className="my-8 h-px bg-[#eee5d8]" />
-          <div className="grid gap-9 lg:grid-cols-[.72fr_1.28fr] lg:items-center">
+          <div className="grid gap-9 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-14">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
                 Multiple children
@@ -1337,7 +1337,8 @@ export default function HomeEducationPage() {
             Start free, decide later
           </h2>
           <p className="mt-3 max-w-2xl text-[16px] font-medium text-white/90 sm:text-[17px]">
-            No card to try it. Move to a paid plan when it&apos;s earning its place.
+            No card to try it. Move to a paid plan when it&apos;s earning its
+            place.
           </p>
           <div className="mt-6 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
             <a
@@ -1356,6 +1357,7 @@ export default function HomeEducationPage() {
             </Link>
           </div>
         </div>
-      </section>    </main>
+      </section>{" "}
+    </main>
   );
 }

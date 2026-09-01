@@ -25,6 +25,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Public-page heading palette: preserve Hero and white-on-dark CTA treatments. */
+.public-site > :is(main, div) > section:not(:first-child)
+  :is(h1, h2, h3, h4, h5, h6):not(.text-white, .text-white *) {
+  color: #075f68 !important;
+}
 /* Shared page alignment and balanced text/media splits. */
 @layer components {
   .site-container {
