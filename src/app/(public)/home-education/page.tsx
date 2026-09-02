@@ -168,29 +168,32 @@ function CheckList({ items }: { items: readonly string[] }) {
 
 export default function HomeEducationPage() {
   return (
-    <main className="overflow-hidden bg-white text-[#10243d]">
-      <section className="relative overflow-hidden bg-[radial-gradient(circle_at_48%_38%,#fffef9_0%,#fff9e9_64%,#fffdf3_100%)]">
+    <main className="home-education-page overflow-hidden bg-white text-[#10243d]">
+      <section className="home-education-hero relative overflow-hidden bg-[radial-gradient(circle_at_48%_38%,#fffef9_0%,#fff9e9_64%,#fffdf3_100%)]">
         <div className="pointer-events-none absolute -left-60 -top-24 h-72 w-72 rounded-full bg-[#43b4b5]/75" />
         <div className="pointer-events-none absolute -bottom-40 -left-56 h-80 w-80 rounded-full border-42 border-[#43b4b5]/70" />
-        <div className="mx-auto grid min-h-162.5 max-w-7xl items-center px-5 pt-8 lg:grid-cols-[38%_62%] lg:pt-0">
-          <div className="relative z-10 py-10 lg:-translate-y-16 lg:py-14">
+        <div className="site-container grid min-h-140 items-center pt-6 lg:grid-cols-[38%_62%] lg:pt-0">
+          <div className="relative z-10 py-9 lg:translate-y-5 lg:py-8 lg:pl-10">
             <p className="text-sm font-bold text-[#087f84]">
               For Home Education
             </p>
-            <h1 className="mt-5 max-w-107.5 text-[36px] font-bold leading-[1.08] tracking-[-.035em] text-[#075f68] sm:text-[52px] lg:text-[48px]">
+            <h1 className="mt-4 max-w-107.5 text-[36px] font-bold leading-[1.08] tracking-[-.035em] text-[#080d43] sm:text-[44px] lg:text-[46px]">
               Flexible learning
               <br />
               with structure,
               <br />
-              evidence and <span className="text-teal-700">assessment</span>
+              evidence and{" "}
+              <span className="bg-linear-to-r from-[#5659ef] via-[#dd17bc] to-[#f2a313] bg-clip-text text-transparent">
+                assessment
+              </span>
             </h1>
-            <span className="mt-5 block h-1 w-16 rounded-full bg-[#078b90]" />
-            <p className="mt-5 max-w-107.5 text-base leading-7 text-[#17213d]">
+            <span className="mt-4 block h-1 w-16 rounded-full bg-[#078b90]" />
+            <p className="mt-4 max-w-107.5 text-base leading-7 text-[#17213d]">
               You set the direction. AttoLearn handles the daily practice, keeps
               the evidence, and gives you assessment tools when you need to
               check.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <Button href="/choose-module">Start Home Learning</Button>
               <Button href="/pricing" outline>
                 Explore Family Pricing
@@ -210,7 +213,7 @@ export default function HomeEducationPage() {
               quality={100}
               unoptimized
               sizes="(min-width: 1024px) 62vw, 100vw"
-              className="h-162.5 w-full object-cover object-center"
+              className="relative -translate-x-12 h-140 w-[calc(100%+48px)] max-w-none object-cover object-center"
               style={{
                 WebkitMaskImage:
                   "linear-gradient(to right, transparent 0%, rgba(0,0,0,.45) 8%, black 22%)",
@@ -218,7 +221,7 @@ export default function HomeEducationPage() {
                   "linear-gradient(to right, transparent 0%, rgba(0,0,0,.45) 8%, black 22%)",
               }}
             />
-            <div className="absolute left-[34%] top-[4%] hidden items-center gap-8 lg:flex">
+            <div className="absolute left-[39%] top-[4%] hidden items-center gap-8 lg:flex">
               <Atom className="h-10 w-10 text-teal-600" strokeWidth={1.7} />
               <Lightbulb
                 className="h-11 w-11 text-amber-500"
@@ -359,8 +362,8 @@ export default function HomeEducationPage() {
           </div>
         </div>
       </section>
-      <section className="bg-[radial-gradient(circle_at_48%_45%,#fffef8_0%,#fffbed_62%,#fffdf7_100%)] py-16 lg:py-20">
-        <div className="site-container content-split">
+      <section className="home-education-curriculum bg-[radial-gradient(circle_at_48%_45%,#fffef8_0%,#fffbed_62%,#fffdf7_100%)] py-16 lg:py-20">
+        <div className="site-container content-split curriculum-split">
           <div className="lg:pl-1">
             <p className="text-sm font-bold uppercase tracking-[.02em] text-[#f16f00]">
               Curriculum-aligned learning
@@ -400,11 +403,11 @@ export default function HomeEducationPage() {
               src="/images/home-education/curriculum-generated.png"
               alt="Home learner choosing curriculum, year level, subject and microskill"
               fill
-              sizes="(min-width:1024px) 560px, 100vw"
+              sizes="(min-width:1024px) 640px, 100vw"
               quality={100}
               className="object-cover object-top"
             />
-            <div className="absolute bottom-[14%] right-[2.5%] top-[6%] hidden w-[41%] overflow-hidden rounded-xl bg-white/95 shadow-2xl sm:block">
+            <div className="ui-mockup absolute bottom-[7%] right-[2.5%] top-[6%] hidden w-[41%] overflow-hidden rounded-xl bg-white/95 shadow-2xl sm:block">
               <div className="bg-[#076b72] px-5 py-4.5 text-lg font-semibold text-white">
                 Choose what to learn
               </div>

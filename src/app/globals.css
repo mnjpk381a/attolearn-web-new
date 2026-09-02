@@ -25,12 +25,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Public-page heading palette: preserve Hero and white-on-dark CTA treatments. */
-.public-site
-  > :is(main, div)
-  > section:not(:first-child)
-  :is(h1, h2, h3, h4, h5, h6):not(.text-white, .text-white *) {
+/* Public-page heading palette: every non-Hero content heading uses teal.
+   Explicit white-on-dark headings and UI mockups retain their contrast. */
+:is(
+    .public-site > section:not(:first-child),
+    .public-site > :is(main, div) > section:not(:first-child)
+  )
+  :is(h1, h2, h3, h4, h5, h6):not(.ui-mockup *, .text-white, .text-white *) {
   color: #075f68 !important;
+}
+
+:is(
+    .public-site > section:not(:first-child),
+    .public-site > :is(main, div) > section:not(:first-child)
+  )
+  :is(h1, h2, h3, h4, h5, h6):not(.ui-mockup *, .text-white, .text-white *)
+  :is(span, strong, em) {
+  color: inherit !important;
 }
 /* Shared page alignment and balanced text/media splits. */
 @layer components {
@@ -654,53 +665,52 @@ body {
   line-height: 1.65;
 }
 
-/* Give every top-level content section the same vertical breathing room.
-   The first section is the page hero; labelled CTAs keep their intentional
-   edge-to-edge composition and connection to the shared footer. */
-.public-site > section:not(:first-child):not([aria-labelledby*="cta"]),
-.public-site
-  > :is(main, div)
-  > section:not(:first-child):not([aria-labelledby*="cta"]) {
+/* Give content sections after the Hero a shared vertical rhythm.
+   The final CTA keeps its own padding and connects directly to the footer. */
+:is(
+  .public-site > section:not(:first-child):not(:last-child),
+  .public-site > :is(main, div) > section:not(:first-child):not(:last-child)
+) {
   margin-block: 0 !important;
   padding-block: var(--public-section-space) !important;
 }
 
-.public-site :is(h1, h2, h3, h4, h5, h6) {
+.public-site :is(h1, h2, h3, h4, h5, h6):not(.ui-mockup *) {
   font-family: ui-sans-serif, system-ui, sans-serif !important;
   font-style: normal;
   text-wrap: balance;
 }
 
-.public-site h1 {
+.public-site h1:not(.ui-mockup *) {
   font-size: clamp(2.625rem, 5vw, 3.625rem) !important;
   font-weight: 800 !important;
   line-height: 1.08 !important;
   letter-spacing: -0.035em !important;
 }
 
-.public-site h2 {
+.public-site h2:not(.ui-mockup *) {
   font-size: clamp(2rem, 3.4vw, 2.625rem) !important;
   font-weight: 800 !important;
   line-height: 1.14 !important;
   letter-spacing: -0.025em !important;
 }
 
-.public-site h3 {
+.public-site h3:not(.ui-mockup *) {
   font-size: 1.125rem !important;
   font-weight: 700 !important;
   line-height: 1.35 !important;
   letter-spacing: -0.01em !important;
 }
 
-.public-site h4,
-.public-site h5,
-.public-site h6 {
+.public-site h4:not(.ui-mockup *),
+.public-site h5:not(.ui-mockup *),
+.public-site h6:not(.ui-mockup *) {
   font-size: 1rem !important;
   font-weight: 700 !important;
   line-height: 1.4 !important;
 }
 
-.public-site p {
+.public-site p:not(.ui-mockup *) {
   font-family: ui-sans-serif, system-ui, sans-serif !important;
   font-size: 0.9375rem !important;
   font-weight: 400 !important;
@@ -716,22 +726,325 @@ body {
     --public-section-space: 3.5rem;
   }
 
-  .public-site h1 {
+  .public-site h1:not(.ui-mockup *) {
     font-size: clamp(2.25rem, 11vw, 2.75rem) !important;
   }
 
-  .public-site h2 {
+  .public-site h2:not(.ui-mockup *) {
     font-size: clamp(1.75rem, 8vw, 2.125rem) !important;
   }
 }
 
 /* Home Education hero intentionally uses the larger reference scale. */
 .public-site .home-education-hero h1 {
-  font-size: clamp(3rem, 4.7vw, 4rem) !important;
+  font-size: clamp(2.25rem, 3.35vw, 2.875rem) !important;
   line-height: 1.08 !important;
 }
 
 .public-site .home-education-hero > div > div > p:not(:first-child) {
+  font-size: 1rem !important;
+  line-height: 1.6875rem !important;
+}
+
+.public-site .home-platform-hero h1 {
+  font-size: clamp(2.625rem, 4vw, 3.125rem) !important;
+  line-height: 1.04 !important;
+}
+
+/* Home Education uses one responsive gap between every visual section.
+   The Hero retains its composition and the final CTA stays flush with the footer. */
+.public-site .home-education-page {
+  --home-education-section-space: clamp(3.5rem, 5vw, 4rem);
+}
+
+.public-site .home-education-page > section:not(:first-child):not(:last-child) {
+  margin-block: 0 !important;
+  padding-block: var(--home-education-section-space) !important;
+}
+
+.public-site .home-education-page > section:last-child {
+  margin-block: 0 !important;
+  padding-top: var(--home-education-section-space) !important;
+  padding-bottom: 0 !important;
+}
+/* Families page uses one responsive gap between every visual section.
+   The final CTA keeps zero bottom padding so it remains flush with the footer. */
+.public-site .families-page {
+  --families-section-space: clamp(3.5rem, 5vw, 4rem);
+}
+
+.public-site .families-page > section:not(:first-child):not(:last-child) {
+  margin-block: 0 !important;
+  padding-block: var(--families-section-space) !important;
+}
+
+.public-site .families-page > section:last-child {
+  margin-block: 0 !important;
+  padding-top: var(--families-section-space) !important;
+  padding-bottom: 0 !important;
+}
+
+/* Families Hero follows its reference artwork's dedicated type scale. */
+.public-site .families-hero h1 {
+  font-size: clamp(2.25rem, 2.85vw, 3rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.public-site .families-hero h1 ~ p {
   font-size: 1.0625rem !important;
-  line-height: 1.75 !important;
+  line-height: 2rem !important;
+}
+
+.public-site .families-hero .site-container > div > p:first-child {
+  font-size: 0.875rem !important;
+  line-height: 1.35 !important;
+}
+
+/* Match every editorial text/media split to the Families page typography.
+   Only the copy column is targeted, so image overlays and UI mockups keep
+   their purpose-built compact type. */
+.public-site
+  section:not(:first-child)
+  .content-split
+  > :not(.content-split-media)
+  :is(h2, h3),
+.public-site
+  section:not(:first-child)
+  :is(
+    [class*="grid-cols-2"]:has(> :nth-child(2):last-child):has(img),
+    [class*="grid-cols-["]:has(> :nth-child(2):last-child):has(img)
+  )
+  > :not(:has(img))
+  :is(h2, h3),
+.public-site
+  section:not(:first-child):is(
+    [class*="grid-cols-2"]:has(> :nth-child(2):last-child):has(img),
+    [class*="grid-cols-["]:has(> :nth-child(2):last-child):has(img)
+  )
+  > :not(:has(img))
+  :is(h2, h3) {
+  font-size: clamp(1.75rem, 2.5vw, 2.125rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.public-site
+  section:not(:first-child)
+  .content-split
+  > :not(.content-split-media)
+  p,
+.public-site
+  section:not(:first-child)
+  :is(
+    [class*="grid-cols-2"]:has(> :nth-child(2):last-child):has(img),
+    [class*="grid-cols-["]:has(> :nth-child(2):last-child):has(img)
+  )
+  > :not(:has(img))
+  p,
+.public-site
+  section:not(:first-child):is(
+    [class*="grid-cols-2"]:has(> :nth-child(2):last-child):has(img),
+    [class*="grid-cols-["]:has(> :nth-child(2):last-child):has(img)
+  )
+  > :not(:has(img))
+  p {
+  font-size: 0.9375rem !important;
+  line-height: 1.75rem !important;
+}
+/* Home Education curriculum feature mirrors the reference's wider visual
+   and compact, centered editorial proportions. */
+.public-site .home-education-curriculum .curriculum-split {
+  width: 100%;
+  max-width: 80rem;
+}
+
+.public-site
+  .home-education-curriculum
+  .curriculum-split
+  > :not(.content-split-media)
+  > h2 {
+  font-size: clamp(2rem, 2.8vw, 2.375rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+.public-site
+  .home-education-curriculum
+  .curriculum-split
+  > :not(.content-split-media)
+  > p:not(:first-child) {
+  font-size: 0.9375rem !important;
+  line-height: 1.75rem !important;
+}
+
+.public-site .home-education-curriculum .content-split-media {
+  width: 100%;
+  max-width: 40rem;
+}
+
+@media (min-width: 64rem) {
+  .public-site .home-education-curriculum .curriculum-split {
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+    gap: 3.5rem;
+  }
+}
+/* Tuition Centres Hero follows the supplied reference's compact left copy
+   while remaining aligned to the shared site/header container. */
+.public-site .tuition-centres-hero-copy h1 {
+  font-size: clamp(2.25rem, 3.35vw, 2.875rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.public-site .tuition-centres-hero-copy > p:first-child {
+  font-size: 0.75rem !important;
+  line-height: 1.35 !important;
+}
+
+.public-site .tuition-centres-hero-copy h1 + p {
+  max-width: 25rem;
+  font-size: 0.875rem !important;
+  line-height: 1.75rem !important;
+}
+
+@media (min-width: 64rem) {
+  .public-site .tuition-centres-hero-copy {
+    padding-top: 1.75rem;
+  }
+}
+/* Tuition Centres tutor-coordination feature uses the reference's wider
+   visual, focused copy column, and generous editorial separation. */
+.public-site .tuition-tutor-coordination .tutor-coordination-split {
+  width: 100%;
+}
+
+.public-site .tuition-tutor-coordination .content-split-media {
+  width: 100%;
+  max-width: 39.25rem;
+}
+
+.public-site
+  .tuition-tutor-coordination
+  .tutor-coordination-split
+  > :not(.content-split-media)
+  > p:not(:first-child) {
+  max-width: 29rem;
+}
+
+@media (min-width: 64rem) {
+  .public-site .tuition-tutor-coordination .tutor-coordination-split {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: clamp(4.5rem, 7vw, 7rem);
+  }
+}
+.public-site .tuition-tutor-coordination li > span:first-child {
+  border-color: #146f78;
+  background: #146f78;
+  color: #ffffff;
+}
+
+@media (min-width: 64rem) {
+  .public-site .tuition-tutor-coordination .content-split-media {
+    transform: translateY(1rem);
+  }
+}
+
+/* Tuition Centres family-permissions feature mirrors the reference's broad
+   landscape visual, compact overlay, and vertically balanced copy column. */
+.public-site .tuition-tutor-coordination .family-permissions-split {
+  width: 100%;
+}
+
+.public-site
+  .tuition-tutor-coordination
+  .family-permissions-split
+  .content-split-media {
+  max-width: 41rem;
+}
+
+.public-site .tuition-tutor-coordination .family-permissions-copy {
+  width: 100%;
+  max-width: 32rem;
+}
+
+.public-site
+  .tuition-tutor-coordination
+  .family-permissions-copy
+  > p:not(:first-child) {
+  max-width: 31rem;
+}
+
+.public-site .tuition-tutor-coordination .family-permissions-copy li {
+  margin-top: 0.7rem;
+}
+
+.public-site
+  .tuition-tutor-coordination
+  .family-permissions-copy
+  li
+  > span:first-child {
+  border-color: #146f78;
+  background: #146f78;
+  color: #ffffff;
+}
+
+@media (min-width: 64rem) {
+  .public-site .tuition-tutor-coordination .family-permissions-split {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    gap: clamp(5.5rem, 8vw, 7.5rem);
+  }
+
+  .public-site .tuition-tutor-coordination .family-permissions-copy {
+    justify-self: end;
+  }
+
+  .public-site
+    .tuition-tutor-coordination
+    .family-permissions-split
+    .content-split-media {
+    transform: none;
+  }
+}
+
+@media (max-width: 39.999rem) {
+  .public-site
+    .tuition-tutor-coordination
+    .family-permissions-split
+    .content-split-media {
+    height: 22rem;
+  }
+
+  .public-site .tuition-tutor-coordination .family-permissions-card {
+    left: 1rem;
+    width: min(17rem, calc(100% - 2rem));
+  }
+}
+
+/* Schools availability notice uses a compact headline and a wider copy
+   measure so its hierarchy matches the intended horizontal card layout. */
+.public-site .schools-availability .schools-availability-copy > h2 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.015em !important;
+  white-space: nowrap;
+}
+
+.public-site
+  .schools-availability
+  .schools-availability-copy
+  > p:not(:last-child) {
+  max-width: 44rem;
+  font-size: 0.875rem !important;
+  line-height: 1.5rem !important;
+}
+
+@media (max-width: 47.999rem) {
+  .public-site .schools-availability .schools-availability-copy > h2 {
+    white-space: normal;
+  }
 }

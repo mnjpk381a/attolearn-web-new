@@ -149,7 +149,8 @@ function PaymentIcon({ index }: { index: number }) {
       />
     </span>
   );
-}function RevisionPaperIcon() {
+}
+function RevisionPaperIcon() {
   return (
     <Image
       src="/images/families/revision-paper-icon-v2.png"
@@ -236,18 +237,18 @@ function Checks({ items }: { items: readonly string[] }) {
 export default function FamiliesPage() {
   return (
     <main className="families-page overflow-hidden bg-white text-[#10243d]">
-      <section className="relative overflow-hidden bg-[#fffaf0] lg:aspect-1674/944">
+      <section className="families-hero relative overflow-hidden bg-[#fffaf0] lg:aspect-1674/860">
         <div className="absolute inset-0 hidden lg:block">
           <Image
-            src="/images/families/families-hero-v3.png"
+            src="/images/families/families-hero-v4.png"
             alt="AttoLearn parent dashboard showing a child profile and learning progress"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-[center_46%]"
           />
         </div>
-        <div className="site-container relative flex min-h-150 items-center py-16 lg:absolute lg:inset-0 lg:min-h-0 lg:items-start lg:py-0 lg:pt-[7.2%]">
+        <div className="site-container relative flex min-h-150 items-center py-16 lg:absolute lg:inset-0 lg:min-h-0 lg:items-start lg:py-0 lg:pt-[5.2%]">
           <div className="relative z-10 w-full lg:max-w-[43%]">
             <p className="flex items-center gap-4 text-sm font-bold uppercase tracking-wide text-[#087f84]">
               For families
@@ -275,17 +276,18 @@ export default function FamiliesPage() {
             </div>
           </div>
         </div>
-        <div className="relative h-97.5 w-full overflow-hidden lg:hidden">
+        <div className="relative h-84 w-full overflow-hidden lg:hidden">
           <Image
-            src="/images/families/families-hero-v3.png"
+            src="/images/families/families-hero-v4.png"
             alt="AttoLearn parent dashboard showing a child profile and learning progress"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-[78%_center]"
+            className="object-cover object-[78%_46%]"
           />
         </div>
-      </section>      <section className="bg-linear-to-b from-[#f4faff] to-white py-20">
+      </section>{" "}
+      <section className="bg-linear-to-b from-[#f4faff] to-white py-20">
         <div className="site-container">
           <Title eyebrow="What families receive">
             Everything your child needs, in one account
@@ -535,7 +537,7 @@ export default function FamiliesPage() {
               />
             </article>
           </div>
-          <div className="mt-16 border-t pt-12">
+          <div className="mt-16 border-t pt-16">
             <Title eyebrow="Assessment at home">
               Check progress with a real assessment
             </Title>
@@ -605,7 +607,8 @@ export default function FamiliesPage() {
             <div className="hidden lg:block" />
           </div>
         </div>
-      </section>      <section className="relative overflow-hidden bg-[#fffdf2] py-12 md:py-14">
+      </section>{" "}
+      <section className="relative overflow-hidden bg-[#fffdf2] py-12 md:py-14">
         <div className="site-container relative">
           <Title eyebrow="The small print, said plainly">
             Things worth knowing before you pay
@@ -664,8 +667,10 @@ export default function FamiliesPage() {
           </div>
         </div>
       </section>
-
-      <section className="w-full bg-[#fffdf2] pb-0 pt-8 sm:pt-10" aria-labelledby="families-final-cta-title">
+      <section
+        className="w-full bg-[#fffdf2] pb-0 pt-8 sm:pt-10"
+        aria-labelledby="families-final-cta-title"
+      >
         <div className="relative min-h-140 w-full overflow-hidden bg-[#fbf7ec] sm:min-h-125 lg:aspect-3/1 lg:min-h-0">
           <Image
             src="/images/families/families-final-cta-v2.png"
@@ -678,18 +683,29 @@ export default function FamiliesPage() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,251,242,.18)_30%,rgba(255,251,242,.72)_44%,rgba(255,251,242,.72)_62%,transparent_78%)] max-lg:bg-[#fffaf0]/55" />
           <div className="relative z-10 flex min-h-140 items-center justify-center px-5 py-14 sm:min-h-125 sm:px-8 lg:absolute lg:inset-0 lg:min-h-0 lg:pl-[34%] lg:pr-[24%]">
             <div className="w-full max-w-130 text-center">
-              <h2 id="families-final-cta-title" className="text-[38px] font-black leading-[1.05] tracking-[-.035em] text-[#092c50] sm:text-[46px] lg:text-[50px]">
+              <h2
+                id="families-final-cta-title"
+                className="text-[38px] font-black leading-[1.05] tracking-[-.035em] text-[#092c50] sm:text-[46px] lg:text-[50px]"
+              >
                 Start free,
                 <span className="block text-[#166f70]">decide later</span>
               </h2>
               <p className="mx-auto mt-5 max-w-97.5 text-[15px] font-medium leading-6 text-[#52606f] sm:text-[16px]">
-                No card to try it. Move to a paid plan<br className="hidden sm:block" /> when it&apos;s earning its place.
+                No card to try it. Move to a paid plan
+                <br className="hidden sm:block" /> when it&apos;s earning its
+                place.
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <Link href="/choose-module" className="inline-flex min-h-12 min-w-40 items-center justify-center gap-4 rounded-lg bg-[#ffad0a] px-7 text-[15px] font-extrabold text-white shadow-[0_8px_20px_rgba(245,158,11,.22)] transition hover:bg-[#ef9d00]">
+                <Link
+                  href="/choose-module"
+                  className="inline-flex min-h-12 min-w-40 items-center justify-center gap-4 rounded-lg bg-[#ffad0a] px-7 text-[15px] font-extrabold text-white shadow-[0_8px_20px_rgba(245,158,11,.22)] transition hover:bg-[#ef9d00]"
+                >
                   Start Free <ArrowRight className="h-5 w-5" />
                 </Link>
-                <Link href="/contact" className="inline-flex min-h-12 min-w-40 items-center justify-center gap-3 rounded-lg border-2 border-[#16868b] bg-[#fffdf5]/90 px-7 text-[15px] font-extrabold text-[#075f68] transition hover:bg-white">
+                <Link
+                  href="/contact"
+                  className="inline-flex min-h-12 min-w-40 items-center justify-center gap-3 rounded-lg border-2 border-[#16868b] bg-[#fffdf5]/90 px-7 text-[15px] font-extrabold text-[#075f68] transition hover:bg-white"
+                >
                   Talk to Sales <Headphones className="h-4.5 w-4.5" />
                 </Link>
               </div>

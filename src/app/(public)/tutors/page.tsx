@@ -416,7 +416,7 @@ export default function TutorsPage() {
       </section>
 
       <section className="border-t border-slate-200 bg-[#f5f9fb]">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:px-10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
           <div className="text-center">
             <p className="text-xl font-medium uppercase tracking-wide text-[#d48b00]">
               Paper Generator for Tutors
@@ -485,7 +485,7 @@ export default function TutorsPage() {
         </div>
       </section>
 
-      <section className="bg-[#f5f9fb] pb-16 sm:pb-20">
+      <section className="bg-[#f5f9fb] pb-16">
         <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
           <div className="flex flex-col gap-5 rounded-xl border border-dashed border-[#e8a21a] bg-[#fff9ee] p-5 sm:flex-row sm:items-center sm:justify-between">
             <div>
@@ -510,7 +510,7 @@ export default function TutorsPage() {
           </div>
         </div>
 
-        <div className="mx-auto mt-20 grid max-w-7xl gap-10 px-5 sm:px-8 lg:mt-24 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:px-10">
+        <div className="mx-auto mt-16 grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:px-10">
           <div>
             <p className="text-xl font-semibold uppercase tracking-wide text-[#d48b00]">
               The Parent Relationship
@@ -578,7 +578,7 @@ export default function TutorsPage() {
       </section>
 
       <section className="border-t border-slate-200 bg-[#f5f9fb]">
-        <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:px-10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
           <div className="text-center">
             <p className="text-xl font-semibold uppercase tracking-wide text-[#d48b00]">
               Tutor Commercial Model
@@ -680,7 +680,7 @@ export default function TutorsPage() {
       </section>
 
       <section className="bg-[#07818a] text-white">
-        <div className="mx-auto max-w-7xl px-5 py-16 text-center sm:px-8 sm:py-20 lg:px-10">
+        <div className="mx-auto max-w-7xl px-5 py-16 text-center sm:px-8 lg:px-10">
           <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
             Start teaching with evidence behind you
           </h2>
@@ -707,7 +707,7 @@ export default function TutorsPage() {
       </section>
 
       <section className="bg-[#f5f9fb]">
-        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:px-10">
+        <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
           <div className="text-center">
             <p className="text-xl font-semibold uppercase tracking-wide text-[#d48b00]">
               The Small Print, Said Plainly
