@@ -26,7 +26,9 @@ body {
 }
 
 /* Public-page heading palette: preserve Hero and white-on-dark CTA treatments. */
-.public-site > :is(main, div) > section:not(:first-child)
+.public-site
+  > :is(main, div)
+  > section:not(:first-child)
   :is(h1, h2, h3, h4, h5, h6):not(.text-white, .text-white *) {
   color: #075f68 !important;
 }
@@ -577,12 +579,14 @@ body {
   font-family: Arial, Helvetica, sans-serif !important;
 }
 
-:is(.schools-page, .tutors-page, .tuition-centres-page, .why-page) .text-\[10px\] {
+:is(.schools-page, .tutors-page, .tuition-centres-page, .why-page)
+  .text-\[10px\] {
   font-size: 12px;
   line-height: 1.4;
 }
 
-:is(.schools-page, .tutors-page, .tuition-centres-page, .why-page) .text-\[11px\] {
+:is(.schools-page, .tutors-page, .tuition-centres-page, .why-page)
+  .text-\[11px\] {
   font-size: 13px;
   line-height: 1.45;
 }
@@ -635,4 +639,99 @@ body {
 .tutors-page h1 {
   font-size: clamp(42px, 5vw, 52px) !important;
   line-height: 1.12 !important;
+}
+
+/* --------------------------
+   Public Site Design Rhythm
+--------------------------- */
+
+.public-site {
+  --public-section-space: clamp(3.75rem, 6vw, 5rem);
+  --public-heading-color: #075f68;
+  --public-body-color: #475569;
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Give every top-level content section the same vertical breathing room.
+   The first section is the page hero; labelled CTAs keep their intentional
+   edge-to-edge composition and connection to the shared footer. */
+.public-site > section:not(:first-child):not([aria-labelledby*="cta"]),
+.public-site
+  > :is(main, div)
+  > section:not(:first-child):not([aria-labelledby*="cta"]) {
+  margin-block: 0 !important;
+  padding-block: var(--public-section-space) !important;
+}
+
+.public-site :is(h1, h2, h3, h4, h5, h6) {
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+  font-style: normal;
+  text-wrap: balance;
+}
+
+.public-site h1 {
+  font-size: clamp(2.625rem, 5vw, 3.625rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.035em !important;
+}
+
+.public-site h2 {
+  font-size: clamp(2rem, 3.4vw, 2.625rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.14 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.public-site h3 {
+  font-size: 1.125rem !important;
+  font-weight: 700 !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.01em !important;
+}
+
+.public-site h4,
+.public-site h5,
+.public-site h6 {
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+.public-site p {
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.9375rem !important;
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+}
+
+.public-site :is(button, a) {
+  line-height: 1.35;
+}
+
+@media (max-width: 39.999rem) {
+  .public-site {
+    --public-section-space: 3.5rem;
+  }
+
+  .public-site h1 {
+    font-size: clamp(2.25rem, 11vw, 2.75rem) !important;
+  }
+
+  .public-site h2 {
+    font-size: clamp(1.75rem, 8vw, 2.125rem) !important;
+  }
+}
+
+/* Home Education hero intentionally uses the larger reference scale. */
+.public-site .home-education-hero h1 {
+  font-size: clamp(3rem, 4.7vw, 4rem) !important;
+  line-height: 1.08 !important;
+}
+
+.public-site .home-education-hero > div > div > p:not(:first-child) {
+  font-size: 1.0625rem !important;
+  line-height: 1.75 !important;
 }
