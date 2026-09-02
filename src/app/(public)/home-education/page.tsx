@@ -17,10 +17,7 @@ import {
   ShieldCheck,
   ShieldX,
   Puzzle,
-  Sparkles,
   Target,
-  Atom,
-  Lightbulb,
   UserRound,
   Users,
   Eye,
@@ -169,26 +166,31 @@ function CheckList({ items }: { items: readonly string[] }) {
 export default function HomeEducationPage() {
   return (
     <main className="home-education-page overflow-hidden bg-white text-[#10243d]">
-      <section className="home-education-hero relative overflow-hidden bg-[radial-gradient(circle_at_48%_38%,#fffef9_0%,#fff9e9_64%,#fffdf3_100%)]">
-        <div className="pointer-events-none absolute -left-60 -top-24 h-72 w-72 rounded-full bg-[#43b4b5]/75" />
-        <div className="pointer-events-none absolute -bottom-40 -left-56 h-80 w-80 rounded-full border-42 border-[#43b4b5]/70" />
-        <div className="site-container grid min-h-140 items-center pt-6 lg:grid-cols-[38%_62%] lg:pt-0">
-          <div className="relative z-10 py-9 lg:translate-y-5 lg:py-8 lg:pl-10">
+      <section className="home-education-hero relative min-h-[34rem] overflow-hidden bg-[#fffaf0] lg:aspect-[1684/941] lg:min-h-0">
+        <Image
+          src="/images/home-education/hero-reference-v2.png"
+          alt="Parent and child learning with AttoLearn progress dashboards"
+          fill
+          priority
+          quality={100}
+          sizes="100vw"
+          className="object-cover object-top lg:object-contain"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-[#fffaf0]/96 via-[#fffaf0]/72 to-transparent lg:hidden" />
+        <div className="site-container relative z-10 flex min-h-[34rem] items-center py-10 lg:absolute lg:inset-0 lg:min-h-0 lg:py-0">
+          <div className="max-w-107.5 rounded-2xl bg-[#fffaf0]/82 p-5 backdrop-blur-[2px] sm:p-6 lg:-translate-y-12 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
             <p className="text-sm font-bold text-[#087f84]">
               For Home Education
             </p>
-            <h1 className="mt-4 max-w-107.5 text-[36px] font-bold leading-[1.08] tracking-[-.035em] text-[#080d43] sm:text-[44px] lg:text-[46px]">
+            <h1 className="mt-4 text-[36px] font-bold leading-[1.08] tracking-[-.035em] text-[#080d43] sm:text-[44px] lg:text-[46px]">
               Flexible learning
               <br />
               with structure,
               <br />
-              evidence and{" "}
-              <span className="bg-linear-to-r from-[#5659ef] via-[#dd17bc] to-[#f2a313] bg-clip-text text-transparent">
-                assessment
-              </span>
+              evidence and <span className="text-[#078b90]">assessment</span>
             </h1>
             <span className="mt-4 block h-1 w-16 rounded-full bg-[#078b90]" />
-            <p className="mt-4 max-w-107.5 text-base leading-7 text-[#17213d]">
+            <p className="mt-4 text-base leading-7 text-[#17213d]">
               You set the direction. AttoLearn handles the daily practice, keeps
               the evidence, and gives you assessment tools when you need to
               check.
@@ -198,103 +200,6 @@ export default function HomeEducationPage() {
               <Button href="/pricing" outline>
                 Explore Family Pricing
               </Button>
-            </div>
-          </div>
-          <div
-            className="relative self-start"
-            style={{ width: "calc(100% + 160px)" }}
-          >
-            <Image
-              src="/images/home-education/hero-final-generated.png"
-              alt="Parent and child learning with AttoLearn progress dashboards"
-              width={1448}
-              height={1086}
-              priority
-              quality={100}
-              unoptimized
-              sizes="(min-width: 1024px) 62vw, 100vw"
-              className="relative -translate-x-12 h-140 w-[calc(100%+48px)] max-w-none object-cover object-center"
-              style={{
-                WebkitMaskImage:
-                  "linear-gradient(to right, transparent 0%, rgba(0,0,0,.45) 8%, black 22%)",
-                maskImage:
-                  "linear-gradient(to right, transparent 0%, rgba(0,0,0,.45) 8%, black 22%)",
-              }}
-            />
-            <div className="absolute left-[39%] top-[4%] hidden items-center gap-8 lg:flex">
-              <Atom className="h-10 w-10 text-teal-600" strokeWidth={1.7} />
-              <Lightbulb
-                className="h-11 w-11 text-amber-500"
-                strokeWidth={1.8}
-              />
-              <span className="block h-5 w-5 rotate-45 border-2 border-fuchsia-600" />
-              <span className="text-4xl font-light text-blue-500">+</span>
-            </div>
-            <div className="absolute left-[7%] top-[13%] hidden w-[25%] space-y-4 lg:block">
-              <div className="rounded-xl bg-white/95 p-4 shadow-xl">
-                <div className="flex items-center justify-between text-xs font-semibold text-[#10243d]">
-                  <span>Practice Progress</span>
-                  <strong className="text-xl text-teal-700">72%</strong>
-                </div>
-                <svg
-                  viewBox="0 0 220 64"
-                  className="mt-3 h-16 w-full"
-                  aria-label="Practice progress rising through the week"
-                >
-                  <path
-                    d="M8 52 L40 38 L70 44 L102 31 L132 36 L165 20 L212 9"
-                    fill="none"
-                    stroke="#087f84"
-                    strokeWidth="3"
-                  />
-                  <path
-                    d="M8 52 L40 38 L70 44 L102 31 L132 36 L165 20 L212 9 L212 62 L8 62 Z"
-                    fill="#e8f6f4"
-                    opacity=".8"
-                  />
-                  {[
-                    [8, 52],
-                    [40, 38],
-                    [70, 44],
-                    [102, 31],
-                    [132, 36],
-                    [165, 20],
-                    [212, 9],
-                  ].map(([cx, cy], i) => (
-                    <circle key={i} cx={cx} cy={cy} r="4" fill="#087f84" />
-                  ))}
-                </svg>
-              </div>
-              <div className="rounded-xl bg-white/95 p-4 shadow-xl">
-                <p className="text-xs font-semibold">Today’s Progress</p>
-                <div className="mt-3 space-y-2 text-[11px]">
-                  {[
-                    [Target, "Questions Answered", "18"],
-                    [Check, "Correct Answers", "15"],
-                    [Sparkles, "Accuracy", "83%"],
-                  ].map(([Icon, label, value]) => (
-                    <div
-                      key={label as string}
-                      className="flex items-center gap-2"
-                    >
-                      <Icon className="h-4 w-4 text-teal-600" />
-                      <span>{label as string}</span>
-                      <strong className="ml-auto">{value as string}</strong>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div className="absolute left-[35%] top-[17%] hidden h-36 w-36 rounded-full bg-white/95 p-4 text-center shadow-xl lg:block">
-              <p className="text-xs font-semibold text-[#101448]">Mastery</p>
-              <div className="mx-auto mt-2 grid h-16 w-16 place-items-center rounded-full bg-[conic-gradient(#087f84_0_85%,#dceeed_85%_100%)]">
-                <div className="grid h-11 w-11 place-items-center rounded-full bg-white text-xl font-bold text-[#101448]">
-                  85%
-                </div>
-              </div>
-              <p className="mt-2 text-xs font-bold text-teal-700">
-                Great work!
-              </p>
             </div>
           </div>
         </div>
@@ -405,7 +310,7 @@ export default function HomeEducationPage() {
               fill
               sizes="(min-width:1024px) 640px, 100vw"
               quality={100}
-              className="object-cover object-top"
+              className="object-cover object-top lg:object-contain"
             />
             <div className="ui-mockup absolute bottom-[7%] right-[2.5%] top-[6%] hidden w-[41%] overflow-hidden rounded-xl bg-white/95 shadow-2xl sm:block">
               <div className="bg-[#076b72] px-5 py-4.5 text-lg font-semibold text-white">
@@ -1033,7 +938,7 @@ export default function HomeEducationPage() {
                       alt="Mr. Okafor"
                       fill
                       sizes="48px"
-                      className="object-cover object-top"
+                      className="object-cover object-top lg:object-contain"
                     />
                   </span>
                 </div>
@@ -1287,7 +1192,7 @@ export default function HomeEducationPage() {
           fill
           sizes="100vw"
           quality={100}
-          className="object-cover object-top"
+          className="object-cover object-top lg:object-contain"
         />
         <div className="absolute inset-0 bg-[#075f68]/78" />
         <div className="site-container relative flex min-h-64 flex-col items-center justify-center py-12 text-center">
