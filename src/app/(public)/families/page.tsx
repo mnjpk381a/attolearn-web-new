@@ -2,25 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  Atom,
   BarChart3,
-  BookOpen,
-  Building2,
   CalendarCheck,
   Check,
   FileText,
   Gift,
   GraduationCap,
-  Dna,
+  Headphones,
   Laptop,
-  Lightbulb,
   MapPin,
   MessageCircle,
   ShieldCheck,
-  Tags,
   Target,
   Timer,
-  Triangle,
   UserRound,
   Users,
 } from "lucide-react";
@@ -133,16 +127,50 @@ function FeatureIcon({ index }: { index: number }) {
   );
 }
 function PaymentIcon({ index }: { index: number }) {
-  const x = ["0%", "33.333%", "66.667%", "100%"][index];
+  const backgrounds = [
+    "bg-[#eef9f5]",
+    "bg-[#f2f8e8]",
+    "bg-[#f1f1f8]",
+    "bg-[#fff0f5]",
+  ] as const;
+
   return (
     <span
       aria-hidden
-      className="block h-20 w-20 bg-no-repeat"
-      style={{
-        backgroundImage: 'url("/images/families/family-payment-icons.png")',
-        backgroundSize: "400% 100%",
-        backgroundPosition: `${x} 50%`,
-      }}
+      className={`relative block size-24 shrink-0 overflow-hidden rounded-full ${backgrounds[index] ?? backgrounds[0]}`}
+    >
+      <Image
+        src="/images/families/family-payment-icons.png"
+        alt=""
+        width={1983}
+        height={793}
+        className="absolute top-1/2 h-51.25 w-lg max-w-none -translate-y-1/2"
+        style={{ left: `${-16 - index * 128}px` }}
+      />
+    </span>
+  );
+}function RevisionPaperIcon() {
+  return (
+    <Image
+      src="/images/families/revision-paper-icon-v2.png"
+      alt=""
+      aria-hidden
+      width={132}
+      height={132}
+      className="h-28 w-28 shrink-0 object-contain md:h-32 md:w-32"
+    />
+  );
+}
+
+function ParticipatingSchoolIcon() {
+  return (
+    <Image
+      src="/images/families/participating-school-icon-v2.png"
+      alt=""
+      aria-hidden
+      width={144}
+      height={112}
+      className="h-24 w-32 shrink-0 object-contain md:h-28 md:w-36"
     />
   );
 }
@@ -208,181 +236,36 @@ function Checks({ items }: { items: readonly string[] }) {
 export default function FamiliesPage() {
   return (
     <main className="families-page overflow-hidden bg-white text-[#10243d]">
-      <section className="relative h-[clamp(560px,44.5vw,760px)] overflow-hidden bg-[radial-gradient(circle_at_8%_3%,rgba(210,235,244,.58),transparent_18%),radial-gradient(circle_at_88%_15%,rgba(237,218,255,.72),transparent_30%),linear-gradient(112deg,#f6fbff_0%,#fffaf0_35%,#fff5eb_61%,#f7ecff_100%)]">
-        <div className="absolute inset-0">
+      <section className="relative overflow-hidden bg-[#fffaf0] lg:aspect-1674/944">
+        <div className="absolute inset-0 hidden lg:block">
           <Image
-            src="/images/families/families-hero-v2.png"
-            alt="A parent supporting her child while he learns on a tablet"
+            src="/images/families/families-hero-v3.png"
+            alt="AttoLearn parent dashboard showing a child profile and learning progress"
             fill
             priority
             sizes="100vw"
             className="object-cover object-center"
           />
         </div>
-        <svg
-          aria-hidden
-          className="absolute inset-x-0 bottom-0 h-32 w-full"
-          viewBox="0 0 1440 128"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0 35 C130 78 190 125 310 95 C430 64 500 34 635 83 C745 123 785 128 890 128 H0Z"
-            fill="#b8ece8"
-            fillOpacity=".82"
-          />
-          <path
-            d="M0 72 C115 101 170 132 285 108 C405 83 475 56 610 101 C700 131 790 128 880 128 H0Z"
-            fill="#83d4d2"
-            fillOpacity=".62"
-          />
-        </svg>
-        <div className="pointer-events-none absolute inset-0 hidden lg:block">
-          <BookOpen
-            className="absolute left-[42%] top-[14%] h-16 w-16 -rotate-12 text-amber-400 drop-shadow-md"
-            strokeWidth={1.4}
-          />
-          <svg
-            aria-hidden
-            className="absolute left-[42%] top-[23%] h-[40%] w-[31%] overflow-visible"
-            viewBox="0 0 500 260"
-            fill="none"
-          >
-            <path
-              d="M18 15 C25 175 165 165 224 174 C312 188 362 292 475 167"
-              stroke="#9ea7f7"
-              strokeWidth="2.5"
-              strokeDasharray="9 12"
-            />
-            <path
-              d="M224 76 V174"
-              stroke="#76d5df"
-              strokeWidth="2"
-              strokeDasharray="7 8"
-            />
-            {[
-              [18, 15],
-              [98, 157],
-              [224, 174],
-              [365, 199],
-              [475, 167],
-            ].map(([cx, cy], i) => (
-              <g key={i}>
-                <circle
-                  cx={cx}
-                  cy={cy}
-                  r="8"
-                  fill={i === 2 ? "#ffab00" : "#8175e8"}
-                />
-                <circle cx={cx} cy={cy} r="3" fill="white" />
-              </g>
-            ))}
-          </svg>
-          <div className="absolute left-[52%] top-[14%] w-40 rounded-2xl border border-white/70 bg-[#fffef9]/95 p-3.5 shadow-[0_10px_28px_rgba(48,61,76,.12)]">
-            <p className="text-xs font-semibold">Practice Progress</p>
-            <svg className="mt-2 h-10 w-full" viewBox="0 0 180 64" fill="none">
-              <defs>
-                <linearGradient id="familyChart" x1="0" y1="0" x2="0" y2="1">
-                  <stop stopColor="#54c6c8" stopOpacity=".35" />
-                  <stop offset="1" stopColor="#54c6c8" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M4 54 L33 39 L62 46 L86 35 L114 19 L140 26 L174 5 V60 H4Z"
-                fill="url(#familyChart)"
-              />
-              <path
-                d="M4 54 L33 39 L62 46 L86 35 L114 19 L140 26 L174 5"
-                stroke="#078d91"
-                strokeWidth="2.5"
-              />
-              <g fill="#078d91">
-                {[
-                  [4, 54],
-                  [33, 39],
-                  [62, 46],
-                  [86, 35],
-                  [114, 19],
-                  [140, 26],
-                  [174, 5],
-                ].map(([cx, cy]) => (
-                  <circle key={cx} cx={cx} cy={cy} r="2.5" />
-                ))}
-              </g>
-            </svg>
-            <b className="absolute right-3 top-8 text-sm">72%</b>
-          </div>
-          <div className="absolute left-[68%] top-[24%] w-24 rounded-2xl border border-white/70 bg-[#fffef9]/95 p-3 text-center shadow-[0_10px_28px_rgba(48,61,76,.12)]">
-            <p className="text-xs font-semibold">Mastery</p>
-            <div className="mx-auto mt-2 grid h-14 w-14 place-items-center rounded-full border-6 border-teal-600 text-sm font-bold">
-              85%
-            </div>
-            <p className="mt-2 text-[10px] font-semibold">Great work!</p>
-          </div>
-          <div className="absolute left-[45%] top-[46%] w-36 rounded-2xl border border-white/70 bg-[#fffef9]/95 p-3.5 shadow-[0_10px_28px_rgba(48,61,76,.12)]">
-            <p className="text-sm font-semibold">Today&apos;s Progress</p>
-            <div className="mt-3 space-y-2 text-[10px]">
-              <p className="flex justify-between">
-                <span>Questions Answered</span>
-                <b>18</b>
-              </p>
-              <p className="flex justify-between">
-                <span>Correct Answers</span>
-                <b>15</b>
-              </p>
-              <p className="flex justify-between">
-                <span>Accuracy</span>
-                <b>83%</b>
-              </p>
-            </div>
-            <div className="mt-3 h-1.5 rounded-full bg-slate-200">
-              <div className="h-full w-4/5 rounded-full bg-teal-500" />
-            </div>
-          </div>
-          <Atom
-            className="absolute right-[27%] top-[7%] h-14 w-14 text-teal-500"
-            strokeWidth={1.4}
-          />
-          <Lightbulb
-            className="absolute right-[17%] top-[8%] h-16 w-16 text-amber-400"
-            strokeWidth={1.5}
-          />
-          <Triangle
-            className="absolute right-[23%] top-[18%] h-10 w-10 rotate-12 text-violet-500"
-            strokeWidth={1.8}
-          />
-          <Dna
-            className="absolute right-[2%] top-[33%] h-11 w-11 rotate-12 text-violet-500"
-            strokeWidth={1.5}
-          />
-          <Target
-            className="absolute right-[14%] top-[10%] hidden h-14 w-14 text-amber-400"
-            strokeWidth={1.5}
-          />
-          <span className="absolute right-[7%] top-[18%] grid grid-cols-5 gap-2">
-            {Array.from({ length: 20 }).map((_, i) => (
-              <i key={i} className="h-1 w-1 rounded-full bg-teal-300" />
-            ))}
-          </span>
-        </div>
-        <div className="relative mx-auto flex h-full max-w-7xl items-center px-5 py-12 sm:px-8 lg:px-10">
-          <div className="max-w-md">
-            <p className="text-sm font-bold uppercase tracking-wide text-[#087f84]">
+        <div className="site-container relative flex min-h-150 items-center py-16 lg:absolute lg:inset-0 lg:min-h-0 lg:items-start lg:py-0 lg:pt-[7.2%]">
+          <div className="relative z-10 w-full lg:max-w-[43%]">
+            <p className="flex items-center gap-4 text-sm font-bold uppercase tracking-wide text-[#087f84]">
               For families
+              <span className="h-px w-8 bg-[#168b87]" />
             </p>
-            <h1 className="mt-8 text-[36px] leading-[1.12] tracking-[-.035em] sm:text-[46px] xl:text-[52px]">
+            <h1 className="mt-7 text-[40px] font-bold leading-[1.1] tracking-[-.035em] text-[#080d43] sm:text-[46px] xl:text-[52px]">
               Understand your
               <br />
               child&apos;s learning.
               <br />
-              <span className="bg-linear-to-r from-blue-500 via-violet-500 to-red-500 bg-clip-text text-transparent">
-                Stay in control.
-              </span>
+              <span className="text-[#168b87]">Stay in control.</span>
             </h1>
-            <p className="mt-7 max-w-105 text-base leading-7 text-slate-700">
+            <span className="mt-6 block h-1 w-18 rounded-full bg-[#ffae00]" />
+            <p className="mt-6 max-w-107.5 text-[17px] leading-8 text-[#202746]">
               Short, focused practice, and clear evidence of what your child
-              actually understands - not just a score.
+              actually understands — not just a score.
             </p>
-            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Btn href="/choose-module">
                 Start Free <ArrowRight className="h-5 w-5" />
               </Btn>
@@ -392,8 +275,17 @@ export default function FamiliesPage() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="bg-linear-to-b from-[#f4faff] to-white py-20">
+        <div className="relative h-97.5 w-full overflow-hidden lg:hidden">
+          <Image
+            src="/images/families/families-hero-v3.png"
+            alt="AttoLearn parent dashboard showing a child profile and learning progress"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-[78%_center]"
+          />
+        </div>
+      </section>      <section className="bg-linear-to-b from-[#f4faff] to-white py-20">
         <div className="site-container">
           <Title eyebrow="What families receive">
             Everything your child needs, in one account
@@ -648,7 +540,7 @@ export default function FamiliesPage() {
               Check progress with a real assessment
             </Title>
             <div className="mt-8 flex flex-col items-center gap-6 rounded-xl border border-dashed border-amber-400 bg-amber-50/50 px-8 py-6 md:flex-row">
-              <FeatureIcon index={6} />
+              <RevisionPaperIcon />
               <div className="flex-1">
                 <h3 className="text-xl text-teal-800">
                   Build a revision paper
@@ -665,7 +557,7 @@ export default function FamiliesPage() {
               <Btn href="/papergenerator">Learn More</Btn>
             </div>
             <div className="mt-5 flex flex-col items-center gap-6 rounded-xl bg-[#eefafa] px-8 py-6 md:flex-row">
-              <Bubble icon={Building2} />
+              <ParticipatingSchoolIcon />
               <div className="flex-1">
                 <h3 className="text-xl text-teal-800">
                   Already at a participating school?
@@ -681,30 +573,27 @@ export default function FamiliesPage() {
           </div>
         </div>
       </section>
-      <section className="site-container pb-14">
-        <div className="relative min-h-82.5 overflow-hidden bg-[#c9f4ed]">
+      <section className="w-full pb-14">
+        <div className="relative min-h-130 w-full overflow-hidden bg-[#bdeee7] sm:min-h-110 lg:aspect-3/1 lg:min-h-0">
           <Image
-            src="/images/families/family-cta-banner.png"
-            alt="A mother and child learning together"
+            src="/images/families/family-cta-complete-v3.png"
+            alt="A mother and child learning together with AttoLearn progress cards"
             fill
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="relative grid min-h-82.5 items-center lg:grid-cols-[35%_38%_27%]">
-            <div />
-            <div className="px-5 text-center">
-              <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-white/90 shadow">
-                <GraduationCap className="h-8 w-8 text-teal-700" />
-              </span>
-              <h2 className="mt-4 text-3xl leading-tight text-[#082d52]">
+          <div className="relative mx-auto grid min-h-130 w-full max-w-295 items-center sm:min-h-110 lg:absolute lg:inset-0 lg:min-h-0 lg:grid-cols-[35%_40%_25%]">
+            <div className="hidden lg:block" />
+            <div className="relative z-10 px-6 py-12 text-center sm:px-8 lg:pt-20">
+              <h2 className="text-[32px] font-bold leading-[1.08] tracking-[-.03em] text-[#082d52] sm:text-[38px]">
                 Start understanding
                 <br />
                 your child&apos;s learning
               </h2>
-              <p className="mt-3 text-base">
+              <p className="mt-4 text-base text-[#173d49]">
                 Free to try. No pressure, no commitment.
               </p>
-              <div className="mt-5 flex flex-col justify-center gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
                 <Btn href="/choose-module">
                   Start Free <ArrowRight className="h-5 w-5" />
                 </Btn>
@@ -713,105 +602,96 @@ export default function FamiliesPage() {
                 </Btn>
               </div>
             </div>
-            <div className="hidden space-y-3 pr-8 lg:block">
-              <div className="-rotate-1 rounded-xl bg-white/90 p-4 shadow-lg">
-                <p className="text-xs font-semibold">Practice Progress</p>
-                <p className="mt-1 text-2xl font-bold text-violet-500">72%</p>
-              </div>
-              <div className="rotate-2 rounded-xl bg-white/90 p-4 shadow-lg">
-                <div className="flex items-center gap-3">
-                  <span className="grid h-12 w-12 place-items-center rounded-full border-7 border-emerald-400 text-sm font-bold">
-                    85%
-                  </span>
-                  <div>
-                    <p className="text-xs font-semibold">Mastery</p>
-                    <p className="text-xl font-bold text-emerald-500">85%</p>
-                  </div>
-                </div>
-              </div>
-              <div className="-rotate-1 rounded-xl bg-white/90 p-4 shadow-lg">
-                <p className="text-xs font-semibold">This Week</p>
-                <div className="mt-3 flex h-9 items-end gap-2">
-                  {[12, 18, 24, 30, 36, 42].map((h) => (
-                    <i
-                      key={h}
-                      className="w-4 rounded-sm bg-blue-400"
-                      style={{ height: h }}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
+            <div className="hidden lg:block" />
           </div>
         </div>
-      </section>
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#fffef8_0%,#fffdf4_100%)] py-16 md:py-20">
-        <div
-          aria-hidden
-          className="absolute left-0 top-0 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-50/70 blur-2xl"
-        />
-        <div
-          aria-hidden
-          className="absolute bottom-0 right-0 h-64 w-64 translate-x-1/3 translate-y-1/3 rounded-full bg-amber-50 blur-2xl"
-        />
+      </section>      <section className="relative overflow-hidden bg-[#fffdf2] py-12 md:py-14">
         <div className="site-container relative">
           <Title eyebrow="The small print, said plainly">
             Things worth knowing before you pay
           </Title>
-          <div className="mt-9 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {smallPrint.map(([, t, c], i) => (
               <article
                 key={t}
-                className="group min-h-57.5 rounded-2xl border border-[#edf1ee] bg-white px-6 py-6 text-left shadow-[0_10px_32px_rgba(20,63,74,.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_16px_38px_rgba(20,63,74,.12)]"
+                className="min-h-52.5 rounded-2xl border border-[#f0eadf] bg-[#fffef9] px-6 py-5 text-left shadow-[0_8px_24px_rgba(46,65,63,.07)]"
               >
                 <div className="flex justify-center">
                   <PaymentIcon index={i} />
                 </div>
-                <h3 className="mt-3 text-[16px] font-bold text-[#075f68]">
+                <h3 className="mt-1 text-[17px] font-bold leading-6 text-[#123d52]">
                   {t}
                 </h3>
-                <p className="mt-2 text-[14px] leading-6 text-slate-600">{c}</p>
+                <p className="mt-1.5 text-[14px] leading-[1.55] text-[#3c4252]">
+                  {c}
+                </p>
               </article>
             ))}
           </div>
-          <div className="relative mt-5 overflow-hidden rounded-2xl border border-dashed border-amber-400 bg-[linear-gradient(100deg,#fffaf0_0%,#fffdf8_55%,#fff8e8_100%)] px-6 py-5 sm:px-8">
-            <div
-              aria-hidden
-              className="absolute -bottom-12 -right-5 h-36 w-36 rounded-full bg-amber-100/70"
-            />
-            <div className="relative grid items-center gap-6 md:grid-cols-[76px_1fr_170px]">
-              <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-white shadow-sm">
-                <Tags className="h-9 w-9 text-amber-500" strokeWidth={1.7} />
-              </div>
+          <div className="mt-5 rounded-2xl border border-dashed border-[#f4ab20] bg-[#fffdf7] px-6 py-4 sm:px-8">
+            <div className="grid items-center gap-5 md:grid-cols-[110px_1fr_240px]">
+              <Image
+                src="/images/families/tax-receipt-coins-v3.png"
+                alt=""
+                aria-hidden
+                width={120}
+                height={96}
+                className="mx-auto h-24 w-28 object-contain"
+              />
               <div>
-                <h3 className="text-xl font-bold text-amber-600">On tax</h3>
-                <p className="mt-2 max-w-3xl text-[15px] leading-6 text-slate-650">
+                <h3 className="text-[21px] font-bold leading-7 text-[#f08b00]">
+                  On tax
+                </h3>
+                <p className="mt-1.5 max-w-3xl text-[15px] leading-6 text-[#363b49]">
                   Whether the figures shown include GST or VAT determines the
                   final amount you pay, and consumer price display rules differ
                   by market.
                 </p>
-                <p className="mt-3 text-xs font-extrabold uppercase leading-5 tracking-wide text-amber-600">
+                <p className="mt-2 text-[12px] font-extrabold uppercase leading-5 tracking-wide text-[#f08b00]">
                   Tax-inclusive vs tax-exclusive display to be confirmed per
                   market before these prices go live
                 </p>
               </div>
-              <div
+              <Image
+                src="/images/families/tax-wallet-calculator-v4.png"
+                alt=""
                 aria-hidden
-                className="hidden items-end justify-center gap-2 md:flex"
-              >
-                <span className="grid h-20 w-24 place-items-center rounded-3xl bg-teal-600 text-amber-300 shadow-md">
-                  <Tags className="h-11 w-11" />
-                </span>
-                <span className="grid h-16 w-14 place-items-center rounded-xl border-4 border-slate-500 bg-slate-100 text-amber-500 shadow-sm">
-                  <span className="grid grid-cols-3 gap-1">
-                    {Array.from({ length: 9 }).map((_, i) => (
-                      <i
-                        key={i}
-                        className="h-1.5 w-1.5 rounded-sm bg-slate-500"
-                      />
-                    ))}
-                  </span>
-                </span>
+                width={250}
+                height={112}
+                className="mx-auto hidden h-28 w-60 object-contain md:block"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full bg-[#fffdf2] pb-0 pt-8 sm:pt-10" aria-labelledby="families-final-cta-title">
+        <div className="relative min-h-140 w-full overflow-hidden bg-[#fbf7ec] sm:min-h-125 lg:aspect-3/1 lg:min-h-0">
+          <Image
+            src="/images/families/families-final-cta-v2.png"
+            alt="A child enjoying learning on a tablet beside books and education icons"
+            fill
+            sizes="(max-width: 1280px) 100vw, 1280px"
+            quality={100}
+            className="object-cover object-center max-lg:opacity-50"
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(255,251,242,.18)_30%,rgba(255,251,242,.72)_44%,rgba(255,251,242,.72)_62%,transparent_78%)] max-lg:bg-[#fffaf0]/55" />
+          <div className="relative z-10 flex min-h-140 items-center justify-center px-5 py-14 sm:min-h-125 sm:px-8 lg:absolute lg:inset-0 lg:min-h-0 lg:pl-[34%] lg:pr-[24%]">
+            <div className="w-full max-w-130 text-center">
+              <h2 id="families-final-cta-title" className="text-[38px] font-black leading-[1.05] tracking-[-.035em] text-[#092c50] sm:text-[46px] lg:text-[50px]">
+                Start free,
+                <span className="block text-[#166f70]">decide later</span>
+              </h2>
+              <p className="mx-auto mt-5 max-w-97.5 text-[15px] font-medium leading-6 text-[#52606f] sm:text-[16px]">
+                No card to try it. Move to a paid plan<br className="hidden sm:block" /> when it&apos;s earning its place.
+              </p>
+              <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <Link href="/choose-module" className="inline-flex min-h-12 min-w-40 items-center justify-center gap-4 rounded-lg bg-[#ffad0a] px-7 text-[15px] font-extrabold text-white shadow-[0_8px_20px_rgba(245,158,11,.22)] transition hover:bg-[#ef9d00]">
+                  Start Free <ArrowRight className="h-5 w-5" />
+                </Link>
+                <Link href="/contact" className="inline-flex min-h-12 min-w-40 items-center justify-center gap-3 rounded-lg border-2 border-[#16868b] bg-[#fffdf5]/90 px-7 text-[15px] font-extrabold text-[#075f68] transition hover:bg-white">
+                  Talk to Sales <Headphones className="h-4.5 w-4.5" />
+                </Link>
               </div>
             </div>
           </div>
