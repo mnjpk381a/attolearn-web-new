@@ -178,8 +178,8 @@ export default function HomeEducationPage() {
         />
         <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-[#fffaf0]/96 via-[#fffaf0]/72 to-transparent lg:hidden" />
         <div className="site-container relative z-10 flex min-h-[34rem] items-center py-10 lg:absolute lg:inset-0 lg:min-h-0 lg:py-0">
-          <div className="max-w-107.5 rounded-2xl bg-[#fffaf0]/82 p-5 backdrop-blur-[2px] sm:p-6 lg:-translate-y-12 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
-            <p className="text-sm font-bold text-[#087f84]">
+          <div className="max-w-107.5 rounded-2xl bg-[#fffaf0]/82 p-5 backdrop-blur-[2px] sm:p-6 lg:-translate-y-20 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
+            <p className="text-sm font-extrabold text-[#087f84]">
               For Home Education
             </p>
             <h1 className="mt-4 text-[36px] font-bold leading-[1.08] tracking-[-.035em] text-[#080d43] sm:text-[44px] lg:text-[46px]">
