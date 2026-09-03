@@ -385,7 +385,7 @@ export default function HomePageClient() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-[64%_center]"
+          className="adaptive-hero-image object-cover object-[64%_center]"
         />
         <div className="absolute inset-0 bg-linear-to-r from-[#fffdf2] via-[#fffdf2]/88 to-transparent lg:via-[#fffdf2]/20" />
         <div className="relative mx-auto min-h-215 w-full max-w-7xl px-3 pb-10 pt-14 sm:px-4 lg:px-6 lg:pt-20">

@@ -1130,3 +1130,20 @@ body {
     font-size: 1rem !important;
   }
 }
+
+/* Preserve the complete Adaptive Learning hero artwork on ultra-wide displays. */
+@media (min-width: 100rem) {
+  .public-site .adaptive-learning-hero {
+    height: calc(100vh - 5rem);
+    min-height: 44rem;
+    max-height: 53.75rem;
+  }
+  .public-site .adaptive-learning-hero .adaptive-hero-image {
+    object-fit: contain !important;
+    object-position: right center !important;
+  }
+  .public-site .adaptive-learning-hero > .relative {
+    height: 100%;
+    min-height: 0;
+  }
+}
