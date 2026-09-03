@@ -162,16 +162,18 @@ function CheckList({ items }: { items: readonly string[] }) {
 export default function HomeEducationPage() {
   return (
     <main className="home-education-page overflow-hidden bg-white text-[#10243d]">
-      <section className="home-education-hero relative min-h-[34rem] overflow-hidden bg-[#fffaf0] lg:aspect-[1684/941] lg:min-h-0">
-        <Image
-          src="/images/home-education/hero-reference-v2.png"
-          alt="Parent and child learning with AttoLearn progress dashboards"
-          fill
-          priority
-          quality={100}
-          sizes="100vw"
-          className="object-cover object-top lg:object-contain"
-        />
+      <section className="home-education-hero relative min-h-[34rem] overflow-hidden bg-[#fffaf0] lg:h-[min(56.28vw,941px)] lg:min-h-0">
+        <div className="absolute inset-y-0 left-1/2 w-full -translate-x-1/2 lg:max-w-[1672px]">
+          <Image
+            src="/images/home-education/hero-reference-v2.png"
+            alt="Parent and child learning with AttoLearn progress dashboards"
+            fill
+            priority
+            quality={100}
+            sizes="(min-width: 1672px) 1672px, 100vw"
+            className="object-cover object-top lg:object-contain lg:object-center"
+          />
+        </div>
         <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-[#fffaf0]/96 via-[#fffaf0]/72 to-transparent lg:hidden" />
         <div className="site-container relative z-10 flex min-h-[34rem] items-center py-10 lg:absolute lg:inset-0 lg:min-h-0 lg:py-0">
           <div className="max-w-107.5 rounded-2xl bg-[#fffaf0]/82 p-5 backdrop-blur-[2px] sm:p-6 lg:-translate-y-20 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
@@ -831,7 +833,7 @@ export default function HomeEducationPage() {
                       alt="Mr. Okafor"
                       fill
                       sizes="48px"
-                      className="object-cover object-top lg:object-contain"
+                      className="object-cover object-top lg:object-contain lg:object-top"
                     />
                   </span>
                 </div>
@@ -1078,17 +1080,17 @@ export default function HomeEducationPage() {
           </div>
         </div>
       </section>{" "}
-      <section className="relative overflow-hidden text-white">
+      <section className="relative overflow-hidden bg-[#075f68] text-white lg:aspect-3/1">
         <Image
           src="/images/home-education/pre-footer/home-education-start-free-banner.png"
           alt="Home education planning notebook, books and plant"
           fill
           sizes="100vw"
           quality={100}
-          className="object-cover object-top lg:object-contain"
+          className="object-cover object-top lg:object-contain lg:object-top"
         />
         <div className="absolute inset-0 bg-[#075f68]/78" />
-        <div className="site-container relative flex min-h-64 flex-col items-center justify-center py-12 text-center">
+        <div className="site-container relative flex min-h-64 flex-col items-center justify-center py-12 text-center lg:absolute lg:inset-0 lg:min-h-0">
           <h2 className="text-[34px] font-black leading-tight tracking-[-.02em] sm:text-[42px]">
             Start free, decide later
           </h2>
