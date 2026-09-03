@@ -15,7 +15,6 @@ import {
   ShieldCheck,
   Target,
   Timer,
-  UserRound,
   Users,
 } from "lucide-react";
 
@@ -310,7 +309,7 @@ export default function FamiliesPage() {
       </section>
       <section className="site-container border-x border-slate-200 bg-white py-16">
         {/* Parent Authority */}
-        <div className="content-split">
+        <div className="content-split lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
           <div className="lg:pl-3">
             <p className="text-[11px] font-bold uppercase tracking-wide text-amber-500">
               Parent authority
@@ -341,98 +340,14 @@ export default function FamiliesPage() {
             </ul>
           </div>
 
-          <div className="content-split-media content-split-media-right relative min-h-[405px] overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
+          <div className="content-split-media content-split-media-right relative aspect-[3/2] lg:translate-x-3">
             <Image
-              src="/images/families/parent-authority.png"
+              src="/images/families/parent-authority-generated.png"
               alt="A parent reviewing the family learning dashboard"
               fill
               sizes="(min-width:1024px) 560px, 100vw"
-              className="object-cover object-center"
+              className="object-contain"
             />
-
-            <div className="absolute inset-0 bg-gradient-to-l from-white/10 via-transparent to-transparent" />
-
-            <div className="absolute bottom-5 right-5 top-5 w-[50%] rounded-xl border border-slate-200 bg-white/95 p-3 shadow-[0_14px_34px_rgba(18,59,73,.16)] backdrop-blur-[2px]">
-              <h3 className="rounded-lg bg-[#07888c] px-4 py-2.5 text-[12px] font-semibold text-white">
-                Family Dashboard
-              </h3>
-
-              <div className="mt-2 grid grid-cols-2 gap-2">
-                {[
-                  [
-                    "Emma, Year 4",
-                    "Fractions - building confidence",
-                    "/images/Students/Student-1.png",
-                  ],
-                  [
-                    "Jack, Year 7",
-                    "Algebra - ready for the next step",
-                    "/images/Students/Student-2.png",
-                  ],
-                ].map(([t, c, src]) => (
-                  <div
-                    key={t}
-                    className="rounded-lg border border-slate-200 bg-white p-2"
-                  >
-                    <Image
-                      src={src}
-                      alt=""
-                      width={28}
-                      height={28}
-                      className="h-7 w-7 rounded-full object-cover ring-2 ring-teal-100"
-                    />
-
-                    <h4 className="mt-1.5 text-[11px] font-bold leading-tight text-teal-800">
-                      {t}
-                    </h4>
-
-                    <p className="mt-1 text-[9px] leading-[14px] text-slate-600">
-                      {c}
-                    </p>
-
-                    <div className="mt-2 h-1 overflow-hidden rounded-full bg-slate-200">
-                      <div className="h-full w-2/5 rounded-full bg-teal-600" />
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-2 grid grid-cols-2 gap-2">
-                {[
-                  ["Tutor access", "Ms. Patel · Maths", "Scoped"],
-                  ["This week", "4 sessions", "Completed"],
-                ].map(([t, c, meta], i) => (
-                  <div
-                    key={t}
-                    className="rounded-lg border border-slate-200 bg-white p-2"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[#e7f7f5] text-teal-700">
-                        {i === 0 ? (
-                          <UserRound className="h-3.5 w-3.5" />
-                        ) : (
-                          <CalendarCheck className="h-3.5 w-3.5" />
-                        )}
-                      </span>
-
-                      <div className="min-w-0">
-                        <h4 className="text-[10px] font-bold leading-tight text-teal-800">
-                          {t}
-                        </h4>
-
-                        <p className="mt-0.5 truncate text-[8.5px] text-slate-600">
-                          {c}
-                        </p>
-                      </div>
-                    </div>
-
-                    <span className="mt-2 inline-flex rounded-full bg-teal-50 px-2 py-1 text-[7.5px] font-semibold text-teal-700">
-                      {meta}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
 
@@ -440,75 +355,15 @@ export default function FamiliesPage() {
 
         {/* Child Experience */}
         <div className="content-split">
-          <div className="content-split-media content-split-media-left relative min-h-[440px] overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
+          <div className="content-split-media content-split-media-left relative aspect-[3/2] lg:-translate-x-3">
             <Image
-              src="/images/families/child-experience.png"
-              alt="A child completing a short learning activity"
+              src="/images/families/child-experience-generated.png"
+              alt="A child completing a short learning activity on a tablet"
               fill
               sizes="(min-width:1024px) 560px, 100vw"
-              className="object-cover object-center"
+              className="object-contain"
             />
-
-            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent" />
-
-            <div className="absolute left-5 top-5 w-[43%] rounded-xl border border-slate-200 bg-white/95 p-2.5 shadow-[0_12px_30px_rgba(18,59,73,.18)] backdrop-blur-[2px]">
-              <h3 className="rounded-lg bg-[#07888c] px-3 py-2 text-[11px] font-semibold text-white">
-                What Emma sees
-              </h3>
-
-              <div className="mt-2 rounded-lg border border-slate-200 bg-white p-2.5">
-                <div className="flex items-center gap-2">
-                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#e5f8f4] text-teal-600">
-                    <Target className="h-3.5 w-3.5" />
-                  </span>
-
-                  <div>
-                    <h4 className="text-[10px] font-bold text-teal-800">
-                      Today&apos;s Best Step
-                    </h4>
-
-                    <p className="text-[8px] text-slate-500">
-                      One activity, chosen for you
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  aria-hidden
-                  className="relative mt-2 h-16 overflow-hidden rounded-md bg-[linear-gradient(180deg,#f7fcfb_0%,#e7f7ed_100%)]"
-                >
-                  <span className="absolute bottom-0 left-0 h-9 w-28 rounded-[100%_100%_0_0] bg-[#cdebd6]" />
-                  <span className="absolute bottom-0 right-0 h-12 w-28 rounded-[100%_100%_0_0] bg-[#75c58f]" />
-                  <span className="absolute bottom-7 right-7 h-7 w-0.5 bg-amber-500" />
-                  <span className="absolute bottom-12 right-3 h-4 w-5 bg-amber-400 [clip-path:polygon(0_0,100%_25%,0_55%)]" />
-                </div>
-              </div>
-
-              <div className="mt-2 flex items-center gap-2 rounded-lg border border-slate-200 bg-white p-2.5">
-                <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[#dff4e8] text-sm text-emerald-600">
-                  ☺
-                </span>
-
-                <div>
-                  <p className="text-[10px] font-bold text-teal-700">
-                    Nice work!
-                  </p>
-
-                  <p className="text-[8px] text-slate-500">
-                    Encouragement, not a score
-                  </p>
-                </div>
-
-                <span
-                  aria-hidden
-                  className="ml-auto text-base tracking-[-2px] text-amber-400"
-                >
-                  ✦·✧
-                </span>
-              </div>
-            </div>
           </div>
-
           <div>
             <p className="text-xs font-bold uppercase tracking-wide text-amber-500">
               Child experience
@@ -617,7 +472,7 @@ export default function FamiliesPage() {
         </div>
       </section>
       <section className="w-full pb-14">
-        <div className="relative min-h-130 w-full overflow-hidden bg-[#bdeee7] sm:min-h-110 lg:aspect-3/1 lg:min-h-0">
+        <div className="relative min-h-130 w-full overflow-hidden bg-[#bdeee7] sm:min-h-110 lg:aspect-[16/5] lg:min-h-0">
           <Image
             src="/images/families/family-cta-complete-v3.png"
             alt="A mother and child learning together with AttoLearn progress cards"
@@ -712,7 +567,7 @@ export default function FamiliesPage() {
         className="w-full bg-[#fffdf2] pb-0 pt-8 sm:pt-10"
         aria-labelledby="families-final-cta-title"
       >
-        <div className="relative min-h-140 w-full overflow-hidden bg-[#fbf7ec] sm:min-h-125 lg:aspect-3/1 lg:min-h-0">
+        <div className="relative min-h-140 w-full overflow-hidden bg-[#fbf7ec] sm:min-h-125 lg:aspect-[16/5] lg:min-h-0">
           <Image
             src="/images/families/families-final-cta-v2.png"
             alt="A child enjoying learning on a tablet beside books and education icons"
@@ -726,10 +581,10 @@ export default function FamiliesPage() {
             <div className="w-full max-w-130 text-center">
               <h2
                 id="families-final-cta-title"
-                className="text-[38px] font-black leading-[1.05] tracking-[-.035em] text-[#092c50] sm:text-[46px] lg:text-[50px]"
+                className="whitespace-nowrap text-[30px] font-black leading-[1.05] tracking-[-.035em] text-[#092c50] sm:text-[38px] lg:text-[44px]"
               >
                 Start free,
-                <span className="block text-[#166f70]">decide later</span>
+                 <span className="text-[#166f70]">decide later</span>
               </h2>
               <p className="mx-auto mt-5 max-w-97.5 text-[15px] font-medium leading-6 text-[#52606f] sm:text-[16px]">
                 No card to try it. Move to a paid plan
