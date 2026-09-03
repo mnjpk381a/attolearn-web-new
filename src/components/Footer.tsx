@@ -79,7 +79,7 @@ export default function Footer() {
                     prefetch={false}
                     className="hover:underline"
                   >
-                    Home Education
+                    Home Schooling
                   </Link>
                 </li>
                 <li>

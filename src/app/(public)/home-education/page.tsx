@@ -162,8 +162,8 @@ function CheckList({ items }: { items: readonly string[] }) {
 export default function HomeEducationPage() {
   return (
     <main className="home-education-page overflow-hidden bg-white text-[#10243d]">
-      <section className="home-education-hero relative min-h-[34rem] overflow-hidden bg-[#fffaf0] lg:h-[min(56.28vw,941px)] lg:min-h-0">
-        <div className="absolute inset-y-0 left-1/2 w-full -translate-x-1/2 lg:max-w-[1672px]">
+      <section className="home-education-hero relative min-h-136 overflow-hidden bg-[#fffaf0] lg:h-[min(56.28vw,941px)] lg:min-h-0">
+        <div className="absolute inset-y-0 left-1/2 w-full -translate-x-1/2 lg:max-w-418">
           <Image
             src="/images/home-education/hero-reference-v2.png"
             alt="Parent and child learning with AttoLearn progress dashboards"
@@ -175,10 +175,10 @@ export default function HomeEducationPage() {
           />
         </div>
         <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-[#fffaf0]/96 via-[#fffaf0]/72 to-transparent lg:hidden" />
-        <div className="site-container relative z-10 flex min-h-[34rem] items-center py-10 lg:absolute lg:inset-0 lg:min-h-0 lg:py-0">
+        <div className="site-container relative z-10 flex min-h-136 items-center py-10 lg:absolute lg:inset-0 lg:min-h-0 lg:py-0">
           <div className="max-w-107.5 rounded-2xl bg-[#fffaf0]/82 p-5 backdrop-blur-[2px] sm:p-6 lg:-translate-y-20 lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
-            <p className="text-sm font-extrabold text-[#087f84]">
-              For Home Education
+            <p className="text-lg font-extrabold text-[#087f84]">
+              For Home Schooling
             </p>
             <h1 className="mt-4 text-[36px] font-bold leading-[1.08] tracking-[-.035em] text-[#080d43] sm:text-[44px] lg:text-[46px]">
               Flexible learning

@@ -17,7 +17,7 @@ export type NavItem =
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Families", href: "/families" },
-  { label: "Home Education", href: "/home-education" },
+  { label: "Home Schooling", href: "/home-education" },
   { label: "Tutors", href: "/tutors" },
   { label: "Tuition Centres", href: "/tuition-centres" },
   { label: "Schools", href: "/schools" },

@@ -1067,3 +1067,66 @@ body {
     scroll-margin-top: 4.5rem;
   }
 }
+
+/* Adaptive Learning hero typography matches the supplied compact reference scale. */
+.public-site .adaptive-learning-hero h1,
+.public-site .adaptive-learning-hero .adaptive-hero-accent {
+  font-size: clamp(2.25rem, 3vw, 2.875rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.08 !important;
+  letter-spacing: -0.03em !important;
+}
+/* Adaptive Learning development cards use the supplied reference scale. */
+.public-site .learning-development-card h3 {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  line-height: 1.5rem !important;
+  color: #146b6d;
+}
+/* Adaptive Learning CTA matches the reference banner scale. */
+.public-site .adaptive-learning-cta h2 {
+  font-size: 2.875rem !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em !important;
+}
+.public-site .adaptive-learning-cta p {
+  font-size: 1.0625rem !important;
+  font-weight: 600 !important;
+  line-height: 1.65 !important;
+}
+@media (max-width: 39.999rem) {
+  .public-site .adaptive-learning-cta {
+    height: auto;
+    min-height: 31rem;
+  }
+  .public-site .adaptive-learning-cta h2 {
+    font-size: 2.125rem !important;
+  }
+  .public-site .adaptive-learning-cta p {
+    font-size: 0.9375rem !important;
+  }
+}
+/* Adaptive Learning closing CTA reference scale. */
+.public-site .adaptive-final-cta h2 {
+  font-size: 3.625rem !important;
+  font-weight: 800 !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.035em !important;
+}
+.public-site .adaptive-final-cta p {
+  font-size: 1.25rem !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+}
+@media (max-width: 39.999rem) {
+  .public-site .adaptive-final-cta {
+    height: 24rem;
+  }
+  .public-site .adaptive-final-cta h2 {
+    font-size: 2.5rem !important;
+  }
+  .public-site .adaptive-final-cta p {
+    font-size: 1rem !important;
+  }
+}
