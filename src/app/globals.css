@@ -1147,3 +1147,24 @@ body {
     min-height: 0;
   }
 }
+
+/* Pricing intro is designed to fit with country actions in one desktop viewport. */
+.public-site .pricing-hero h1 {
+  font-size: 2.625rem !important;
+  font-weight: 800 !important;
+  line-height: 1.04 !important;
+  letter-spacing: -0.025em !important;
+}
+.public-site .pricing-hero p {
+  font-size: 0.875rem !important;
+  line-height: 1.45 !important;
+}
+@media (max-width: 39.999rem) {
+  .public-site .pricing-hero {
+    height: auto;
+    min-height: 28rem;
+  }
+  .public-site .pricing-hero h1 {
+    font-size: 2.25rem !important;
+  }
+}

@@ -69,7 +69,7 @@ export const navItems: NavItem[] = [
     ],
   },
 
-  { label: "Pricing", href: "#" },
+  { label: "Pricing", href: "/pricing" },
 
   {
     label: "Company",
