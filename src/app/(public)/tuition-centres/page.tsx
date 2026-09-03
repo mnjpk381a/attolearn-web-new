@@ -111,6 +111,11 @@ function TickList({ items }: { items: readonly string[] }) {
   );
 }
 
+const learnerProfileImages = [
+  "/images/tuition-centres/learner-lachlan-generated.png",
+  "/images/tuition-centres/learner-sophie-generated.png",
+  "/images/tuition-centres/learner-noah-generated.png",
+] as const;
 function DashboardList({
   title,
   rows,
@@ -133,9 +138,13 @@ function DashboardList({
             <span className="relative h-12 w-12 shrink-0 rounded-full border-2 border-white shadow-sm">
               <Image
                 src={
-                  index % 2 === 0
-                    ? "/images/tuition-centres/tutor-woman-v2.png"
-                    : "/images/tuition-centres/tutor-man-v2.png"
+                  title === "Learners"
+                    ? learnerProfileImages[index]
+                    : name === "Emily Baxter"
+                      ? "/images/tuition-centres/tutor-emily-baxter-generated.png"
+                      : index % 2 === 0
+                      ? "/images/tuition-centres/tutor-woman-v2.png"
+                      : "/images/tuition-centres/tutor-man-v2.png"
                 }
                 alt={`${name} profile`}
                 fill
