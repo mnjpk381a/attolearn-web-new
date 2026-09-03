@@ -1048,3 +1048,38 @@ body {
     white-space: normal;
   }
 }
+/* Shared responsive safety layer for all public routes. */
+.public-site {
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.public-site :where(section, article, div, nav, main) {
+  min-width: 0;
+}
+
+.public-site :where(img, video, canvas, iframe) {
+  max-width: 100%;
+}
+
+.public-site :where(h1, h2, h3, h4, h5, h6, p, li, a, button) {
+  overflow-wrap: anywhere;
+}
+
+.public-site .content-split-media {
+  max-width: 100%;
+}
+
+@media (max-width: 39.999rem) {
+  .public-site :where(a, button) {
+    max-width: 100%;
+  }
+
+  .public-site :where(a, button).whitespace-nowrap {
+    white-space: normal;
+  }
+
+  .public-site :where(section, article) {
+    scroll-margin-top: 4.5rem;
+  }
+}
