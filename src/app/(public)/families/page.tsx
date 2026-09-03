@@ -308,27 +308,31 @@ export default function FamiliesPage() {
           </div>
         </div>
       </section>
-      <section className="site-container border-x border-slate-200 bg-[#fffef8] py-16">
+      <section className="site-container border-x border-slate-200 bg-white py-16">
+        {/* Parent Authority */}
         <div className="content-split">
           <div className="lg:pl-3">
             <p className="text-[11px] font-bold uppercase tracking-wide text-amber-500">
               Parent authority
             </p>
-            <h2 className="mt-3 text-[28px] sm:text-[34px] font-semibold leading-tight text-[#08797d]">
+
+            <h2 className="mt-3 text-[28px] font-semibold leading-tight text-[#08797d] sm:text-[34px]">
               You decide what happens
             </h2>
+
             <p className="mt-5 max-w-md text-[15px] leading-7 text-slate-600">
               AttoLearn is built so that a parent&apos;s authority is never in
               question - over the account, over access, and over the
               child&apos;s experience.
             </p>
+
             <ul className="mt-6 space-y-3">
               {parentChecks.map((x) => (
                 <li
                   key={x}
                   className="flex items-center gap-3 text-[14px] font-medium text-slate-700"
                 >
-                  <span className="grid h-4.5 w-4.5 shrink-0 place-items-center rounded-full bg-[#078d91] text-white">
+                  <span className="grid h-[18px] w-[18px] shrink-0 place-items-center rounded-full bg-[#078d91] text-white">
                     <Check className="h-3 w-3" />
                   </span>
                   {x}
@@ -336,7 +340,8 @@ export default function FamiliesPage() {
               ))}
             </ul>
           </div>
-          <div className="content-split-media content-split-media-right relative h-90 overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
+
+          <div className="content-split-media content-split-media-right relative min-h-[405px] overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
             <Image
               src="/images/families/parent-authority.png"
               alt="A parent reviewing the family learning dashboard"
@@ -344,11 +349,15 @@ export default function FamiliesPage() {
               sizes="(min-width:1024px) 560px, 100vw"
               className="object-cover object-center"
             />
-            <div className="absolute inset-y-5 right-5 w-[49%] rounded-xl border border-slate-200 bg-white/97 p-3 shadow-[0_12px_30px_rgba(18,59,73,.16)]">
-              <h3 className="rounded-lg bg-[#07888c] px-4 py-2.5 text-xs font-semibold text-white">
+
+            <div className="absolute inset-0 bg-gradient-to-l from-white/10 via-transparent to-transparent" />
+
+            <div className="absolute bottom-5 right-5 top-5 w-[50%] rounded-xl border border-slate-200 bg-white/95 p-3 shadow-[0_14px_34px_rgba(18,59,73,.16)] backdrop-blur-[2px]">
+              <h3 className="rounded-lg bg-[#07888c] px-4 py-2.5 text-[12px] font-semibold text-white">
                 Family Dashboard
               </h3>
-              <div className="mt-2.5 grid grid-cols-2 gap-2">
+
+              <div className="mt-2 grid grid-cols-2 gap-2">
                 {[
                   [
                     "Emma, Year 4",
@@ -363,58 +372,75 @@ export default function FamiliesPage() {
                 ].map(([t, c, src]) => (
                   <div
                     key={t}
-                    className="min-h-26 rounded-lg border border-slate-200 p-2.5"
+                    className="rounded-lg border border-slate-200 bg-white p-2"
                   >
                     <Image
                       src={src}
                       alt=""
-                      width={30}
-                      height={30}
-                      className="h-7.5 w-7.5 rounded-full object-cover ring-2 ring-teal-100"
+                      width={28}
+                      height={28}
+                      className="h-7 w-7 rounded-full object-cover ring-2 ring-teal-100"
                     />
-                    <h4 className="mt-2 text-[11px] font-bold text-teal-800">
+
+                    <h4 className="mt-1.5 text-[11px] font-bold leading-tight text-teal-800">
                       {t}
                     </h4>
-                    <p className="mt-1 text-[9px] leading-3.5 text-slate-600">
+
+                    <p className="mt-1 text-[9px] leading-[14px] text-slate-600">
                       {c}
                     </p>
-                    <span className="mt-2 block h-1 rounded-full bg-slate-200">
-                      <i className="block h-full w-2/5 rounded-full bg-teal-600" />
-                    </span>
+
+                    <div className="mt-2 h-1 overflow-hidden rounded-full bg-slate-200">
+                      <div className="h-full w-2/5 rounded-full bg-teal-600" />
+                    </div>
                   </div>
                 ))}
               </div>
+
               <div className="mt-2 grid grid-cols-2 gap-2">
                 {[
-                  ["Tutor access", "Ms. Patel - Maths, scoped"],
-                  ["This week", "4 sessions completed"],
-                ].map(([t, c], i) => (
+                  ["Tutor access", "Ms. Patel · Maths", "Scoped"],
+                  ["This week", "4 sessions", "Completed"],
+                ].map(([t, c, meta], i) => (
                   <div
                     key={t}
-                    className="min-h-22 rounded-lg border border-slate-200 p-2.5"
+                    className="rounded-lg border border-slate-200 bg-white p-2"
                   >
-                    <span className="grid h-7 w-7 place-items-center rounded-full bg-[#e7f7f5] text-teal-700">
-                      {i === 0 ? (
-                        <UserRound className="h-4 w-4" />
-                      ) : (
-                        <CalendarCheck className="h-4 w-4" />
-                      )}
+                    <div className="flex items-center gap-2">
+                      <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[#e7f7f5] text-teal-700">
+                        {i === 0 ? (
+                          <UserRound className="h-3.5 w-3.5" />
+                        ) : (
+                          <CalendarCheck className="h-3.5 w-3.5" />
+                        )}
+                      </span>
+
+                      <div className="min-w-0">
+                        <h4 className="text-[10px] font-bold leading-tight text-teal-800">
+                          {t}
+                        </h4>
+
+                        <p className="mt-0.5 truncate text-[8.5px] text-slate-600">
+                          {c}
+                        </p>
+                      </div>
+                    </div>
+
+                    <span className="mt-2 inline-flex rounded-full bg-teal-50 px-2 py-1 text-[7.5px] font-semibold text-teal-700">
+                      {meta}
                     </span>
-                    <h4 className="mt-2 text-[11px] font-bold text-teal-800">
-                      {t}
-                    </h4>
-                    <p className="mt-1 text-[9px] leading-3.5 text-slate-600">
-                      {c}
-                    </p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
+
         <div className="my-16 border-t border-slate-200" />
+
+        {/* Child Experience */}
         <div className="content-split">
-          <div className="content-split-media content-split-media-left relative min-h-110 overflow-hidden rounded-xl border border-slate-300 shadow-sm">
+          <div className="content-split-media content-split-media-left relative min-h-[440px] overflow-hidden rounded-xl border border-slate-300 bg-white shadow-sm">
             <Image
               src="/images/families/child-experience.png"
               alt="A child completing a short learning activity"
@@ -422,24 +448,31 @@ export default function FamiliesPage() {
               sizes="(min-width:1024px) 560px, 100vw"
               className="object-cover object-center"
             />
-            <div className="absolute left-5 top-5 w-[42%] rounded-xl border border-slate-200 bg-white/96 p-2.5 shadow-[0_12px_30px_rgba(18,59,73,.18)]">
+
+            <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-transparent to-transparent" />
+
+            <div className="absolute left-5 top-5 w-[43%] rounded-xl border border-slate-200 bg-white/95 p-2.5 shadow-[0_12px_30px_rgba(18,59,73,.18)] backdrop-blur-[2px]">
               <h3 className="rounded-lg bg-[#07888c] px-3 py-2 text-[11px] font-semibold text-white">
                 What Emma sees
               </h3>
+
               <div className="mt-2 rounded-lg border border-slate-200 bg-white p-2.5">
                 <div className="flex items-center gap-2">
-                  <span className="grid h-6 w-6 place-items-center rounded-full bg-[#e5f8f4] text-teal-600">
+                  <span className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#e5f8f4] text-teal-600">
                     <Target className="h-3.5 w-3.5" />
                   </span>
+
                   <div>
                     <h4 className="text-[10px] font-bold text-teal-800">
                       Today&apos;s Best Step
                     </h4>
+
                     <p className="text-[8px] text-slate-500">
                       One activity, chosen for you
                     </p>
                   </div>
                 </div>
+
                 <div
                   aria-hidden
                   className="relative mt-2 h-16 overflow-hidden rounded-md bg-[linear-gradient(180deg,#f7fcfb_0%,#e7f7ed_100%)]"
@@ -450,18 +483,22 @@ export default function FamiliesPage() {
                   <span className="absolute bottom-12 right-3 h-4 w-5 bg-amber-400 [clip-path:polygon(0_0,100%_25%,0_55%)]" />
                 </div>
               </div>
+
               <div className="mt-2 flex items-center gap-2 rounded-lg border border-slate-200 bg-white p-2.5">
                 <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-[#dff4e8] text-sm text-emerald-600">
                   ☺
                 </span>
+
                 <div>
                   <p className="text-[10px] font-bold text-teal-700">
                     Nice work!
                   </p>
+
                   <p className="text-[8px] text-slate-500">
                     Encouragement, not a score
                   </p>
                 </div>
+
                 <span
                   aria-hidden
                   className="ml-auto text-base tracking-[-2px] text-amber-400"
@@ -471,18 +508,22 @@ export default function FamiliesPage() {
               </div>
             </div>
           </div>
+
           <div>
-            <p className="text-xs font-bold uppercase text-amber-500">
+            <p className="text-xs font-bold uppercase tracking-wide text-amber-500">
               Child experience
             </p>
-            <h2 className="mt-3 text-[30px] font-semibold leading-tight text-[#057b80]">
+
+            <h2 className="mt-3 text-[28px] font-semibold leading-tight text-[#057b80] sm:text-[34px]">
               Low-pressure, always encouraging
             </h2>
-            <p className="mt-5 text-[14px] leading-6 text-slate-600">
+
+            <p className="mt-5 max-w-md text-[14px] leading-7 text-slate-600">
               Your child never sees a raw diagnostic label or an overwhelming
               list - just one clear next step, with hints and support along the
               way.
             </p>
+
             <Checks items={childChecks} />
           </div>
         </div>
