@@ -192,7 +192,7 @@ export default function HomePageClient() {
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
-                href="/chooseplan"
+                href="#"
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-linear-to-r from-[#168f8c] to-[#08777c] px-6 text-sm font-extrabold text-white shadow-[0_8px_18px_rgba(8,119,124,.18)] transition hover:brightness-95"
               >
                 Start Free <ArrowRight className="h-4 w-4" />
@@ -200,7 +200,7 @@ export default function HomePageClient() {
               <ActionLink href="/adaptive-learning" outline>
                 Explore Adaptive Learning
               </ActionLink>
-              <ActionLink href="/schools" outline>
+              <ActionLink href="#" outline>
                 Explore School Solutions
               </ActionLink>
             </div>
