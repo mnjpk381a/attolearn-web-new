@@ -4,12 +4,9 @@ import {
   ArrowRight,
   ChevronRight,
   BarChart3,
-  BookOpen,
   Check,
-  ClipboardCheck,
   FileText,
   Globe2,
-  GraduationCap,
   LineChart,
   Flag,
   CalendarDays,
@@ -17,7 +14,6 @@ import {
   ShieldCheck,
   ShieldX,
   Puzzle,
-  Target,
   UserRound,
   Users,
   Eye,
@@ -303,132 +299,29 @@ export default function HomeEducationPage() {
               ))}
             </ul>
           </div>
-          <div className="content-split-media content-split-media-right relative aspect-630/500 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(79,55,31,.08)]">
+          <div className="content-split-media content-split-media-right relative aspect-630/500">
             <Image
-              src="/images/home-education/curriculum-generated.png"
+              src="/images/home-education/curriculum-choice-generated.png"
               alt="Home learner choosing curriculum, year level, subject and microskill"
               fill
               sizes="(min-width:1024px) 640px, 100vw"
               quality={100}
-              className="object-cover object-top lg:object-contain"
+              className="object-contain"
             />
-            <div className="ui-mockup absolute bottom-[7%] right-[2.5%] top-[6%] hidden w-[41%] overflow-hidden rounded-xl bg-white/95 shadow-2xl sm:block">
-              <div className="bg-[#076b72] px-5 py-4.5 text-lg font-semibold text-white">
-                Choose what to learn
-              </div>
-              <div className="divide-y divide-slate-100">
-                {[
-                  [
-                    BookOpen,
-                    "Curriculum",
-                    "Australian Curriculum",
-                    "text-teal-700 bg-teal-50",
-                  ],
-                  [
-                    GraduationCap,
-                    "Year level",
-                    "Year 5 — Sofia",
-                    "text-orange-600 bg-orange-50",
-                  ],
-                  [
-                    ClipboardCheck,
-                    "Subject → Topic",
-                    "Mathematics — Fractions",
-                    "text-green-600 bg-green-50",
-                  ],
-                  [
-                    Target,
-                    "Microskill",
-                    "Comparing fractions with unlike denominators",
-                    "text-fuchsia-600 bg-fuchsia-50",
-                  ],
-                ].map(([Icon, title, copy, color]) => (
-                  <div
-                    key={title as string}
-                    className="flex items-center gap-3 px-4 py-4.25"
-                  >
-                    <span
-                      className={`grid h-10 w-10 shrink-0 place-items-center rounded-full ${color}`}
-                    >
-                      <Icon className="h-6 w-6" />
-                    </span>
-                    <div>
-                      <p className="text-sm font-bold text-[#075f68]">
-                        {title as string}
-                      </p>
-                      <p className="mt-1 text-sm leading-5 text-slate-600">
-                        {copy as string}
-                      </p>
-                    </div>
-                    <ChevronRight
-                      className="ml-auto h-5 w-5 shrink-0 text-[#16113f]"
-                      strokeWidth={3}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_52%_45%,#fffef8_0%,#fffbed_62%,#fffdf7_100%)] py-16 lg:py-20">
         <div className="site-container content-split">
-          <div className="content-split-media content-split-media-left relative order-2 aspect-630/500 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(79,55,31,.08)] lg:order-1">
+          <div className="content-split-media content-split-media-left relative order-2 aspect-630/500 lg:order-1">
             <Image
-              src="/images/home-education/parent-goals-generated.png"
-              alt="Parent planning home education goals"
+              src="/images/home-education/parent-term-plan-generated.png"
+              alt="Parent planning home education goals and revision priorities"
               fill
               sizes="(min-width:1024px) 560px, 100vw"
               quality={100}
-              unoptimized
-              className="object-cover object-center"
+              className="object-contain"
             />
-            <div className="absolute bottom-[14%] left-[3%] top-[6%] hidden w-[42%] overflow-hidden rounded-xl bg-white/95 shadow-2xl sm:block">
-              <div className="bg-[#076b72] px-5 py-4.5 text-base font-bold text-white">
-                This term’s plan — Sofia
-              </div>
-              <div className="divide-y divide-slate-100">
-                {[
-                  [
-                    Flag,
-                    "Priority",
-                    "Fractions and decimals, set by you",
-                    "text-red-500 bg-red-50",
-                  ],
-                  [
-                    CalendarDays,
-                    "Revision plan",
-                    "Weekly return to Term 1 measurement",
-                    "text-blue-600 bg-blue-50",
-                  ],
-                  [
-                    Star,
-                    "Today’s Best Step",
-                    "One activity, chosen from the plan",
-                    "text-amber-500 bg-amber-50",
-                  ],
-                ].map(([Icon, title, copy, color]) => (
-                  <div key={title as string} className="flex gap-4 px-4 py-4.5">
-                    <span
-                      className={`grid h-14 w-14 shrink-0 place-items-center rounded-full ${color}`}
-                    >
-                      <Icon className="h-8 w-8" />
-                    </span>
-                    <div>
-                      <strong
-                        className="block text-[15px] text-[#075f68]"
-                        style={{ fontWeight: 800 }}
-                      >
-                        {title as string}
-                      </strong>
-                      <p className="mt-1 text-sm leading-6 text-slate-600">
-                        {copy as string}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
           <div className="order-1 lg:order-2 lg:pl-8 xl:pl-10">
             <p className="text-xs font-bold uppercase tracking-[.04em] text-[#f16f00]">
