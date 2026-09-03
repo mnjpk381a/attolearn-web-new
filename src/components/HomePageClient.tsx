@@ -153,7 +153,7 @@ function CapabilityIcon({ index }: { index: number }) {
         alt=""
         width={2103}
         height={748}
-        className="absolute top-1/2 h-24 w-[270px] max-w-none -translate-y-1/2"
+        className="absolute top-1/2 h-24 w-67.5 max-w-none -translate-y-1/2"
         style={{ left: `${-index * 90}px` }}
       />
     </span>
@@ -206,7 +206,7 @@ export default function HomePageClient() {
             </div>
           </div>
           <div className="ui-mockup relative mx-auto w-full max-w-175 overflow-hidden rounded-[18px] border-2 border-[#b8dfd8] bg-[#fffdf4] shadow-[0_18px_42px_rgba(20,101,94,.16)]">
-            <div className="grid min-h-[540px] grid-cols-[112px_1fr] sm:grid-cols-[136px_1fr]">
+            <div className="grid min-h-135 grid-cols-[112px_1fr] sm:grid-cols-[136px_1fr]">
               <aside className="flex flex-col bg-linear-to-b from-[#197f79] to-[#258f8b] px-3 py-5 text-white sm:px-4">
                 <p className="px-1 text-sm font-extrabold">AttoLearn</p>
                 <nav className="mt-6 space-y-1 text-[10px] font-semibold sm:text-xs">
@@ -238,7 +238,7 @@ export default function HomePageClient() {
                   <Settings className="h-4 w-4" />
                 </div>
               </aside>
-              <div className="flex min-h-[540px] flex-col p-4 sm:p-5">
+              <div className="flex min-h-135 flex-col p-4 sm:p-5">
                 <h2 className="text-[22px] font-black text-[#07163f]">
                   Overview
                 </h2>
