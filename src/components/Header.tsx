@@ -55,7 +55,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden min-w-0 items-center gap-0.5 xl:flex 2xl:gap-2">
+          <nav className="hidden min-w-0 translate-y-1 items-center gap-0.5 xl:flex 2xl:gap-2">
             {navItems.map((item) => {
               if ("children" in item) {
                 const key = item.label;
@@ -154,18 +154,6 @@ export default function Header() {
               );
             })}
 
-            <a
-              href="https://portal.attolearn.com/auth/login"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-2 inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-[#077784] px-3 py-2 text-[13px] font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0 2xl:ml-3 2xl:px-4 2xl:text-sm"
-              onClick={() => {
-                setMobileOpen(false);
-                setOpenDropdown(null);
-              }}
-            >
-              Log In
-            </a>
             {/* <Link
               href="/choose-module"
               prefetch={false}
@@ -178,6 +166,18 @@ export default function Header() {
               Sign In / Sign Up
             </Link> */}
           </nav>
+          <a
+            href="https://portal.attolearn.com/auth/login"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden translate-y-1 shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-[#077784] px-4 py-2 text-[13px] font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0 xl:inline-flex 2xl:text-sm"
+            onClick={() => {
+              setMobileOpen(false);
+              setOpenDropdown(null);
+            }}
+          >
+            Log In
+          </a>
 
           {/* Mobile Button */}
           <button
