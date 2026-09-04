@@ -16,7 +16,7 @@ const accountRows = [
   [UserRound, "Parent or guardian", "Creates and owns the child’s profile"],
   [UsersRound, "Tutor or centre", "Uses scoped access, with parent consent"],
   [Bot, "School", "Enrols students under its authorised relationship"],
-  [LockKeyhole, "Child, on their own", "Cannot create or own an account"],
+  [LockKeyhole, "Child, on their own", "No such route exists"],
 ] as const;
 const aiCards = [
   [
@@ -307,7 +307,7 @@ export default function SafetyAndTrustPage() {
       <section className="relative overflow-hidden bg-[#f8fbf8] lg:min-h-[560px]">
         <div className="absolute inset-0 hidden lg:block">
           <Image
-            src="/images/safety-and-trust/generated/safety-hero.png"
+            src="/images/safety-and-trust/generated/safety-hero-v2.png"
             alt="Child safety and data protection"
             fill
             priority
@@ -351,7 +351,7 @@ export default function SafetyAndTrustPage() {
         </div>
         <div className="relative aspect-[16/10] lg:hidden">
           <Image
-            src="/images/safety-and-trust/generated/safety-hero.png"
+            src="/images/safety-and-trust/generated/safety-hero-v2.png"
             alt=""
             fill
             sizes="100vw"
