@@ -583,8 +583,7 @@ export default function FamiliesPage() {
                 id="families-final-cta-title"
                 className="whitespace-nowrap text-[30px] font-black leading-[1.05] tracking-[-.035em] text-[#092c50] sm:text-[38px] lg:text-[44px]"
               >
-                Start free,
-                 <span className="text-[#166f70]">decide later</span>
+                Start free, decide later
               </h2>
               <p className="mx-auto mt-5 max-w-97.5 text-[15px] font-medium leading-6 text-[#52606f] sm:text-[16px]">
                 No card to try it. Move to a paid plan

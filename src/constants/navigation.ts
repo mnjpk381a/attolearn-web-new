@@ -20,7 +20,7 @@ export const navItems: NavItem[] = [
   { label: "Home Schooling", href: "/home-education" },
   { label: "Tutors", href: "/tutors" },
   { label: "Tuition Centres", href: "/tuition-centres" },
-  { label: "Schools", href: "/schools" },
+  { label: "AttoCampus", href: "/schools" },
 
   {
     label: "Products",
@@ -30,24 +30,8 @@ export const navItems: NavItem[] = [
         description: "Short, evidence-informed learning sessions",
         href: "/adaptive-learning",
       },
-      {
-        label: "Paper Generator",
-        description: "Printable and online assessments",
-        href: "#",
-      },
-      {
-        label: "School Management",
-        description: "Connected school operations",
-        href: "#",
-      },
-      {
-        label: "Experience AttoLearn",
-        description: "Explore interactive demonstrations",
-        href: "#",
-      },
     ],
   },
-
   {
     label: "Why AttoLearn",
     children: [
@@ -59,7 +43,7 @@ export const navItems: NavItem[] = [
       {
         label: "Safety and Trust",
         description: "Permissions, governance and child safety",
-        href: "#",
+        href: "/safety-and-trust",
       },
       {
         label: "Learning Architecture",
@@ -70,14 +54,4 @@ export const navItems: NavItem[] = [
   },
 
   { label: "Pricing", href: "/pricing" },
-
-  {
-    label: "Company",
-    children: [
-      { label: "About", href: "#" },
-      { label: "Partners", href: "#" },
-      // { label: "Team", href: "/team" },
-      // { label: "Contact", href: "/contact" },
-    ],
-  },
 ];

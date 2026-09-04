@@ -49,12 +49,13 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/sms"
-                    prefetch={false}
-                    className="hover:underline"
-                  >
+                  <Link href="#" prefetch={false} className="hover:underline">
                     School Management
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" prefetch={false} className="hover:underline">
+                    Experience AttoLearn
                   </Link>
                 </li>
               </ul>
@@ -117,11 +118,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/partners"
-                    prefetch={false}
-                    className="hover:underline"
-                  >
+                  <Link href="#" prefetch={false} className="hover:underline">
                     Partners
                   </Link>
                 </li>
@@ -142,11 +139,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/resources"
-                    prefetch={false}
-                    className="hover:underline"
-                  >
+                  <Link href="#" prefetch={false} className="hover:underline">
                     Resources
                   </Link>
                 </li>

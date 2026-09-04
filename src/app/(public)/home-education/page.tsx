@@ -242,9 +242,7 @@ export default function HomeEducationPage() {
               What home educators use
             </p>
             <h2 className="mt-3 text-3xl font-bold leading-[1.12] text-[#075f68] md:text-[38px]">
-              Structure where you want it,
-              <br />
-              flexibility where you need it
+              Structure where you want it, flexibility where you need it
             </h2>
             <div className="mt-4 flex items-center justify-center gap-1.5">
               <span className="h-0.75 w-8 rounded-full bg-[#087f84]" />
