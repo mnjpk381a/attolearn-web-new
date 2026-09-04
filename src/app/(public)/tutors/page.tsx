@@ -151,17 +151,17 @@ export default function TutorsPage() {
       <section className="relative overflow-hidden bg-[#fffdf4] lg:min-h-[500px]">
         <div className="absolute inset-0 hidden lg:block">
           <Image
-            src="/images/tutors/generated/tutor-hero-clean-v3.png"
+            src="/images/tutors/generated/tutor-hero-clean-v4.png"
             alt="Tutor using learner evidence to prepare the next lesson"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-bottom"
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,#fffdf4_0%,#fffdf4_31%,rgba(255,253,244,.82)_39%,transparent_57%)]" />
         </div>
         <div className="relative mx-auto flex min-h-[500px] max-w-7xl items-center px-5 py-10 sm:px-8 lg:px-10">
-          <div className="relative z-10 max-w-[410px]">
+          <div className="relative z-10 max-w-[500px]">
             <p className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.12em] text-[#07858b] before:h-px before:w-10 before:bg-[#07858b]">
               For Tutors
             </p>
@@ -197,7 +197,7 @@ export default function TutorsPage() {
           </div>
 
           <div className="hero-evidence-cards pointer-events-none absolute inset-0 hidden lg:block">
-            <div className="absolute left-[45%] top-7 w-44 rounded-xl border border-[#dbe9e7] bg-white/95 p-3 shadow-[0_10px_28px_rgba(6,83,88,.16)] backdrop-blur-[2px]">
+            <div className="absolute left-[48%] top-6 w-44 rounded-xl border border-[#dbe9e7] bg-white/95 p-3 shadow-[0_10px_28px_rgba(6,83,88,.16)] ">
               <div className="flex items-center gap-2">
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-[#dff4f2] text-[#087a80]">
                   <GraduationCap className="h-5 w-5" />
@@ -224,7 +224,7 @@ export default function TutorsPage() {
               </div>
             </div>
 
-            <div className="absolute right-[4%] top-8 w-44 rounded-xl border border-[#eadfcb] bg-white/95 p-3 shadow-[0_10px_28px_rgba(82,62,15,.14)]">
+            <div className="absolute right-[5%] top-7 w-44 rounded-xl border border-[#eadfcb] bg-white/95 p-3 shadow-[0_10px_28px_rgba(82,62,15,.14)]">
               <div className="flex items-center gap-2">
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-[#dff4f2] text-[#087a80]">
                   <Trophy className="h-5 w-5" />
@@ -251,7 +251,7 @@ export default function TutorsPage() {
               </div>
             </div>
 
-            <div className="absolute bottom-10 left-[42%] w-48 rounded-xl border border-[#dbe9e7] bg-white/95 p-3 shadow-[0_10px_28px_rgba(6,83,88,.16)]">
+            <div className="absolute bottom-16 left-[41%] w-48 rounded-xl border border-[#dbe9e7] bg-white/95 p-3 shadow-[0_10px_28px_rgba(6,83,88,.16)]">
               <div className="flex items-center gap-2">
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-[#e7f5ef] text-[#087a80]">
                   <BarChart3 className="h-5 w-5" />
@@ -260,15 +260,54 @@ export default function TutorsPage() {
                   Progress Overview
                 </p>
               </div>
-              <div className="mt-3 flex h-14 items-end gap-1 border-b border-l border-slate-200 px-2 pb-1">
-                {[26, 38, 47, 56, 63, 72].map((h) => (
-                  <span
-                    key={h}
-                    className="flex-1 rounded-t-sm bg-[#36aaa7]"
-                    style={{ height: `${h}%` }}
-                  />
-                ))}
-              </div>
+              <svg
+                viewBox="0 0 160 58"
+                className="mt-2 h-14 w-full"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 52H156M4 6V52"
+                  fill="none"
+                  stroke="#d8e5e5"
+                  strokeWidth="1"
+                />
+                <polyline
+                  points="8,44 30,36 52,30 75,32 98,23 122,20 150,9"
+                  fill="none"
+                  stroke="#299f9d"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <polyline
+                  points="8,51 30,45 52,39 75,34 98,31 122,24 150,17"
+                  fill="none"
+                  stroke="#f1a20b"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                {[
+                  "8,44",
+                  "30,36",
+                  "52,30",
+                  "75,32",
+                  "98,23",
+                  "122,20",
+                  "150,9",
+                ].map((point) => {
+                  const [cx, cy] = point.split(",");
+                  return (
+                    <circle
+                      key={point}
+                      cx={cx}
+                      cy={cy}
+                      r="2.5"
+                      fill="#299f9d"
+                    />
+                  );
+                })}
+              </svg>
               <div className="mt-3 flex justify-between">
                 <div>
                   <b className="text-lg text-[#087a80]">72%</b>
@@ -281,7 +320,7 @@ export default function TutorsPage() {
               </div>
             </div>
 
-            <div className="absolute bottom-10 right-[6%] w-44 rounded-xl border border-[#eadfcb] bg-white/95 p-3 shadow-[0_10px_28px_rgba(82,62,15,.14)]">
+            <div className="absolute bottom-16 right-[6%] w-44 rounded-xl border border-[#eadfcb] bg-white/95 p-3 shadow-[0_10px_28px_rgba(82,62,15,.14)]">
               <div className="flex items-center gap-2">
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-[#fff0cf] text-[#ed9b08]">
                   <Lightbulb className="h-5 w-5" />
@@ -306,7 +345,7 @@ export default function TutorsPage() {
         </div>
         <div className="relative aspect-[16/10] w-full lg:hidden">
           <Image
-            src="/images/tutors/generated/tutor-hero-clean-v3.png"
+            src="/images/tutors/generated/tutor-hero-clean-v4.png"
             alt=""
             fill
             sizes="100vw"
