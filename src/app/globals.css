@@ -1189,3 +1189,9 @@ body {
   font-size: 16px !important;
   line-height: 1.1 !important;
 }
+
+/* Safety & Trust small-print section follows its compact supplied reference. */
+.public-site .safety-trust-page > .safety-small-print-section {
+  padding-top: 3rem !important;
+  padding-bottom: 0.5rem !important;
+}
