@@ -209,16 +209,17 @@ function GeneratedChildSafeIcon({
   return (
     <span
       aria-hidden="true"
-      className="inline-block shrink-0 rounded-full bg-transparent bg-no-repeat"
-      style={{
-        width: size,
-        height: size,
-        backgroundImage:
-          "url('/images/safety-and-trust/generated/child-safe-icons.png')",
-        backgroundSize: "400% 100%",
-        backgroundPosition: `${(index * 100) / 3}% 0%`,
-      }}
-    />
+      className="relative inline-block shrink-0"
+      style={{ width: size, height: size }}
+    >
+      <Image
+        src={`/images/safety-and-trust/generated/child-safe-icon-${index}.png`}
+        alt=""
+        fill
+        sizes={`${size}px`}
+        className="object-contain"
+      />
+    </span>
   );
 }
 function GeneratedFormalIcon({
@@ -590,11 +591,11 @@ export default function SafetyAndTrustPage() {
       </section>
       <section className="bg-[#fffdf7] py-12 lg:py-14">
         <div className="mx-auto grid max-w-7xl gap-5 px-3 sm:px-4 lg:grid-cols-2 lg:px-6">
-          <article className="min-h-[470px] rounded-2xl border border-[#e7ded0] bg-[#fffef9] p-7 shadow-[0_8px_24px_rgba(63,45,15,.05)]">
+          <article className="min-h-[430px] rounded-2xl border border-[#e7ded0] bg-[#fffef9] p-6 shadow-[0_8px_24px_rgba(63,45,15,.05)]">
             <p className="text-xs font-bold uppercase tracking-wide text-[#087b82]">
               Child-safe outputs
             </p>
-            <h2 className="mt-2 text-3xl font-extrabold text-[#08213c]">
+            <h2 className="mt-2 text-2xl font-extrabold text-[#08213c] sm:text-3xl">
               What a child actually sees
             </h2>
             <ul className="mt-4 divide-y divide-[#ece4d8]">
@@ -609,17 +610,17 @@ export default function SafetyAndTrustPage() {
               ))}
             </ul>
           </article>
-          <article className="min-h-[470px] overflow-hidden rounded-2xl border border-[#e7ded0] bg-[#fffef9] shadow-[0_8px_24px_rgba(63,45,15,.05)]">
-            <h2 className="bg-[#087b82] px-6 py-4 text-xl font-extrabold text-white">
+          <article className="min-h-[430px] overflow-hidden rounded-2xl border border-[#e7ded0] bg-[#fffef9] shadow-[0_8px_24px_rgba(63,45,15,.05)]">
+            <h4 className="bg-[#087b82] px-6 py-4 text-lg font-extrabold text-white">
               Things we’ve decided not to build
-            </h2>
+            </h4>
             <div className="p-4">
               {notBuilt.map(([title, copy], index) => (
                 <div
                   key={title}
-                  className="flex min-h-[96px] items-center gap-5 border-b border-[#ece4d8] px-2 py-3 last:border-b-0"
+                  className="flex min-h-[84px] items-center gap-4 border-b border-[#ece4d8] px-2 py-2 last:border-b-0"
                 >
-                  <GeneratedChildSafeIcon index={index} size={64} />
+                  <GeneratedChildSafeIcon index={index} size={60} />
                   <div>
                     <h3
                       className={`font-bold ${index === 0 ? "text-red-600" : index === 1 ? "text-blue-700" : index === 2 ? "text-purple-700" : "text-green-700"}`}
@@ -811,17 +812,17 @@ export default function SafetyAndTrustPage() {
           </div>
         </div>
       </section>
-      <section className="safety-small-print-section bg-[#fffdf7] pb-2 pt-10 lg:pb-2 lg:pt-12">
+      <section className="safety-small-print-section bg-[#fffdf7] pb-2 pt-6 lg:pb-2 lg:pt-6">
         <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="text-center">
             <p className="text-xs font-bold uppercase tracking-wide text-[#ed9807]">
               The small print, said plainly
             </p>
-            <h2 className="mt-2 text-3xl font-extrabold leading-tight text-[#075e65]">
+            <h2 className="mt-2 text-[clamp(1.35rem,3vw,1.875rem)] font-extrabold leading-tight text-[#075e65] sm:whitespace-nowrap">
               Things worth knowing before you pay
             </h2>
           </div>
-          <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               [
                 "Prices are local",
@@ -842,11 +843,11 @@ export default function SafetyAndTrustPage() {
             ].map(([title, copy], index) => (
               <article
                 key={title}
-                className="flex min-h-[122px] items-center gap-3 rounded-[10px] border border-[#e7ded0] bg-[#fffef9] p-4 shadow-[0_6px_18px_rgba(63,45,15,.04)]"
+                className="flex min-h-[122px] items-start gap-2 rounded-[10px] border border-[#e7ded0] bg-[#fffef9] p-3 shadow-[0_6px_18px_rgba(63,45,15,.04)]"
               >
-                <GeneratedSmallPrintIcon index={index} size={72} />
+                <GeneratedSmallPrintIcon index={index} size={64} />
                 <div className="min-w-0">
-                  <h3 className="text-sm font-bold leading-tight text-[#075e65]">
+                  <h3 className="whitespace-nowrap text-xs font-bold leading-tight text-[#075e65] xl:text-[13px]">
                     {title}
                   </h3>
                   <p className="mt-2 text-xs leading-5 text-slate-600">
