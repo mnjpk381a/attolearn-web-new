@@ -4,23 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
-  BarChart3,
-  Bell,
-  CircleHelp,
-  Clock3,
-  FileText,
-  Settings,
-  BookOpen,
   Building2,
   CheckCircle2,
-  ClipboardCheck,
   GraduationCap,
   Home,
-  Layers3,
   Quote,
   ReceiptText,
   School,
-  UserRoundCheck,
   Users,
 } from "lucide-react";
 
@@ -144,17 +134,13 @@ function ActionLink({
 
 function CapabilityIcon({ index }: { index: number }) {
   return (
-    <span
-      aria-hidden
-      className="relative block h-24 w-28 shrink-0 overflow-hidden"
-    >
+    <span aria-hidden className="relative block h-16 w-20 shrink-0">
       <Image
-        src="/images/homepage/home-hero-capability-icons-v2.png"
+        src={`/images/homepage/home-hero-capability-icon-${index}.png`}
         alt=""
-        width={2103}
-        height={748}
-        className="absolute top-1/2 h-24 w-67.5 max-w-none -translate-y-1/2"
-        style={{ left: `${-index * 90}px` }}
+        fill
+        sizes="80px"
+        className="object-contain"
       />
     </span>
   );
@@ -163,17 +149,22 @@ export default function HomePageClient() {
   return (
     <main className="overflow-hidden bg-white text-[#10243d]">
       <section className="home-platform-hero relative overflow-hidden bg-[#fffdf2]">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_70%_18%,rgba(211,247,244,.92)_0%,rgba(239,251,246,.78)_30%,rgba(255,253,242,.96)_67%)]" />
-        <div className="pointer-events-none absolute -right-48 -top-52 h-190 w-190 rounded-full border-85 border-[#bfeee7]/45" />
-        <div className="pointer-events-none absolute -left-52 bottom-3 h-105 w-105 rounded-full border-40 border-[#82d7ce]/60" />
-        <div className="pointer-events-none absolute -bottom-40 left-[24%] h-95 w-[72%] rotate-[-8deg] rounded-[50%] bg-[#b9eee5]/42" />
-        <div className="site-container relative grid items-start gap-9 pb-9 pt-10 lg:grid-cols-[.78fr_1.22fr] lg:pt-12">
-          <div className="relative z-10 max-w-130">
+        <Image
+          src="/images/homepage/home-hero-background.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="pointer-events-none object-cover object-center"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-white/12" />
+        <div className="site-container relative grid items-center gap-7 pb-3 pt-8 lg:min-h-[455px] lg:grid-cols-[.78fr_1.22fr] lg:pt-8">
+          <div className="relative z-10 max-w-[430px]">
             <span className="inline-flex items-center gap-2 rounded-full border border-[#9edbd6] bg-white/80 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#08757b]">
               <Users className="h-4 w-4" /> Learning, assessment and school
               operations
             </span>
-            <h1 className="mt-5 text-[38px] font-black leading-[1.04] tracking-[-.035em] text-[#07163f] sm:text-[48px] lg:text-[50px]">
+            <h1 className="mt-4 text-[36px] font-black leading-[1.03] tracking-[-.035em] text-[#07163f] sm:text-[40px] lg:text-[42px]">
               One connected
               <br />
               platform for every
@@ -185,12 +176,12 @@ export default function HomePageClient() {
                 who supports them.
               </span>
             </h1>
-            <p className="mt-5 max-w-115 text-[14px] font-medium leading-6 text-[#1d3150]">
+            <p className="mt-4 max-w-[420px] text-[13px] font-medium leading-5 text-[#1d3150]">
               Adaptive learning, assessment and school management, brought
               together — so what a student practises, what a parent sees and
               what a school records are one connected picture.
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
               <Link
                 href="#"
                 className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-linear-to-r from-[#168f8c] to-[#08777c] px-6 text-sm font-extrabold text-white shadow-[0_8px_18px_rgba(8,119,124,.18)] transition hover:brightness-95"
@@ -205,206 +196,36 @@ export default function HomePageClient() {
               </ActionLink>
             </div>
           </div>
-          <div className="ui-mockup relative mx-auto w-full max-w-175 overflow-hidden rounded-[18px] border-2 border-[#b8dfd8] bg-[#fffdf4] shadow-[0_18px_42px_rgba(20,101,94,.16)]">
-            <div className="grid min-h-135 grid-cols-[112px_1fr] sm:grid-cols-[136px_1fr]">
-              <aside className="flex flex-col bg-linear-to-b from-[#197f79] to-[#258f8b] px-3 py-5 text-white sm:px-4">
-                <p className="px-1 text-sm font-extrabold">AttoLearn</p>
-                <nav className="mt-6 space-y-1 text-[10px] font-semibold sm:text-xs">
-                  {[
-                    [Home, "Overview"],
-                    [BookOpen, "Learning"],
-                    [ClipboardCheck, "Assessments"],
-                    [BarChart3, "Reports"],
-                    [Users, "Students"],
-                    [Layers3, "Classes"],
-                    [UserRoundCheck, "Parents"],
-                    [School, "School"],
-                  ].map(([Icon, label], index) => {
-                    const I = Icon as typeof Home;
-                    return (
-                      <div
-                        key={String(label)}
-                        className={`flex items-center gap-2 rounded-md px-2 py-2 ${index === 0 ? "bg-white/18" : ""}`}
-                      >
-                        <I className="h-3.5 w-3.5 shrink-0" />
-                        <span>{String(label)}</span>
-                      </div>
-                    );
-                  })}
-                </nav>
-                <div className="mt-auto flex justify-around pt-5 text-white/85">
-                  <Bell className="h-4 w-4" />
-                  <CircleHelp className="h-4 w-4" />
-                  <Settings className="h-4 w-4" />
-                </div>
-              </aside>
-              <div className="flex min-h-135 flex-col p-4 sm:p-5">
-                <h2 className="text-[22px] font-black text-[#07163f]">
-                  Overview
-                </h2>
-                <div className="mt-3 grid grid-cols-2 gap-2 xl:grid-cols-4">
-                  {[
-                    ["Students", "2,145", Users],
-                    ["Active Learners", "1,783", BarChart3],
-                    ["Assessments", "356", ClipboardCheck],
-                    ["Learning Sessions", "8,562", Clock3],
-                  ].map(([label, value, Icon]) => {
-                    const I = Icon as typeof Users;
-                    return (
-                      <div
-                        key={String(label)}
-                        className="flex min-h-26 min-w-0 flex-col rounded-lg bg-white p-3 shadow-[0_4px_16px_rgba(29,86,83,.06)]"
-                      >
-                        <p className="whitespace-nowrap text-[11px] font-extrabold leading-none text-slate-600 sm:text-xs">
-                          {String(label)}
-                        </p>
-                        <div className="mt-auto flex items-end justify-between gap-2 pt-3">
-                          <b className="whitespace-nowrap text-[22px] font-black leading-none tracking-[-.02em] text-[#07163f] sm:text-[26px]">
-                            {String(value)}
-                          </b>
-                          <I className="h-4 w-4 text-[#07958f]" />
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="mt-3 grid flex-1 gap-3 lg:grid-cols-[1.45fr_.85fr]">
-                  <div className="rounded-lg bg-white p-4 shadow-[0_4px_16px_rgba(29,86,83,.06)]">
-                    <p className="text-sm font-black text-[#07163f]">
-                      Learning Progress
-                    </p>
-                    <p className="mt-1 text-[11px] font-medium text-slate-500">
-                      Average progress across all students
-                    </p>
-                    <div className="mt-4 flex h-28 items-end gap-2">
-                      <div className="flex h-full w-8 flex-col justify-between text-[11px] font-semibold text-slate-500">
-                        <span>100%</span>
-                        <span>75%</span>
-                        <span>50%</span>
-                        <span>25%</span>
-                        <span>0%</span>
-                      </div>
-                      <div className="relative h-full flex-1 border-b border-l border-slate-100">
-                        <svg
-                          viewBox="0 0 260 100"
-                          className="absolute inset-0 h-full w-full"
-                          aria-hidden="true"
-                        >
-                          <polyline
-                            points="0,78 38,80 70,64 105,69 142,59 176,53 214,33 260,9"
-                            fill="none"
-                            stroke="#087f82"
-                            strokeWidth="4"
-                          />
-                          <g fill="#087f82">
-                            {[
-                              [0, 78],
-                              [38, 80],
-                              [70, 64],
-                              [105, 69],
-                              [142, 59],
-                              [176, 53],
-                              [214, 33],
-                              [260, 9],
-                            ].map(([cx, cy]) => (
-                              <circle
-                                key={`${cx}-${cy}`}
-                                cx={cx}
-                                cy={cy}
-                                r="4"
-                              />
-                            ))}
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="rounded-lg bg-white p-4 shadow-[0_4px_16px_rgba(29,86,83,.06)]">
-                    <p className="text-sm font-black text-[#07163f]">
-                      Subject Mastery
-                    </p>
-                    <div className="mt-4 flex items-center justify-center gap-4">
-                      <div className="h-23 w-23 rounded-full bg-[conic-gradient(#176b68_0_42%,#f2ac16_42%_70%,#58ad3a_70%)] p-4">
-                        <div className="h-full w-full rounded-full bg-white" />
-                      </div>
-                      <div className="space-y-3 text-xs font-extrabold">
-                        <p>
-                          <i className="mr-2 inline-block h-2 w-2 rounded-full bg-[#176b68]" />
-                          Maths&nbsp;&nbsp;72%
-                        </p>
-                        <p>
-                          <i className="mr-2 inline-block h-2 w-2 rounded-full bg-[#f2ac16]" />
-                          English&nbsp;&nbsp;58%
-                        </p>
-                        <p>
-                          <i className="mr-2 inline-block h-2 w-2 rounded-full bg-[#58ad3a]" />
-                          Science&nbsp;&nbsp;65%
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-3 grid min-h-38 gap-3 sm:grid-cols-2">
-                  <div className="rounded-lg bg-white p-4 shadow-[0_4px_16px_rgba(29,86,83,.06)]">
-                    <p className="text-sm font-black text-[#07163f]">
-                      Real-time Activity
-                    </p>
-                    {[
-                      "Algebra: Linear Equations",
-                      "English: Reading Comprehension",
-                      "Science: Forces and Motion",
-                    ].map((item) => (
-                      <p
-                        key={item}
-                        className="mt-2.5 flex items-center justify-between gap-2 text-[11px] font-semibold text-slate-700"
-                      >
-                        <span className="flex items-center gap-2">
-                          <FileText className="h-3.5 w-3.5 text-[#087f82]" />
-                          {item}
-                        </span>
-                        <b className="rounded bg-green-50 px-1.5 py-1 text-green-600">
-                          Completed
-                        </b>
-                      </p>
-                    ))}
-                  </div>
-                  <div className="rounded-lg bg-white p-4 shadow-[0_4px_16px_rgba(29,86,83,.06)]">
-                    <p className="text-sm font-black text-[#07163f]">
-                      Next Steps
-                    </p>
-                    {[
-                      "5 students practise in Algebra",
-                      "3 assessments ready to review",
-                      "2 upcoming sessions scheduled",
-                    ].map((item) => (
-                      <p
-                        key={item}
-                        className="mt-3.5 flex items-center justify-between gap-2 text-[11px] font-semibold text-slate-700"
-                      >
-                        <span>{item}</span>
-                        <ArrowRight className="h-3 w-3" />
-                      </p>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="relative mx-auto aspect-[3/2] w-full max-w-[700px] overflow-hidden rounded-[18px] lg:mx-0 lg:-translate-y-5 lg:justify-self-end">
+            <Image
+              src="/images/homepage/home-hero-right.png"
+              alt="AttoLearn learning dashboard with mascot"
+              fill
+              priority
+              sizes="(min-width: 1024px) 58vw, 100vw"
+              className="object-cover object-center"
+            />
           </div>
         </div>
-        <div className="site-container relative pb-8">
-          <div className="grid gap-5 rounded-2xl border border-[#d7e6df] bg-[#fffdf4]/95 px-7 py-8 shadow-[0_10px_26px_rgba(21,91,86,.08)] sm:grid-cols-3">
+        <div className="relative mx-auto w-full max-w-[1060px] px-3 pb-7 sm:px-4">
+          <div className="grid gap-3 rounded-2xl border border-[#e4dccb] bg-[#fffdf4]/95 px-6 py-4 shadow-[0_8px_22px_rgba(21,91,86,.08)] sm:grid-cols-3">
             {[
-              "Foundation to Year 10",
-              "Maths, English and Science",
-              "7–12 minute sessions",
-            ].map((label, index) => (
+              ["Foundation to Year 10", "A complete learning journey"],
+              ["Maths, English and Science", "Core subjects, real progress"],
+              ["7–12 minute sessions", "Focused practice, lasting results"],
+            ].map(([label, copy], index) => (
               <div
                 key={label}
-                className="flex items-center justify-center gap-5 text-center sm:min-h-16 sm:border-r sm:border-[#ddd8c9] sm:last:border-0"
+                className="flex items-center justify-center gap-4 sm:min-h-16 sm:border-r sm:border-[#ddd8c9] sm:last:border-0"
               >
                 <CapabilityIcon index={index} />
-                <span className="text-base font-black text-[#07163f]">
-                  {label}
+                <span className="min-w-0">
+                  <b className="block text-[13px] font-black text-[#07163f]">
+                    {label}
+                  </b>
+                  <small className="mt-1 block text-[11px] text-[#8c7db4]">
+                    {copy}
+                  </small>
                 </span>
               </div>
             ))}
@@ -413,8 +234,6 @@ export default function HomePageClient() {
       </section>
 
       <section className="relative overflow-hidden bg-[#fffdf4] py-14 lg:py-16">
-        <div className="pointer-events-none absolute -left-28 -top-32 h-72 w-72 rounded-full bg-[#dff4ee]/80" />
-        <div className="pointer-events-none absolute -right-24 bottom-0 h-64 w-64 rounded-full bg-[#d9f4ed]/65" />
         <div className="site-container relative">
           <div className="text-center">
             <div className="flex items-center justify-center gap-5">

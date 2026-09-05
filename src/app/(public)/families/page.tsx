@@ -236,19 +236,18 @@ function Checks({ items }: { items: readonly string[] }) {
 export default function FamiliesPage() {
   return (
     <main className="families-page overflow-hidden bg-white text-[#10243d]">
-      <section className="families-hero relative overflow-hidden bg-[#fffaf0] lg:h-[min(56.28vw,941px)]">
-        <div className="absolute inset-y-0 left-1/2 hidden w-full max-w-[1672px] -translate-x-1/2 lg:block">
-          <Image
-            src="/images/families/families-hero-v4.png"
-            alt="AttoLearn parent dashboard showing a child profile and learning progress"
-            fill
-            priority
-            sizes="100vw"
-            className="object-contain object-center"
-          />
-        </div>
-        <div className="site-container relative flex min-h-150 items-center py-16 lg:absolute lg:inset-0 lg:min-h-0 lg:items-start lg:py-0 lg:pt-[5.2%]">
-          <div className="relative z-10 w-full lg:max-w-[43%]">
+      <section className="families-hero relative overflow-hidden bg-[#fffaf0]">
+        <Image
+          src="/images/families/families-hero-composite-v2.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="pointer-events-none object-cover object-center"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-white/10" />
+        <div className="site-container relative flex min-h-[570px] items-center py-12 lg:py-10">
+          <div className="relative z-10 w-full max-w-[470px]">
             <p className="flex items-center gap-4 text-sm font-bold uppercase tracking-wide text-[#087f84]">
               For families
               <span className="h-px w-8 bg-[#168b87]" />
@@ -261,7 +260,7 @@ export default function FamiliesPage() {
               <span className="text-[#168b87]">Stay in control.</span>
             </h1>
             <span className="mt-6 block h-1 w-18 rounded-full bg-[#ffae00]" />
-            <p className="mt-6 max-w-107.5 text-[17px] leading-8 text-[#202746] lg:max-w-[360px]">
+            <p className="mt-6 max-w-107.5 text-[17px] leading-8 text-[#202746] lg:max-w-[390px]">
               Short, focused practice, and clear evidence of what your child
               actually understands — not just a score.
             </p>
@@ -274,16 +273,6 @@ export default function FamiliesPage() {
               </Btn>
             </div>
           </div>
-        </div>
-        <div className="relative h-84 w-full overflow-hidden lg:hidden">
-          <Image
-            src="/images/families/families-hero-v4.png"
-            alt="AttoLearn parent dashboard showing a child profile and learning progress"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-[78%_46%]"
-          />
         </div>
       </section>{" "}
       <section className="bg-linear-to-b from-[#f4faff] to-white py-20">
