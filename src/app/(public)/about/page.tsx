@@ -7,7 +7,7 @@ export default function AboutPage() {
       <section className="relative flex min-h-100 items-center justify-center text-center text-white">
         <div className="absolute inset-0">
           <Image
-            src="/images/Banners/about-img.jpg"
+            src="/images/About/about-hero.jpg"
             alt="AttoLearn"
             fill
             priority
@@ -16,7 +16,7 @@ export default function AboutPage() {
         </div>
 
         <div className="relative z-10 mx-auto max-w-4xl px-4">
-          <h1 className="text-4xl font-bold text-white">
+          <h1 className="text-center text-4xl font-bold text-white">
             Empowering Schools to Teach, Manage, and Grow
           </h1>
         </div>
@@ -24,7 +24,9 @@ export default function AboutPage() {
 
       {/* About */}
       <section className="mx-auto max-w-6xl px-4 py-12">
-        <h3 className="text-2xl font-bold text-teal-700">About AttoLearn</h3>
+        <h3 className="text-center text-2xl font-bold text-teal-700">
+          About AttoLearn
+        </h3>
 
         <p className="mt-6 text-base leading-relaxed text-gray-700">
           AttoLearn is a modern education platform designed to simplify how
@@ -48,7 +50,7 @@ export default function AboutPage() {
       {/* Idea */}
       <section className="bg-gray-50 py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <h3 className="text-2xl font-bold text-teal-700">
+          <h3 className="text-center text-2xl font-bold text-teal-700">
             The Idea Behind AttoLearn
           </h3>
 
@@ -94,7 +96,7 @@ export default function AboutPage() {
 
       {/* What AttoLearn Offers */}
       <section className="mx-auto max-w-6xl px-4 py-12">
-        <h3 className="text-2xl font-bold text-teal-700">
+        <h3 className="text-center text-2xl font-bold text-teal-700">
           What AttoLearn Offers
         </h3>
 
@@ -105,7 +107,7 @@ export default function AboutPage() {
 
         <div className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-xl border border-teal-700 p-6">
-            <h4 className="text-lg font-semibold text-teal-700">
+            <h4 className="text-center text-lg font-semibold text-teal-700">
               Paper Generator
             </h4>
 
@@ -116,7 +118,7 @@ export default function AboutPage() {
           </div>
 
           <div className="rounded-xl border border-teal-700 p-6">
-            <h4 className="text-lg font-semibold text-teal-700">
+            <h4 className="text-center text-lg font-semibold text-teal-700">
               School Management System
             </h4>
 
@@ -128,7 +130,7 @@ export default function AboutPage() {
           </div>
 
           <div className="rounded-xl border border-teal-700 p-6">
-            <h4 className="text-lg font-semibold text-teal-700">
+            <h4 className="text-center text-lg font-semibold text-teal-700">
               Academic Assessments
             </h4>
 
@@ -139,7 +141,7 @@ export default function AboutPage() {
           </div>
 
           <div className="rounded-xl border border-teal-700 p-6">
-            <h4 className="text-lg font-semibold text-teal-700">
+            <h4 className="text-center text-lg font-semibold text-teal-700">
               Communication & Collaboration
             </h4>
 
@@ -159,7 +161,7 @@ export default function AboutPage() {
       {/* Why Schools Choose AttoLearn */}
       <section className="bg-gray-50 py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <h3 className="text-2xl font-bold text-teal-700">
+          <h3 className="text-center text-2xl font-bold text-teal-700">
             Why Schools Choose AttoLearn
           </h3>
 
@@ -170,7 +172,7 @@ export default function AboutPage() {
 
           <div className="mt-10 grid gap-8 md:grid-cols-2">
             <div className="rounded-xl border border-teal-700 bg-white p-6">
-              <h4 className="text-lg font-semibold text-teal-700">
+              <h4 className="text-center text-lg font-semibold text-teal-700">
                 Save Time for Teachers
               </h4>
 
@@ -182,7 +184,7 @@ export default function AboutPage() {
             </div>
 
             <div className="rounded-xl border border-teal-700 bg-white p-6">
-              <h4 className="text-lg font-semibold text-teal-700">
+              <h4 className="text-center text-lg font-semibold text-teal-700">
                 Simplify School Operations
               </h4>
 
@@ -193,7 +195,7 @@ export default function AboutPage() {
             </div>
 
             <div className="rounded-xl border border-teal-700 bg-white p-6">
-              <h4 className="text-lg font-semibold text-teal-700">
+              <h4 className="text-center text-lg font-semibold text-teal-700">
                 Designed for Educators
               </h4>
 
@@ -205,7 +207,7 @@ export default function AboutPage() {
             </div>
 
             <div className="rounded-xl border border-teal-700 bg-white p-6">
-              <h4 className="text-lg font-semibold text-teal-700">
+              <h4 className="text-center text-lg font-semibold text-teal-700">
                 Built for Growth
               </h4>
 
@@ -220,7 +222,7 @@ export default function AboutPage() {
 
       {/* Designed for the Real Needs of Schools */}
       <section className="mx-auto max-w-6xl px-4 py-12">
-        <h3 className="text-2xl font-bold text-teal-700">
+        <h3 className="text-center text-2xl font-bold text-teal-700">
           Designed for the Real Needs of Schools
         </h3>
 
@@ -266,7 +268,7 @@ export default function AboutPage() {
       {/* Built on Attobility Technology */}
       <section className="bg-gray-50 py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <h3 className="text-2xl font-bold text-teal-700">
+          <h3 className="text-center text-2xl font-bold text-teal-700">
             Built on Attobility Technology
           </h3>
 
@@ -292,7 +294,9 @@ export default function AboutPage() {
 
       {/* Our Approach */}
       <section className="mx-auto max-w-6xl px-4 py-12">
-        <h3 className="text-2xl font-bold text-teal-700">Our Approach</h3>
+        <h3 className="text-center text-2xl font-bold text-teal-700">
+          Our Approach
+        </h3>
 
         <p className="mt-6 text-base leading-relaxed text-gray-700">
           At AttoLearn, we believe technology should support education rather
@@ -316,7 +320,9 @@ export default function AboutPage() {
       {/* Vision */}
       <section className="bg-gray-50 py-12">
         <div className="mx-auto max-w-6xl px-4">
-          <h3 className="text-2xl font-bold text-teal-700">Our Vision</h3>
+          <h3 className="text-center text-2xl font-bold text-teal-700">
+            Our Vision
+          </h3>
 
           <p className="mt-6 text-base leading-relaxed text-gray-700">
             Our vision is to build a trusted platform that helps schools operate

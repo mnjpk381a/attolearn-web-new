@@ -238,12 +238,12 @@ export default function FamiliesPage() {
     <main className="families-page overflow-hidden bg-white text-[#10243d]">
       <section className="families-hero relative overflow-hidden bg-[#fffaf0]">
         <Image
-          src="/images/families/families-hero-composite-v2.png"
+          src="/images/families/families-hero-composite-v3.png"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="pointer-events-none object-cover object-center"
+          className="pointer-events-none object-fill"
         />
         <div className="pointer-events-none absolute inset-0 bg-white/10" />
         <div className="site-container relative flex min-h-[570px] items-center py-12 lg:py-10">

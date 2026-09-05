@@ -304,7 +304,7 @@ function SectionTitle({
 export default function SafetyAndTrustPage() {
   return (
     <main className="safety-trust-page overflow-hidden bg-[#fcfdfc] text-slate-800">
-      <section className="relative overflow-hidden bg-[#f8fbf8] lg:min-h-[560px]">
+      <section className="relative overflow-hidden bg-[#f8fbf8] lg:min-h-140">
         <div className="absolute inset-0 hidden lg:block">
           <Image
             src="/images/safety-and-trust/generated/safety-hero-v2.png"
@@ -315,9 +315,9 @@ export default function SafetyAndTrustPage() {
             className="object-fill"
           />
         </div>
-        <div className="absolute inset-y-0 left-0 hidden w-[52%] bg-gradient-to-r from-[#fffef7] via-[#fffef7]/90 to-transparent lg:block" />
-        <div className="relative mx-auto flex max-w-7xl items-center px-3 py-12 sm:px-4 lg:min-h-[560px] lg:px-6">
-          <div className="relative z-10 max-w-[550px]">
+        <div className="absolute inset-y-0 left-0 hidden w-[52%] bg-linear-to-r from-[#fffef7] via-[#fffef7]/90 to-transparent lg:block" />
+        <div className="relative mx-auto flex max-w-7xl items-center px-3 py-12 sm:px-4 lg:min-h-140 lg:px-6">
+          <div className="relative z-10 max-w-137.5">
             <p className="text-xs font-bold uppercase tracking-[.12em] text-[#087b82]">
               Safety and trust
             </p>
@@ -326,7 +326,7 @@ export default function SafetyAndTrustPage() {
               <br />
               not just compliant
             </h1>
-            <p className="mt-6 max-w-[510px] text-[15px] leading-7 text-slate-700">
+            <p className="mt-6 max-w-127.5 text-[15px] leading-7 text-slate-700">
               Compliance is a floor. The decisions that actively protect a child
               are made in how content is approved, what the software is allowed
               to decide, who can see what, and what a nine-year-old is shown on
@@ -349,7 +349,7 @@ export default function SafetyAndTrustPage() {
             </div>
           </div>
         </div>
-        <div className="relative aspect-[16/10] lg:hidden">
+        <div className="relative aspect-16/10 lg:hidden">
           <Image
             src="/images/safety-and-trust/generated/safety-hero-v2.png"
             alt=""
@@ -404,7 +404,7 @@ export default function SafetyAndTrustPage() {
               {accountRows.map(([, title, copy], index) => (
                 <div
                   key={title}
-                  className="flex min-h-[88px] items-center gap-5 border-t border-[#eee6da] px-5 py-4"
+                  className="flex min-h-22 items-center gap-5 border-t border-[#eee6da] px-5 py-4"
                 >
                   <GeneratedReviewIcon index={index} size={62} />
                   <div>
@@ -482,7 +482,7 @@ export default function SafetyAndTrustPage() {
               ].map(([title, copy, tone], index) => (
                 <div
                   key={title}
-                  className="flex min-h-[92px] items-center gap-5 border-t border-[#eee6da] px-5 py-4"
+                  className="flex min-h-23 items-center gap-5 border-t border-[#eee6da] px-5 py-4"
                 >
                   <GeneratedReviewIcon index={4 + index} size={66} />
                   <div>
@@ -513,7 +513,7 @@ export default function SafetyAndTrustPage() {
             {aiCards.map(([, title, copy], i) => (
               <article
                 key={title}
-                className={`${i === 2 ? "md:col-span-2 md:min-h-[180px]" : "md:min-h-[265px]"} flex items-start gap-6 rounded-2xl border border-[#e7ded0] bg-[#fffef9] p-7 shadow-[0_10px_28px_rgba(63,45,15,.07)]`}
+                className={`${i === 2 ? "md:col-span-2 md:min-h-45" : "md:min-h-66.25"} flex items-start gap-6 rounded-2xl border border-[#e7ded0] bg-[#fffef9] p-7 shadow-[0_10px_28px_rgba(63,45,15,.07)]`}
               >
                 <GeneratedAiIcon index={i} size={88} />
                 <div>
@@ -535,7 +535,7 @@ export default function SafetyAndTrustPage() {
             copy="Explained rather than asserted — here is who can actually do what."
           />
           <div className="mt-8 overflow-x-auto rounded-2xl border border-[#dde7e5] bg-white shadow-sm">
-            <div className="min-w-[760px]">
+            <div className="min-w-190">
               <div className="grid grid-cols-[.55fr_1.25fr_1.25fr] bg-[#f4faf9] px-5 py-3 text-xs font-bold uppercase">
                 <span>Role</span>
                 <span className="text-[#087b82]">Can</span>
@@ -544,7 +544,7 @@ export default function SafetyAndTrustPage() {
               {roles.map(([role, can, cannot], index) => (
                 <div
                   key={role}
-                  className="grid min-h-[88px] grid-cols-[.55fr_1.25fr_1.25fr] items-center gap-5 border-t border-[#e8eceb] px-5 py-4 text-sm leading-5"
+                  className="grid min-h-22 grid-cols-[.55fr_1.25fr_1.25fr] items-center gap-5 border-t border-[#e8eceb] px-5 py-4 text-sm leading-5"
                 >
                   <b className="flex items-center gap-3 text-[#08213c]">
                     <GeneratedRoleIcon index={index} size={48} />
@@ -573,7 +573,7 @@ export default function SafetyAndTrustPage() {
             ].map(([title, copy], index) => (
               <article
                 key={title}
-                className="min-h-[190px] rounded-xl border border-[#e7ded0] bg-[#fffef9] p-6 shadow-[0_8px_22px_rgba(63,45,15,.05)]"
+                className="min-h-47.5 rounded-xl border border-[#e7ded0] bg-[#fffef9] p-6 shadow-[0_8px_22px_rgba(63,45,15,.05)]"
               >
                 <div className="flex items-center gap-4">
                   <GeneratedRoleIcon index={5 + index} size={56} />
@@ -591,7 +591,7 @@ export default function SafetyAndTrustPage() {
       </section>
       <section className="bg-[#fffdf7] py-12 lg:py-14">
         <div className="mx-auto grid max-w-7xl gap-5 px-3 sm:px-4 lg:grid-cols-2 lg:px-6">
-          <article className="min-h-[430px] rounded-2xl border border-[#e7ded0] bg-[#fffef9] p-6 shadow-[0_8px_24px_rgba(63,45,15,.05)]">
+          <article className="min-h-107.5 rounded-2xl border border-[#e7ded0] bg-[#fffef9] p-6 shadow-[0_8px_24px_rgba(63,45,15,.05)]">
             <p className="text-xs font-bold uppercase tracking-wide text-[#087b82]">
               Child-safe outputs
             </p>
@@ -610,7 +610,7 @@ export default function SafetyAndTrustPage() {
               ))}
             </ul>
           </article>
-          <article className="min-h-[430px] overflow-hidden rounded-2xl border border-[#e7ded0] bg-[#fffef9] shadow-[0_8px_24px_rgba(63,45,15,.05)]">
+          <article className="min-h-107.5 overflow-hidden rounded-2xl border border-[#e7ded0] bg-[#fffef9] shadow-[0_8px_24px_rgba(63,45,15,.05)]">
             <h4 className="bg-[#087b82] px-6 py-4 text-lg font-extrabold text-white">
               Things we’ve decided not to build
             </h4>
@@ -618,7 +618,7 @@ export default function SafetyAndTrustPage() {
               {notBuilt.map(([title, copy], index) => (
                 <div
                   key={title}
-                  className="flex min-h-[84px] items-center gap-4 border-b border-[#ece4d8] px-2 py-2 last:border-b-0"
+                  className="flex min-h-21 items-center gap-4 border-b border-[#ece4d8] px-2 py-2 last:border-b-0"
                 >
                   <GeneratedChildSafeIcon index={index} size={60} />
                   <div>
@@ -654,7 +654,7 @@ export default function SafetyAndTrustPage() {
             </p>
           </div>
           <div className="mt-8 overflow-x-auto rounded-xl border border-[#e7ded0] bg-[#fffef9] shadow-[0_8px_24px_rgba(63,45,15,.06)]">
-            <div className="min-w-[850px]">
+            <div className="min-w-212.5">
               <div className="grid grid-cols-[.68fr_1.18fr_1.42fr] bg-[#fbfaf3] px-6 py-4 text-xs font-bold uppercase tracking-wide text-[#075e65]">
                 <span>Market</span>
                 <span>Framework</span>
@@ -663,7 +663,7 @@ export default function SafetyAndTrustPage() {
               {countries.map(([flag, market, framework, status]) => (
                 <div
                   key={market}
-                  className="grid min-h-[98px] grid-cols-[.68fr_1.18fr_1.42fr] items-center gap-6 border-t border-[#e8dfd3] px-6 py-4 text-xs leading-5"
+                  className="grid min-h-24.5 grid-cols-[.68fr_1.18fr_1.42fr] items-center gap-6 border-t border-[#e8dfd3] px-6 py-4 text-xs leading-5"
                 >
                   <b className="flex items-center gap-4 text-[#08213c]">
                     <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full bg-white shadow-sm">
@@ -740,7 +740,7 @@ export default function SafetyAndTrustPage() {
             ].map(([title, copy, action, href], index) => (
               <article
                 key={title}
-                className="min-h-[250px] rounded-2xl border border-[#e7ded0] bg-[#fffef9] p-6 shadow-[0_8px_24px_rgba(63,45,15,.06)]"
+                className="min-h-62.5 rounded-2xl border border-[#e7ded0] bg-[#fffef9] p-6 shadow-[0_8px_24px_rgba(63,45,15,.06)]"
               >
                 <div className="flex items-center gap-4">
                   <GeneratedFormalIcon index={index} size={66} />
@@ -778,7 +778,7 @@ export default function SafetyAndTrustPage() {
           </div>
         </div>
       </section>
-      <section className="relative min-h-[230px] overflow-hidden text-center text-white">
+      <section className="relative min-h-57.5 overflow-hidden text-center text-white">
         <Image
           src="/images/safety-and-trust/generated/safety-cta.png"
           alt=""
@@ -787,7 +787,7 @@ export default function SafetyAndTrustPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-[#032f38]/55" />
-        <div className="relative z-10 mx-auto flex min-h-[230px] max-w-7xl items-center justify-center px-3 sm:px-4 lg:px-6">
+        <div className="relative z-10 mx-auto flex min-h-57.5 max-w-7xl items-center justify-center px-3 sm:px-4 lg:px-6">
           <div>
             <h2 className="text-3xl font-extrabold">
               Safety is a design decision, not a disclaimer
@@ -843,7 +843,7 @@ export default function SafetyAndTrustPage() {
             ].map(([title, copy], index) => (
               <article
                 key={title}
-                className="flex min-h-[122px] items-start gap-2 rounded-[10px] border border-[#e7ded0] bg-[#fffef9] p-3 shadow-[0_6px_18px_rgba(63,45,15,.04)]"
+                className="flex min-h-30.5 items-start gap-2 rounded-[10px] border border-[#e7ded0] bg-[#fffef9] p-3 shadow-[0_6px_18px_rgba(63,45,15,.04)]"
               >
                 <GeneratedSmallPrintIcon index={index} size={64} />
                 <div className="min-w-0">
@@ -857,7 +857,7 @@ export default function SafetyAndTrustPage() {
               </article>
             ))}
           </div>
-          <div className="mt-4 flex min-h-[100px] items-center gap-5 rounded-[10px] border border-dashed border-[#efb32b] bg-[#fffaf0] px-5 py-3">
+          <div className="mt-4 flex min-h-25 items-center gap-5 rounded-[10px] border border-dashed border-[#efb32b] bg-[#fffaf0] px-5 py-3">
             <GeneratedSmallPrintIcon index={4} size={88} />
             <div>
               <h3 className="font-bold text-[#075e65]">On tax</h3>
@@ -874,7 +874,7 @@ export default function SafetyAndTrustPage() {
           </div>
         </div>
       </section>
-      <section className="relative min-h-[210px] overflow-hidden text-center text-white">
+      <section className="relative min-h-52.5 overflow-hidden text-center text-white">
         <Image
           src="/images/paper-generator/generated/start-free-cta.png"
           alt=""
@@ -883,7 +883,7 @@ export default function SafetyAndTrustPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-[#005761]/45" />
-        <div className="relative z-10 mx-auto flex min-h-[210px] max-w-7xl items-center justify-center px-3 sm:px-4 lg:px-6">
+        <div className="relative z-10 mx-auto flex min-h-52.5 max-w-7xl items-center justify-center px-3 sm:px-4 lg:px-6">
           <div>
             <h2 className="text-3xl font-extrabold">
               Start free, decide later
