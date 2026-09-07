@@ -633,7 +633,7 @@ export default function TuitionCentresPage() {
             </div>
           </div>
         </div>
-        <div className="content-split family-permissions-split">
+        <div className="content-split family-permissions-split section-block-gap">
           <div className="content-split-media content-split-media-left relative h-[25.25rem] overflow-hidden rounded-2xl border border-[#e8ddd0] shadow-sm">
             <Image
               src="/images/tuition-centres/family-permissions-v3.png"

@@ -665,6 +665,16 @@ body {
   line-height: 1.65;
 }
 
+.public-site .section-block-gap {
+  margin-top: 3.5rem !important;
+}
+
+@media (min-width: 64rem) {
+  .public-site .section-block-gap {
+    margin-top: 4rem !important;
+  }
+}
+
 /* Give content sections after the Hero a shared vertical rhythm.
    The final CTA keeps its own padding and connects directly to the footer. */
 :is(

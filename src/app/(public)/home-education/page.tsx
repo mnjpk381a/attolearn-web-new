@@ -481,7 +481,7 @@ export default function HomeEducationPage() {
               ))}
             </div>
           </div>
-          <div className="mt-3 grid gap-8 bg-white/25 py-7 lg:grid-cols-[.9fr_1.1fr] lg:gap-12 lg:py-8">
+          <div className="section-block-gap grid gap-8 bg-white/25 py-7 lg:grid-cols-[.9fr_1.1fr] lg:gap-12 lg:py-8">
             <div className="split-section-copy py-1 lg:pl-1">
               <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
                 Home education reporting
@@ -913,7 +913,7 @@ export default function HomeEducationPage() {
                 </div>
               </div>
             </div>
-            <div className="grid gap-9 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-14">
+            <div className="section-block-gap grid gap-9 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-14">
               <div>
                 <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
                   Multiple children
