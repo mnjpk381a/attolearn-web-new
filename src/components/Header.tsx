@@ -155,7 +155,7 @@ export default function Header() {
             })}
 
             {/* <Link
-              href="/choose-module"
+              href="#"
               prefetch={false}
               className="ml-2 inline-flex items-center justify-center rounded-lg bg-[#077784] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0"
               onClick={() => {
@@ -167,7 +167,7 @@ export default function Header() {
             </Link> */}
           </nav>
           <a
-            href="https://portal.attolearn.com/auth/login"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden translate-y-1 shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-[#077784] px-4 py-2 text-[13px] font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0 xl:inline-flex 2xl:text-sm"
@@ -306,7 +306,7 @@ export default function Header() {
               })}
 
               <a
-                href="https://portal.attolearn.com/auth/login"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex w-full items-center justify-center rounded-lg bg-[#077784] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0"
@@ -319,7 +319,7 @@ export default function Header() {
               </a>
 
               {/* <Link
-                href="/choose-module"
+                href="#"
                 prefetch={false}
                 className="mt-2 inline-flex w-full items-center justify-center rounded-lg bg-[#077784] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0"
                 onClick={() => {

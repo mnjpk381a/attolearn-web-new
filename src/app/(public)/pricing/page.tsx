@@ -136,7 +136,7 @@ export default function PricingPage() {
         </div>
         <div className="mt-5 flex flex-col justify-center gap-4 sm:flex-row">
           <Link
-            href="/choose-module"
+            href="#"
             className="inline-flex h-14 min-w-56 items-center justify-center gap-5 rounded-lg bg-linear-to-r from-[#ff8a00] to-[#ffad0b] px-8 font-bold text-white shadow-lg"
           >
             Start Free <ArrowRight className="h-5 w-5" />
@@ -364,7 +364,7 @@ export default function PricingPage() {
             </p>
             <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
               <Link
-                href="/choose-module"
+                href="#"
                 className="inline-flex h-13 min-w-52 items-center justify-center gap-4 rounded-lg bg-linear-to-r from-[#ff8a00] to-[#ffad0b] px-7 font-bold text-white"
               >
                 Start Free <ArrowRight className="h-5 w-5" />

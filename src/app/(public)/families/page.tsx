@@ -269,7 +269,7 @@ export default function FamiliesPage() {
               actually understands — not just a score.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-              <Btn href="/choose-module">
+              <Btn href="#">
                 Start Free <ArrowRight className="h-5 w-5" />
               </Btn>
               <Btn href="/pricing" outline>
@@ -485,7 +485,7 @@ export default function FamiliesPage() {
                 Free to try. No pressure, no commitment.
               </p>
               <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
-                <Btn href="/choose-module">
+                <Btn href="#">
                   Start Free <ArrowRight className="h-5 w-5" />
                 </Btn>
                 <Btn href="/pricing" outline>
@@ -585,7 +585,7 @@ export default function FamiliesPage() {
               </p>
               <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <Link
-                  href="/choose-module"
+                  href="#"
                   className="inline-flex min-h-12 min-w-40 items-center justify-center gap-4 rounded-lg bg-[#ffad0a] px-7 text-[15px] font-extrabold text-white shadow-[0_8px_20px_rgba(245,158,11,.22)] transition hover:bg-[#ef9d00]"
                 >
                   Start Free <ArrowRight className="h-5 w-5" />

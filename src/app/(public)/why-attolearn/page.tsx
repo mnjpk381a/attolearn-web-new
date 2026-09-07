@@ -182,8 +182,8 @@ export default function WhyAttoLearnPage() {
             What AttoLearn actually looks at
           </EditorialTitle>
           <p className="mt-2 text-sm text-slate-700">
-            Each activity collects the evidence it&apos;s suited to collect — not
-            every dimension, every time.
+            Each activity collects the evidence it&apos;s suited to collect —
+            not every dimension, every time.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-5">
             {dimensions.map(([Icon, title, question, example], index) => (
@@ -525,7 +525,7 @@ export default function WhyAttoLearnPage() {
           </h2>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
-              href="/choose-module"
+              href="#"
               className="inline-flex h-12 items-center justify-center rounded-md bg-[#f4aa17] px-7 text-sm font-semibold text-white transition hover:bg-[#dc9411]"
             >
               Explore Adaptive Learning

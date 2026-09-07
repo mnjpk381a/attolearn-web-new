@@ -677,7 +677,7 @@ export default function HomePageClient() {
           </p>
           <div className="mt-6 flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row">
             <a
-              href="https://portal.attolearn.com/auth/login"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-12 items-center justify-center rounded-lg bg-[#f6a914] px-9 text-[16px] font-extrabold text-white shadow-[0_8px_20px_rgba(0,0,0,.15)] transition hover:bg-[#df970d]"

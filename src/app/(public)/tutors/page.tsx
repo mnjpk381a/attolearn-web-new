@@ -182,7 +182,7 @@ export default function TutorsPage() {
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row [&_a]:whitespace-nowrap">
               <Link
-                href="https://portal.attolearn.com/auth/login"
+                href="#"
                 className="inline-flex h-11 items-center justify-center gap-3 rounded-md bg-[#ff9f0a] px-6 text-sm font-bold text-white shadow-md"
               >
                 Join as a Tutor <ArrowRight className="h-4 w-4" />
@@ -877,7 +877,7 @@ export default function TutorsPage() {
             </p>
             <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
               <a
-                href="https://portal.attolearn.com/auth/login"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex h-11 items-center justify-center rounded-md bg-[#f4a50c] px-7 text-sm font-bold text-white"
@@ -1000,7 +1000,7 @@ export default function TutorsPage() {
             </p>
             <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
               <a
-                href="https://portal.attolearn.com/auth/login"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex h-12 min-w-40 items-center justify-center rounded-md bg-[#f4aa08] px-8 text-sm font-bold text-white shadow-[0_8px_22px_rgba(244,170,8,.22)] transition hover:bg-[#e79b00]"

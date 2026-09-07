@@ -414,7 +414,7 @@ export default function HomePageClient() {
               should do next.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-              <Btn href="/choose-module">
+              <Btn href="#">
                 Start Adaptive Learning <ArrowRight className="h-4 w-4" />
               </Btn>
               <Btn href="/papergenerator/demo" outline>
@@ -529,7 +529,7 @@ export default function HomePageClient() {
                 </div>
               </div>
               <Link
-                href="/choose-module"
+                href="#"
                 className="inline-flex min-h-11 items-center justify-center rounded-lg bg-[#f8ad17] px-6 text-[13px] font-extrabold text-white shadow-sm"
               >
                 Start My Step
@@ -991,7 +991,7 @@ export default function HomePageClient() {
             {/* Buttons */}
             <div className="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap lg:flex-nowrap">
               <Link
-                href="/choose-module"
+                href="#"
                 className="
             inline-flex
             h-12.5
@@ -1160,7 +1160,7 @@ export default function HomePageClient() {
           </p>
           <div className="mt-7 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
-              href="/choose-module"
+              href="#"
               className="inline-flex h-13.5 min-w-40.5 items-center justify-center rounded-[7px] bg-[#ffad12] px-7 text-[17px] font-bold text-white shadow-lg transition hover:-translate-y-0.5"
             >
               Start Free
