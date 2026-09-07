@@ -357,7 +357,7 @@ export default function TutorsPage() {
 
       <section
         id="workspace"
-        className="mx-auto max-w-7xl px-5 py-16 text-center sm:px-8 lg:px-10 lg:py-20"
+        className="mx-auto max-w-7xl px-3 py-16 text-center sm:px-4 lg:px-6 lg:py-20"
       >
         <p className="text-xs font-bold uppercase tracking-[.1em] text-[#f19a0a]">
           Tutor Workspace
@@ -398,7 +398,7 @@ export default function TutorsPage() {
       </section>
 
       <section className="bg-[radial-gradient(circle_at_50%_45%,#fffef8_0%,#fffbed_70%,#fffdf7_100%)]">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[.78fr_1.22fr] lg:items-center lg:px-10 lg:py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 px-3 py-16 sm:px-4 lg:grid-cols-[.78fr_1.22fr] lg:items-center lg:px-6 lg:py-20">
           <div>
             <p className="text-xs font-bold uppercase tracking-[.1em] text-[#ef9707]">
               Understand learner needs
@@ -416,7 +416,7 @@ export default function TutorsPage() {
           </div>
           <EvidenceCard />
         </div>
-        <div className="mx-auto max-w-7xl px-5 pb-16 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl px-3 pb-16 sm:px-4 lg:px-6">
           <div className="grid items-center gap-7 overflow-hidden rounded-2xl border-2 border-[#f3a029] bg-[radial-gradient(circle_at_78%_40%,#fff7e6_0%,#fffaf0_55%,#fff4df_100%)] p-6 sm:p-8 lg:grid-cols-[280px_1fr] lg:p-10">
             <span className="relative mx-auto block h-60 w-60 lg:h-64 lg:w-64">
               <Image
@@ -447,7 +447,7 @@ export default function TutorsPage() {
       </section>
 
       <section className="bg-[radial-gradient(circle_at_50%_45%,#fffef8_0%,#fffbed_70%,#fffdf7_100%)]">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[.72fr_1.28fr] lg:items-center lg:px-10 lg:py-20">
+        <div className="mx-auto grid max-w-7xl gap-10 px-3 py-16 sm:px-4 lg:grid-cols-[.72fr_1.28fr] lg:items-center lg:px-6 lg:py-20">
           <div>
             <p className="text-xs font-bold uppercase tracking-[.1em] text-[#f19a0a]">
               Assign targeted work
@@ -483,8 +483,8 @@ export default function TutorsPage() {
         </div>
       </section>
 
-      <section className="border-y border-[#eee9dc] bg-[radial-gradient(circle_at_50%_45%,#fffef8_0%,#fffbed_70%,#fffdf7_100%)]">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[1.25fr_.75fr] lg:items-center lg:px-10 lg:py-20">
+      <section className="bg-[radial-gradient(circle_at_50%_45%,#fffef8_0%,#fffbed_70%,#fffdf7_100%)]">
+        <div className="mx-auto grid max-w-7xl gap-10 px-3 py-16 sm:px-4 lg:grid-cols-[1.25fr_.75fr] lg:items-center lg:px-6 lg:py-20">
           <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[#e5d9c6] shadow-[0_16px_38px_rgba(51,43,30,.13)] sm:aspect-[16/9]">
             <Image
               src="/images/tutors/generated/session-preparation-reference.png"
@@ -519,7 +519,7 @@ export default function TutorsPage() {
         </div>
       </section>
 
-      <section className="border-t border-slate-200 bg-[#fffef9]">
+      <section className="bg-[#fffef9]">
         <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 lg:px-6 lg:py-20">
           <div className="text-center">
             <p className="text-xs font-bold uppercase tracking-[.1em] text-[#f19a0a]">
@@ -595,8 +595,8 @@ export default function TutorsPage() {
       </section>
 
       <section className="bg-[#fffef9] pb-16">
-        <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
-          <div className="flex flex-col gap-5 rounded-xl border border-dashed border-[#e8a21a] bg-[#fff9ee] p-5 sm:flex-row sm:items-center">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
+          <div className="flex flex-col gap-5 bg-[#fff9ee] p-5 sm:flex-row sm:items-center">
             <span className="relative h-24 w-24 shrink-0 overflow-hidden rounded-full">
               <Image
                 src="/images/tutors/paper-generator-icons/combined-chapter.png"
@@ -628,7 +628,7 @@ export default function TutorsPage() {
           </div>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:px-10">
+        <div className="mx-auto mt-16 grid max-w-7xl gap-10 px-3 sm:px-4 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:px-6">
           <div>
             <p className="text-xs font-bold uppercase tracking-[.1em] text-[#f19a0a]">
               The Parent Relationship
@@ -716,7 +716,7 @@ export default function TutorsPage() {
         </div>
       </section>
 
-      <section className="border-t border-[#eee7db] bg-[#fffdf7]">
+      <section className="bg-[#fffdf7]">
         <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 lg:px-6 lg:py-20">
           <div className="text-center">
             <p className="text-xs font-bold uppercase tracking-[.08em] text-[#e99a05]">
@@ -859,7 +859,7 @@ export default function TutorsPage() {
         </div>
       </section>
 
-      <section className="relative min-h-[230px] overflow-hidden border-y border-[#e5e3dc]">
+      <section className="relative min-h-[230px] overflow-hidden ">
         <Image
           src="/images/tutors/closing-sections/teaching-cta-v2.png"
           alt=""
@@ -867,7 +867,7 @@ export default function TutorsPage() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="relative z-10 mx-auto flex min-h-[230px] max-w-7xl items-center justify-center px-5 py-10 text-center sm:px-8 lg:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[230px] max-w-7xl items-center justify-center px-3 py-10 text-center sm:px-4 lg:px-6">
           <div>
             <h2 className="text-3xl font-extrabold leading-tight text-[#075e65] sm:text-4xl">
               Start teaching with evidence behind you
@@ -952,7 +952,7 @@ export default function TutorsPage() {
             ))}
           </div>
 
-          <div className="mt-6 flex flex-col gap-5 rounded-xl border border-dashed border-[#e8a21a] bg-[#fff9ee] p-6 sm:flex-row sm:items-center">
+          <div className="mt-6 flex flex-col gap-5 bg-[#fff9ee] p-6 sm:flex-row sm:items-center">
             <span className="relative h-20 w-20 shrink-0 overflow-hidden rounded-full">
               <Image
                 src="/images/tutors/closing-sections/on-tax-v2.png"
@@ -978,7 +978,7 @@ export default function TutorsPage() {
         </div>
       </section>
 
-      <section className="relative min-h-[260px] overflow-hidden border-t border-[#174f56]">
+      <section className="relative min-h-[260px] overflow-hidden ">
         <Image
           src="/images/tutors/closing-sections/start-free-cta.png"
           alt=""
@@ -987,7 +987,7 @@ export default function TutorsPage() {
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-[#003f48]/35" />
-        <div className="relative z-10 mx-auto flex min-h-[260px] max-w-7xl items-center justify-center px-3 py-10 text-center sm:px-4">
+        <div className="relative z-10 mx-auto flex min-h-[260px] max-w-7xl items-center justify-center px-3 py-10 text-center sm:px-4 lg:px-6">
           {" "}
           lg:px-6
           <div>

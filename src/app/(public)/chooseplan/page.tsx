@@ -82,7 +82,7 @@ function PlanDetailsModal({
         </div>
 
         <div className="text-[15px] font-semibold text-teal-800 text-center">
-          {billing === "monthly" ? plan.monthly ?? "—" : plan.annual ?? "—"}
+          {billing === "monthly" ? (plan.monthly ?? "—") : (plan.annual ?? "—")}
         </div>
       </div>
     );
@@ -308,7 +308,7 @@ function ChoosePlanContent() {
         }}
       />
 
-      <div className="mx-auto max-w-7xl px-6 py-10">
+      <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6 py-10">
         <div className="grid gap-8 lg:grid-cols-[380px_1fr]">
           <div
             className="relative rounded-3xl overflow-hidden bg-cover bg-center text-white shadow-lg"

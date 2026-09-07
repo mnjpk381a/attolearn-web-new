@@ -203,36 +203,38 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_48%_40%,#fffef8_0%,#fffbed_65%,#fffdf7_100%)] py-10">
-        <div className="site-container grid items-center gap-7 rounded-2xl border border-[#eadfce] bg-white/35 py-5 shadow-[0_5px_18px_rgba(99,70,32,.04)] md:grid-cols-[minmax(0,240px)_minmax(0,1fr)_auto] lg:gap-10">
-          <div className="relative mx-auto h-38.75 w-57.5">
-            <Image
-              src="/images/home-education/pathway-house-generated.png"
-              alt="Home education pathway represented by a house, books and plants"
-              fill
-              sizes="230px"
-              quality={100}
-              unoptimized
-              className="object-contain"
-            />
+        <div className="site-container">
+          <div className="grid items-center gap-7 rounded-2xl border border-[#eadfce] bg-white/35 py-5 shadow-[0_5px_18px_rgba(99,70,32,.04)] md:grid-cols-[minmax(0,240px)_minmax(0,1fr)_auto] lg:gap-10">
+            <div className="relative mx-auto h-38.75 w-57.5">
+              <Image
+                src="/images/home-education/pathway-house-generated.png"
+                alt="Home education pathway represented by a house, books and plants"
+                fill
+                sizes="230px"
+                quality={100}
+                unoptimized
+                className="object-contain"
+              />
+            </div>
+            <div>
+              <h2 className="home-education-pathway-heading text-[24px] font-bold leading-tight text-[#08736f]">
+                A pathway, not a separate product
+              </h2>
+              <p className="mt-4 max-w-152.5 text-[14px] leading-7 text-[#30354f]">
+                Home Education uses AttoLearn’s family learning, planning,
+                assessment and tutor-collaboration capabilities in a parent-led
+                context. There is no separate “homeschool edition” or different
+                account type — you use the same AttoLearn Family account, set up
+                around you as the primary educator.
+              </p>
+            </div>
+            <Link
+              href="/families"
+              className="inline-flex h-14 items-center justify-center gap-5 rounded-xl bg-[#167f7b] px-7 text-base font-semibold text-white shadow-[0_8px_20px_rgba(22,127,123,.22)] transition hover:bg-[#116b68] md:mr-5 lg:mr-6"
+            >
+              See the Family product <ArrowRight className="h-6 w-6" />
+            </Link>
           </div>
-          <div>
-            <h2 className="home-education-pathway-heading text-[24px] font-bold leading-tight text-[#08736f]">
-              A pathway, not a separate product
-            </h2>
-            <p className="mt-4 max-w-152.5 text-[14px] leading-7 text-[#30354f]">
-              Home Education uses AttoLearn’s family learning, planning,
-              assessment and tutor-collaboration capabilities in a parent-led
-              context. There is no separate “homeschool edition” or different
-              account type — you use the same AttoLearn Family account, set up
-              around you as the primary educator.
-            </p>
-          </div>
-          <Link
-            href="/families"
-            className="inline-flex h-14 items-center justify-center gap-5 rounded-xl bg-[#167f7b] px-7 text-base font-semibold text-white shadow-[0_8px_20px_rgba(22,127,123,.22)] transition hover:bg-[#116b68]"
-          >
-            See the Family product <ArrowRight className="h-6 w-6" />
-          </Link>
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_42%,#fffef8_0%,#fffbed_58%,#fffdf7_100%)] py-16 lg:py-20">
@@ -407,7 +409,7 @@ export default function HomeEducationPage() {
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_40%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] py-14 lg:py-16">
         <div className="site-container">
-          <div className="rounded-2xl border border-[#eee5d8] bg-white/25 px-5 py-9 shadow-[0_10px_30px_rgba(70,61,42,.035)] sm:px-8 lg:px-10">
+          <div className="bg-white/25 px-5 py-9 sm:px-8 lg:px-10">
             <div className="mx-auto max-w-7xl text-center">
               <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100] md:text-base">
                 Coverage and progress
@@ -479,8 +481,8 @@ export default function HomeEducationPage() {
               ))}
             </div>
           </div>
-          <div className="mt-3 grid gap-8 rounded-2xl border border-[#eee5d8] bg-white/25 px-6 py-7 shadow-[0_8px_24px_rgba(70,61,42,.025)] lg:grid-cols-[.9fr_1.1fr] lg:gap-12 lg:px-10 lg:py-8">
-            <div className="py-1 lg:pl-1">
+          <div className="mt-3 grid gap-8 bg-white/25 py-7 lg:grid-cols-[.9fr_1.1fr] lg:gap-12 lg:py-8">
+            <div className="split-section-copy py-1 lg:pl-1">
               <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
                 Home education reporting
               </p>
@@ -588,7 +590,7 @@ export default function HomeEducationPage() {
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_40%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] py-14 lg:py-16">
         <div className="site-container">
-          <div className="rounded-2xl border border-[#eee5d8] bg-white/25 px-6 py-10 shadow-[0_10px_30px_rgba(70,61,42,.03)] lg:px-10 lg:py-12">
+          <div className="bg-white/25 px-6 py-10 lg:px-10 lg:py-12">
             <div className="text-center">
               <p className="text-base font-extrabold uppercase tracking-[.11em] text-[#ee8100] md:text-lg">
                 How the report behaves
@@ -690,7 +692,7 @@ export default function HomeEducationPage() {
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_40%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] py-14 lg:py-16">
         <div className="site-container">
-          <div className="rounded-2xl border border-[#eee5d8] bg-white/25 px-6 py-9 shadow-[0_10px_30px_rgba(70,61,42,.03)] lg:px-10 lg:py-10">
+          <div className="bg-white/25 px-6 py-9 lg:px-10 lg:py-10">
             <div className="text-center">
               <p className="text-base font-extrabold uppercase tracking-[.11em] text-[#ee8100] md:text-lg">
                 Assessment tools
@@ -785,236 +787,237 @@ export default function HomeEducationPage() {
         </div>
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_45%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] py-14 lg:py-16">
-        <div className="site-container overflow-hidden rounded-2xl border border-[#eee5d8] bg-white/25 py-8 shadow-[0_10px_30px_rgba(70,61,42,.03)]">
-          <div className="grid gap-9 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-14">
-            <div>
-              <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
-                Tutor collaboration
-              </p>
-              <h2 className="mt-4 text-[32px] font-extrabold leading-[1.15] tracking-[-.02em] text-[#075f68] md:text-[38px]">
-                Bring in help without handing over control
-              </h2>
-              <p className="mt-5 max-w-97.5 text-[14px] font-medium leading-6 text-[#34364d]">
-                Many home educators outsource one subject. You can invite an
-                approved tutor into a single subject and keep everything else
-                closed.
-              </p>
-              <CheckList
-                items={[
-                  "You invite the tutor — they cannot add your child",
-                  "Access is scoped to what you allow",
-                  "The tutor sees evidence, not your account",
-                  "Withdraw access at any time, without explanation",
-                ]}
-              />
-            </div>
-            <div className="rounded-xl border border-[#eee5da] bg-white/45 p-2 shadow-[0_6px_20px_rgba(67,58,43,.035)]">
-              <div className="rounded-lg bg-[#075f68] px-5 py-3 text-[16px] font-extrabold text-white">
-                Tutor access — Sofia
+        <div className="site-container">
+          <div className="overflow-hidden bg-white/25 py-8">
+            <div className="grid gap-9 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-14">
+              <div>
+                <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
+                  Tutor collaboration
+                </p>
+                <h2 className="mt-4 text-[32px] font-extrabold leading-[1.15] tracking-[-.02em] text-[#075f68] md:text-[38px]">
+                  Bring in help without handing over control
+                </h2>
+                <p className="mt-5 max-w-97.5 text-[14px] font-medium leading-6 text-[#34364d]">
+                  Many home educators outsource one subject. You can invite an
+                  approved tutor into a single subject and keep everything else
+                  closed.
+                </p>
+                <CheckList
+                  items={[
+                    "You invite the tutor — they cannot add your child",
+                    "Access is scoped to what you allow",
+                    "The tutor sees evidence, not your account",
+                    "Withdraw access at any time, without explanation",
+                  ]}
+                />
               </div>
-              <div className="mt-2 space-y-1.5">
-                <div className="flex min-h-15.5 items-center gap-4 rounded-lg border border-[#eee5da] bg-white/75 px-4">
-                  <span className="grid h-10 w-10 place-items-center rounded-full bg-[#f6f4e9] text-[#075f68]">
-                    <UserRound className="h-6 w-6" />
-                  </span>
-                  <div>
-                    <p className="text-[13px] font-extrabold text-[#075f68]">
-                      Mr. Okafor
-                    </p>
-                    <p className="text-[11px] font-medium text-[#34364d]">
-                      Mathematics only — invited by you
-                    </p>
-                  </div>
-                  <span className="relative ml-auto h-12 w-12 overflow-hidden rounded-full bg-[#f0e3d2]">
-                    <Image
-                      src="/images/home-education/mr-okafor-generated.png"
-                      alt="Mr. Okafor"
-                      fill
-                      sizes="48px"
-                      className="object-cover object-top lg:object-contain lg:object-top"
-                    />
-                  </span>
+              <div className="rounded-xl border border-[#eee5da] bg-white/45 p-2 shadow-[0_6px_20px_rgba(67,58,43,.035)]">
+                <div className="rounded-lg bg-[#075f68] px-5 py-3 text-[16px] font-extrabold text-white">
+                  Tutor access — Sofia
                 </div>
-                <div className="grid min-h-17.5 items-center rounded-lg border border-[#eee5da] bg-white/75 px-4 sm:grid-cols-[1.2fr_.8fr_.8fr]">
-                  <div className="flex items-center gap-4">
-                    <span className="grid h-10 w-10 place-items-center rounded-full bg-[#fff5dc] text-[#f08a00]">
-                      <Eye className="h-6 w-6" />
+                <div className="mt-2 space-y-1.5">
+                  <div className="flex min-h-15.5 items-center gap-4 rounded-lg border border-[#eee5da] bg-white/75 px-4">
+                    <span className="grid h-10 w-10 place-items-center rounded-full bg-[#f6f4e9] text-[#075f68]">
+                      <UserRound className="h-6 w-6" />
                     </span>
                     <div>
                       <p className="text-[13px] font-extrabold text-[#075f68]">
-                        Can see
+                        Mr. Okafor
+                      </p>
+                      <p className="text-[11px] font-medium text-[#34364d]">
+                        Mathematics only — invited by you
+                      </p>
+                    </div>
+                    <span className="relative ml-auto h-12 w-12 overflow-hidden rounded-full bg-[#f0e3d2]">
+                      <Image
+                        src="/images/home-education/mr-okafor-generated.png"
+                        alt="Mr. Okafor"
+                        fill
+                        sizes="48px"
+                        className="object-cover object-top lg:object-contain lg:object-top"
+                      />
+                    </span>
+                  </div>
+                  <div className="grid min-h-17.5 items-center rounded-lg border border-[#eee5da] bg-white/75 px-4 sm:grid-cols-[1.2fr_.8fr_.8fr]">
+                    <div className="flex items-center gap-4">
+                      <span className="grid h-10 w-10 place-items-center rounded-full bg-[#fff5dc] text-[#f08a00]">
+                        <Eye className="h-6 w-6" />
+                      </span>
+                      <div>
+                        <p className="text-[13px] font-extrabold text-[#075f68]">
+                          Can see
+                        </p>
+                        <p className="text-[11px] text-[#34364d]">
+                          Maths evidence and goals
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="grid h-11 w-11 place-items-center rounded-full bg-[conic-gradient(#075f68_0_72%,#e8e4d7_72%)]">
+                        <span className="grid h-8 w-8 place-items-center rounded-full bg-white text-[10px] font-extrabold">
+                          72%
+                        </span>
+                      </span>
+                      <p className="text-[10px] font-bold text-[#075f68]">
+                        Progress
+                        <br />
+                        <span className="font-medium text-[#34364d]">
+                          72% completed
+                        </span>
+                      </p>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Flag className="h-7 w-7 fill-[#f29a00] text-[#f29a00]" />
+                      <p className="text-[10px] font-bold text-[#075f68]">
+                        Goal
+                        <br />
+                        <span className="font-medium text-[#34364d]">
+                          Master fractions
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex min-h-14.5 items-center gap-4 rounded-lg border border-[#eee5da] bg-white/75 px-4">
+                    <span className="grid h-10 w-10 place-items-center rounded-full bg-[#f5eafb] text-[#8d20bd]">
+                      <LockKeyhole className="h-6 w-6" />
+                    </span>
+                    <div>
+                      <p className="text-[13px] font-extrabold text-[#075f68]">
+                        Cannot see
                       </p>
                       <p className="text-[11px] text-[#34364d]">
-                        Maths evidence and goals
+                        English, Science, account settings
                       </p>
                     </div>
+                    <div className="ml-auto flex items-center text-[#53606a]">
+                      <FileText className="h-8 w-8" />
+                      <LockKeyhole className="-ml-2 mt-4 h-5 w-5 fill-white" />
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="grid h-11 w-11 place-items-center rounded-full bg-[conic-gradient(#075f68_0_72%,#e8e4d7_72%)]">
-                      <span className="grid h-8 w-8 place-items-center rounded-full bg-white text-[10px] font-extrabold">
-                        72%
-                      </span>
-                    </span>
-                    <p className="text-[10px] font-bold text-[#075f68]">
-                      Progress
-                      <br />
-                      <span className="font-medium text-[#34364d]">
-                        72% completed
-                      </span>
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Flag className="h-7 w-7 fill-[#f29a00] text-[#f29a00]" />
-                    <p className="text-[10px] font-bold text-[#075f68]">
-                      Goal
-                      <br />
-                      <span className="font-medium text-[#34364d]">
-                        Master fractions
-                      </span>
-                    </p>
-                  </div>
-                </div>
-                <div className="flex min-h-14.5 items-center gap-4 rounded-lg border border-[#eee5da] bg-white/75 px-4">
-                  <span className="grid h-10 w-10 place-items-center rounded-full bg-[#f5eafb] text-[#8d20bd]">
-                    <LockKeyhole className="h-6 w-6" />
-                  </span>
-                  <div>
-                    <p className="text-[13px] font-extrabold text-[#075f68]">
-                      Cannot see
-                    </p>
-                    <p className="text-[11px] text-[#34364d]">
-                      English, Science, account settings
-                    </p>
-                  </div>
-                  <div className="ml-auto flex items-center text-[#53606a]">
-                    <FileText className="h-8 w-8" />
-                    <LockKeyhole className="-ml-2 mt-4 h-5 w-5 fill-white" />
-                  </div>
-                </div>
-                <div className="flex min-h-14.5 items-center gap-4 rounded-lg border border-[#eee5da] bg-white/75 px-4">
-                  <span className="grid h-10 w-10 place-items-center rounded-full bg-[#eef8df] text-[#469d20]">
-                    <Shield className="h-6 w-6 fill-current" />
-                  </span>
-                  <div>
-                    <p className="text-[13px] font-extrabold text-[#075f68]">
-                      Remove access
-                    </p>
-                    <p className="text-[11px] text-[#34364d]">
-                      Available to you at any time
-                    </p>
-                  </div>
-                  <span className="ml-auto grid h-12 w-12 place-items-center rounded-full bg-[#eef8df] text-[#469d20]">
-                    <ShieldCheck className="h-8 w-8" />
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="my-8 h-px bg-[#eee5d8]" />
-          <div className="grid gap-9 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-14">
-            <div>
-              <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
-                Multiple children
-              </p>
-              <h2 className="mt-4 text-[32px] font-extrabold leading-[1.15] tracking-[-.02em] text-[#075f68] md:text-[38px]">
-                One account, each child on their own path
-              </h2>
-              <p className="mt-5 max-w-100 text-[14px] font-medium leading-6 text-[#34364d]">
-                Home educating siblings rarely means teaching them the same
-                thing. Every child has their own year level, goals, evidence and
-                pace under one family account.
-              </p>
-              <CheckList
-                items={[
-                  "Switch between children in one view",
-                  "Separate year level and goals per child",
-                  "Up to 3 children included, add-ons available beyond that",
-                  "Evidence kept separately for each child",
-                ]}
-              />
-            </div>
-            <div className="rounded-xl border border-[#eee5da] bg-white/45 p-2 shadow-[0_6px_20px_rgba(67,58,43,.035)]">
-              <div className="rounded-lg bg-[#075f68] px-5 py-3 text-[16px] font-extrabold text-white">
-                Your children
-              </div>
-              <div className="mt-2 grid gap-2 sm:grid-cols-2">
-                {[
-                  [
-                    "Sofia, Year 5",
-                    "Fractions — building confidence",
-                    "68%",
-                    "#4a9b1e",
-                    "bg-[#eef7dc]",
-                  ],
-                  [
-                    "Elias, Year 2",
-                    "Reading — steady progress",
-                    "45%",
-                    "#ef9500",
-                    "bg-[#fff3df]",
-                  ],
-                  [
-                    "Nadia, Year 8",
-                    "Algebra — ready for the next step",
-                    "81%",
-                    "#8621bd",
-                    "bg-[#f5eafb]",
-                  ],
-                ].map(([name, copy, score, color, bg]) => (
-                  <div
-                    key={name as string}
-                    className="flex min-h-21.5 items-center gap-4 rounded-lg border border-[#eee5da] bg-white/75 px-4"
-                  >
-                    <span
-                      className={`grid h-12 w-12 shrink-0 place-items-center rounded-full ${bg}`}
-                    >
-                      <UserRound
-                        className="h-8 w-8"
-                        style={{ color: color as string }}
-                      />
+                  <div className="flex min-h-14.5 items-center gap-4 rounded-lg border border-[#eee5da] bg-white/75 px-4">
+                    <span className="grid h-10 w-10 place-items-center rounded-full bg-[#eef8df] text-[#469d20]">
+                      <Shield className="h-6 w-6 fill-current" />
                     </span>
                     <div>
                       <p className="text-[13px] font-extrabold text-[#075f68]">
-                        {name as string}
+                        Remove access
                       </p>
-                      <p className="mt-1 text-[11px] font-medium leading-4 text-[#34364d]">
-                        {copy as string}
+                      <p className="text-[11px] text-[#34364d]">
+                        Available to you at any time
                       </p>
                     </div>
-                    <span
-                      className="ml-auto grid h-12 w-12 shrink-0 place-items-center rounded-full"
-                      style={{
-                        background: `conic-gradient(${color} 0 ${score},#eee8da ${score})`,
-                      }}
-                    >
-                      <span className="grid h-9 w-9 place-items-center rounded-full bg-white text-[11px] font-extrabold">
-                        {score as string}
-                      </span>
+                    <span className="ml-auto grid h-12 w-12 place-items-center rounded-full bg-[#eef8df] text-[#469d20]">
+                      <ShieldCheck className="h-8 w-8" />
                     </span>
                   </div>
-                ))}
-                <div className="flex min-h-21.5 items-center gap-4 rounded-lg border border-[#eee5da] bg-white/75 px-4">
-                  <span className="grid h-12 w-12 place-items-center rounded-full bg-[#eef1ff] text-[#536ed1]">
-                    <CalendarDays className="h-8 w-8" />
-                  </span>
-                  <div>
-                    <p className="text-[13px] font-extrabold text-[#075f68]">
-                      This week
-                    </p>
-                    <p className="mt-1 text-[11px] text-[#34364d]">
-                      11 sessions
-                      <br />
-                      completed
-                    </p>
-                  </div>
-                  <div className="ml-auto flex h-12 items-end gap-1">
-                    {[14, 30, 19, 43, 26, 50, 34].map((h, i) => (
+                </div>
+              </div>
+            </div>
+            <div className="grid gap-9 lg:grid-cols-[.82fr_1.18fr] lg:items-center lg:gap-14">
+              <div>
+                <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100]">
+                  Multiple children
+                </p>
+                <h2 className="mt-4 text-[32px] font-extrabold leading-[1.15] tracking-[-.02em] text-[#075f68] md:text-[38px]">
+                  One account, each child on their own path
+                </h2>
+                <p className="mt-5 max-w-100 text-[14px] font-medium leading-6 text-[#34364d]">
+                  Home educating siblings rarely means teaching them the same
+                  thing. Every child has their own year level, goals, evidence
+                  and pace under one family account.
+                </p>
+                <CheckList
+                  items={[
+                    "Switch between children in one view",
+                    "Separate year level and goals per child",
+                    "Up to 3 children included, add-ons available beyond that",
+                    "Evidence kept separately for each child",
+                  ]}
+                />
+              </div>
+              <div className="rounded-xl border border-[#eee5da] bg-white/45 p-2 shadow-[0_6px_20px_rgba(67,58,43,.035)]">
+                <div className="rounded-lg bg-[#075f68] px-5 py-3 text-[16px] font-extrabold text-white">
+                  Your children
+                </div>
+                <div className="mt-2 grid gap-2 sm:grid-cols-2">
+                  {[
+                    [
+                      "Sofia, Year 5",
+                      "Fractions — building confidence",
+                      "68%",
+                      "#4a9b1e",
+                      "bg-[#eef7dc]",
+                    ],
+                    [
+                      "Elias, Year 2",
+                      "Reading — steady progress",
+                      "45%",
+                      "#ef9500",
+                      "bg-[#fff3df]",
+                    ],
+                    [
+                      "Nadia, Year 8",
+                      "Algebra — ready for the next step",
+                      "81%",
+                      "#8621bd",
+                      "bg-[#f5eafb]",
+                    ],
+                  ].map(([name, copy, score, color, bg]) => (
+                    <div
+                      key={name as string}
+                      className="flex min-h-21.5 items-center gap-4 rounded-lg border border-[#eee5da] bg-white/75 px-4"
+                    >
                       <span
-                        key={i}
-                        className="w-1.5 bg-[#8d9bdd]"
-                        style={{ height: h }}
-                      />
-                    ))}
+                        className={`grid h-12 w-12 shrink-0 place-items-center rounded-full ${bg}`}
+                      >
+                        <UserRound
+                          className="h-8 w-8"
+                          style={{ color: color as string }}
+                        />
+                      </span>
+                      <div>
+                        <p className="text-[13px] font-extrabold text-[#075f68]">
+                          {name as string}
+                        </p>
+                        <p className="mt-1 text-[11px] font-medium leading-4 text-[#34364d]">
+                          {copy as string}
+                        </p>
+                      </div>
+                      <span
+                        className="ml-auto grid h-12 w-12 shrink-0 place-items-center rounded-full"
+                        style={{
+                          background: `conic-gradient(${color} 0 ${score},#eee8da ${score})`,
+                        }}
+                      >
+                        <span className="grid h-9 w-9 place-items-center rounded-full bg-white text-[11px] font-extrabold">
+                          {score as string}
+                        </span>
+                      </span>
+                    </div>
+                  ))}
+                  <div className="flex min-h-21.5 items-center gap-4 rounded-lg border border-[#eee5da] bg-white/75 px-4">
+                    <span className="grid h-12 w-12 place-items-center rounded-full bg-[#eef1ff] text-[#536ed1]">
+                      <CalendarDays className="h-8 w-8" />
+                    </span>
+                    <div>
+                      <p className="text-[13px] font-extrabold text-[#075f68]">
+                        This week
+                      </p>
+                      <p className="mt-1 text-[11px] text-[#34364d]">
+                        11 sessions
+                        <br />
+                        completed
+                      </p>
+                    </div>
+                    <div className="ml-auto flex h-12 items-end gap-1">
+                      {[14, 30, 19, 43, 26, 50, 34].map((h, i) => (
+                        <span
+                          key={i}
+                          className="w-1.5 bg-[#8d9bdd]"
+                          style={{ height: h }}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1151,7 +1151,7 @@ export default function HomePageClient() {
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-[#145556]/70" />
-        <div className="relative mx-auto flex h-full w-full max-w-7xl flex-col items-center justify-center px-4 pb-3 text-center">
+        <div className="relative mx-auto flex h-full w-full max-w-7xl flex-col items-center justify-center px-3 sm:px-4 lg:px-6 pb-3 text-center">
           <h2 className="text-[#fffbed]">Start free, decide later</h2>
           <p className="mt-4 text-[#fffbed]">
             See the value for yourself. No credit card required.

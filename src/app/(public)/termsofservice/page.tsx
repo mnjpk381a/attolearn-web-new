@@ -46,7 +46,7 @@ export default function TermsOfServicePage() {
   return (
     <main className="min-h-screen bg-gray-50 pt-10 pb-16">
       <section className="mb-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-teal-700">Terms of Use</h1>
           </div>
@@ -54,7 +54,7 @@ export default function TermsOfServicePage() {
       </section>
 
       <section className="space-y-8">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:auto-rows-fr">
             <ReadMoreCard title="1. Acceptance of Terms of Use">
               <>
@@ -221,7 +221,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:auto-rows-fr">
             <ReadMoreCard title="3. Your Privacy">
               <>
@@ -349,7 +349,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:auto-rows-fr">
             <ReadMoreCard title="5. Intellectual Property Rights">
               <>
@@ -455,7 +455,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:auto-rows-fr">
             <ReadMoreCard title="7. Content Restrictions and Conduct">
               <>
@@ -578,7 +578,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:auto-rows-fr">
             <ReadMoreCard title="9. Pricing and Currency">
               <>
@@ -686,7 +686,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:auto-rows-fr">
             <ReadMoreCard title="11. Your Representations and Warranties">
               <>
@@ -839,7 +839,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:auto-rows-fr">
             <ReadMoreCard title="13. Data Management and Security">
               <>
@@ -980,7 +980,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:auto-rows-fr">
             <ReadMoreCard title="15. Whole Agreement">
               <p className="text-base">
@@ -1000,7 +1000,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:auto-rows-fr">
             <div className="flex h-full flex-col rounded-2xl bg-white p-6 shadow-sm">
               <h3 className="mb-3 text-2xl font-bold text-teal-700">

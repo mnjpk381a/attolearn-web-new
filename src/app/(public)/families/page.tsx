@@ -300,7 +300,7 @@ export default function FamiliesPage() {
           </div>
         </div>
       </section>
-      <section className="site-container border-x border-slate-200 bg-white py-16">
+      <section className="site-container bg-white py-16">
         {/* Parent Authority */}
         <div className="content-split lg:grid-cols-[0.95fr_1.05fr] lg:gap-12">
           <div className="lg:pl-3">
@@ -344,7 +344,7 @@ export default function FamiliesPage() {
           </div>
         </div>
 
-        <div className="my-16 border-t border-slate-200" />
+        <div className="my-16" />
 
         {/* Child Experience */}
         <div className="content-split">
@@ -426,7 +426,7 @@ export default function FamiliesPage() {
               />
             </article>
           </div>
-          <div className="mt-16 border-t pt-16">
+          <div className="mt-16 pt-16">
             <Title eyebrow="Assessment at home">
               Check progress with a real assessment
             </Title>

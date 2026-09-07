@@ -270,7 +270,7 @@ export default function PricingPage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-12">
-        <div className="flex flex-col items-center gap-7 rounded-xl border border-[#ff9b43] bg-[#fffaf4] p-7 md:flex-row">
+        <div className="flex flex-col items-center gap-7 bg-[#fffaf4] p-7 md:flex-row">
           <span className="relative h-32 w-32 shrink-0">
             <Image
               src="/images/pricing/small-print-icons/published-market.png"

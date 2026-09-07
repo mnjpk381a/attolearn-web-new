@@ -3,7 +3,7 @@ export default function RefundPolicyPage() {
     <main className="min-h-screen bg-gray-50 pt-10 pb-16">
       <section>
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-xl bg-white p-6 shadow-sm sm:p-8">
+          <div className="bg-white p-6 sm:p-8">
             <div className="mb-16 text-center">
               <h1 className="text-2xl font-bold text-teal-700">
                 Refund Policy

@@ -657,7 +657,7 @@ body {
 --------------------------- */
 
 .public-site {
-  --public-section-space: clamp(3.75rem, 6vw, 5rem);
+  --public-section-space: clamp(3.5rem, 5vw, 4rem);
   --public-heading-color: #075f68;
   --public-body-color: #475569;
   font-family: ui-sans-serif, system-ui, sans-serif !important;
@@ -780,34 +780,26 @@ body {
 
 /* Home Education uses one responsive gap between every visual section.
    The Hero retains its composition and the final CTA stays flush with the footer. */
-.public-site .home-education-page {
-  --home-education-section-space: clamp(3.5rem, 5vw, 4rem);
-}
-
 .public-site .home-education-page > section:not(:first-child):not(:last-child) {
   margin-block: 0 !important;
-  padding-block: var(--home-education-section-space) !important;
+  padding-block: var(--public-section-space) !important;
 }
 
 .public-site .home-education-page > section:last-child {
   margin-block: 0 !important;
-  padding-top: var(--home-education-section-space) !important;
+  padding-top: var(--public-section-space) !important;
   padding-bottom: 0 !important;
 }
 /* Families page uses one responsive gap between every visual section.
    The final CTA keeps zero bottom padding so it remains flush with the footer. */
-.public-site .families-page {
-  --families-section-space: clamp(3.5rem, 5vw, 4rem);
-}
-
 .public-site .families-page > section:not(:first-child):not(:last-child) {
   margin-block: 0 !important;
-  padding-block: var(--families-section-space) !important;
+  padding-block: var(--public-section-space) !important;
 }
 
 .public-site .families-page > section:last-child {
   margin-block: 0 !important;
-  padding-top: var(--families-section-space) !important;
+  padding-top: var(--public-section-space) !important;
   padding-bottom: 0 !important;
 }
 
@@ -852,6 +844,7 @@ body {
   )
   > :not(:has(img))
   :is(h2, h3) {
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
   font-size: clamp(1.75rem, 2.5vw, 2.125rem) !important;
   font-weight: 600 !important;
   line-height: 1.25 !important;
@@ -878,7 +871,9 @@ body {
   )
   > :not(:has(img))
   p {
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
   font-size: 0.9375rem !important;
+  font-weight: 400 !important;
   line-height: 1.75rem !important;
 }
 /* Home Education curriculum feature mirrors the reference's wider visual
@@ -893,9 +888,11 @@ body {
   .curriculum-split
   > :not(.content-split-media)
   > h2 {
-  font-size: clamp(2rem, 2.8vw, 2.375rem) !important;
-  font-weight: 700 !important;
-  line-height: 1.2 !important;
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.75rem, 2.5vw, 2.125rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
 }
 
 .public-site
@@ -1087,6 +1084,35 @@ body {
 
 .public-site .content-split-media {
   max-width: 100%;
+}
+
+/* Generated editorial images include a pale matte in the bitmap itself.
+   Crop that matte and let the website render one clean, transparent frame. */
+.public-site .content-split-media:has(> img[src*="-generated"]) {
+  overflow: hidden;
+  border-radius: 1rem;
+  background: transparent !important;
+}
+
+.public-site .content-split-media > img[src*="-generated"] {
+  object-fit: cover !important;
+  transform: scale(1.05);
+  transform-origin: center;
+}
+
+.public-site .split-section-copy > :is(h2, h3) {
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+  font-size: clamp(1.75rem, 2.5vw, 2.125rem) !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.02em !important;
+}
+
+.public-site .split-section-copy > p:not(:first-child) {
+  font-family: ui-sans-serif, system-ui, sans-serif !important;
+  font-size: 0.9375rem !important;
+  font-weight: 400 !important;
+  line-height: 1.75rem !important;
 }
 
 @media (max-width: 39.999rem) {

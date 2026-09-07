@@ -26,7 +26,7 @@ export default function Testimonials() {
           "From admissions to exams, it's all in one smart system. Super efficient!",
       },
     ],
-    []
+    [],
   );
 
   const [idx, setIdx] = useState(0);
@@ -42,7 +42,7 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="w-full bg-white py-14">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
         {/* Heading */}
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#007381]">
