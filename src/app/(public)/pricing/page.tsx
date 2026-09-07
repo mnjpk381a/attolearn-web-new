@@ -198,7 +198,7 @@ export default function PricingPage() {
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 {card.copy}
               </p>
-              {card.action && (
+              {"action" in card && card.action && (
                 <Link
                   href="/papergenerator"
                   className="mt-auto inline-flex items-center gap-2 rounded-md border border-[#07808a] px-3 py-2 text-xs font-bold text-[#076d76]"
