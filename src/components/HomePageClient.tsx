@@ -391,15 +391,11 @@ export default function HomePageClient() {
 
       <section className="bg-[linear-gradient(180deg,#fff_0%,#fbfffe_100%)] py-16 lg:py-20">
         <div className="site-container">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-[34px] font-black leading-[1.12] tracking-[-.025em] text-[#075f68] sm:text-[44px] lg:text-[48px]">
-              Learning is not a single score.
-              <br />
-              <span className="text-[#075f68]">
-                Learning is a pattern of evidence.
-              </span>
+          <div className="mx-auto max-w-7xl text-center">
+            <h2 className="evidence-heading whitespace-nowrap text-[22px] font-black leading-[1.12] tracking-[-.025em] text-[#075f68] sm:text-[28px] lg:text-[32px]">
+              Learning is not a single score. Learning is a pattern of evidence.
             </h2>
-            <p className="mt-5 text-[16px] font-medium leading-7 text-slate-600 sm:text-[17px]">
+            <p className="mx-auto mt-5 max-w-4xl text-[16px] font-medium leading-7 text-slate-600 sm:text-[17px]">
               A child can get the same answer right for very different reasons.
               AttoLearn looks at the same skill seven ways, so what you see
               reflects understanding rather than a tally of ticks.
@@ -450,10 +446,8 @@ export default function HomePageClient() {
       <section className="bg-[#fafbff] py-16">
         <div className="site-container">
           <div className="text-center">
-            <h2 className="text-[40px] font-black leading-[1.02] tracking-[-.035em] text-[#075f68] sm:text-[52px] lg:text-[58px]">
-              Already supporting
-              <br />
-              school <span className="text-[#075f68]">communities</span>
+            <h2 className="community-reach-heading text-[40px] font-black leading-[1.02] tracking-[-.035em] text-[#075f68]">
+              Already supporting school communities
             </h2>
             <p className="mt-4 text-[16px] font-medium text-slate-500 sm:text-[17px]">
               Current conservative public reach figures.
@@ -500,7 +494,7 @@ export default function HomePageClient() {
                   <span className="mx-5 h-22 w-px shrink-0 bg-[#cfddd5]" />
                   <div>
                     <p
-                      className={`text-[36px] font-black leading-none tracking-[-.02em] sm:text-[40px] ${String(valueStyle)}`}
+                      className={`community-reach-stat text-[36px] font-black leading-none tracking-[-.02em] sm:text-[40px] ${String(valueStyle)}`}
                     >
                       {String(value)}
                     </p>
@@ -540,8 +534,7 @@ export default function HomePageClient() {
         <div className="site-container">
           <div className="text-center">
             <h2 className="text-2xl font-extrabold text-[#075f68]">
-              Start with the <span className="text-[#075f68]">AttoLearn</span>{" "}
-              pathway that fits you
+              Start with the AttoLearn pathway that fits you
             </h2>
             <p className="mt-1 text-xs text-slate-500">
               Different starting points. One connected platform.
