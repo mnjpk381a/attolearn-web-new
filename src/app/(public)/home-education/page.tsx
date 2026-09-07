@@ -216,7 +216,7 @@ export default function HomeEducationPage() {
             />
           </div>
           <div>
-            <h2 className="text-[24px] font-bold leading-tight text-[#08736f]">
+            <h2 className="home-education-pathway-heading text-[24px] font-bold leading-tight text-[#08736f]">
               A pathway, not a separate product
             </h2>
             <p className="mt-4 max-w-152.5 text-[14px] leading-7 text-[#30354f]">
@@ -237,11 +237,11 @@ export default function HomeEducationPage() {
       </section>
       <section className="bg-[radial-gradient(circle_at_50%_42%,#fffef8_0%,#fffbed_58%,#fffdf7_100%)] py-16 lg:py-20">
         <div className="site-container">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto max-w-7xl text-center">
             <p className="text-base font-bold uppercase tracking-[.12em] text-[#f28a00] md:text-lg">
               What home educators use
             </p>
-            <h2 className="mt-3 text-3xl font-bold leading-[1.12] text-[#075f68] md:text-[38px]">
+            <h2 className="home-education-structure-heading mt-3 text-3xl font-bold leading-[1.12] text-[#075f68]">
               Structure where you want it, flexibility where you need it
             </h2>
             <div className="mt-4 flex items-center justify-center gap-1.5">
@@ -408,11 +408,11 @@ export default function HomeEducationPage() {
       <section className="bg-[radial-gradient(circle_at_50%_40%,#fffef9_0%,#fffbed_68%,#fffdf7_100%)] py-14 lg:py-16">
         <div className="site-container">
           <div className="rounded-2xl border border-[#eee5d8] bg-white/25 px-5 py-9 shadow-[0_10px_30px_rgba(70,61,42,.035)] sm:px-8 lg:px-10">
-            <div className="mx-auto max-w-190 text-center">
+            <div className="mx-auto max-w-7xl text-center">
               <p className="text-sm font-extrabold uppercase tracking-[.035em] text-[#ee8100] md:text-base">
                 Coverage and progress
               </p>
-              <h2 className="mt-2 text-[31px] font-extrabold leading-[1.12] tracking-[-.025em] text-[#075f68] md:text-[38px]">
+              <h2 className="home-education-evidence-heading mt-2 text-[31px] font-extrabold leading-[1.12] tracking-[-.025em] text-[#075f68]">
                 Evidence you can actually look back on
               </h2>
               <p className="mx-auto mt-3 max-w-170 text-[15px] leading-[1.45] text-[#33364f]">

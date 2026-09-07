@@ -704,9 +704,7 @@ export default function HomePageClient() {
         />
         <div className="relative mx-auto w-full max-w-7xl px-3 text-center sm:px-4 lg:px-6">
           <h2 className="mx-auto max-w-4xl text-[34px] font-extrabold leading-[1.18] text-[#fffbed] sm:text-[42px] lg:text-[46px]">
-            Practice produces evidence.
-            <br />
-            Evidence shapes the next step.
+            Practice produces evidence. Evidence shapes the next step.
           </h2>
           <div
             className="mx-auto mt-3 flex items-center justify-center gap-2"
