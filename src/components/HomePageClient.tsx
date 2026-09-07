@@ -150,15 +150,29 @@ export default function HomePageClient() {
     <main className="overflow-hidden bg-white text-[#10243d]">
       <section className="home-platform-hero relative overflow-hidden bg-[#fffdf2]">
         <div className="relative">
-          <Image
-            src="/images/homepage/home-hero-composite-v3.png"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="pointer-events-none object-cover object-center"
-          />
+          <div className="pointer-events-none absolute inset-0">
+            <Image
+              src="/images/homepage/home-hero-background.png"
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-fill object-center"
+            />
+          </div>
           <div className="pointer-events-none absolute inset-0 bg-white/12" />
+          <div className="site-container pointer-events-none absolute inset-0 hidden lg:block">
+            <div className="absolute inset-y-0 right-6 w-[62%] max-w-[760px]">
+              <Image
+                src="/images/homepage/home-hero-right.png"
+                alt="AttoLearn learning dashboard with mascot"
+                fill
+                priority
+                sizes="(min-width: 1280px) 760px, 62vw"
+                className="object-contain object-bottom"
+              />
+            </div>
+          </div>
           <div className="site-container relative flex items-center pb-3 pt-8 lg:min-h-[540px] lg:pt-8">
             <div className="relative z-10 max-w-[430px]">
               <span className="inline-flex items-center gap-2 rounded-full border border-[#9edbd6] bg-white/80 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#08757b]">
