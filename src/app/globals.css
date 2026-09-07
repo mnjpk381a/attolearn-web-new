@@ -657,7 +657,7 @@ body {
 --------------------------- */
 
 .public-site {
-  --public-section-space: clamp(3.5rem, 5vw, 4rem);
+  --public-section-space: 3rem;
   --public-heading-color: #075f68;
   --public-body-color: #475569;
   font-family: ui-sans-serif, system-ui, sans-serif !important;
@@ -666,20 +666,34 @@ body {
 }
 
 .public-site .section-block-gap {
-  margin-top: 3.5rem !important;
+  margin-top: var(--public-section-space) !important;
 }
 
-@media (min-width: 64rem) {
-  .public-site .section-block-gap {
-    margin-top: 4rem !important;
+@media (min-width: 40rem) {
+  .public-site {
+    --public-section-space: 3.5rem;
   }
 }
 
-/* Give content sections after the Hero a shared vertical rhythm.
-   The final CTA keeps its own padding and connects directly to the footer. */
+@media (min-width: 64rem) {
+  .public-site {
+    --public-section-space: 4rem;
+  }
+}
+
+@media (min-width: 96rem) {
+  .public-site {
+    --public-section-space: 4.5rem;
+  }
+}
+
+/* Give every regular top-level content section one responsive vertical rhythm.
+   The first section remains the page Hero; single-section pages are included. */
 :is(
-  .public-site > section:not(:first-child):not(:last-child),
-  .public-site > :is(main, div) > section:not(:first-child):not(:last-child)
+  .public-site > section:not(:first-child),
+  .public-site > :is(main, div) > section:not(:first-child),
+  .public-site > section:only-child,
+  .public-site > :is(main, div) > section:only-child
 ) {
   margin-block: 0 !important;
   padding-block: var(--public-section-space) !important;
@@ -739,7 +753,7 @@ body {
 
 @media (max-width: 39.999rem) {
   .public-site {
-    --public-section-space: 3.5rem;
+    --public-section-space: 3rem;
   }
 
   .public-site h1:not(.ui-mockup *) {
@@ -786,31 +800,6 @@ body {
 .public-site .home-platform-hero h1 {
   font-size: clamp(2.625rem, 4vw, 3.125rem) !important;
   line-height: 1.04 !important;
-}
-
-/* Home Education uses one responsive gap between every visual section.
-   The Hero retains its composition and the final CTA stays flush with the footer. */
-.public-site .home-education-page > section:not(:first-child):not(:last-child) {
-  margin-block: 0 !important;
-  padding-block: var(--public-section-space) !important;
-}
-
-.public-site .home-education-page > section:last-child {
-  margin-block: 0 !important;
-  padding-top: var(--public-section-space) !important;
-  padding-bottom: 0 !important;
-}
-/* Families page uses one responsive gap between every visual section.
-   The final CTA keeps zero bottom padding so it remains flush with the footer. */
-.public-site .families-page > section:not(:first-child):not(:last-child) {
-  margin-block: 0 !important;
-  padding-block: var(--public-section-space) !important;
-}
-
-.public-site .families-page > section:last-child {
-  margin-block: 0 !important;
-  padding-top: var(--public-section-space) !important;
-  padding-bottom: 0 !important;
 }
 
 /* Families Hero follows its reference artwork's dedicated type scale. */
@@ -1251,12 +1240,6 @@ body {
 .tutors-page .hero-evidence-cards .text-lg {
   font-size: 16px !important;
   line-height: 1.1 !important;
-}
-
-/* Safety & Trust small-print section follows its compact supplied reference. */
-.public-site .safety-trust-page > .safety-small-print-section {
-  padding-top: 1.5rem !important;
-  padding-bottom: 0.5rem !important;
 }
 
 .public-site h2.community-reach-heading {
