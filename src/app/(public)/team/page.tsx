@@ -194,7 +194,7 @@ export default function TeamPage() {
   return (
     <main className="min-h-screen bg-slate-50">
       <section className="pt-16 sm:pt-20">
-        <div className="mx-auto max-w-6xl px-4">
+        <div className="site-container">
           {/* Title */}
           <div className="mb-10 text-center">
             <h2 className="text-2xl font-extrabold text-[#007381] sm:text-3xl">

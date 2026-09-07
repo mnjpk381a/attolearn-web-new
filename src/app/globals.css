@@ -735,6 +735,27 @@ body {
   }
 }
 
+/* Desktop hero artwork shares the header's 80rem container and 1.5rem gutters.
+   Keep decorative section backgrounds full width and artwork inside the menu. */
+@media (min-width: 80rem) {
+  .public-site .menu-aligned-hero-art {
+    left: max(1.5rem, calc((100% - 77rem) / 2));
+    right: max(1.5rem, calc((100% - 77rem) / 2));
+    width: auto;
+    max-width: none;
+  }
+
+  .public-site .menu-aligned-hero-art.hero-art-side {
+    left: auto;
+    width: 47.74rem;
+  }
+
+  .public-site .menu-aligned-hero-art.hero-art-wide {
+    left: auto;
+    width: 55.44rem;
+  }
+}
+
 /* Home Education hero intentionally uses the larger reference scale. */
 .public-site .home-education-hero h1 {
   font-size: clamp(2.25rem, 3.35vw, 2.875rem) !important;

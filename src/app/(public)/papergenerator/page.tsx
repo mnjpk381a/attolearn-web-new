@@ -130,17 +130,17 @@ export default function PaperGeneratorPage() {
   return (
     <main className="paper-generator-page overflow-hidden bg-[#fbfdfc] text-slate-800">
       <section className="relative overflow-hidden bg-[#e7f3f1] lg:min-h-[500px]">
-        <div className="absolute inset-y-0 right-0 hidden w-[72%] lg:block">
+        <div className="menu-aligned-hero-art hero-art-wide absolute inset-y-0 right-0 hidden w-[72%] lg:block">
           <Image
             src="/images/paper-generator/generated/paper-generator-hero.png"
             alt="Paper Generator assessment dashboard"
             fill
             priority
-            sizes="72vw"
+            sizes="(min-width: 1280px) 887px, 72vw"
             className="object-contain object-right"
           />
         </div>
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,#eaf8f7_0%,#eaf8f7_34%,rgba(234,248,247,.84)_42%,transparent_58%)]" />
+        <div className="menu-aligned-hero-art absolute inset-0 bg-[linear-gradient(90deg,#eaf8f7_0%,#eaf8f7_34%,rgba(234,248,247,.84)_42%,transparent_58%)]" />
         <div className="relative mx-auto flex max-w-7xl items-center px-3 py-12 sm:px-4 lg:min-h-[500px] lg:px-6 lg:py-10">
           <div className="max-w-[420px]">
             <p className="inline-flex items-center gap-2 rounded-full border border-[#b8dfdf] bg-white/70 px-3 py-1 text-xs font-bold uppercase tracking-[.08em] text-[#087a80]">

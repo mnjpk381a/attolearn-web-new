@@ -106,18 +106,18 @@ export default function SchoolsPage() {
   return (
     <div className="schools-page bg-white text-slate-800">
       <section className="relative min-h-150 overflow-hidden border-b border-slate-200 bg-[#fffdfa]">
-        <div className="absolute inset-y-0 right-0 w-full lg:w-[62%]">
+        <div className="menu-aligned-hero-art hero-art-side absolute inset-y-0 right-0 w-full lg:w-[62%]">
           <Image
             src="/images/schools/reference/schools-hero.png"
             alt="Teacher and pupils learning together"
             fill
             priority
-            sizes="(min-width: 1024px) 62vw, 100vw"
+            sizes="(min-width: 1280px) 764px, (min-width: 1024px) 62vw, 100vw"
             className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-white/35 lg:bg-linear-to-r lg:from-[#fffdfa] lg:via-[#fffdfa]/25 lg:to-transparent" />
         </div>
-        <div className="relative mx-auto grid min-h-150 max-w-7xl items-center px-5 py-16 sm:px-8 lg:grid-cols-[0.78fr_1.22fr] lg:px-10">
+        <div className="site-container relative grid min-h-150 items-center py-16 lg:grid-cols-[0.78fr_1.22fr]">
           <div className="relative z-10 max-w-lg rounded-2xl bg-white/80 p-6 backdrop-blur-sm lg:bg-transparent lg:p-0 lg:backdrop-blur-none">
             <p className="text-xs font-extrabold uppercase tracking-[.06em] text-[#07818a]">
               For Schools

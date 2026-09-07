@@ -359,7 +359,7 @@ export default function ResourcesPage() {
     <main className="bg-white">
       {/* ------------------- Video Cards Section ------------------- */}
       <section className="pt-24">
-        <div className="mx-auto max-w-6xl px-4">
+        <div className="site-container">
           <div className="mb-6 text-center">
             <h2 className="text-xl font-extrabold text-slate-900 sm:text-2xl">
               Step-by-step guides and walkthrough videos

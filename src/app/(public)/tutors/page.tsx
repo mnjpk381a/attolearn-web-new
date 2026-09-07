@@ -149,18 +149,18 @@ export default function TutorsPage() {
   return (
     <div className="tutors-page overflow-hidden bg-[#fffef9] text-slate-800">
       <section className="relative overflow-hidden bg-[#fffdf4] lg:min-h-[500px]">
-        <div className="absolute inset-0 hidden lg:block">
+        <div className="menu-aligned-hero-art absolute inset-0 hidden lg:block">
           <Image
             src="/images/tutors/generated/tutor-hero-clean-v4.png"
             alt="Tutor using learner evidence to prepare the next lesson"
             fill
             priority
-            sizes="100vw"
-            className="object-cover object-bottom"
+            sizes="(min-width: 1280px) 1232px, 100vw"
+            className="object-cover object-bottom xl:object-contain xl:object-right"
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,#fffdf4_0%,#fffdf4_31%,rgba(255,253,244,.82)_39%,transparent_57%)]" />
         </div>
-        <div className="relative mx-auto flex min-h-[500px] max-w-7xl items-center px-5 py-10 sm:px-8 lg:px-10">
+        <div className="site-container relative flex min-h-[500px] items-center py-10">
           <div className="relative z-10 max-w-[500px]">
             <p className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.12em] text-[#07858b] before:h-px before:w-10 before:bg-[#07858b]">
               For Tutors

@@ -379,15 +379,17 @@ export default function HomePageClient() {
   return (
     <div className="adaptive-page overflow-hidden bg-white text-[#102338]">
       <section className="adaptive-learning-hero relative overflow-hidden bg-[#fffdf2] lg:min-h-215">
-        <Image
-          src="/images/homepage/adaptive-hero.png"
-          alt="A learning path leading toward a target"
-          fill
-          priority
-          sizes="100vw"
-          className="adaptive-hero-image object-cover object-[64%_center]"
-        />
-        <div className="absolute inset-0 bg-linear-to-r from-[#fffdf2] via-[#fffdf2]/88 to-transparent lg:via-[#fffdf2]/20" />
+        <div className="menu-aligned-hero-art absolute inset-0">
+          <Image
+            src="/images/homepage/adaptive-hero.png"
+            alt="A learning path leading toward a target"
+            fill
+            priority
+            sizes="(min-width: 1280px) 1232px, 100vw"
+            className="adaptive-hero-image object-cover object-[64%_center] xl:object-contain xl:object-right"
+          />
+        </div>
+        <div className="menu-aligned-hero-art absolute inset-0 bg-linear-to-r from-[#fffdf2] via-[#fffdf2]/88 to-transparent lg:via-[#fffdf2]/20" />
         <div className="relative mx-auto min-h-215 w-full max-w-7xl px-3 pb-10 pt-14 sm:px-4 lg:px-6 lg:pt-20">
           <div className="max-w-118.75">
             <p className="inline-flex items-center gap-2 rounded-full bg-[#e8f5ec] px-4 py-2 text-[12px] font-bold text-[#178477]">
@@ -420,7 +422,7 @@ export default function HomePageClient() {
               </Btn>
             </div>
           </div>
-          <div className="mt-10 rounded-2xl bg-white/95 p-5 shadow-[0_14px_38px_rgba(44,75,67,.14)] lg:absolute lg:bottom-42.5 lg:right-0 lg:mt-0 lg:w-138.75">
+          <div className="mt-10 rounded-2xl bg-white/95 p-5 shadow-[0_14px_38px_rgba(44,75,67,.14)] lg:absolute lg:bottom-42.5 lg:right-6 lg:mt-0 lg:w-138.75">
             <div className="grid grid-cols-[1fr_116px] items-center">
               <div className="pr-6">
                 <h3 className="text-[18px] font-bold text-[#10163b]">
@@ -457,7 +459,7 @@ export default function HomePageClient() {
               </div>
             </div>
           </div>
-          <div className="mt-4 grid overflow-hidden rounded-xl bg-white/95 shadow-[0_10px_28px_rgba(44,75,67,.1)] sm:grid-cols-3 lg:absolute lg:bottom-15.5 lg:left-0 lg:mt-0 lg:w-141.25">
+          <div className="mt-4 grid overflow-hidden rounded-xl bg-white/95 shadow-[0_10px_28px_rgba(44,75,67,.1)] sm:grid-cols-3 lg:absolute lg:bottom-15.5 lg:left-6 lg:mt-0 lg:w-141.25">
             {[
               [GraduationCap, "Foundation to Year 10"],
               [BookOpen, "Maths, English and Science"],

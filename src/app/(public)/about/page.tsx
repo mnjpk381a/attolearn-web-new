@@ -4,8 +4,8 @@ export default function AboutPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative flex min-h-100 items-center justify-center text-center text-white">
-        <div className="absolute inset-0">
+      <section className="relative bg-[#075e65] flex min-h-100 items-center justify-center text-center text-white">
+        <div className="menu-aligned-hero-art absolute inset-0">
           <Image
             src="/images/About/about-hero.jpg"
             alt="AttoLearn"

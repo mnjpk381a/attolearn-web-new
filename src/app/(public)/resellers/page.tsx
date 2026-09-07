@@ -438,7 +438,7 @@ export default function ResellersPage() {
     <main className="bg-white">
       {/* ------------------- Resellers ------------------- */}
       <section className="bg-slate-50 pt-24 pb-10">
-        <div className="mx-auto max-w-6xl px-4">
+        <div className="site-container">
           <div className="relative mb-6">
             <div>
               <h2 className="text-2xl font-extrabold text-[#007381]">

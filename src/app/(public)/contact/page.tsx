@@ -91,7 +91,7 @@ export default function ContactPage() {
   return (
     <section className="bg-white mt-4">
       {/* Map */}
-      <div className="mb-8">
+      <div className="site-container mb-8">
         <iframe
           title="Attobility Location Map"
           className="h-75 w-full border-0"
@@ -101,7 +101,7 @@ export default function ContactPage() {
           allowFullScreen
         />
       </div>
-      <div className="mx-auto max-w-6xl px-4 pb-14">
+      <div className="site-container pb-14">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
           {/* Left: Info */}
           <div className="lg:col-span-4">

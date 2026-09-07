@@ -236,15 +236,19 @@ function Checks({ items }: { items: readonly string[] }) {
 export default function FamiliesPage() {
   return (
     <main className="families-page overflow-hidden bg-white text-[#10243d]">
-      <section className="families-hero relative overflow-hidden bg-[#fffaf0]">
-        <Image
-          src="/images/families/families-hero-composite-v3.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="pointer-events-none object-fill"
-        />
+      <section className="families-hero relative overflow-hidden bg-[#fffaf0] xl:bg-linear-to-r xl:from-[#fffaf0] xl:via-[#fffbe8] xl:to-[#e5f5ee]">
+        <div className="pointer-events-none absolute inset-0 mx-auto max-w-7xl">
+          <div className="absolute inset-0 xl:left-auto xl:right-6 xl:w-[1013px] xl:[mask-image:linear-gradient(to_right,transparent,black_12%,black_94%,transparent)]">
+            <Image
+              src="/images/families/families-hero-composite-v3.png"
+              alt=""
+              fill
+              priority
+              sizes="(min-width: 1280px) 1013px, 100vw"
+              className="object-fill xl:object-contain"
+            />
+          </div>
+        </div>
         <div className="pointer-events-none absolute inset-0 bg-white/10" />
         <div className="site-container relative flex min-h-[570px] items-center py-12 lg:py-10">
           <div className="relative z-10 w-full max-w-[470px]">

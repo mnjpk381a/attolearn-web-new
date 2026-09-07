@@ -305,14 +305,14 @@ export default function SafetyAndTrustPage() {
   return (
     <main className="safety-trust-page overflow-hidden bg-[#fcfdfc] text-slate-800">
       <section className="relative overflow-hidden bg-[#f8fbf8] lg:min-h-140">
-        <div className="absolute inset-0 hidden lg:block">
+        <div className="menu-aligned-hero-art absolute inset-0 hidden lg:block">
           <Image
             src="/images/safety-and-trust/generated/safety-hero-v2.png"
             alt="Child safety and data protection"
             fill
             priority
-            sizes="100vw"
-            className="object-fill"
+            sizes="(min-width: 1280px) 1232px, 100vw"
+            className="object-contain object-right"
           />
         </div>
         <div className="absolute inset-y-0 left-0 hidden w-[52%] bg-linear-to-r from-[#fffef7] via-[#fffef7]/90 to-transparent lg:block" />

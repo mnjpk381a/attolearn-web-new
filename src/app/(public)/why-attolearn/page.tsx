@@ -114,18 +114,18 @@ export default function WhyAttoLearnPage() {
   return (
     <main className="why-page bg-white text-slate-800">
       <section className="relative min-h-135 overflow-hidden bg-[#fbfcfc]">
-        <div className="absolute inset-y-0 right-0 hidden w-[62%] bg-[#f7f3ec] md:block">
+        <div className="menu-aligned-hero-art hero-art-side absolute inset-y-0 right-0 hidden w-[62%] bg-[#f7f3ec] md:block">
           <Image
             src="/images/why-attolearn/learning-philosophy-hero.png"
             alt="Tutor helping a learner understand their work"
             fill
             priority
-            sizes="62vw"
+            sizes="(min-width: 1280px) 764px, 62vw"
             className="object-contain object-right"
           />
           <div className="absolute inset-0 bg-linear-to-r from-[#fbfcfc] via-[#fbfcfc]/25 to-transparent" />
         </div>
-        <div className="relative mx-auto flex min-h-135 max-w-7xl items-center px-5 py-14 sm:px-8 lg:px-10">
+        <div className="site-container relative flex min-h-135 items-center py-14">
           <div className="max-w-lg rounded-2xl bg-white/90 p-6 md:bg-transparent md:p-0">
             <p className="text-lg font-semibold text-[#d9910d]">
               Why AttoLearn

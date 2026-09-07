@@ -213,7 +213,7 @@ export default function WorkingTogetherSection() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_22%,rgba(16,185,129,0.06),transparent_30%)]" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_78%_34%,rgba(14,165,233,0.06),transparent_35%)]" />
 
-        <div className="relative z-10 mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10 lg:px-8 lg:pb-24 lg:pt-14">
+        <div className="site-container relative z-10 pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-14">
           {/* HERO TOP */}
           <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
             {/* LEFT SIDE */}
