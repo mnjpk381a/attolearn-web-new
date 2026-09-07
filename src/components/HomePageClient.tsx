@@ -149,62 +149,54 @@ export default function HomePageClient() {
   return (
     <main className="overflow-hidden bg-white text-[#10243d]">
       <section className="home-platform-hero relative overflow-hidden bg-[#fffdf2]">
-        <Image
-          src="/images/homepage/home-hero-background.png"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="pointer-events-none object-cover object-center"
-        />
-        <div className="pointer-events-none absolute inset-0 bg-white/12" />
-        <div className="site-container relative grid items-center gap-7 pb-3 pt-8 lg:min-h-[455px] lg:grid-cols-[.78fr_1.22fr] lg:pt-8">
-          <div className="relative z-10 max-w-[430px]">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#9edbd6] bg-white/80 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#08757b]">
-              <Users className="h-4 w-4" /> Learning, assessment and school
-              operations
-            </span>
-            <h1 className="mt-4 text-[36px] font-black leading-[1.03] tracking-[-.035em] text-[#07163f] sm:text-[40px] lg:text-[42px]">
-              One connected
-              <br />
-              platform for every
-              <br />
-              learner.
-              <span className="mt-1 block font-black text-[#168f8c]">
-                And everyone
-                <br />
-                who supports them.
+        <div className="relative">
+          <Image
+            src="/images/homepage/home-hero-composite-v3.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="pointer-events-none object-cover object-center"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-white/12" />
+          <div className="site-container relative flex items-center pb-3 pt-8 lg:min-h-[540px] lg:pt-8">
+            <div className="relative z-10 max-w-[430px]">
+              <span className="inline-flex items-center gap-2 rounded-full border border-[#9edbd6] bg-white/80 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#08757b]">
+                <Users className="h-4 w-4" /> Learning, assessment and school
+                operations
               </span>
-            </h1>
-            <p className="mt-4 max-w-[420px] text-[13px] font-medium leading-5 text-[#1d3150]">
-              Adaptive learning, assessment and school management, brought
-              together — so what a student practises, what a parent sees and
-              what a school records are one connected picture.
-            </p>
-            <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
-              <Link
-                href="#"
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-linear-to-r from-[#168f8c] to-[#08777c] px-6 text-sm font-extrabold text-white shadow-[0_8px_18px_rgba(8,119,124,.18)] transition hover:brightness-95"
-              >
-                Start Free <ArrowRight className="h-4 w-4" />
-              </Link>
-              <ActionLink href="/adaptive-learning" outline>
-                Explore Adaptive Learning
-              </ActionLink>
-              <ActionLink href="#" outline>
-                Explore School Solutions
-              </ActionLink>
+              <h1 className="mt-4 text-[36px] font-black leading-[1.03] tracking-[-.035em] text-[#07163f] sm:text-[40px] lg:text-[42px]">
+                One connected
+                <br />
+                platform for every
+                <br />
+                learner.
+                <span className="mt-1 block font-black text-[#168f8c]">
+                  And everyone
+                  <br />
+                  who supports them.
+                </span>
+              </h1>
+              <p className="mt-4 max-w-[420px] text-[13px] font-medium leading-5 text-[#1d3150]">
+                Adaptive learning, assessment and school management, brought
+                together — so what a student practises, what a parent sees and
+                what a school records are one connected picture.
+              </p>
+              <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+                <Link
+                  href="#"
+                  className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-linear-to-r from-[#168f8c] to-[#08777c] px-6 text-sm font-extrabold text-white shadow-[0_8px_18px_rgba(8,119,124,.18)] transition hover:brightness-95"
+                >
+                  Start Free <ArrowRight className="h-4 w-4" />
+                </Link>
+                <ActionLink href="/adaptive-learning" outline>
+                  Explore Adaptive Learning
+                </ActionLink>
+                <ActionLink href="#" outline>
+                  Explore School Solutions
+                </ActionLink>
+              </div>
             </div>
-          </div>
-          <div className="relative mx-auto aspect-[3/2] w-full max-w-[700px] overflow-hidden rounded-[18px] lg:mx-0 lg:-translate-y-5 lg:justify-self-end">
-            <Image
-              src="/images/homepage/home-hero-right.png"
-              alt="AttoLearn learning dashboard with mascot"
-              fill
-              priority
-              sizes="(min-width: 1024px) 58vw, 100vw"
-              className="object-cover object-center"
-            />
           </div>
         </div>
         <div className="relative mx-auto w-full max-w-[1060px] px-3 pb-7 sm:px-4">
