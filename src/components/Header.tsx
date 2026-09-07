@@ -167,7 +167,7 @@ export default function Header() {
             </Link> */}
           </nav>
           <a
-            href="#"
+            href="https://portal.attolearn.com/auth/login"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden translate-y-1 shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-[#077784] px-4 py-2 text-[13px] font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0 xl:inline-flex 2xl:text-sm"
@@ -176,7 +176,7 @@ export default function Header() {
               setOpenDropdown(null);
             }}
           >
-            Log In
+            Login
           </a>
 
           {/* Mobile Button */}
@@ -315,7 +315,7 @@ export default function Header() {
                   setOpenDropdown(null);
                 }}
               >
-                Log In
+                Login
               </a>
 
               {/* <Link
