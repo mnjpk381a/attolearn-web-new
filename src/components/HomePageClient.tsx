@@ -162,7 +162,7 @@ export default function HomePageClient() {
           </div>
           <div className="pointer-events-none absolute inset-0 bg-white/12" />
           <div className="site-container pointer-events-none absolute inset-0 hidden lg:block">
-            <div className="absolute inset-y-0 right-6 w-[62%] max-w-[760px]">
+            <div className="absolute inset-y-0 right-6 w-[62%] max-w-190">
               <Image
                 src="/images/homepage/home-hero-right.png"
                 alt="AttoLearn learning dashboard with mascot"
@@ -173,8 +173,8 @@ export default function HomePageClient() {
               />
             </div>
           </div>
-          <div className="site-container relative flex items-center pb-3 pt-8 lg:min-h-[540px] lg:pt-8">
-            <div className="relative z-10 max-w-[430px]">
+          <div className="site-container relative flex items-center pb-3 pt-8 lg:min-h-135 lg:pt-8">
+            <div className="relative z-10 max-w-107.5">
               <span className="inline-flex items-center gap-2 rounded-full border border-[#9edbd6] bg-white/80 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#08757b]">
                 <Users className="h-4 w-4" /> Learning, assessment and school
                 operations
@@ -191,7 +191,7 @@ export default function HomePageClient() {
                   who supports them.
                 </span>
               </h1>
-              <p className="mt-4 max-w-[420px] text-[13px] font-medium leading-5 text-[#1d3150]">
+              <p className="mt-4 max-w-105 text-[13px] font-medium leading-5 text-[#1d3150]">
                 Adaptive learning, assessment and school management, brought
                 together — so what a student practises, what a parent sees and
                 what a school records are one connected picture.
@@ -213,7 +213,7 @@ export default function HomePageClient() {
             </div>
           </div>
         </div>
-        <div className="relative mx-auto w-full max-w-[1060px] px-3 pb-7 sm:px-4">
+        <div className="relative mx-auto w-full max-w-265 px-3 pb-7 sm:px-4">
           <div className="grid gap-3 rounded-2xl border border-[#e4dccb] bg-[#fffdf4]/95 px-6 py-4 shadow-[0_8px_22px_rgba(21,91,86,.08)] sm:grid-cols-3">
             {[
               ["Foundation to Year 10", "A complete learning journey"],
