@@ -482,7 +482,7 @@ export default function PaperGeneratorPage() {
                 "Live and in daily use in schools",
               ],
               [
-                "/images/pricing/country-icons/australia.png",
+                "/images/pricing/country-icons/australia-flag.png",
                 "Australia",
                 "Australian Curriculum, Foundation to Year 10",
                 "bg-[#f7b719]",

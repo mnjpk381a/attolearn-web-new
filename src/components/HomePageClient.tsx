@@ -191,7 +191,7 @@ export default function HomePageClient() {
                   who supports them.
                 </span>
               </h1>
-              <p className="mt-4 max-w-105 text-[13px] font-medium leading-5 text-[#1d3150]">
+              <p className="home-hero-description mt-4 max-w-105 text-[13px] font-medium leading-5 text-[#1d3150]">
                 Adaptive learning, assessment and school management, brought
                 together — so what a student practises, what a parent sees and
                 what a school records are one connected picture.

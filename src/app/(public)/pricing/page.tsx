@@ -18,7 +18,7 @@ import { useState } from "react";
 
 const countries = ["Australia", "USA", "UK", "Pakistan"] as const;
 const countryFlags: Record<(typeof countries)[number], string> = {
-  Australia: "/images/pricing/country-icons/australia.png",
+  Australia: "/images/pricing/country-icons/australia-flag.png",
   USA: "/images/pricing/country-icons/usa.png",
   UK: "/images/pricing/country-icons/uk.png",
   Pakistan: "/images/pricing/country-icons/pakistan.png",
@@ -81,7 +81,23 @@ export default function PricingPage() {
   return (
     <main className="overflow-hidden bg-[#fffefb] text-[#092f3d]">
       <section className="pricing-hero relative h-[390px] overflow-hidden bg-[radial-gradient(circle_at_18%_5%,#149a9b_0%,#087b80_38%,#03545f_100%)] px-4 pb-20 pt-5 text-center text-white sm:pt-6">
-        <div className="absolute inset-x-0 bottom-0 h-16 bg-[#fffefb] [clip-path:polygon(0_50%,5%_32%,13%_43%,27%_75%,43%_57%,58%_48%,78%_80%,92%_38%,100%_45%,100%_100%,0_100%)]" />
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 1440 90"
+          preserveAspectRatio="none"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-16 w-full"
+        >
+          <path
+            fill="#fffefb"
+            d="M0 35C120 10 250 62 390 55c130-7 230-35 370-21 160 16 270 42 400 16 120-24 200-40 280-16v56H0Z"
+          />
+          <path
+            fill="none"
+            stroke="#a7ddd5"
+            strokeWidth="2"
+            d="M0 35C120 10 250 62 390 55c130-7 230-35 370-21 160 16 270 42 400 16 120-24 200-40 280-16"
+          />
+        </svg>
         <div className="relative mx-auto max-w-4xl">
           <p className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-5 py-2 text-xs font-bold tracking-[.12em]">
             <Tag className="h-4 w-4" /> PRICING
@@ -128,7 +144,7 @@ export default function PricingPage() {
                   fill
                   sizes="28px"
                   className="object-contain"
-                />
+                />{" "}
               </span>
               {c}
             </button>

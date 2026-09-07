@@ -64,7 +64,7 @@ const roles = [
 ] as const;
 const countries = [
   [
-    "/images/pricing/country-icons/australia.png",
+    "/images/pricing/country-icons/australia-flag.png",
     "Australia",
     "Privacy Act, plus the Children’s Online Privacy Code being developed by the OAIC",
     "The Code must be registered before December 2026; we are tracking the draft.",

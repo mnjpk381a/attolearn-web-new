@@ -1235,3 +1235,25 @@ body {
   font-weight: 900 !important;
   line-height: 1 !important;
 }
+
+.public-site p.home-hero-description {
+  font-weight: 600 !important;
+}
+
+.public-site h2.home-education-pathway-heading {
+  font-size: 1.5rem !important;
+  text-wrap: nowrap !important;
+  white-space: nowrap;
+}
+
+.public-site h2.home-education-structure-heading {
+  font-size: 2rem !important;
+  text-wrap: nowrap !important;
+  white-space: nowrap;
+}
+
+.public-site h2.home-education-evidence-heading {
+  font-size: 2rem !important;
+  text-wrap: nowrap !important;
+  white-space: nowrap;
+}
