@@ -1214,10 +1214,10 @@ body {
 @media (max-width: 39.999rem) {
   .public-site .pricing-hero {
     height: auto;
-    min-height: 28rem;
+    min-height: 0;
   }
   .public-site .pricing-hero h1 {
-    font-size: 2.25rem !important;
+    font-size: 2rem !important;
   }
 }
 

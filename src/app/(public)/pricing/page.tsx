@@ -79,48 +79,57 @@ export default function PricingPage() {
   const [audience, setAudience] = useState("Schools");
   return (
     <main className="overflow-hidden bg-[#fffefb] text-[#092f3d]">
-      <section className="pricing-hero relative flex min-h-140 items-center overflow-hidden bg-[#f8fdff] px-4 py-10 text-center sm:min-h-130 sm:py-10 lg:h-110 lg:min-h-0 lg:py-6">
+      <section className="pricing-hero relative flex min-h-0 items-center overflow-hidden bg-[#f8fdff] px-4 py-7 text-center sm:min-h-130 sm:py-10 lg:h-110 lg:min-h-0 lg:py-6">
         <Image
           src="/images/pricing/pricing-hero-background-v2.png"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center lg:object-fill"
+          className="hidden object-fill object-center lg:block"
         />
-        <div className="pointer-events-none absolute inset-0 bg-[#fffaf0]/10" />
         <div className="site-container relative mx-auto">
           <p className="mx-auto inline-flex items-center gap-2 rounded-full border border-[#8bd8db] bg-[#eafafa]/90 px-5 py-2 text-xs font-bold tracking-[.12em] text-[#087d86]">
             <Tag className="h-4 w-4" /> PRICING
           </p>
-          <h1 className="mx-auto mt-5 max-w-3xl font-extrabold leading-[1.03] text-[#063b57]">
+          <h1 className="mx-auto mt-3 max-w-3xl font-extrabold leading-[1.03] text-[#063b57] sm:mt-5">
             Priced by how you use
             <br />
             <span className="text-[#07939b]">Atto</span>
             <span className="text-[#ffad0b]">Learn</span>
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-[15px] font-semibold leading-6 text-[#34445c] sm:text-base">
+          <p className="mx-auto mt-3 max-w-xl text-sm font-semibold leading-5 text-[#34445c] sm:mt-4 sm:text-base sm:leading-6">
             Families pay a household price, not a price per child. Tutors pay
             for the students they manage. Centres and schools are quoted.
             Nothing is blended into a single confusing list.
           </p>
-          <div className="mt-5 flex flex-col justify-center gap-4 sm:flex-row">
+          <div className="mt-4 flex flex-col justify-center gap-3 sm:mt-5 sm:flex-row sm:gap-4">
             <Link
               href="#"
-              className="inline-flex h-14 min-w-56 items-center justify-center gap-5 rounded-lg bg-linear-to-r from-[#ff9800] to-[#ffb20b] px-8 font-bold text-white shadow-lg shadow-amber-200/50"
+              className="inline-flex h-12 min-w-56 items-center justify-center gap-5 rounded-lg bg-linear-to-r from-[#ff9800] to-[#ffb20b] px-8 font-bold text-white shadow-lg shadow-amber-200/50 sm:h-14"
             >
               Start Free <ArrowRight className="h-5 w-5" />
             </Link>
             <Link
               href="#"
-              className="inline-flex h-14 min-w-56 items-center justify-center gap-5 rounded-lg border-2 border-[#07949a] bg-white/95 px-8 font-bold text-[#087e82]"
+              className="inline-flex h-12 min-w-56 items-center justify-center gap-5 rounded-lg border-2 border-[#07949a] bg-white/95 px-8 font-bold text-[#087e82] sm:h-14"
             >
               Talk to Sales <MessageCircle className="h-5 w-5" />
             </Link>
           </div>
+          <div className="relative -mx-3 mt-4 aspect-4/3 overflow-hidden sm:-mx-4 lg:hidden">
+            <Image
+              src="/images/pricing/pricing-hero-mobile-v1.png"
+              alt="AttoLearn owl and pricing options"
+              fill
+              priority
+              sizes="100vw"
+              className="object-fill object-center"
+            />
+          </div>
         </div>
       </section>
-      <section className="relative z-10 mx-auto -mt-9 w-full max-w-5xl px-4 text-center">
+      <section className="relative z-10 mx-auto mt-0 w-full max-w-5xl px-4 text-center lg:-mt-9">
         <h2 className="inline-flex items-center gap-4 text-lg font-bold before:h-px before:w-14 before:bg-[#22b9ae] after:h-px after:w-14 after:bg-[#22b9ae]">
           Your country
         </h2>
