@@ -394,10 +394,10 @@ export default function HomeEducationPage() {
               ))}
             </ul>
           </div>
-          <div className="content-split-media content-split-media-right relative aspect-1520/1034 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(28,55,64,.10)]">
+          <div className="content-split-media content-split-media-right relative aspect-3/2 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(28,55,64,.10)]">
             <Image
-              src="/images/home-education/adaptive-daily-complete-tablet.png"
-              alt="Tablet showing Todays Best Step adaptive fraction lesson"
+              src="/images/home-education/adaptive-daily-number-pattern-v2.png"
+              alt="Tablet showing an adaptive number pattern learning activity"
               fill
               sizes="(min-width:1024px) 560px, 100vw"
               quality={100}
