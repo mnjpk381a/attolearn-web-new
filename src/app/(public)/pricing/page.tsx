@@ -6,7 +6,6 @@ import {
   ArrowRight,
   BadgeInfo,
   Building2,
-  Check,
   FileText,
   MessageCircle,
   Percent,
@@ -80,52 +79,47 @@ export default function PricingPage() {
   const [audience, setAudience] = useState("Schools");
   return (
     <main className="overflow-hidden bg-[#fffefb] text-[#092f3d]">
-      <section className="pricing-hero relative h-[390px] overflow-hidden bg-[radial-gradient(circle_at_18%_5%,#149a9b_0%,#087b80_38%,#03545f_100%)] px-4 pb-20 pt-5 text-center text-white sm:pt-6">
-        <svg
-          aria-hidden="true"
-          viewBox="0 0 1440 90"
-          preserveAspectRatio="none"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-16 w-full"
-        >
-          <path
-            fill="#fffefb"
-            d="M0 35C120 10 250 62 390 55c130-7 230-35 370-21 160 16 270 42 400 16 120-24 200-40 280-16v56H0Z"
-          />
-          <path
-            fill="none"
-            stroke="#a7ddd5"
-            strokeWidth="2"
-            d="M0 35C120 10 250 62 390 55c130-7 230-35 370-21 160 16 270 42 400 16 120-24 200-40 280-16"
-          />
-        </svg>
-        <div className="relative mx-auto max-w-4xl">
-          <p className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-5 py-2 text-xs font-bold tracking-[.12em]">
+      <section className="pricing-hero relative flex min-h-140 items-center overflow-hidden bg-[#f8fdff] px-4 py-10 text-center sm:min-h-130 sm:py-10 lg:h-110 lg:min-h-0 lg:py-6">
+        <Image
+          src="/images/pricing/pricing-hero-background-v2.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center lg:object-fill"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-[#fffaf0]/10" />
+        <div className="site-container relative mx-auto">
+          <p className="mx-auto inline-flex items-center gap-2 rounded-full border border-[#8bd8db] bg-[#eafafa]/90 px-5 py-2 text-xs font-bold tracking-[.12em] text-[#087d86]">
             <Tag className="h-4 w-4" /> PRICING
           </p>
-          <h1 className="mt-3 font-extrabold">
+          <h1 className="mx-auto mt-5 max-w-3xl font-extrabold leading-[1.03] text-[#063b57]">
             Priced by how you use
             <br />
-            <span className="text-[#ffad0b]">AttoLearn</span>
+            <span className="text-[#07939b]">Atto</span>
+            <span className="text-[#ffad0b]">Learn</span>
           </h1>
-          <span className="mx-auto mt-2 block h-1 w-44 -rotate-2 rounded-full bg-[#ffad0b]" />
-          <p className="mx-auto mt-3 max-w-xl text-white/95">
-            Families pay a household price, not a price per child.
-            <br />
-            Tutors pay for the students they manage.
-            <br />
-            Centres and schools are quoted.
-            <br />
+          <p className="mx-auto mt-4 max-w-xl text-[15px] font-semibold leading-6 text-[#34445c] sm:text-base">
+            Families pay a household price, not a price per child. Tutors pay
+            for the students they manage. Centres and schools are quoted.
             Nothing is blended into a single confusing list.
           </p>
-          <p className="mx-auto mt-3 inline-flex items-center gap-3 rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-sm font-bold">
-            <span className="grid h-7 w-7 place-items-center rounded-full bg-white text-[#05858a]">
-              <Check className="h-4 w-4" strokeWidth={3} />
-            </span>
-            Currently available for English, Mathematics and Science.
-          </p>
+          <div className="mt-5 flex flex-col justify-center gap-4 sm:flex-row">
+            <Link
+              href="#"
+              className="inline-flex h-14 min-w-56 items-center justify-center gap-5 rounded-lg bg-linear-to-r from-[#ff9800] to-[#ffb20b] px-8 font-bold text-white shadow-lg shadow-amber-200/50"
+            >
+              Start Free <ArrowRight className="h-5 w-5" />
+            </Link>
+            <Link
+              href="#"
+              className="inline-flex h-14 min-w-56 items-center justify-center gap-5 rounded-lg border-2 border-[#07949a] bg-white/95 px-8 font-bold text-[#087e82]"
+            >
+              Talk to Sales <MessageCircle className="h-5 w-5" />
+            </Link>
+          </div>
         </div>
       </section>
-
       <section className="relative z-10 mx-auto -mt-9 w-full max-w-5xl px-4 text-center">
         <h2 className="inline-flex items-center gap-4 text-lg font-bold before:h-px before:w-14 before:bg-[#22b9ae] after:h-px after:w-14 after:bg-[#22b9ae]">
           Your country
@@ -149,20 +143,6 @@ export default function PricingPage() {
               {c}
             </button>
           ))}
-        </div>
-        <div className="mt-5 flex flex-col justify-center gap-4 sm:flex-row">
-          <Link
-            href="#"
-            className="inline-flex h-14 min-w-56 items-center justify-center gap-5 rounded-lg bg-linear-to-r from-[#ff8a00] to-[#ffad0b] px-8 font-bold text-white shadow-lg"
-          >
-            Start Free <ArrowRight className="h-5 w-5" />
-          </Link>
-          <Link
-            href="/contact"
-            className="inline-flex h-14 min-w-56 items-center justify-center gap-5 rounded-lg border border-[#07808a] bg-white px-8 font-bold text-[#076d76]"
-          >
-            Talk to Sales <MessageCircle className="h-5 w-5" />
-          </Link>
         </div>
       </section>
 
