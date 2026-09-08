@@ -1,18 +1,18 @@
 export type NavItem =
   | {
+    label: string;
+    href: string;
+  }
+  | {
+    label: string;
+    href?: string;
+    children: {
       label: string;
       href: string;
-    }
-  | {
-      label: string;
-      href?: string;
-      children: {
-        label: string;
-        href: string;
-        description?: string;
-        disabled?: boolean;
-      }[];
-    };
+      description?: string;
+      disabled?: boolean;
+    }[];
+  };
 
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
@@ -20,7 +20,7 @@ export const navItems: NavItem[] = [
   { label: "Home Schooling", href: "/home-education" },
   { label: "Tutors", href: "/tutors" },
   { label: "Tuition Centres", href: "/tuition-centres" },
-  { label: "AttoCampus", href: "/schools" },
+  { label: "AttoCampus", href: "https://portal.attolearn.com/auth/login" },
 
   { label: "Adaptive Learning", href: "/adaptive-learning" },
   {
