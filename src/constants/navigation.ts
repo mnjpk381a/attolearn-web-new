@@ -1,18 +1,18 @@
 export type NavItem =
   | {
-    label: string;
-    href: string;
-  }
-  | {
-    label: string;
-    href?: string;
-    children: {
       label: string;
       href: string;
-      description?: string;
-      disabled?: boolean;
-    }[];
-  };
+    }
+  | {
+      label: string;
+      href?: string;
+      children: {
+        label: string;
+        href: string;
+        description?: string;
+        disabled?: boolean;
+      }[];
+    };
 
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
@@ -35,11 +35,6 @@ export const navItems: NavItem[] = [
         label: "Safety and Trust",
         description: "Permissions, governance and child safety",
         href: "/safety-and-trust",
-      },
-      {
-        label: "Learning Architecture",
-        description: "The technical account, for specialists",
-        href: "#",
       },
     ],
   },

@@ -237,20 +237,20 @@ export default function FamiliesPage() {
   return (
     <main className="families-page overflow-hidden bg-white text-[#10243d]">
       <section className="families-hero relative overflow-hidden bg-[#fffaf0] xl:bg-linear-to-r xl:from-[#fffaf0] xl:via-[#fffbe8] xl:to-[#e5f5ee]">
-        <div className="pointer-events-none absolute inset-0 mx-auto max-w-7xl">
-          <div className="absolute inset-0 xl:left-auto xl:right-6 xl:w-[1013px] xl:[mask-image:linear-gradient(to_right,transparent,black_12%,black_94%,transparent)]">
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0">
             <Image
-              src="/images/families/families-hero-composite-v3.png"
+              src="/images/families/families-hero-background-v6.png"
               alt=""
               fill
               priority
-              sizes="(min-width: 1280px) 1013px, 100vw"
-              className="object-fill xl:object-contain"
+              sizes="100vw"
+              className="hidden object-cover object-center lg:block"
             />
           </div>
         </div>
         <div className="pointer-events-none absolute inset-0 bg-white/10" />
-        <div className="site-container relative flex min-h-[570px] items-center py-12 lg:py-10">
+        <div className="site-container relative flex min-h-[570px] flex-col justify-center py-12 lg:flex-row lg:items-center lg:justify-start lg:py-10">
           <div className="relative z-10 w-full max-w-[470px]">
             <p className="flex items-center gap-4 text-sm font-bold uppercase tracking-wide text-[#087f84]">
               For families
@@ -276,6 +276,17 @@ export default function FamiliesPage() {
                 Compare Family Plans
               </Btn>
             </div>
+          </div>
+          <div className="relative z-0 mt-10 aspect-video w-full self-center overflow-hidden sm:max-w-[720px] lg:absolute lg:right-6 lg:top-1/2 lg:mt-0 lg:w-[54%] lg:max-w-none xl:w-[55%] lg:-translate-y-1/2">
+            <Image
+              src="/images/families/families-hero-dashboard-borderless-v13.png"
+              alt="AttoLearn family learning dashboard"
+              fill
+              priority
+              unoptimized
+              sizes="(min-width: 1280px) 55vw, (min-width: 1024px) 54vw, (min-width: 640px) 720px, 100vw"
+              className="object-contain object-center lg:object-right"
+            />
           </div>
         </div>
       </section>{" "}
@@ -471,7 +482,7 @@ export default function FamiliesPage() {
             alt="A mother and child learning together with AttoLearn progress cards"
             fill
             sizes="100vw"
-            className="object-cover object-center"
+            className="hidden object-cover object-center lg:block"
           />
           <div className="relative mx-auto grid min-h-130 w-full max-w-295 items-center sm:min-h-110 lg:absolute lg:inset-0 lg:min-h-0 lg:grid-cols-[35%_40%_25%]">
             <div className="hidden lg:block" />

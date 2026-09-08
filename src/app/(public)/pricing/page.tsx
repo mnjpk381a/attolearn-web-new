@@ -77,7 +77,7 @@ const smallPrint = [
 export default function PricingPage() {
   const [country, setCountry] =
     useState<(typeof countries)[number]>("Australia");
-  const [audience, setAudience] = useState("Schools");
+  const [audience, setAudience] = useState("Families");
   return (
     <main className="overflow-hidden bg-[#fffefb] text-[#092f3d]">
       <section className="pricing-hero relative flex min-h-0 items-center overflow-hidden bg-[#f8fdff] px-4 py-7 text-center sm:min-h-130 sm:py-10 lg:h-110 lg:min-h-0 lg:py-6">
@@ -96,8 +96,12 @@ export default function PricingPage() {
           <h1 className="mx-auto mt-3 max-w-3xl font-extrabold leading-[1.03] text-[#063b57] sm:mt-5">
             Priced by how you use
             <br />
-            <span className="text-[#07939b]">Atto</span>
-            <span className="text-[#ffad0b]">Learn</span>
+            <span className="text-[42px] font-extrabold text-[#07939b] sm:text-[56px]">
+              Atto
+            </span>
+            <span className="text-[42px] font-extrabold text-[#ffad0b] sm:text-[56px]">
+              Learn
+            </span>
           </h1>
           <p className="mx-auto mt-3 max-w-xl text-sm font-semibold leading-5 text-[#34445c] sm:mt-4 sm:text-base sm:leading-6">
             Families pay a household price, not a price per child. Tutors pay
@@ -111,12 +115,14 @@ export default function PricingPage() {
             >
               Start Free <ArrowRight className="h-5 w-5" />
             </Link>
-            <Link
-              href="#"
-              className="inline-flex h-12 min-w-56 items-center justify-center gap-5 rounded-lg border-2 border-[#07949a] bg-white/95 px-8 font-bold text-[#087e82] sm:h-14"
-            >
-              Talk to Sales <MessageCircle className="h-5 w-5" />
-            </Link>
+            {audience === "Schools" && (
+              <Link
+                href="#"
+                className="inline-flex h-12 min-w-56 items-center justify-center gap-5 rounded-lg border-2 border-[#07949a] bg-white/95 px-8 font-bold text-[#087e82] sm:h-14"
+              >
+                Talk to Sales <MessageCircle className="h-5 w-5" />
+              </Link>
+            )}
           </div>
           <div className="relative -mx-3 mt-4 aspect-4/3 overflow-hidden sm:-mx-4 lg:hidden">
             <Image
@@ -723,12 +729,14 @@ export default function PricingPage() {
               >
                 Start Free <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link
-                href="/contact"
-                className="inline-flex h-13 min-w-52 items-center justify-center gap-4 rounded-lg border border-[#07808a] bg-white px-7 font-bold text-[#076d76]"
-              >
-                Talk to Sales <MessageCircle className="h-5 w-5" />
-              </Link>
+              {audience === "Schools" && (
+                <Link
+                  href="/contact"
+                  className="inline-flex h-13 min-w-52 items-center justify-center gap-4 rounded-lg border border-[#07808a] bg-white px-7 font-bold text-[#076d76]"
+                >
+                  Talk to Sales <MessageCircle className="h-5 w-5" />
+                </Link>
+              )}
             </div>
           </div>
         </div>
