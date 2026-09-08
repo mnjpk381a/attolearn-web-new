@@ -665,6 +665,10 @@ body {
   line-height: 1.65;
 }
 
+.public-site .pricing-final-cta {
+  padding-block: 0 !important;
+}
+
 .public-site .section-block-gap {
   margin-top: var(--public-section-space) !important;
 }
@@ -705,6 +709,10 @@ body {
   text-wrap: balance;
 }
 
+.public-site > main > section.pricing-final-cta {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 .public-site h1:not(.ui-mockup *) {
   font-size: clamp(2.625rem, 5vw, 3.625rem) !important;
   font-weight: 800 !important;
