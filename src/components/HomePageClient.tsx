@@ -180,12 +180,9 @@ export default function HomePageClient() {
                 operations
               </span>
               <h1 className="mt-4 text-[36px] font-black leading-[1.03] tracking-[-.035em] text-[#07163f] sm:text-[40px] lg:text-[42px]">
-                One connected
-                <br />
-                platform for every
-                <br />
-                learner.
-                <span className="mt-1 block font-black text-[#168f8c]">
+                One connected platform for
+                <br /> every learner.
+                <span className="mt-3 block font-black text-[#168f8c]">
                   And everyone
                   <br />
                   who supports them.
@@ -320,7 +317,7 @@ export default function HomePageClient() {
                 ],
                 button: "Explore Adaptive Learning",
                 image:
-                  "/images/homepage/learn-assess-manage/adaptive-learning-tablet.png",
+                  "/images/homepage/learn-assess-manage/adaptive-learning-tablet-v2.png",
                 href: "/adaptive-learning",
                 reverse: false,
               },
@@ -330,7 +327,7 @@ export default function HomePageClient() {
                 bullets: [],
                 button: "Explore Paper Generator",
                 image:
-                  "/images/homepage/learn-assess-manage/family-assessment.png",
+                  "/images/homepage/learn-assess-manage/assessment-for-everyone-v2.png",
                 href: "/papergenerator",
                 reverse: true,
               },
@@ -382,7 +379,7 @@ export default function HomePageClient() {
                   </Link>
                 </div>
                 <div
-                  className={`content-split-media relative order-2 aspect-630/500 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(79,55,31,.08)] ${item.reverse ? "content-split-media-left lg:order-1" : "content-split-media-right"}`}
+                  className={`content-split-media relative order-2 overflow-hidden rounded-2xl shadow-[0_10px_30px_rgba(79,55,31,.08)] ${item.title === "Assessment for everyone" ? "aspect-3/2" : "aspect-630/500"} ${item.reverse ? "content-split-media-left lg:order-1" : "content-split-media-right"}`}
                 >
                   <Image
                     src={item.image}
@@ -390,7 +387,11 @@ export default function HomePageClient() {
                     fill
                     sizes="(min-width:1024px) 560px,100vw"
                     quality={100}
-                    className="object-cover object-center"
+                    className={
+                      item.title === "Assessment for everyone"
+                        ? "object-contain object-center"
+                        : "object-cover object-center"
+                    }
                   />
                 </div>
               </article>
