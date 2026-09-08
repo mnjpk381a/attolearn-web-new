@@ -1341,7 +1341,7 @@ function DemoClient() {
     <section className="relative overflow-visible py-4 pb-10">
       <div className="flex flex-col w-full">
         <header className="sticky top-0 z-30 bg-white shadow-sm py-6">
-          <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-4">
+          <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-3 sm:px-4 lg:px-6">
             <span
               className="text-3xl text-teal-700 hover:text-gray-700 cursor-pointer flex items-center"
               onClick={handleBack}

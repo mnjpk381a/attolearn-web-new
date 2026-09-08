@@ -22,16 +22,7 @@ export const navItems: NavItem[] = [
   { label: "Tuition Centres", href: "/tuition-centres" },
   { label: "AttoCampus", href: "https://portal.attolearn.com/auth/login" },
 
-  {
-    label: "Products",
-    children: [
-      {
-        label: "Adaptive Learning",
-        description: "Short, evidence-informed learning sessions",
-        href: "/adaptive-learning",
-      },
-    ],
-  },
+  { label: "Adaptive Learning", href: "/adaptive-learning" },
   {
     label: "Why AttoLearn",
     children: [

@@ -239,8 +239,8 @@ export default function ProductSuite() {
     active === "school"
       ? schoolFeatures
       : active === "paper"
-      ? paperGeneratorFeatures
-      : [];
+        ? paperGeneratorFeatures
+        : [];
 
   const visibleCount = active === "school" ? 8 : features.length; // "Read More" only for school like your original script
   const showReadMore = active === "school" && features.length > 8;
@@ -249,7 +249,7 @@ export default function ProductSuite() {
 
   return (
     <section id="features" className="w-full bg-white py-12">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-3 sm:px-4 lg:px-6">
         <h5 className="text-center text-xl sm:text-2xl font-extrabold text-gray-900">
           Explore Our Core Products
         </h5>

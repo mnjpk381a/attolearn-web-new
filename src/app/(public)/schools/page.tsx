@@ -201,8 +201,8 @@ export default function SchoolsPage() {
       </section>
 
       <section className="schools-availability bg-[#f5f9fb]">
-        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
-          <div className="grid min-h-50 gap-8 rounded-2xl border border-dashed border-[#e8a21a] bg-[#fff9ee] px-7 py-8 sm:px-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-16">
+        <div className="mx-auto max-w-7xl px-3 py-12 sm:px-4 lg:px-6">
+          <div className="grid min-h-50 gap-8 bg-[#fff9ee] px-7 py-8 sm:px-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center lg:gap-16">
             <div className="schools-availability-copy max-w-3xl">
               <h2 className="text-base font-semibold text-[#075e65]">
                 What is available today, and what is next
@@ -230,7 +230,7 @@ export default function SchoolsPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-2 lg:items-center lg:px-10">
+      <section className="mx-auto grid max-w-7xl gap-10 px-3 py-12 sm:px-4 lg:grid-cols-2 lg:items-center lg:px-6">
         <div>
           <p className="text-xl font-semibold text-[#00777d]">
             School-linked adaptive learning
@@ -290,7 +290,7 @@ export default function SchoolsPage() {
       </section>
 
       <section className="border-y border-[#f0dfbc] bg-[#fffdfa]">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-2 lg:items-center lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-10 px-3 py-12 sm:px-4 lg:grid-cols-2 lg:items-center lg:px-6">
           <div className="relative min-h-92 overflow-hidden rounded-xl">
             <Image
               src="/images/schools/reference/homework-teacher.png"
@@ -354,7 +354,7 @@ export default function SchoolsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-12 text-center sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-7xl px-3 py-12 text-center sm:px-4 lg:px-6">
         <h2 className="text-3xl font-semibold text-[#075e65]">
           Assessment the school already runs, in the same place
         </h2>
@@ -383,7 +383,7 @@ export default function SchoolsPage() {
       </section>
 
       <section className="border-y border-[#cde5e6] bg-[#f1fbfb]">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-10 px-3 py-12 sm:px-4 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-6">
           <div>
             <p className="text-xl font-semibold text-[#00777d]">
               Learning visibility
@@ -470,7 +470,7 @@ export default function SchoolsPage() {
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-linear-to-r from-[#fffaf1] via-[#fffaf1]/95 to-transparent" />
-        <div className="relative mx-auto max-w-7xl px-5 py-12 text-center sm:px-8 lg:px-10">
+        <div className="relative mx-auto max-w-7xl px-3 py-12 text-center sm:px-4 lg:px-6">
           <p className="text-xl font-semibold text-[#d08b0a]">
             School Management
           </p>
@@ -500,7 +500,7 @@ export default function SchoolsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-12 text-center sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-7xl px-3 py-12 text-center sm:px-4 lg:px-6">
         <p className="text-xl font-semibold text-[#00777d]">
           One connected ecosystem
         </p>
@@ -572,7 +572,7 @@ export default function SchoolsPage() {
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-linear-to-r from-[#eafafa] via-[#eafafa]/95 to-transparent" />
-        <div className="relative mx-auto flex min-h-84 max-w-7xl flex-col items-center px-5 py-12 text-center sm:px-8 sm:py-12 lg:px-10">
+        <div className="relative mx-auto flex min-h-84 max-w-7xl flex-col items-center px-3 py-12 text-center sm:px-4 sm:py-12 lg:px-6">
           <p className="text-sm font-semibold tracking-[0.08em] text-[#d88700] uppercase">
             Current school reach
           </p>
@@ -645,7 +645,7 @@ export default function SchoolsPage() {
       </section>
 
       <section className="bg-[#07818a] text-white">
-        <div className="mx-auto max-w-7xl px-5 py-12 text-center sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl px-3 py-12 text-center sm:px-4 lg:px-6">
           <h2 className="text-3xl font-semibold leading-tight sm:text-4xl">
             See how it fits your school
           </h2>
@@ -671,7 +671,7 @@ export default function SchoolsPage() {
       </section>
 
       <section className="bg-[#f5f9fb]">
-        <div className="mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl px-3 py-12 sm:px-4 lg:px-6">
           <div className="text-center">
             <p className="text-sm font-semibold tracking-[0.08em] text-[#d88700] uppercase">
               The small print, said plainly

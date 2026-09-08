@@ -143,8 +143,8 @@ function DashboardList({
                     : name === "Emily Baxter"
                       ? "/images/tuition-centres/tutor-emily-baxter-generated.png"
                       : index % 2 === 0
-                      ? "/images/tuition-centres/tutor-woman-v2.png"
-                      : "/images/tuition-centres/tutor-man-v2.png"
+                        ? "/images/tuition-centres/tutor-woman-v2.png"
+                        : "/images/tuition-centres/tutor-man-v2.png"
                 }
                 alt={`${name} profile`}
                 fill
@@ -320,7 +320,7 @@ export default function TuitionCentresPage() {
         </div>
       </section>
       <section className="site-container py-16">
-        <div className="grid gap-6 rounded-2xl border border-[#eee5da] bg-white/80 px-7 py-6 shadow-[0_8px_22px_rgba(72,62,45,.06)] md:grid-cols-[76px_1fr_auto] md:items-center">
+        <div className="grid gap-6 bg-white/80 px-7 py-6 md:grid-cols-[76px_1fr_auto] md:items-center">
           <span className="grid h-19 w-19 place-items-center rounded-full bg-[#16838a] text-white">
             <Building2 className="h-10 w-10" strokeWidth={1.9} />
           </span>
@@ -633,8 +633,7 @@ export default function TuitionCentresPage() {
             </div>
           </div>
         </div>
-        <div className="my-16 h-px bg-[#eadfd2]" />
-        <div className="content-split family-permissions-split">
+        <div className="content-split family-permissions-split section-block-gap">
           <div className="content-split-media content-split-media-left relative h-[25.25rem] overflow-hidden rounded-2xl border border-[#e8ddd0] shadow-sm">
             <Image
               src="/images/tuition-centres/family-permissions-v3.png"

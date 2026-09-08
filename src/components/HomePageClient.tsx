@@ -157,10 +157,10 @@ export default function HomePageClient() {
               fill
               priority
               sizes="100vw"
-              className="object-fill object-center"
+              className="object-cover object-center lg:object-fill"
             />
           </div>
-          <div className="pointer-events-none absolute inset-0 bg-white/12" />
+          <div className="pointer-events-none absolute inset-0 bg-white/35 lg:bg-white/12" />
           <div className="site-container pointer-events-none absolute inset-0 hidden lg:block">
             <div className="absolute inset-y-0 right-6 w-[62%] max-w-190">
               <Image
@@ -169,12 +169,12 @@ export default function HomePageClient() {
                 fill
                 priority
                 sizes="(min-width: 1280px) 760px, 62vw"
-                className="object-contain object-bottom"
+                className="translate-y-[6%] object-contain object-bottom"
               />
             </div>
           </div>
-          <div className="site-container relative flex items-center pb-3 pt-8 lg:min-h-135 lg:pt-8">
-            <div className="relative z-10 max-w-107.5">
+          <div className="site-container relative flex flex-col items-center pb-3 pt-8 lg:min-h-135 lg:flex-row lg:pt-8">
+            <div className="relative z-10 w-full max-w-107.5">
               <span className="inline-flex items-center gap-2 rounded-full border border-[#9edbd6] bg-white/80 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#08757b]">
                 <Users className="h-4 w-4" /> Learning, assessment and school
                 operations
@@ -210,6 +210,16 @@ export default function HomePageClient() {
                   Explore School Solutions
                 </ActionLink>
               </div>
+            </div>
+            <div className="relative mt-6 aspect-3/2 w-full lg:hidden">
+              <Image
+                src="/images/homepage/home-hero-right.png"
+                alt="AttoLearn learning dashboard with mascot"
+                fill
+                priority
+                sizes="(min-width: 640px) 90vw, 100vw"
+                className="translate-y-[6%] object-contain object-bottom"
+              />
             </div>
           </div>
         </div>

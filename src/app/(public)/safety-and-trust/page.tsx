@@ -424,9 +424,7 @@ export default function SafetyAndTrustPage() {
             </article>
           </div>
 
-          <div className="my-10 h-px bg-[#eadfce]" />
-
-          <div className="grid gap-12 lg:grid-cols-[.92fr_1.08fr] lg:items-start">
+          <div className="section-block-gap grid gap-12 lg:grid-cols-[.92fr_1.08fr] lg:items-start">
             <article className="px-2 py-3 lg:order-2 lg:col-start-2 lg:px-5 [&_ul]:space-y-2 [&_li]:text-[13px] [&_li]:leading-5">
               <p className="text-xs font-bold uppercase text-[#ed9807]">
                 Approved content

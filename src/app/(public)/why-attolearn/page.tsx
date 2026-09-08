@@ -143,7 +143,7 @@ export default function WhyAttoLearnPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-14 text-center sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-7xl px-3 py-14 text-center sm:px-4 lg:px-6">
         <p className="text-sm font-semibold text-[#d9910d]">
           Why right and wrong are not enough
         </p>
@@ -174,7 +174,7 @@ export default function WhyAttoLearnPage() {
       </section>
 
       <section className="bg-[#f0fafa]">
-        <div className="mx-auto max-w-7xl px-5 py-14 text-center sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl px-3 py-14 text-center sm:px-4 lg:px-6">
           <p className="text-sm font-semibold text-[#d9910d]">
             The seven learning dimensions
           </p>
@@ -349,7 +349,7 @@ export default function WhyAttoLearnPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-14 text-center sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-7xl px-3 py-14 text-center sm:px-4 lg:px-6">
         <p className="text-sm font-semibold text-[#d9910d]">
           The evidence-to-experience loop
         </p>
@@ -396,7 +396,7 @@ export default function WhyAttoLearnPage() {
           />
           <div className="absolute inset-0 bg-linear-to-r from-[#edfafa] to-transparent" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-5 py-12 sm:px-8 lg:px-10">
+        <div className="relative mx-auto max-w-7xl px-3 py-12 sm:px-4 lg:px-6">
           <p className="text-sm font-semibold text-[#d9910d]">
             Child-safe learning
           </p>
@@ -448,7 +448,7 @@ export default function WhyAttoLearnPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-5 py-12 text-center sm:px-8 lg:px-10">
+      <section className="mx-auto max-w-7xl px-3 py-12 text-center sm:px-4 lg:px-6">
         <p className="text-sm font-semibold text-[#d9910d]">
           Explainable adaptation
         </p>
@@ -479,7 +479,7 @@ export default function WhyAttoLearnPage() {
       </section>
 
       <section className="bg-[#fff8e8]">
-        <div className="mx-auto max-w-7xl px-5 py-12 text-center sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl px-3 py-12 text-center sm:px-4 lg:px-6">
           <p className="text-sm font-semibold text-[#d9910d]">
             The philosophy promise
           </p>
@@ -516,7 +516,7 @@ export default function WhyAttoLearnPage() {
       </section>
 
       <section className="bg-[#05777d] text-white">
-        <div className="mx-auto max-w-7xl px-5 py-14 text-center sm:px-8 lg:px-10">
+        <div className="mx-auto max-w-7xl px-3 py-14 text-center sm:px-4 lg:px-6">
           <p className="text-sm font-semibold text-[#f5b32b]">
             See it in practice
           </p>
