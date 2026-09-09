@@ -663,7 +663,7 @@ export default function TutorsPage() {
 
           <div className="rounded-2xl border border-[#d8e3e5] bg-[#f9fcfc] p-5 shadow-[0_14px_35px_rgba(0,80,85,0.10)] sm:p-6">
             <h3 className="rounded-lg bg-[#07858b] px-5 py-4 text-sm font-semibold text-white">
-              Where you sit
+              Where you sit (Tutor)
             </h3>
             <div className="mt-4 space-y-3">
               {[
