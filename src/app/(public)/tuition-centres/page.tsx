@@ -240,12 +240,12 @@ export default function TuitionCentresPage() {
               />
             </div>
             <div className="space-y-4">
-              <article className="rounded-xl border border-[#e8e2d8] bg-[#fffdf5] p-5 shadow-[0_8px_22px_rgba(57,73,70,.08)]">
-                <div className="flex items-start justify-between">
+              <article className="rounded-xl border border-[#e8e2d8] bg-[#fffdf5] p-4 shadow-[0_8px_22px_rgba(57,73,70,.08)]">
+                <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-xs font-bold text-[#075e65]">
+                    <h3 className="text-sm font-extrabold text-[#10243d]">
                       Centre Progress
-                    </p>
+                    </h3>
                     <p className="mt-4 text-xs text-slate-500">
                       Assessments Completed
                     </p>

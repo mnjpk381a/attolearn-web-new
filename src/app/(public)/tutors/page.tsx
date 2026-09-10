@@ -148,7 +148,7 @@ function EvidenceCard() {
 export default function TutorsPage() {
   return (
     <div className="tutors-page overflow-hidden bg-[#fffef9] text-slate-800">
-      <section className="relative overflow-hidden bg-[#fffdf4] lg:min-h-[500px]">
+      <section className="relative overflow-hidden bg-[#fffdf4] lg:min-h-125">
         <div className="menu-aligned-hero-art absolute inset-0 hidden lg:block">
           <Image
             src="/images/tutors/generated/tutor-hero-clean-v4.png"
@@ -160,8 +160,8 @@ export default function TutorsPage() {
           />
           <div className="absolute inset-0 bg-[linear-gradient(90deg,#fffdf4_0%,#fffdf4_31%,rgba(255,253,244,.82)_39%,transparent_57%)]" />
         </div>
-        <div className="site-container relative flex min-h-[500px] items-center py-10">
-          <div className="relative z-10 max-w-[500px]">
+        <div className="site-container relative flex min-h-125 items-center py-10">
+          <div className="relative z-10 max-w-125">
             <p className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.12em] text-[#07858b] before:h-px before:w-10 before:bg-[#07858b]">
               For Tutors
             </p>
@@ -343,7 +343,7 @@ export default function TutorsPage() {
             </div>
           </div>
         </div>
-        <div className="relative aspect-[16/10] w-full lg:hidden">
+        <div className="relative aspect-16/10 w-full lg:hidden">
           <Image
             src="/images/tutors/generated/tutor-hero-clean-v4.png"
             alt=""
@@ -359,7 +359,7 @@ export default function TutorsPage() {
         id="workspace"
         className="mx-auto max-w-7xl px-3 py-16 text-center sm:px-4 lg:px-6 lg:py-20"
       >
-        <p className="text-xs font-bold uppercase tracking-[.1em] text-[#f19a0a]">
+        <p className="text-xs font-bold uppercase tracking-widest text-[#f19a0a]">
           Tutor Workspace
         </p>
 
@@ -400,7 +400,7 @@ export default function TutorsPage() {
       <section className="bg-[radial-gradient(circle_at_50%_45%,#fffef8_0%,#fffbed_70%,#fffdf7_100%)]">
         <div className="mx-auto grid max-w-7xl gap-12 px-3 py-16 sm:px-4 lg:grid-cols-[.78fr_1.22fr] lg:items-center lg:px-6 lg:py-20">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[.1em] text-[#ef9707]">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#ef9707]">
               Understand learner needs
             </p>
             <h2 className="mt-2 text-3xl font-extrabold leading-tight text-[#075e65]">
@@ -449,7 +449,7 @@ export default function TutorsPage() {
       <section className="bg-[radial-gradient(circle_at_50%_45%,#fffef8_0%,#fffbed_70%,#fffdf7_100%)]">
         <div className="mx-auto grid max-w-7xl gap-10 px-3 py-16 sm:px-4 lg:grid-cols-[.72fr_1.28fr] lg:items-center lg:px-6 lg:py-20">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[.1em] text-[#f19a0a]">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#f19a0a]">
               Assign targeted work
             </p>
 
@@ -471,7 +471,7 @@ export default function TutorsPage() {
               ]}
             />
           </div>
-          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[#e7ded0] shadow-[0_16px_36px_rgba(48,63,54,.12)] sm:aspect-[16/9]">
+          <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl border border-[#e7ded0] shadow-[0_16px_36px_rgba(48,63,54,.12)] sm:aspect-video">
             <Image
               src="/images/tutors/generated/assigned-work-reference.png"
               alt="Tablet showing an assigned fractions activity and learner progress"
@@ -485,7 +485,7 @@ export default function TutorsPage() {
 
       <section className="bg-[radial-gradient(circle_at_50%_45%,#fffef8_0%,#fffbed_70%,#fffdf7_100%)]">
         <div className="mx-auto grid max-w-7xl gap-10 px-3 py-16 sm:px-4 lg:grid-cols-[1.25fr_.75fr] lg:items-center lg:px-6 lg:py-20">
-          <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[#e5d9c6] shadow-[0_16px_38px_rgba(51,43,30,.13)] sm:aspect-[16/9]">
+          <div className="relative aspect-16/10 w-full overflow-hidden rounded-2xl border border-[#e5d9c6] shadow-[0_16px_38px_rgba(51,43,30,.13)] sm:aspect-video">
             <Image
               src="/images/tutors/generated/session-preparation-reference.png"
               alt="Tutor reviewing learner diagnostic evidence before a session"
@@ -495,7 +495,7 @@ export default function TutorsPage() {
             />
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-[.1em] text-[#ef9707]">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#ef9707]">
               Prepare before the session
             </p>
             <h2 className="mt-2 text-3xl font-extrabold leading-tight text-[#075e65]">
@@ -522,7 +522,7 @@ export default function TutorsPage() {
       <section className="bg-[#fffef9]">
         <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 lg:px-6 lg:py-20">
           <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[.1em] text-[#f19a0a]">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#f19a0a]">
               Paper Generator for Tutors
             </p>
             <h2 className="mt-1 text-3xl font-semibold leading-tight text-[#00666c] sm:text-4xl">
@@ -630,7 +630,7 @@ export default function TutorsPage() {
 
         <div className="mx-auto mt-16 grid max-w-7xl gap-10 px-3 sm:px-4 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-16 lg:px-6">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[.1em] text-[#f19a0a]">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#f19a0a]">
               The Parent Relationship
             </p>
             <h2 className="mt-1 text-3xl font-semibold leading-[1.15] tracking-[-0.02em] text-[#00666c] sm:text-4xl">
@@ -663,7 +663,7 @@ export default function TutorsPage() {
 
           <div className="rounded-2xl border border-[#d8e3e5] bg-[#f9fcfc] p-5 shadow-[0_14px_35px_rgba(0,80,85,0.10)] sm:p-6">
             <h3 className="rounded-lg bg-[#07858b] px-5 py-4 text-sm font-semibold text-white">
-              Where you sit
+              Where you sit (Tutor)
             </h3>
             <div className="mt-4 space-y-3">
               {[
@@ -734,7 +734,7 @@ export default function TutorsPage() {
           </div>
 
           <div className="mt-10 grid w-full gap-5 md:grid-cols-2">
-            <article className="flex min-h-[250px] gap-4 rounded-xl border border-[#e8e3d8] bg-[#fffef9] p-5 shadow-[0_8px_24px_rgba(64,47,14,0.035)] sm:p-6">
+            <article className="flex min-h-62.5 gap-4 rounded-xl border border-[#e8e3d8] bg-[#fffef9] p-5 shadow-[0_8px_24px_rgba(64,47,14,0.035)] sm:p-6">
               <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full">
                 <Image
                   src="/images/tutors/commercial-model-icons/invited-by-parent.png"
@@ -765,7 +765,7 @@ export default function TutorsPage() {
               </div>
             </article>
 
-            <article className="relative flex min-h-[250px] gap-4 rounded-xl border-2 border-[#efb327] bg-[#fffef9] p-5 shadow-[0_8px_24px_rgba(64,47,14,0.035)] sm:p-6">
+            <article className="relative flex min-h-62.5 gap-4 rounded-xl border-2 border-[#efb327] bg-[#fffef9] p-5 shadow-[0_8px_24px_rgba(64,47,14,0.035)] sm:p-6">
               <span className="absolute -top-3 left-10 rounded-full bg-[#eda912] px-4 py-1 text-xs font-bold text-white">
                 Independent tutors
               </span>
@@ -859,7 +859,7 @@ export default function TutorsPage() {
         </div>
       </section>
 
-      <section className="relative min-h-[230px] overflow-hidden ">
+      <section className="relative min-h-57.5 overflow-hidden ">
         <Image
           src="/images/tutors/closing-sections/teaching-cta-v2.png"
           alt=""
@@ -867,7 +867,7 @@ export default function TutorsPage() {
           sizes="100vw"
           className="object-cover object-center"
         />
-        <div className="relative z-10 mx-auto flex min-h-[230px] max-w-7xl items-center justify-center px-3 py-10 text-center sm:px-4 lg:px-6">
+        <div className="relative z-10 mx-auto flex min-h-57.5 max-w-7xl items-center justify-center px-3 py-10 text-center sm:px-4 lg:px-6">
           <div>
             <h2 className="text-3xl font-extrabold leading-tight text-[#075e65] sm:text-4xl">
               Start teaching with evidence behind you
@@ -898,7 +898,7 @@ export default function TutorsPage() {
       <section className="bg-[#fffef9]">
         <div className="mx-auto max-w-7xl px-3 py-16 sm:px-4 lg:px-6 lg:py-20">
           <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[.1em] text-[#f19a0a]">
+            <p className="text-xs font-bold uppercase tracking-widest text-[#f19a0a]">
               The Small Print, Said Plainly
             </p>
             <h2 className="mt-1 text-3xl font-semibold text-[#00666c] sm:text-4xl">
@@ -931,7 +931,7 @@ export default function TutorsPage() {
             ].map(([image, title, copy]) => (
               <article
                 key={title}
-                className="min-h-[215px] rounded-xl border border-[#ebe5da] bg-[#fffef9] px-5 py-5 text-left shadow-[0_8px_22px_rgba(58,42,12,.06)]"
+                className="min-h-53.75 rounded-xl border border-[#ebe5da] bg-[#fffef9] px-5 py-5 text-left shadow-[0_8px_22px_rgba(58,42,12,.06)]"
               >
                 <span className="relative block h-20 w-20">
                   <Image
@@ -945,7 +945,7 @@ export default function TutorsPage() {
                 <h3 className="mt-2 text-base font-bold text-[#075c61]">
                   {title}
                 </h3>
-                <p className="mt-2 max-w-[230px] text-sm leading-6 text-slate-600">
+                <p className="mt-2 max-w-57.5 text-sm leading-6 text-slate-600">
                   {copy}
                 </p>
               </article>
@@ -978,7 +978,7 @@ export default function TutorsPage() {
         </div>
       </section>
 
-      <section className="relative min-h-[260px] overflow-hidden ">
+      <section className="relative min-h-65 overflow-hidden ">
         <Image
           src="/images/tutors/closing-sections/start-free-cta.png"
           alt=""
@@ -987,7 +987,7 @@ export default function TutorsPage() {
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-[#003f48]/35" />
-        <div className="relative z-10 mx-auto flex min-h-[260px] max-w-7xl items-center justify-center px-3 py-10 text-center sm:px-4 lg:px-6">
+        <div className="relative z-10 mx-auto flex min-h-65 max-w-7xl items-center justify-center px-3 py-10 text-center sm:px-4 lg:px-6">
           {" "}
           lg:px-6
           <div>

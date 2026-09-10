@@ -1284,3 +1284,18 @@ body {
   text-wrap: nowrap !important;
   white-space: nowrap;
 }
+/* Keep Why AttoLearn dimension titles bold despite the shared paragraph reset. */
+#learning-dimensions h3.why-dimension-title {
+  max-width: 7.5rem;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 0.875rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  letter-spacing: -0.01em !important;
+  white-space: normal !important;
+}
+
+
+
+
+

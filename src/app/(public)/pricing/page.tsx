@@ -23,10 +23,49 @@ const countryFlags: Record<(typeof countries)[number], string> = {
   UK: "/images/pricing/country-icons/uk.png",
   Pakistan: "/images/pricing/country-icons/pakistan.png",
 };
+const pricingByCountry: Record<
+  (typeof countries)[number],
+  {
+    familyMonthly: string;
+    familyAnnual: string;
+    fourthChild: string;
+    tutorPlans: [string, string, string];
+    extraStudent: string;
+  }
+> = {
+  Australia: {
+    familyMonthly: "A$10",
+    familyAnnual: "A$96",
+    fourthChild: "A$3",
+    tutorPlans: ["A$29", "A$49", "A$89"],
+    extraStudent: "A$2",
+  },
+  USA: {
+    familyMonthly: "US$10",
+    familyAnnual: "US$96",
+    fourthChild: "US$3",
+    tutorPlans: ["US$29", "US$49", "US$89"],
+    extraStudent: "US$2",
+  },
+  UK: {
+    familyMonthly: "£9",
+    familyAnnual: "£86",
+    fourthChild: "£2",
+    tutorPlans: ["£25", "£45", "£79"],
+    extraStudent: "£2",
+  },
+  Pakistan: {
+    familyMonthly: "PKR 300",
+    familyAnnual: "PKR 2,900",
+    fourthChild: "PKR 75",
+    tutorPlans: ["PKR 900", "PKR 1,500", "PKR 2,500"],
+    extraStudent: "PKR 75",
+  },
+};
 const audiences = [
   { label: "Families", icon: Users },
-  { label: "Tutors & Centers", icon: UserRound },
-  { label: "Schools", icon: Building2 },
+  { label: "Tuition", icon: UserRound },
+  { label: "Tuition Centre", icon: Building2 },
 ] as const;
 const schoolCards = [
   {
@@ -78,6 +117,7 @@ export default function PricingPage() {
   const [country, setCountry] =
     useState<(typeof countries)[number]>("Australia");
   const [audience, setAudience] = useState("Families");
+  const pricing = pricingByCountry[country];
   return (
     <main className="overflow-hidden bg-[#fffefb] text-[#092f3d]">
       <section className="pricing-hero relative flex min-h-0 items-center overflow-hidden bg-[#f8fdff] px-4 py-7 text-center sm:min-h-130 sm:py-10 lg:h-110 lg:min-h-0 lg:py-6">
@@ -115,7 +155,7 @@ export default function PricingPage() {
             >
               Start Free <ArrowRight className="h-5 w-5" />
             </Link>
-            {audience === "Schools" && (
+            {audience === "Tuition Centre" && (
               <Link
                 href="#"
                 className="inline-flex h-12 min-w-56 items-center justify-center gap-5 rounded-lg border-2 border-[#07949a] bg-white/95 px-8 font-bold text-[#087e82] sm:h-14"
@@ -182,8 +222,8 @@ export default function PricingPage() {
                 One plan for the household
               </h2>
               <p className="mt-3 text-base text-slate-600 sm:text-lg">
-                Up to three children included. A fourth child costs a little
-                more, not four times as much.
+                Up to three children included. A fourth child costs{" "}
+                {pricing.fourthChild} per month, not four times as much.
               </p>
             </div>
 
@@ -228,11 +268,13 @@ export default function PricingPage() {
                   AttoLearn Family
                 </h3>
                 <p className="mt-1 flex items-end gap-2 text-[#075966]">
-                  <span className="text-5xl font-extrabold">A$10</span>
+                  <span className="text-5xl font-extrabold">
+                    {pricing.familyMonthly}
+                  </span>
                   <span className="pb-1 text-base">per month</span>
                 </p>
                 <p className="text-base text-slate-700">
-                  or A$66 a year — roughly two months free
+                  or {pricing.familyAnnual} a year — roughly two months free
                 </p>
                 <ul className="mt-5 space-y-3">
                   {[
@@ -291,7 +333,7 @@ export default function PricingPage() {
               </div>
             </div>
           </div>
-        ) : audience === "Tutors & Centers" ? (
+        ) : audience === "Tuition" ? (
           <div className="mt-9">
             <div className="text-center">
               <h2 className="text-3xl font-extrabold text-[#075966] sm:text-4xl">
@@ -330,7 +372,7 @@ export default function PricingPage() {
               {[
                 [
                   "Tutor Starter",
-                  "A$29",
+                  pricing.tutorPlans[0],
                   "10 active students",
                   [
                     "Create learner profiles",
@@ -341,7 +383,7 @@ export default function PricingPage() {
                 ],
                 [
                   "Tutor Growth",
-                  "A$49",
+                  pricing.tutorPlans[1],
                   "25 active students",
                   [
                     "Everything in Starter",
@@ -352,7 +394,7 @@ export default function PricingPage() {
                 ],
                 [
                   "Tutor Pro",
-                  "A$89",
+                  pricing.tutorPlans[2],
                   "50 active students",
                   [
                     "Everything in Growth",
@@ -439,9 +481,9 @@ export default function PricingPage() {
                 ))}
               </div>
               <p className="mt-4 text-sm text-slate-600">
-                Extra students: A$2 each per month. Annual billing is available
-                at approximately ten months&apos; price for twelve months&apos;
-                access.
+                Extra students: {pricing.extraStudent} each per month. Annual
+                billing is available at approximately ten months&apos; price for
+                twelve months&apos; access.
               </p>
             </div>
 
@@ -522,14 +564,14 @@ export default function PricingPage() {
             {" "}
             <div className="mt-7 text-center">
               <h2 className="text-3xl font-extrabold text-[#073a49]">
-                {audience === "Schools"
+                {audience === "Tuition Centre"
                   ? "Schools are quoted by modules and size"
                   : audience === "Families"
                     ? "Simple family-first pricing"
                     : "Flexible pricing for managed learners"}
               </h2>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                {audience === "Schools"
+                {audience === "Tuition Centre"
                   ? "School pricing is kept entirely separate from family pricing. A school licence is not a bundle of family plans."
                   : "Choose the setup that fits how you support learning."}
               </p>
@@ -729,7 +771,7 @@ export default function PricingPage() {
               >
                 Start Free <ArrowRight className="h-5 w-5" />
               </Link>
-              {audience === "Schools" && (
+              {audience === "Tuition Centre" && (
                 <Link
                   href="/contact"
                   className="inline-flex h-13 min-w-52 items-center justify-center gap-4 rounded-lg border border-[#07808a] bg-white px-7 font-bold text-[#076d76]"

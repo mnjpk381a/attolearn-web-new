@@ -141,7 +141,7 @@ export default function Header() {
                   prefetch={false}
                   className={`whitespace-nowrap rounded-md px-2.5 py-2 text-[13px] font-semibold transition focus:outline-none focus-visible:outline-none focus:ring-0 2xl:px-3 2xl:text-sm ${
                     active
-                      ? "bg-gray-50 font-semibold text-black"
+                      ? "bg-[#f4aa17] font-semibold text-white"
                       : "text-black hover:bg-gray-50"
                   }`}
                   onClick={() => {
@@ -292,7 +292,7 @@ export default function Header() {
                     prefetch={false}
                     className={`block rounded-lg px-3 py-2 text-sm font-semibold transition focus:outline-none focus-visible:outline-none focus:ring-0 ${
                       active
-                        ? "bg-gray-50 font-semibold text-black"
+                        ? "bg-[#f4aa17] font-semibold text-white"
                         : "text-black hover:bg-gray-50"
                     }`}
                     onClick={() => {
