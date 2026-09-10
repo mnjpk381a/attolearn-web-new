@@ -109,11 +109,7 @@ export default function Footer() {
               <h4 className="text-white font-semibold">Company</h4>
               <ul className="mt-3 space-y-2 text-sm text-white/90">
                 <li>
-                  <Link
-                    href="/about"
-                    prefetch={false}
-                    className="hover:underline"
-                  >
+                  <Link href="#" prefetch={false} className="hover:underline">
                     About
                   </Link>
                 </li>
