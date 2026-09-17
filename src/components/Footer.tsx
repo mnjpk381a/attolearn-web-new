@@ -114,6 +114,15 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <Link
+                    href="/team"
+                    prefetch={false}
+                    className="hover:underline"
+                  >
+                    Team
+                  </Link>
+                </li>{" "}
+                <li>
                   <Link href="#" prefetch={false} className="hover:underline">
                     Partners
                   </Link>
