@@ -168,7 +168,7 @@ export default function Header() {
           </nav>
           <a
             href="#"
-            target="_blank"
+            // target="_blank"
             rel="noopener noreferrer"
             className="hidden translate-y-1 shrink-0 items-center justify-center whitespace-nowrap rounded-lg bg-[#077784] px-4 py-2 text-[13px] font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0 xl:inline-flex 2xl:text-sm"
             onClick={() => {
@@ -307,7 +307,7 @@ export default function Header() {
 
               <a
                 href="#"
-                target="_blank"
+                // target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex w-full items-center justify-center rounded-lg bg-[#077784] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#005e66] focus:outline-none focus-visible:outline-none focus:ring-0"
                 onClick={() => {
