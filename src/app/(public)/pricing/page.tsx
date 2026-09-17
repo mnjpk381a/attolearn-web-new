@@ -207,8 +207,10 @@ export default function PricingPage() {
           {audiences.map(({ label, icon: Icon }) => (
             <button
               key={label}
+              type="button"
+              disabled={label === "Tuition Centre"}
               onClick={() => setAudience(label)}
-              className={`flex h-14 items-center justify-center gap-4 border-[#0b7f87] font-bold sm:border-r last:border-r-0 ${audience === label ? "bg-[#056d77] text-white" : "bg-white text-[#075966]"}`}
+              className={`flex h-14 items-center justify-center gap-4 border-[#0b7f87] font-bold sm:border-r last:border-r-0 ${audience === label ? "bg-[#056d77] text-white" : "bg-white text-[#075966]"} disabled:cursor-not-allowed`}
             >
               <Icon className="h-5 w-5" />
               {label}
