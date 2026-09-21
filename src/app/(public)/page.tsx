@@ -1,18 +1,15 @@
 import HomePageClient from "@/components/HomePageClient";
+import { pageMetadata } from "@/lib/seo/pages";
+import SeoPageExtras from "@/components/SeoPageExtras";
 
-
-
-export const metadata = {
-  title: "Home - AttoLearn",
-};
+export const metadata = pageMetadata("/");
 
 export default function Page() {
-
   return (
-    <main className="w-full">
-    <HomePageClient/>
-    </main>
+    <SeoPageExtras path="/">
+      <div className="w-full">
+        <HomePageClient />
+      </div>
+    </SeoPageExtras>
   );
 }
-
-

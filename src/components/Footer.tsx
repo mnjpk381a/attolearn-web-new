@@ -14,15 +14,14 @@ export default function Footer() {
               <Link href="/" prefetch={false} className="inline-flex">
                 <Image
                   src="/images/EducationIcon/AttoLearn-Logo_footer.png"
-                  alt="Attobility"
+                  alt="AttoLearn"
                   width={300}
                   height={72}
                   className="h-19 w-42 object-contain"
                 />
               </Link>
               <p className="mt-3 max-w-48 text-sm leading-5 text-white/90">
-                One connected platform for learning, assessment and school
-                management.
+                Learning practice and evidence for families, tutors and tuition centres.
               </p>
             </div>
 
@@ -41,7 +40,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/papergenerator"
+                    href="/paper-generator"
                     prefetch={false}
                     className="hover:underline"
                   >
@@ -49,12 +48,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" prefetch={false} className="hover:underline">
-                    School Management
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" prefetch={false} className="hover:underline">
+                  <Link href="/adaptive-learning" prefetch={false} className="hover:underline">
                     Experience AttoLearn
                   </Link>
                 </li>
@@ -94,11 +88,11 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/schools"
+                    href="/tuition-centres"
                     prefetch={false}
                     className="hover:underline"
                   >
-                    Schools
+                    Tuition Centres
                   </Link>
                 </li>
               </ul>
@@ -109,7 +103,7 @@ export default function Footer() {
               <h4 className="text-white font-semibold">Company</h4>
               <ul className="mt-3 space-y-2 text-sm text-white/90">
                 <li>
-                  <Link href="#" prefetch={false} className="hover:underline">
+                  <Link href="/about" prefetch={false} className="hover:underline">
                     About
                   </Link>
                 </li>

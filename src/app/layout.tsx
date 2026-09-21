@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Poppins } from "next/font/google";
 import ToastProvider from "@/components/ToastProvider";
+import { siteOrigin, privateRobots } from "@/lib/seo/config";
 import "./globals.css";
 
 // Plus Jakarta Sans font
@@ -17,6 +18,12 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 export const metadata: Metadata = {
+  metadataBase: siteOrigin ? new URL(siteOrigin) : undefined,
+  // Unknown, account and legacy routes are excluded unless explicitly public.
+  robots: privateRobots,
+  verification: process.env.GOOGLE_SITE_VERIFICATION
+    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+    : undefined,
   title: "AttoLearn",
   description: "Attobility Adaptive Learning Platform",
   icons: [{ rel: "icon", url: "/favicon.png" }],

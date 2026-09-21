@@ -189,16 +189,15 @@ export default function HomePageClient() {
                 </span>
               </h1>
               <p className="home-hero-description mt-4 max-w-105 text-[13px] font-medium leading-5 text-[#1d3150]">
-                Adaptive learning, assessment and school management, brought
-                together — so what a student practises, what a parent sees and
-                what a school records are one connected picture.
+                Explore adaptive practice, assessment and learning evidence
+                for students, families, tutors and tuition centres.
               </p>
               <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
                 <Link
-                  href="#"
+                  href="/contact"
                   className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md bg-linear-to-r from-[#168f8c] to-[#08777c] px-6 text-sm font-extrabold text-white shadow-[0_8px_18px_rgba(8,119,124,.18)] transition hover:brightness-95"
                 >
-                  Start Free <ArrowRight className="h-4 w-4" />
+                  Ask about availability <ArrowRight className="h-4 w-4" />
                 </Link>
                 <ActionLink href="/adaptive-learning" outline>
                   Explore Adaptive Learning
