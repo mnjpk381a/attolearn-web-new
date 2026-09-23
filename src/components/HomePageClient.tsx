@@ -8,9 +8,7 @@ import {
   CheckCircle2,
   GraduationCap,
   Home,
-  Quote,
   ReceiptText,
-  School,
   Users,
 } from "lucide-react";
 
@@ -42,13 +40,6 @@ const pathways = [
     copy: "Bring adaptive learning, assessment and tutor coordination into one pathway.",
     href: "/tuition-centres",
     link: "For Centres",
-  },
-  {
-    image: "/images/homepage/pathways/schools.png",
-    title: "Schools",
-    copy: "Connect learning, assessment, homework and everyday school operations.",
-    href: "/schools",
-    link: "School Solutions",
   },
 ] as const;
 
@@ -189,8 +180,8 @@ export default function HomePageClient() {
                 </span>
               </h1>
               <p className="home-hero-description mt-4 max-w-105 text-[13px] font-medium leading-5 text-[#1d3150]">
-                Explore adaptive practice, assessment and learning evidence
-                for students, families, tutors and tuition centres.
+                Explore adaptive practice, assessment and learning evidence for
+                students, families, tutors and tuition centres.
               </p>
               <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
                 <Link
@@ -201,9 +192,6 @@ export default function HomePageClient() {
                 </Link>
                 <ActionLink href="/adaptive-learning" outline>
                   Explore Adaptive Learning
-                </ActionLink>
-                <ActionLink href="#" outline>
-                  Explore School Solutions
                 </ActionLink>
               </div>
             </div>
@@ -259,7 +247,7 @@ export default function HomePageClient() {
               Start with the pathway that matches your role.
             </p>
           </div>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {pathways.map(({ image, title, copy, href, link }) => (
               <article
                 key={title}
@@ -329,16 +317,6 @@ export default function HomePageClient() {
                   "/images/homepage/learn-assess-manage/assessment-for-everyone-v2.png",
                 href: "/papergenerator",
                 reverse: true,
-              },
-              {
-                title: "A connected school ecosystem",
-                copy: "Schools can connect adaptive learning, homework, assessment, communication and everyday operations.",
-                bullets: [],
-                button: "Explore School Solutions",
-                image:
-                  "/images/homepage/learn-assess-manage/school-dashboard.png",
-                href: "/schools",
-                reverse: false,
               },
             ].map((item) => (
               <article
@@ -453,93 +431,6 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      <section className="bg-[#fafbff] py-16">
-        <div className="site-container">
-          <div className="text-center">
-            <h2 className="community-reach-heading text-[40px] font-black leading-[1.02] tracking-[-.035em] text-[#075f68]">
-              Already supporting school communities
-            </h2>
-            <p className="mt-4 text-[16px] font-medium text-slate-500 sm:text-[17px]">
-              Current conservative public reach figures.
-            </p>
-          </div>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {[
-              [
-                School,
-                "50+",
-                "Schools",
-                "Partnering for better learning.",
-                "bg-[#e7f6f2] text-[#168f8c]",
-                "text-[#168f8c]",
-              ],
-              [
-                Users,
-                "4,000+",
-                "Students",
-                "Growing every day with AttoLearn.",
-                "bg-[#eef7df] text-[#45a627]",
-                "text-[#45a627]",
-              ],
-              [
-                GraduationCap,
-                "100+",
-                "Teachers",
-                "Empowering educators to make an impact.",
-                "bg-[#f7eafa] text-[#8520c2]",
-                "text-[#8520c2]",
-              ],
-            ].map(([Icon, value, label, copy, iconStyle, valueStyle]) => {
-              const I = Icon as typeof School;
-              return (
-                <article
-                  key={String(label)}
-                  className="flex min-h-38 items-center rounded-xl border border-[#eee8dc] bg-[#fffef9] p-5 shadow-[0_7px_22px_rgba(63,81,69,.06)]"
-                >
-                  <span
-                    className={`grid h-24 w-24 shrink-0 place-items-center rounded-full ${String(iconStyle)}`}
-                  >
-                    <I className="h-13 w-13" strokeWidth={1.8} />
-                  </span>
-                  <span className="mx-5 h-22 w-px shrink-0 bg-[#cfddd5]" />
-                  <div>
-                    <p
-                      className={`community-reach-stat text-[36px] font-black leading-none tracking-[-.02em] sm:text-[40px] ${String(valueStyle)}`}
-                    >
-                      {String(value)}
-                    </p>
-                    <p className="mt-3 text-[14px] font-black uppercase text-[#111445]">
-                      {String(label)}
-                    </p>
-                    <p className="mt-2 text-[14px] font-medium leading-5 text-slate-600">
-                      {String(copy)}
-                    </p>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-          <blockquote className="mt-6 flex items-center gap-6 rounded-xl bg-linear-to-r from-[#075b61] to-[#064a52] px-7 py-6 text-white shadow-[0_8px_22px_rgba(5,72,79,.16)]">
-            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-[#2c8f90] text-white">
-              <Quote className="h-8 w-8 rotate-180 fill-current" />
-            </span>
-            <span className="h-12 w-px bg-white/35" />
-            <div>
-              <p className="text-[18px] font-semibold leading-7 sm:text-[20px]">
-                “From admissions to exams, it is all in one smart system. Super
-                efficient.”
-              </p>
-              <cite className="mt-1 block text-[14px] font-medium not-italic text-[#56c2bd]">
-                School-user feedback
-              </cite>
-            </div>
-            <span className="ml-auto hidden h-14 w-14 shrink-0 place-items-center rounded-full bg-[#2c8f90] text-white sm:grid">
-              <Quote className="h-8 w-8 fill-current" />
-            </span>
-          </blockquote>
-        </div>
-      </section>
-
       <section className="py-14">
         <div className="site-container">
           <div className="text-center">
@@ -550,7 +441,7 @@ export default function HomePageClient() {
               Different starting points. One connected platform.
             </p>
           </div>
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mx-auto mt-8 grid max-w-4xl gap-5 md:grid-cols-2">
             {[
               [
                 "/images/homepage/pathway-photos/families.png",
@@ -565,13 +456,6 @@ export default function HomePageClient() {
                 "Explore support across your teaching practice.",
                 "/tutors",
                 Building2,
-              ],
-              [
-                "/images/homepage/pathway-photos/schools.png",
-                "Schools",
-                "See how learning, assessment and operations connect.",
-                "/schools",
-                School,
               ],
             ].map(([src, title, copy, href, Icon]) => {
               const I = Icon as typeof Home;

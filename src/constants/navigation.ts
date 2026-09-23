@@ -20,9 +20,7 @@ export const navItems: NavItem[] = [
   { label: "Home Schooling", href: "/home-education" },
   { label: "Tutors", href: "/tutors" },
   { label: "Tuition Centres", href: "/tuition-centres" },
-  ...(process.env.NEXT_PUBLIC_ATTOCAMPUS_URL
-    ? [{ label: "AttoCampus", href: process.env.NEXT_PUBLIC_ATTOCAMPUS_URL }]
-    : []),
+  { label: "AttoCampus", href: "https://portal.attolearn.com/auth/login" },
 
   { label: "Adaptive Learning", href: "/adaptive-learning" },
   {

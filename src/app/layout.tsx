@@ -25,7 +25,8 @@ export const metadata: Metadata = {
     ? { google: process.env.GOOGLE_SITE_VERIFICATION }
     : undefined,
   title: "AttoLearn",
-  description: "Attobility Adaptive Learning Platform",
+  description:
+    "Adaptive learning, meaningful evidence and teaching tools for families, tutors and tuition centres.",
   icons: [{ rel: "icon", url: "/favicon.png" }],
 };
 
@@ -35,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-AU" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${plusJakarta.variable} ${poppins.variable} antialiased`}
       >
