@@ -16,11 +16,18 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
-const countries = ["Australia", "USA", "UK", "Pakistan"] as const;
+const countries = [
+  "Australia",
+  "USA",
+  "UK",
+  "New Zealand",
+  "Pakistan",
+] as const;
 const countryFlags: Record<(typeof countries)[number], string> = {
   Australia: "/images/pricing/country-icons/australia-flag.png",
   USA: "/images/pricing/country-icons/usa.png",
   UK: "/images/pricing/country-icons/uk.png",
+  "New Zealand": "/images/pricing/country-icons/new-zealand.png",
   Pakistan: "/images/pricing/country-icons/pakistan.png",
 };
 const pricingByCountry: Record<
@@ -54,6 +61,13 @@ const pricingByCountry: Record<
     tutorPlans: ["£25", "£45", "£79"],
     extraStudent: "£2",
   },
+  "New Zealand": {
+    familyMonthly: "NZ$10",
+    familyAnnual: "NZ$96",
+    fourthChild: "NZ$3",
+    tutorPlans: ["NZ$29", "NZ$49", "NZ$89"],
+    extraStudent: "NZ$2",
+  },
   Pakistan: {
     familyMonthly: "PKR 300",
     familyAnnual: "PKR 2,900",
@@ -64,7 +78,7 @@ const pricingByCountry: Record<
 };
 const audiences = [
   { label: "Families", icon: Users },
-  { label: "Tuition", icon: UserRound },
+  { label: "Tutor", icon: UserRound },
   { label: "Tuition Centre", icon: Building2 },
 ] as const;
 const schoolCards = [
@@ -180,7 +194,7 @@ export default function PricingPage() {
         <h2 className="inline-flex items-center gap-4 text-lg font-bold before:h-px before:w-14 before:bg-[#22b9ae] after:h-px after:w-14 after:bg-[#22b9ae]">
           Your country
         </h2>
-        <div className="mx-auto mt-3 grid max-w-2xl grid-cols-2 overflow-hidden rounded-lg bg-white shadow-[0_10px_32px_rgba(20,65,68,.13)] sm:grid-cols-4">
+        <div className="mx-auto mt-3 grid max-w-3xl grid-cols-2 overflow-hidden rounded-lg bg-white shadow-[0_10px_32px_rgba(20,65,68,.13)] sm:grid-cols-5">
           {countries.map((c) => (
             <button
               key={c}
@@ -335,7 +349,7 @@ export default function PricingPage() {
               </div>
             </div>
           </div>
-        ) : audience === "Tuition" ? (
+        ) : audience === "Tutor" ? (
           <div className="mt-9">
             <div className="text-center">
               <h2 className="text-3xl font-extrabold text-[#075966] sm:text-4xl">
