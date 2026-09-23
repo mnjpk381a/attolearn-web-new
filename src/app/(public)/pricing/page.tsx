@@ -201,13 +201,13 @@ export default function PricingPage() {
               onClick={() => setCountry(c)}
               className={`flex h-14 items-center justify-center gap-3 text-sm font-semibold transition ${country === c ? "bg-[#076d76] text-white" : "text-[#233443] hover:bg-teal-50"}`}
             >
-              <span className="relative h-7 w-7 shrink-0">
+              <span className="relative h-7 w-7 shrink-0 overflow-hidden rounded-full">
                 <Image
                   src={countryFlags[c]}
                   alt=""
                   fill
                   sizes="28px"
-                  className="object-contain"
+                  className="object-cover"
                 />{" "}
               </span>
               {c}
@@ -604,7 +604,7 @@ export default function PricingPage() {
                       alt=""
                       fill
                       sizes="96px"
-                      className="object-contain"
+                      className="object-cover"
                     />
                   </span>
                   <h3 className="mt-3 text-lg font-bold text-[#075966]">
@@ -632,7 +632,7 @@ export default function PricingPage() {
                   alt=""
                   fill
                   sizes="144px"
-                  className="object-contain"
+                  className="object-cover"
                 />
               </span>
               <div className="flex-1">
@@ -678,7 +678,7 @@ export default function PricingPage() {
               alt=""
               fill
               sizes="128px"
-              className="object-contain"
+              className="object-cover"
             />
           </span>
           <div>
@@ -726,7 +726,7 @@ export default function PricingPage() {
                     alt=""
                     fill
                     sizes="96px"
-                    className="object-contain"
+                    className="object-cover"
                   />
                 </span>
                 <h3 className="mt-4 text-lg font-bold text-[#075966]">

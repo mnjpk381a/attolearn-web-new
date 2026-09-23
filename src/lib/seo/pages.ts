@@ -51,16 +51,16 @@ const descriptions: Record<string, string> = {
   "/paper-generator":
     "Explore AttoLearn Paper Generator, including question selection, paper review and printable assessments. Confirm subject and account availability.",
   "/pricing":
-    "Review AttoLearn plan information for families, tutors and tuition centres. Confirm your country, account type and current terms before joining.",
+    "Review AttoLearn pricing for families, tutors and tuition centres in Australia, the USA, the UK, New Zealand and Pakistan, displayed in local currencies.",
 };
 
 export const priorityPages = priorities;
 export const searchPages: SearchPage[] = [
   {
     path: "/",
-    title: "AttoLearn — learning support for families and tutors",
+    title: "AttoLearn adaptive learning for families and tutors",
     description:
-      "Explore adaptive practice, learning evidence and teaching tools for families, tutors and tuition centres. Find the AttoLearn experience that fits your needs.",
+      "Explore adaptive practice, meaningful learning evidence and teaching tools for families, tutors and tuition centres, with clear next steps for every learner.",
     published: true,
     parent: "/",
     related: ["/adaptive-learning", "/families", "/tutors", "/tuition-centres"],
