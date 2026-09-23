@@ -9,7 +9,6 @@ import {
   GraduationCap,
   Home,
   ReceiptText,
-  School,
   Users,
 } from "lucide-react";
 
@@ -41,13 +40,6 @@ const pathways = [
     copy: "Bring adaptive learning, assessment and tutor coordination into one pathway.",
     href: "/tuition-centres",
     link: "For Centres",
-  },
-  {
-    image: "/images/homepage/pathways/schools.png",
-    title: "Schools",
-    copy: "Connect learning, assessment, homework and everyday school operations.",
-    href: "/schools",
-    link: "School Solutions",
   },
 ] as const;
 
@@ -255,7 +247,7 @@ export default function HomePageClient() {
               Start with the pathway that matches your role.
             </p>
           </div>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {pathways.map(({ image, title, copy, href, link }) => (
               <article
                 key={title}
@@ -449,7 +441,7 @@ export default function HomePageClient() {
               Different starting points. One connected platform.
             </p>
           </div>
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mx-auto mt-8 grid max-w-4xl gap-5 md:grid-cols-2">
             {[
               [
                 "/images/homepage/pathway-photos/families.png",
@@ -464,13 +456,6 @@ export default function HomePageClient() {
                 "Explore support across your teaching practice.",
                 "/tutors",
                 Building2,
-              ],
-              [
-                "/images/homepage/pathway-photos/schools.png",
-                "Schools",
-                "See how learning, assessment and operations connect.",
-                "/schools",
-                School,
               ],
             ].map(([src, title, copy, href, Icon]) => {
               const I = Icon as typeof Home;
