@@ -188,8 +188,8 @@ export default function HomePageClient() {
                 </span>
               </h1>
               <p className="home-hero-description mt-4 max-w-105 text-[13px] font-medium leading-5 text-[#1d3150]">
-                Explore adaptive practice, assessment and learning evidence
-                for students, families, tutors and tuition centres.
+                Explore adaptive practice, assessment and learning evidence for
+                students, families, tutors and tuition centres.
               </p>
               <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
                 <Link
@@ -198,6 +198,9 @@ export default function HomePageClient() {
                 >
                   Ask about availability <ArrowRight className="h-4 w-4" />
                 </Link>
+                <ActionLink href="/adaptive-learning" outline>
+                  Explore Adaptive Learning
+                </ActionLink>
               </div>
             </div>
             <div className="relative mt-6 aspect-3/2 w-full lg:hidden">
