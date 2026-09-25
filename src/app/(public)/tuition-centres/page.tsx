@@ -634,7 +634,7 @@ export default function TuitionCentresPage() {
           </div>
         </div>
         <div className="content-split family-permissions-split section-block-gap">
-          <div className="content-split-media content-split-media-left relative h-[25.25rem] overflow-hidden rounded-2xl border border-[#e8ddd0] shadow-sm">
+          <div className="content-split-media content-split-media-left relative h-101 overflow-hidden rounded-2xl border border-[#e8ddd0] shadow-sm">
             <Image
               src="/images/tuition-centres/family-permissions-v3.png"
               alt="Parent reviewing learning on a tablet"
@@ -815,7 +815,7 @@ export default function TuitionCentresPage() {
         </div>
       </section>
 
-      <section className="relative flex min-h-[20rem] items-center overflow-hidden text-white">
+      <section className="relative flex min-h-80 items-center overflow-hidden text-white">
         <Image
           src="/images/tuition-centres/roster-cta-v2.png"
           alt="Laptop workspace"
@@ -825,7 +825,7 @@ export default function TuitionCentresPage() {
         />
         <div className="absolute inset-0 bg-[#075f68]/78" />
         <div className="site-container relative py-16 text-center">
-          <h2 className="!text-white text-[32px] font-extrabold tracking-[-.025em] sm:text-[40px]">
+          <h2 className="text-white! text-[32px] font-extrabold tracking-[-.025em] sm:text-[40px]">
             See it with your own roster
           </h2>
           <p className="mt-2 text-base text-white/90">
@@ -947,7 +947,7 @@ export default function TuitionCentresPage() {
           </p>
           <div className="mt-7 flex w-full max-w-sm flex-col justify-center gap-3 sm:w-auto sm:max-w-none sm:flex-row">
             <a
-              href="https://portal.attolearn.com/signup"
+              href="https://portal.attocampus.com/signup"
               className="inline-flex h-12 items-center justify-center rounded-md bg-[#f5aa12] px-9 text-sm font-bold text-white shadow-sm transition hover:bg-[#e99c00]"
             >
               Start Free

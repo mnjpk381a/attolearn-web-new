@@ -1,5 +1,5 @@
 export const SignupLink =
-  "https://portal.attolearn.com/auth/signup";
+  "https://portal.attocampus.com/auth/signup";
 
 export type PlanSection = {
   heading?: string;

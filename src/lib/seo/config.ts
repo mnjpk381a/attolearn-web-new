@@ -16,7 +16,7 @@ export function publicOrigin(
       "NEXT_PUBLIC_SITE_URL must be the canonical HTTPS website origin, without a path, query or credentials.",
     );
   }
-  if (["portal.attolearn.com", "al.attolearn.com"].includes(url.hostname)) {
+  if (["portal.attocampus.com", "al.attolearn.com"].includes(url.hostname)) {
     throw new Error(
       "Use the public marketing origin, not the learning portal origin.",
     );

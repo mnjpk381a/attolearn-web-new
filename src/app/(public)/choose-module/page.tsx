@@ -13,7 +13,7 @@ const moduleOptions = [
     title: "School Management Module",
     description:
       "Continue to the school portal for administration, teachers, students, parents, and resellers.",
-    href: "https://portal.attolearn.com/auth/login",
+    href: "https://portal.attocampus.com/auth/login",
     icon: FaSchool,
   },
 ];
