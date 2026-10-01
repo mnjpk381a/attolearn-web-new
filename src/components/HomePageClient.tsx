@@ -167,8 +167,7 @@ export default function HomePageClient() {
           <div className="site-container relative flex flex-col items-center pb-3 pt-8 lg:min-h-135 lg:flex-row lg:pt-8">
             <div className="relative z-10 w-full max-w-107.5">
               <span className="inline-flex items-center gap-2 rounded-full border border-[#9edbd6] bg-white/80 px-3 py-1.5 text-[11px] font-bold uppercase tracking-wide text-[#08757b]">
-                <Users className="h-4 w-4" /> Learning, assessment and school
-                operations
+                <Users className="h-4 w-4" /> Learning and assessment
               </span>
               <h1 className="mt-4 text-[36px] font-black leading-[1.03] tracking-[-.035em] text-[#07163f] sm:text-[40px] lg:text-[42px]">
                 One connected platform for
@@ -308,16 +307,8 @@ export default function HomePageClient() {
                 href: "/adaptive-learning",
                 reverse: false,
               },
-              {
-                title: "Assessment for everyone",
-                copy: "Families, home educators, tutors, centres and schools can use assessment in ways that suit their role.",
-                bullets: [],
-                button: "Explore Paper Generator",
-                image:
-                  "/images/homepage/learn-assess-manage/assessment-for-everyone-v2.png",
-                href: "/papergenerator",
-                reverse: true,
-              },
+
+
             ].map((item) => (
               <article
                 key={item.title}
@@ -589,3 +580,5 @@ export default function HomePageClient() {
     </main>
   );
 }
+
+

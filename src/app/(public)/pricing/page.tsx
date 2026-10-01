@@ -11,7 +11,6 @@ import {
   MessageCircle,
   Percent,
   Tag,
-  UserRound,
   Users,
 } from "lucide-react";
 import { useState } from "react";
@@ -78,8 +77,7 @@ const pricingByCountry: Record<
 };
 const audiences = [
   { label: "Families", icon: Users },
-  { label: "Tutor", icon: UserRound },
-  { label: "Tuition Centre", icon: Building2 },
+  { label: "Tutor / Tuition Centre", icon: Building2 },
 ] as const;
 const schoolCards = [
   {
@@ -169,7 +167,7 @@ export default function PricingPage() {
             >
               Start Free <ArrowRight className="h-5 w-5" />
             </Link>
-            {audience === "Tuition Centre" && (
+            {audience !== "Families" && (
               <Link
                 href="#"
                 className="inline-flex h-12 min-w-56 items-center justify-center gap-5 rounded-lg border-2 border-[#07949a] bg-white/95 px-8 font-bold text-[#087e82] sm:h-14"
@@ -217,12 +215,11 @@ export default function PricingPage() {
       </section>
 
       <section className="site-container">
-        <div className="mx-auto grid max-w-3xl overflow-hidden rounded-xl border border-[#0b7f87] sm:grid-cols-3">
+        <div className="mx-auto grid max-w-2xl overflow-hidden rounded-xl border border-[#0b7f87] sm:grid-cols-2">
           {audiences.map(({ label, icon: Icon }) => (
             <button
               key={label}
               type="button"
-              disabled={label === "Tuition Centre"}
               onClick={() => setAudience(label)}
               className={`flex h-14 items-center justify-center gap-4 border-[#0b7f87] font-bold sm:border-r last:border-r-0 ${audience === label ? "bg-[#056d77] text-white" : "bg-white text-[#075966]"} disabled:cursor-not-allowed`}
             >
@@ -349,7 +346,7 @@ export default function PricingPage() {
               </div>
             </div>
           </div>
-        ) : audience === "Tutor" ? (
+        ) : audience !== "Families" ? (
           <div className="mt-9">
             <div className="text-center">
               <h2 className="text-3xl font-extrabold text-[#075966] sm:text-4xl">
@@ -364,7 +361,7 @@ export default function PricingPage() {
 
             <div className="mt-7 flex flex-col items-center gap-5 rounded-xl border border-[#c5e7e8] bg-[#eefafa] p-6 text-left md:flex-row">
               <span className="grid size-16 shrink-0 place-items-center rounded-full bg-[#d8f4f2] text-[#087f84]">
-                <UserRound className="size-9" />
+                <Building2 className="size-9" />
               </span>
               <div className="flex-1">
                 <h3 className="text-lg font-bold text-[#075966]">
@@ -580,14 +577,14 @@ export default function PricingPage() {
             {" "}
             <div className="mt-7 text-center">
               <h2 className="text-3xl font-extrabold text-[#073a49]">
-                {audience === "Tuition Centre"
+                {audience !== "Families"
                   ? "Schools are quoted by modules and size"
                   : audience === "Families"
                     ? "Simple family-first pricing"
                     : "Flexible pricing for managed learners"}
               </h2>
               <p className="mt-3 text-sm leading-6 text-slate-600">
-                {audience === "Tuition Centre"
+                {audience !== "Families"
                   ? "School pricing is kept entirely separate from family pricing. A school licence is not a bundle of family plans."
                   : "Choose the setup that fits how you support learning."}
               </p>
@@ -787,7 +784,7 @@ export default function PricingPage() {
               >
                 Start Free <ArrowRight className="h-5 w-5" />
               </Link>
-              {audience === "Tuition Centre" && (
+              {audience !== "Families" && (
                 <Link
                   href="/contact"
                   className="inline-flex h-13 min-w-52 items-center justify-center gap-4 rounded-lg border border-[#07808a] bg-white px-7 font-bold text-[#076d76]"
@@ -802,3 +799,10 @@ export default function PricingPage() {
     </main>
   );
 }
+
+
+
+
+
+
+
