@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -7,9 +6,11 @@ import {
   BadgeInfo,
   Building2,
   Check,
+  ChevronDown,
   FileText,
   MessageCircle,
   Percent,
+  Search,
   Tag,
   Users,
 } from "lucide-react";
@@ -129,6 +130,12 @@ export default function PricingPage() {
   const [country, setCountry] =
     useState<(typeof countries)[number]>("Australia");
   const [audience, setAudience] = useState("Families");
+  const [billingCycle, setBillingCycle] = useState<"monthly" | "annual">("monthly");
+  const [countrySearch, setCountrySearch] = useState("");
+  const [countryOpen, setCountryOpen] = useState(false);
+  const filteredCountries = countries.filter((item) =>
+    item.toLowerCase().includes(countrySearch.toLowerCase()),
+  );
   const pricing = pricingByCountry[country];
   return (
     <main className="overflow-hidden bg-[#fffefb] text-[#092f3d]">
@@ -192,25 +199,50 @@ export default function PricingPage() {
         <h2 className="inline-flex items-center gap-4 text-lg font-bold before:h-px before:w-14 before:bg-[#22b9ae] after:h-px after:w-14 after:bg-[#22b9ae]">
           Your country
         </h2>
-        <div className="mx-auto mt-3 grid max-w-3xl grid-cols-2 overflow-hidden rounded-lg bg-white shadow-[0_10px_32px_rgba(20,65,68,.13)] sm:grid-cols-5">
-          {countries.map((c) => (
-            <button
-              key={c}
-              onClick={() => setCountry(c)}
-              className={`flex h-14 items-center justify-center gap-3 text-sm font-semibold transition ${country === c ? "bg-[#076d76] text-white" : "text-[#233443] hover:bg-teal-50"}`}
-            >
+        <div className="relative mx-auto mt-3 max-w-md text-left">
+          <button
+            type="button"
+            onClick={() => setCountryOpen((open) => !open)}
+            className="flex h-14 w-full items-center justify-between rounded-lg bg-white px-4 text-sm font-semibold text-[#233443] shadow-[0_10px_32px_rgba(20,65,68,.13)]"
+          >
+            <span className="flex items-center gap-3">
               <span className="relative h-7 w-7 shrink-0 overflow-hidden rounded-full">
-                <Image
-                  src={countryFlags[c]}
-                  alt=""
-                  fill
-                  sizes="28px"
-                  className="object-cover"
-                />{" "}
+                <Image src={countryFlags[country]} alt="" fill sizes="28px" className="object-cover" />
               </span>
-              {c}
-            </button>
-          ))}
+              {country}
+            </span>
+            <ChevronDown className="h-5 w-5 text-[#087d86]" />
+          </button>
+          {countryOpen && (
+            <div className="absolute z-30 mt-2 w-full rounded-lg border border-[#d5e7e8] bg-white p-2 shadow-xl">
+              <div className="flex items-center gap-2 rounded-md border border-slate-200 px-3">
+                <Search className="h-4 w-4 text-slate-400" />
+                <input
+                  autoFocus
+                  value={countrySearch}
+                  onChange={(event) => setCountrySearch(event.target.value)}
+                  placeholder="Search country"
+                  className="h-10 w-full bg-transparent text-sm outline-none"
+                />
+              </div>
+              <div className="mt-1 max-h-56 overflow-y-auto">
+                {filteredCountries.map((c) => (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => { setCountry(c); setCountryOpen(false); setCountrySearch(""); }}
+                    className={`flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm ${country === c ? "bg-[#076d76] text-white" : "text-[#233443] hover:bg-teal-50"}`}
+                  >
+                    <span className="relative h-6 w-6 shrink-0 overflow-hidden rounded-full">
+                      <Image src={countryFlags[c]} alt="" fill sizes="24px" className="object-cover" />
+                    </span>
+                    {c}
+                  </button>
+                ))}
+                {filteredCountries.length === 0 && <p className="px-3 py-3 text-sm text-slate-500">No country found.</p>}
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -228,7 +260,10 @@ export default function PricingPage() {
             </button>
           ))}
         </div>
-        {audience === "Families" ? (
+        <div className="mx-auto mt-8 flex w-fit rounded-full border border-[#0b7f87] bg-white p-1 text-sm font-bold">
+          <button type="button" onClick={() => setBillingCycle("monthly")} className={`rounded-full px-5 py-2 ${billingCycle === "monthly" ? "bg-[#056d77] text-white" : "text-[#075966]"}`}>Monthly</button>
+          <button type="button" onClick={() => setBillingCycle("annual")} className={`rounded-full px-5 py-2 ${billingCycle === "annual" ? "bg-[#056d77] text-white" : "text-[#075966]"}`}>Yearly</button>
+        </div>        {audience === "Families" ? (
           <div className="mt-9">
             <div className="text-center">
               <h2 className="text-3xl font-extrabold text-[#075966] sm:text-4xl">
@@ -282,7 +317,7 @@ export default function PricingPage() {
                 </h3>
                 <p className="mt-1 flex items-end gap-2 text-[#075966]">
                   <span className="text-5xl font-extrabold">
-                    {pricing.familyMonthly}
+                    {billingCycle === "monthly" ? pricing.familyMonthly : pricing.familyAnnual}
                   </span>
                   <span className="pb-1 text-base">per month</span>
                 </p>
@@ -799,6 +834,13 @@ export default function PricingPage() {
     </main>
   );
 }
+
+
+
+
+
+
+
 
 
 
