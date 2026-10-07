@@ -87,6 +87,13 @@ const countryFlags: Record<string, string> = {
   "New Zealand": "/images/pricing/country-icons/new-zealand.png",
   Pakistan: "/images/pricing/country-icons/pakistan.png",
 };
+const countryFlagEmojis: Record<string, string> = {
+  Australia: "🇦🇺", "United States": "🇺🇸", "United Kingdom": "🇬🇧", Canada: "🇨🇦", "New Zealand": "🇳🇿", Singapore: "🇸🇬", India: "🇮🇳", Pakistan: "🇵🇰", "United Arab Emirates": "🇦🇪", "Saudi Arabia": "🇸🇦", Malaysia: "🇲🇾", Indonesia: "🇮🇩", Philippines: "🇵🇭", "Hong Kong": "🇭🇰", Bangladesh: "🇧🇩", "Sri Lanka": "🇱🇰", Nepal: "🇳🇵", Maldives: "🇲🇻", Brunei: "🇧🇳", Bahrain: "🇧🇭", Kuwait: "🇰🇼", Qatar: "🇶🇦", Oman: "🇴🇲", Jordan: "🇯🇴", Lebanon: "🇱🇧", Egypt: "🇪🇬", Iraq: "🇮🇶", Turkey: "🇹🇷", Ireland: "🇮🇪", Malta: "🇲🇹", Cyprus: "🇨🇾", Netherlands: "🇳🇱", "South Africa": "🇿🇦", Nigeria: "🇳🇬", Kenya: "🇰🇪", Ghana: "🇬🇭", Uganda: "🇺🇬", Tanzania: "🇹🇿", Rwanda: "🇷🇼", Zambia: "🇿🇲", Zimbabwe: "🇿🇼", Botswana: "🇧🇼", Namibia: "🇳🇦", Malawi: "🇲🇼", Mauritius: "🇲🇺", Seychelles: "🇸🇨", "The Gambia": "🇬🇲", "Sierra Leone": "🇸🇱", Liberia: "🇱🇷", Cameroon: "🇨🇲", Jamaica: "🇯🇲", "Trinidad and Tobago": "🇹🇹", Barbados: "🇧🇧", "The Bahamas": "🇧🇸", Guyana: "🇬🇾", Belize: "🇧🇿", Fiji: "🇫🇯", "Papua New Guinea": "🇵🇬", "Solomon Islands": "🇸🇧", Vanuatu: "🇻🇺", Samoa: "🇼🇸", Tonga: "🇹🇴",
+};
+function flagCode(country: string) {
+  const flag = countryFlagEmojis[country];
+  return flag ? [...flag].map((char) => String.fromCodePoint(char.codePointAt(0)! - 127397)).join("").toLowerCase() : "un";
+}
 const pricingByCountry: Record<string, { familyMonthly: string; familyAnnual: string; fourthChild: string; tutorPlans: [string, string, string]; extraStudent: string }> = {
   "Australia": { familyMonthly: "AUD 13", familyAnnual: "AUD 125", fourthChild: "AUD 3", tutorPlans: ["AUD 39", "AUD 65", "AUD 117"], extraStudent: "AUD 3" },
   "United States": { familyMonthly: "USD 10", familyAnnual: "USD 96", fourthChild: "USD 3", tutorPlans: ["USD 30", "USD 50", "USD 90"], extraStudent: "USD 2" },
@@ -281,8 +288,8 @@ export default function PricingPage() {
             className="flex h-14 w-full items-center justify-between rounded-lg bg-white px-4 text-sm font-semibold text-[#233443] shadow-[0_10px_32px_rgba(20,65,68,.13)]"
           >
             <span className="flex items-center gap-3">
-              <span className="relative h-7 w-7 shrink-0 overflow-hidden rounded-full">
-                <Image src={countryFlags[country] || countryFlags["Australia"]} alt="" fill sizes="28px" className="object-cover" />
+              <span className="flex h-6 w-8 shrink-0 items-center justify-center overflow-hidden rounded-sm">
+                <img src={`https://flagcdn.com/w40/${flagCode(country)}.png`} alt="" className="h-full w-full object-cover" />
               </span>
               {country}
             </span>
@@ -308,8 +315,8 @@ export default function PricingPage() {
                     onClick={() => { setCountry(c); setCountryOpen(false); setCountrySearch(""); }}
                     className={`flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm ${country === c ? "bg-[#076d76] text-white" : "text-[#233443] hover:bg-teal-50"}`}
                   >
-                    <span className="relative h-6 w-6 shrink-0 overflow-hidden rounded-full">
-                      <Image src={countryFlags[c] || countryFlags["Australia"]} alt="" fill sizes="24px" className="object-cover" />
+                    <span className="flex h-5 w-7 shrink-0 items-center justify-center overflow-hidden rounded-sm">
+                      <img src={`https://flagcdn.com/w40/${flagCode(c)}.png`} alt="" className="h-full w-full object-cover" />
                     </span>
                     {c}
                   </button>
@@ -909,6 +916,12 @@ export default function PricingPage() {
     </main>
   );
 }
+
+
+
+
+
+
 
 
 
