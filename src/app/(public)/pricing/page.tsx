@@ -18,63 +18,145 @@ import { useState } from "react";
 
 const countries = [
   "Australia",
-  "USA",
-  "UK",
+  "United States",
+  "United Kingdom",
+  "Canada",
   "New Zealand",
+  "Singapore",
+  "India",
   "Pakistan",
+  "United Arab Emirates",
+  "Saudi Arabia",
+  "Malaysia",
+  "Indonesia",
+  "Philippines",
+  "Hong Kong",
+  "Bangladesh",
+  "Sri Lanka",
+  "Nepal",
+  "Maldives",
+  "Brunei",
+  "Bahrain",
+  "Kuwait",
+  "Qatar",
+  "Oman",
+  "Jordan",
+  "Lebanon",
+  "Egypt",
+  "Iraq",
+  "Turkey",
+  "Ireland",
+  "Malta",
+  "Cyprus",
+  "Netherlands",
+  "South Africa",
+  "Nigeria",
+  "Kenya",
+  "Ghana",
+  "Uganda",
+  "Tanzania",
+  "Rwanda",
+  "Zambia",
+  "Zimbabwe",
+  "Botswana",
+  "Namibia",
+  "Malawi",
+  "Mauritius",
+  "Seychelles",
+  "The Gambia",
+  "Sierra Leone",
+  "Liberia",
+  "Cameroon",
+  "Jamaica",
+  "Trinidad and Tobago",
+  "Barbados",
+  "The Bahamas",
+  "Guyana",
+  "Belize",
+  "Fiji",
+  "Papua New Guinea",
+  "Solomon Islands",
+  "Vanuatu",
+  "Samoa",
+  "Tonga"
 ] as const;
-const countryFlags: Record<(typeof countries)[number], string> = {
+const countryFlags: Record<string, string> = {
   Australia: "/images/pricing/country-icons/australia-flag.png",
-  USA: "/images/pricing/country-icons/usa.png",
-  UK: "/images/pricing/country-icons/uk.png",
+  "United States": "/images/pricing/country-icons/usa.png",
+  "United Kingdom": "/images/pricing/country-icons/uk.png",
   "New Zealand": "/images/pricing/country-icons/new-zealand.png",
   Pakistan: "/images/pricing/country-icons/pakistan.png",
 };
-const pricingByCountry: Record<
-  (typeof countries)[number],
-  {
-    familyMonthly: string;
-    familyAnnual: string;
-    fourthChild: string;
-    tutorPlans: [string, string, string];
-    extraStudent: string;
-  }
-> = {
-  Australia: {
-    familyMonthly: "A$10",
-    familyAnnual: "A$96",
-    fourthChild: "A$3",
-    tutorPlans: ["A$29", "A$49", "A$89"],
-    extraStudent: "A$2",
-  },
-  USA: {
-    familyMonthly: "US$10",
-    familyAnnual: "US$96",
-    fourthChild: "US$3",
-    tutorPlans: ["US$29", "US$49", "US$89"],
-    extraStudent: "US$2",
-  },
-  UK: {
-    familyMonthly: "£9",
-    familyAnnual: "£86",
-    fourthChild: "£2",
-    tutorPlans: ["£25", "£45", "£79"],
-    extraStudent: "£2",
-  },
-  "New Zealand": {
-    familyMonthly: "NZ$10",
-    familyAnnual: "NZ$96",
-    fourthChild: "NZ$3",
-    tutorPlans: ["NZ$29", "NZ$49", "NZ$89"],
-    extraStudent: "NZ$2",
-  },
-  Pakistan: {
-    familyMonthly: "PKR 300",
-    familyAnnual: "PKR 2,900",
-    fourthChild: "PKR 75",
-    tutorPlans: ["PKR 900", "PKR 1,500", "PKR 2,500"],
-    extraStudent: "PKR 75",
-  },
+const countryFlagEmojis: Record<string, string> = {
+  Australia: "🇦🇺", "United States": "🇺🇸", "United Kingdom": "🇬🇧", Canada: "🇨🇦", "New Zealand": "🇳🇿", Singapore: "🇸🇬", India: "🇮🇳", Pakistan: "🇵🇰", "United Arab Emirates": "🇦🇪", "Saudi Arabia": "🇸🇦", Malaysia: "🇲🇾", Indonesia: "🇮🇩", Philippines: "🇵🇭", "Hong Kong": "🇭🇰", Bangladesh: "🇧🇩", "Sri Lanka": "🇱🇰", Nepal: "🇳🇵", Maldives: "🇲🇻", Brunei: "🇧🇳", Bahrain: "🇧🇭", Kuwait: "🇰🇼", Qatar: "🇶🇦", Oman: "🇴🇲", Jordan: "🇯🇴", Lebanon: "🇱🇧", Egypt: "🇪🇬", Iraq: "🇮🇶", Turkey: "🇹🇷", Ireland: "🇮🇪", Malta: "🇲🇹", Cyprus: "🇨🇾", Netherlands: "🇳🇱", "South Africa": "🇿🇦", Nigeria: "🇳🇬", Kenya: "🇰🇪", Ghana: "🇬🇭", Uganda: "🇺🇬", Tanzania: "🇹🇿", Rwanda: "🇷🇼", Zambia: "🇿🇲", Zimbabwe: "🇿🇼", Botswana: "🇧🇼", Namibia: "🇳🇦", Malawi: "🇲🇼", Mauritius: "🇲🇺", Seychelles: "🇸🇨", "The Gambia": "🇬🇲", "Sierra Leone": "🇸🇱", Liberia: "🇱🇷", Cameroon: "🇨🇲", Jamaica: "🇯🇲", "Trinidad and Tobago": "🇹🇹", Barbados: "🇧🇧", "The Bahamas": "🇧🇸", Guyana: "🇬🇾", Belize: "🇧🇿", Fiji: "🇫🇯", "Papua New Guinea": "🇵🇬", "Solomon Islands": "🇸🇧", Vanuatu: "🇻🇺", Samoa: "🇼🇸", Tonga: "🇹🇴",
+};
+function flagCode(country: string) {
+  const flag = countryFlagEmojis[country];
+  return flag ? [...flag].map((char) => String.fromCodePoint(char.codePointAt(0)! - 127397)).join("").toLowerCase() : "un";
+}
+const pricingByCountry: Record<string, { familyMonthly: string; familyAnnual: string; fourthChild: string; tutorPlans: [string, string, string]; extraStudent: string }> = {
+  "Australia": { familyMonthly: "AUD 13", familyAnnual: "AUD 125", fourthChild: "AUD 3", tutorPlans: ["AUD 39", "AUD 65", "AUD 117"], extraStudent: "AUD 3" },
+  "United States": { familyMonthly: "USD 10", familyAnnual: "USD 96", fourthChild: "USD 3", tutorPlans: ["USD 30", "USD 50", "USD 90"], extraStudent: "USD 2" },
+  "United Kingdom": { familyMonthly: "GBP 9", familyAnnual: "GBP 86", fourthChild: "GBP 2", tutorPlans: ["GBP 27", "GBP 45", "GBP 81"], extraStudent: "GBP 2" },
+  "Canada": { familyMonthly: "CAD 10", familyAnnual: "CAD 96", fourthChild: "CAD 3", tutorPlans: ["CAD 30", "CAD 50", "CAD 90"], extraStudent: "CAD 2" },
+  "New Zealand": { familyMonthly: "NZD 13", familyAnnual: "NZD 125", fourthChild: "NZD 3", tutorPlans: ["NZD 39", "NZD 65", "NZD 117"], extraStudent: "NZD 3" },
+  "Singapore": { familyMonthly: "SGD 13", familyAnnual: "SGD 125", fourthChild: "SGD 3", tutorPlans: ["SGD 39", "SGD 65", "SGD 117"], extraStudent: "SGD 3" },
+  "India": { familyMonthly: "INR 500", familyAnnual: "INR 4,800", fourthChild: "INR 125", tutorPlans: ["INR 1,500", "INR 2,500", "INR 4,500"], extraStudent: "INR 100" },
+  "Pakistan": { familyMonthly: "PKR 300", familyAnnual: "PKR 2,900", fourthChild: "PKR 75", tutorPlans: ["PKR 900", "PKR 1,500", "PKR 2,700"], extraStudent: "PKR 60" },
+  "United Arab Emirates": { familyMonthly: "AED 35", familyAnnual: "AED 340", fourthChild: "AED 9", tutorPlans: ["AED 105", "AED 175", "AED 315"], extraStudent: "AED 7" },
+  "Saudi Arabia": { familyMonthly: "SAR 35", familyAnnual: "SAR 340", fourthChild: "SAR 9", tutorPlans: ["SAR 105", "SAR 175", "SAR 315"], extraStudent: "SAR 7" },
+  "Malaysia": { familyMonthly: "MYR 29", familyAnnual: "MYR 279", fourthChild: "MYR 7", tutorPlans: ["MYR 87", "MYR 145", "MYR 261"], extraStudent: "MYR 6" },
+  "Indonesia": { familyMonthly: "IDR 79,000", familyAnnual: "IDR 759,000", fourthChild: "IDR 19,750", tutorPlans: ["IDR 237,000", "IDR 395,000", "IDR 711,000"], extraStudent: "IDR 15,800" },
+  "Philippines": { familyMonthly: "PHP 299", familyAnnual: "PHP 2,899", fourthChild: "PHP 75", tutorPlans: ["PHP 897", "PHP 1,495", "PHP 2,691"], extraStudent: "PHP 60" },
+  "Hong Kong": { familyMonthly: "HKD 78", familyAnnual: "HKD 749", fourthChild: "HKD 20", tutorPlans: ["HKD 234", "HKD 390", "HKD 702"], extraStudent: "HKD 16" },
+  "Bangladesh": { familyMonthly: "BDT 499", familyAnnual: "BDT 4,799", fourthChild: "BDT 125", tutorPlans: ["BDT 1,497", "BDT 2,495", "BDT 4,491"], extraStudent: "BDT 100" },
+  "Sri Lanka": { familyMonthly: "LKR 1,490", familyAnnual: "LKR 14,300", fourthChild: "LKR 373", tutorPlans: ["LKR 4,470", "LKR 7,450", "LKR 13,410"], extraStudent: "LKR 298" },
+  "Nepal": { familyMonthly: "NPR 699", familyAnnual: "NPR 6,700", fourthChild: "NPR 175", tutorPlans: ["NPR 2,097", "NPR 3,495", "NPR 6,291"], extraStudent: "NPR 140" },
+  "Maldives": { familyMonthly: "MVR 99", familyAnnual: "MVR 950", fourthChild: "MVR 25", tutorPlans: ["MVR 297", "MVR 495", "MVR 891"], extraStudent: "MVR 20" },
+  "Brunei": { familyMonthly: "BND 13", familyAnnual: "BND 125", fourthChild: "BND 3", tutorPlans: ["BND 39", "BND 65", "BND 117"], extraStudent: "BND 3" },
+  "Bahrain": { familyMonthly: "BHD 3.5", familyAnnual: "BHD 34", fourthChild: "BHD 1", tutorPlans: ["BHD 11", "BHD 18", "BHD 32"], extraStudent: "BHD 1" },
+  "Kuwait": { familyMonthly: "KWD 3", familyAnnual: "KWD 29", fourthChild: "KWD 1", tutorPlans: ["KWD 9", "KWD 15", "KWD 27"], extraStudent: "KWD 1" },
+  "Qatar": { familyMonthly: "QAR 35", familyAnnual: "QAR 340", fourthChild: "QAR 9", tutorPlans: ["QAR 105", "QAR 175", "QAR 315"], extraStudent: "QAR 7" },
+  "Oman": { familyMonthly: "OMR 3.5", familyAnnual: "OMR 34", fourthChild: "OMR 1", tutorPlans: ["OMR 11", "OMR 18", "OMR 32"], extraStudent: "OMR 1" },
+  "Jordan": { familyMonthly: "JOD 7", familyAnnual: "JOD 67", fourthChild: "JOD 2", tutorPlans: ["JOD 21", "JOD 35", "JOD 63"], extraStudent: "JOD 1" },
+  "Lebanon": { familyMonthly: "LBP 899,000", familyAnnual: "LBP 8,600,000", fourthChild: "LBP 224,750", tutorPlans: ["LBP 2,697,000", "LBP 4,495,000", "LBP 8,091,000"], extraStudent: "LBP 179,800" },
+  "Egypt": { familyMonthly: "EGP 249", familyAnnual: "EGP 2,390", fourthChild: "EGP 62", tutorPlans: ["EGP 747", "EGP 1,245", "EGP 2,241"], extraStudent: "EGP 50" },
+  "Iraq": { familyMonthly: "IQD 12,000", familyAnnual: "IQD 115,000", fourthChild: "IQD 3,000", tutorPlans: ["IQD 36,000", "IQD 60,000", "IQD 108,000"], extraStudent: "IQD 2,400" },
+  "Turkey": { familyMonthly: "TRY 299", familyAnnual: "TRY 2,870", fourthChild: "TRY 75", tutorPlans: ["TRY 897", "TRY 1,495", "TRY 2,691"], extraStudent: "TRY 60" },
+  "Ireland": { familyMonthly: "EUR 9", familyAnnual: "EUR 86", fourthChild: "EUR 2", tutorPlans: ["EUR 27", "EUR 45", "EUR 81"], extraStudent: "EUR 2" },
+  "Malta": { familyMonthly: "EUR 9", familyAnnual: "EUR 86", fourthChild: "EUR 2", tutorPlans: ["EUR 27", "EUR 45", "EUR 81"], extraStudent: "EUR 2" },
+  "Cyprus": { familyMonthly: "EUR 9", familyAnnual: "EUR 86", fourthChild: "EUR 2", tutorPlans: ["EUR 27", "EUR 45", "EUR 81"], extraStudent: "EUR 2" },
+  "Netherlands": { familyMonthly: "EUR 9", familyAnnual: "EUR 86", fourthChild: "EUR 2", tutorPlans: ["EUR 27", "EUR 45", "EUR 81"], extraStudent: "EUR 2" },
+  "South Africa": { familyMonthly: "ZAR 149", familyAnnual: "ZAR 1,430", fourthChild: "ZAR 37", tutorPlans: ["ZAR 447", "ZAR 745", "ZAR 1,341"], extraStudent: "ZAR 30" },
+  "Nigeria": { familyMonthly: "NGN 7,500", familyAnnual: "NGN 72,000", fourthChild: "NGN 1,875", tutorPlans: ["NGN 22,500", "NGN 37,500", "NGN 67,500"], extraStudent: "NGN 1,500" },
+  "Kenya": { familyMonthly: "KES 999", familyAnnual: "KES 9,590", fourthChild: "KES 250", tutorPlans: ["KES 2,997", "KES 4,995", "KES 8,991"], extraStudent: "KES 200" },
+  "Ghana": { familyMonthly: "GHS 99", familyAnnual: "GHS 950", fourthChild: "GHS 25", tutorPlans: ["GHS 297", "GHS 495", "GHS 891"], extraStudent: "GHS 20" },
+  "Uganda": { familyMonthly: "UGX 29,000", familyAnnual: "UGX 279,000", fourthChild: "UGX 7,250", tutorPlans: ["UGX 87,000", "UGX 145,000", "UGX 261,000"], extraStudent: "UGX 5,800" },
+  "Tanzania": { familyMonthly: "TZS 19,900", familyAnnual: "TZS 191,000", fourthChild: "TZS 4,975", tutorPlans: ["TZS 59,700", "TZS 99,500", "TZS 179,100"], extraStudent: "TZS 3,980" },
+  "Rwanda": { familyMonthly: "RWF 9,900", familyAnnual: "RWF 95,000", fourthChild: "RWF 2,475", tutorPlans: ["RWF 29,700", "RWF 49,500", "RWF 89,100"], extraStudent: "RWF 1,980" },
+  "Zambia": { familyMonthly: "ZMW 149", familyAnnual: "ZMW 1,430", fourthChild: "ZMW 37", tutorPlans: ["ZMW 447", "ZMW 745", "ZMW 1,341"], extraStudent: "ZMW 30" },
+  "Zimbabwe": { familyMonthly: "To confirm 9", familyAnnual: "To confirm 86", fourthChild: "To confirm 2", tutorPlans: ["To confirm 27", "To confirm 45", "To confirm 81"], extraStudent: "To confirm 2" },
+  "Botswana": { familyMonthly: "BWP 99", familyAnnual: "BWP 950", fourthChild: "BWP 25", tutorPlans: ["BWP 297", "BWP 495", "BWP 891"], extraStudent: "BWP 20" },
+  "Namibia": { familyMonthly: "NAD 149", familyAnnual: "NAD 1,430", fourthChild: "NAD 37", tutorPlans: ["NAD 447", "NAD 745", "NAD 1,341"], extraStudent: "NAD 30" },
+  "Malawi": { familyMonthly: "MWK 7,900", familyAnnual: "MWK 75,900", fourthChild: "MWK 1,975", tutorPlans: ["MWK 23,700", "MWK 39,500", "MWK 71,100"], extraStudent: "MWK 1,580" },
+  "Mauritius": { familyMonthly: "MUR 399", familyAnnual: "MUR 3,830", fourthChild: "MUR 100", tutorPlans: ["MUR 1,197", "MUR 1,995", "MUR 3,591"], extraStudent: "MUR 80" },
+  "Seychelles": { familyMonthly: "SCR 129", familyAnnual: "SCR 1,240", fourthChild: "SCR 32", tutorPlans: ["SCR 387", "SCR 645", "SCR 1,161"], extraStudent: "SCR 26" },
+  "The Gambia": { familyMonthly: "GMD 599", familyAnnual: "GMD 5,750", fourthChild: "GMD 150", tutorPlans: ["GMD 1,797", "GMD 2,995", "GMD 5,391"], extraStudent: "GMD 120" },
+  "Sierra Leone": { familyMonthly: "SLE 149", familyAnnual: "SLE 1,430", fourthChild: "SLE 37", tutorPlans: ["SLE 447", "SLE 745", "SLE 1,341"], extraStudent: "SLE 30" },
+  "Liberia": { familyMonthly: "USD 9", familyAnnual: "USD 86", fourthChild: "USD 2", tutorPlans: ["USD 27", "USD 45", "USD 81"], extraStudent: "USD 2" },
+  "Cameroon": { familyMonthly: "XAF 4,900", familyAnnual: "XAF 47,000", fourthChild: "XAF 1,225", tutorPlans: ["XAF 14,700", "XAF 24,500", "XAF 44,100"], extraStudent: "XAF 980" },
+  "Jamaica": { familyMonthly: "JMD 1,299", familyAnnual: "JMD 12,500", fourthChild: "JMD 325", tutorPlans: ["JMD 3,897", "JMD 6,495", "JMD 11,691"], extraStudent: "JMD 260" },
+  "Trinidad and Tobago": { familyMonthly: "TTD 65", familyAnnual: "TTD 625", fourthChild: "TTD 16", tutorPlans: ["TTD 195", "TTD 325", "TTD 585"], extraStudent: "TTD 13" },
+  "Barbados": { familyMonthly: "BBD 20", familyAnnual: "BBD 192", fourthChild: "BBD 5", tutorPlans: ["BBD 60", "BBD 100", "BBD 180"], extraStudent: "BBD 4" },
+  "The Bahamas": { familyMonthly: "BSD 10", familyAnnual: "BSD 96", fourthChild: "BSD 3", tutorPlans: ["BSD 30", "BSD 50", "BSD 90"], extraStudent: "BSD 2" },
+  "Guyana": { familyMonthly: "GYD 1,999", familyAnnual: "GYD 19,200", fourthChild: "GYD 500", tutorPlans: ["GYD 5,997", "GYD 9,995", "GYD 17,991"], extraStudent: "GYD 400" },
+  "Belize": { familyMonthly: "BZD 20", familyAnnual: "BZD 192", fourthChild: "BZD 5", tutorPlans: ["BZD 60", "BZD 100", "BZD 180"], extraStudent: "BZD 4" },
+  "Fiji": { familyMonthly: "FJD 20", familyAnnual: "FJD 192", fourthChild: "FJD 5", tutorPlans: ["FJD 60", "FJD 100", "FJD 180"], extraStudent: "FJD 4" },
+  "Papua New Guinea": { familyMonthly: "PGK 35", familyAnnual: "PGK 336", fourthChild: "PGK 9", tutorPlans: ["PGK 105", "PGK 175", "PGK 315"], extraStudent: "PGK 7" },
+  "Solomon Islands": { familyMonthly: "SBD 75", familyAnnual: "SBD 720", fourthChild: "SBD 19", tutorPlans: ["SBD 225", "SBD 375", "SBD 675"], extraStudent: "SBD 15" },
+  "Vanuatu": { familyMonthly: "VUV 999", familyAnnual: "VUV 9,590", fourthChild: "VUV 250", tutorPlans: ["VUV 2,997", "VUV 4,995", "VUV 8,991"], extraStudent: "VUV 200" },
+  "Samoa": { familyMonthly: "WST 25", familyAnnual: "WST 240", fourthChild: "WST 6", tutorPlans: ["WST 75", "WST 125", "WST 225"], extraStudent: "WST 5" },
+  "Tonga": { familyMonthly: "TOP 22", familyAnnual: "TOP 211", fourthChild: "TOP 6", tutorPlans: ["TOP 66", "TOP 110", "TOP 198"], extraStudent: "TOP 4" },
 };
 const audiences = [
   { label: "Families", icon: Users },
@@ -206,8 +288,8 @@ export default function PricingPage() {
             className="flex h-14 w-full items-center justify-between rounded-lg bg-white px-4 text-sm font-semibold text-[#233443] shadow-[0_10px_32px_rgba(20,65,68,.13)]"
           >
             <span className="flex items-center gap-3">
-              <span className="relative h-7 w-7 shrink-0 overflow-hidden rounded-full">
-                <Image src={countryFlags[country]} alt="" fill sizes="28px" className="object-cover" />
+              <span className="flex h-6 w-8 shrink-0 items-center justify-center overflow-hidden rounded-sm">
+                <img src={`https://flagcdn.com/w40/${flagCode(country)}.png`} alt="" className="h-full w-full object-cover" />
               </span>
               {country}
             </span>
@@ -233,8 +315,8 @@ export default function PricingPage() {
                     onClick={() => { setCountry(c); setCountryOpen(false); setCountrySearch(""); }}
                     className={`flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm ${country === c ? "bg-[#076d76] text-white" : "text-[#233443] hover:bg-teal-50"}`}
                   >
-                    <span className="relative h-6 w-6 shrink-0 overflow-hidden rounded-full">
-                      <Image src={countryFlags[c]} alt="" fill sizes="24px" className="object-cover" />
+                    <span className="flex h-5 w-7 shrink-0 items-center justify-center overflow-hidden rounded-sm">
+                      <img src={`https://flagcdn.com/w40/${flagCode(c)}.png`} alt="" className="h-full w-full object-cover" />
                     </span>
                     {c}
                   </button>
@@ -834,6 +916,13 @@ export default function PricingPage() {
     </main>
   );
 }
+
+
+
+
+
+
+
 
 
 
