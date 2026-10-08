@@ -161,15 +161,18 @@ function Btn({
   children,
   outline = false,
   amber = false,
+  target,
 }: {
   href: string;
   children: React.ReactNode;
   outline?: boolean;
   amber?: boolean;
+  target?: string;
 }) {
   return (
     <Link
       href={href}
+      target={target}
       className={`inline-flex min-h-12 items-center justify-center gap-2 rounded-lg px-6 text-sm font-semibold transition hover:-translate-y-0.5 ${outline ? "border border-[#0b969a] bg-white text-[#087e82] shadow-sm" : amber ? "bg-amber-400 text-white shadow-lg" : "bg-linear-to-r from-[#09aaa1] to-[#007d82] text-white shadow-lg"}`}
     >
       {children}
@@ -417,7 +420,7 @@ export default function HomePageClient() {
               <Btn href="#">
                 Start Adaptive Learning <ArrowRight className="h-4 w-4" />
               </Btn>
-              <Btn href="/papergenerator/demo" outline>
+              <Btn href="https://al.attolearn.com/try" target="_blank" outline>
                 <PlayCircle className="h-5 w-5" /> Try a Live Demo
               </Btn>
             </div>
