@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "npm run build && pm2 restart attolearn --update-env",
     "start": "next start --port 382",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
