@@ -11,7 +11,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky",
-    "test:seo": "npm run build && node --test tests/seo.test.mjs"
+    "test:seo": "npm run build && node --test tests/seo.test.mjs",
+    "test:pricing": "node --test tests/pricing.test.mjs",
+    "pricing:import": "node scripts/import-pricing.mjs"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [

@@ -51,7 +51,7 @@ const descriptions: Record<string, string> = {
   "/paper-generator":
     "Explore AttoLearn Paper Generator, including question selection, paper review and printable assessments. Confirm subject and account availability.",
   "/pricing":
-    "Review AttoLearn pricing for families, tutors and tuition centres in Australia, the USA, the UK, New Zealand and Pakistan, displayed in local currencies.",
+    "Review AttoLearn pricing for families, independent tutors and tuition centres across 62 countries, with monthly plans displayed in local currencies.",
 };
 
 export const priorityPages = priorities;
